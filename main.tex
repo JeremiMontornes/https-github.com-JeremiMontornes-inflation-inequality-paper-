@@ -750,21 +750,25 @@ While inflation has clear distributional effects, monetary policy also generates
 
 \section{Validation Tests}
 
+This appendix reports validation checks for the inflation series recalculated with the package methodology. The objective is not to replicate the official aggregate index mechanically: household-group indices are built by combining official item prices and weights with group-specific expenditure shares, and the group average is then compared with the official all-items series. The validation is therefore a diagnostic on the size and time profile of the residual difference between the package recalculation and the published aggregate.
 
-This appendix presents a comparison of recalculated inflation rates using the package's methodology against official headline inflation data. Figure A1 illustrate the alignment of recalculated inflation rates with the Harmonized Consumer Price Index (HCPI) or CPI ? for  France from 1998 to 2024, with an average deviation of less than 0.1 percentage points. Futermore, we are constrained to remain at the COICOP level 2 due to the merging of the HBS and HICP datasets. Does this have an impact on the recalculation of inflation? Figure A2 the impact of aggregation bias in inflation measurements within the French context, comparing COICOP level 2 and level 3 aggregation. We can be confident that the level of aggregation 2 doesn't influence inflation estimates [level 1 ?].  Figure A3 comparing recalculated inflation rates to those published annually by INSEE. We compare each income decile's annualized inflation rate and compute summary statistics. The  absolute offset ranges from 0.04 to 0.11.
+Figure A.2 compares the French year-on-year inflation rate recomputed with the national-source level-3 INSEE workflow to the published all-items HICP. The level-3 workflow uses INSEE item price indices and index weights together with Budget de famille expenditure shares by standard-of-living group, after recoding the ECOICOP v2 product structure to the COICOP v1 structure used by the HICP/HBS bridge. The grey bars report the monthly difference between the package recalculation and the published all-items HICP, in percentage points.
 
+Figure A.3 performs a complementary validation in index levels. The package first constructs chained price indices for French income groups and then compares the average across household groups with the published all-items HICP rebased to the same base year. This level comparison is useful because small monthly rate differences can accumulate in long-run index measures.
+
+Finally, Table A.1 compares the package's annual inflation rates by French standard-of-living decile with the official annual INSEE decile series. The reported offsets remain small, although they should be read with the same caveat: the package combines detailed prices and expenditure structures rather than reproducing the exact INSEE production system.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
 \centering
-\caption{Comparison with national CPI: France (inflation in \%, offset in pp)}
+\caption{Comparison with national HICP: France, level-3 INSEE workflow (inflation in \%, offset in pp)}
 %\label{fig:Fig4.png}
-\includegraphics[scale=0.5]{fig/figureB.png}
+\includegraphics[scale=0.5]{fig/france_hicp_inflation_validation_level3_insee_recode_mean_vs_published.png}
 \vspace{20pt} 
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Note: This figure compares the inflation published by the Insee to the inflation built using publicly-available data.\\
-Sources: Insee, authors' calculation}
+\caption*{Note: The blue line reports the published all-items HICP for France. The black line reports the package recalculation using INSEE level-3 item prices, INSEE index weights, and Budget de famille expenditure shares. Grey bars show the recalculation minus the published HICP, in percentage points.\\
+Sources: INSEE, Eurostat, authors' calculation with \texttt{inflationinequality}.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -774,45 +778,18 @@ Sources: Insee, authors' calculation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
 \centering
-\caption{Effect of level of COICOP: France (inflation in \%, offset in pp)}
+\caption{Comparison with national HICP: France (index level, offset in index points)}
 %\label{fig:Fig4.png}
-\includegraphics[scale=0.5]{fig/figureC.png}
+\includegraphics[scale=0.5]{fig/france_hicp_validation_level_mean_vs_published.png}
 \vspace{20pt} 
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Note: This figure compares the inflation published by the Insee to the inflation built using publicly-available data.\\
-Sources: Insee, authors' calculation}
+\caption*{Note: This figure compares the average recalculated household-group price index with the published French all-items HICP, after rebasing both series to the same base year. Grey bars show the recalculation minus the published HICP, in index points.\\
+Sources: INSEE, Eurostat, authors' calculation with \texttt{inflationinequality}.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[!h]
-\centering
-\caption{Comparison with annual inflation by decile: France (in pp)}
-\centering
-\begin{tabular}[t]{lrr}
- \hline 
-\textbf{Decile} & \textbf{Mean(Offset)} & \textbf{Mean(Absolute(Offset)}\\
- \hline 
-1 & -0.08 & 0.11\\
-2 & -0.04 & 0.06\\
-3 & -0.01 & 0.04\\
-4 & 0.04 & 0.09\\
-5 & -0.02 & 0.04\\
-6 & 0.01 & 0.04\\
-7 & -0.05 & 0.06\\
-8 & 0.05 & 0.06\\
-9 & -0.07 & 0.08\\
-10 & 0.07 & 0.09\\
- \hline 
-\end{tabular}
-\begin{minipage}{\textwidth}
-Note: This figure compares the inflation published by the Insee to the inflation built using publicly-available data.\\
-Sources: Insee, authors' calculation
-\end{minipage}
-\end{table}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{tables/fr_decile_validation_summary}
 \newpage
 
 
