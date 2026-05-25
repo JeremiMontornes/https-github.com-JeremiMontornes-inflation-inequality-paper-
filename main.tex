@@ -25,6 +25,8 @@
 \usepackage{multirow}
 \usepackage[colorlinks,pdfborder=false]{hyperref}
 \usepackage{subcaption} % Package pour les sous-figures
+\usepackage{float}
+\usepackage{chngcntr}
 \usepackage{hyperref}
 
 \definecolor{citecol}{rgb}{0,.2,.7}
@@ -646,8 +648,10 @@ While we calculate of inflation rates for different household categories, it rem
 % \renewcommand{\thesubsection}{\arabic{subsection})}
 %\renewcommand{\thetable}{\Roman{table}}
 %\renewcommand{\thefigure}{\Roman{figure}}
-\renewcommand{\thetable}{A.\arabic{table}}
-\renewcommand{\thefigure}{A.\arabic{figure}}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
+\renewcommand{\thetable}{\Alph{section}.\arabic{table}}
 
 %\pagenumbering{roman}
  \setcounter{page}{1}
@@ -706,65 +710,23 @@ Source: Euostat HICP, HBS, authors' calculation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-\section{Using Scanner data to Mesure Inflation Inequality}
-
-
-
-Our approach can only capture the part of inflation inequality that appears between household categories (e.g., first and fifth quintiles). Recent advances in data availability, such as scanner data\footnote{ Scanner data are detailed data is available in supermarkets from the recording of the transaction. Private companies such as Nielsen is the most famous make available this kind of data.} from supermarkets and bank client data, allow for more granular insights into inflation experiences. Accurate measurement requires granular price and spending data due to aggregation bias.
-
-\cite{jaravel2024distributional} investigated inflation inequality in the United States from 2004 to 2023, highlighting a significant aggregation bias. Using  the Consumer Price Index (CPI) and Consumer Expenditure Survey (CEX) data, the calculated inflation gap is 0.37 percentage points. However, using scanner data revealed a considerably larger gap of 0.66 percentage points, with the first quintile  experiencing 1.87\% inflation and the fifth quintile experiencing 1.21\% inflation.
-
-%Inflation inequalities measured at the individual level are more important because they reflect inequality within household categories in detailed consumption categories (e.g. between organic tomatoes and regular tomatoes). 
-
-
-
-
-
-
-\section{The `inflationinequality`  package}
-
-All figures of the paper are plotted with the package `inflationinequality`. This package provides tools to measure inflation inequality. Its core functionalities include the calculation and visualization of inflation rates and contributions to inflation by household categories, as well as the simulation of counterfactual scenarios for unconventional price policies. 
-
-By default, the package retrieves datasets with the highest granularity of COICOP levels, specifically level 2. However, users can opt to download only COICOP level 1 data. Through integration with DBnomics\footnote{To construct these series we use data from DBnomics. The DBnomics API is called using the rdbnomics package.}, the package facilitates the retrieval and the updateof Consumer Price Index (CPI) and Household Budget Survey (HBS) data from any euro area country. This allows for cross-country comparisons, leveraging the standardized definitions of categories across the  euro area. 
-
-
-
-The inflationinequality package use  objects to manage metadata associated with its datasets efficiently. For example, the object of class "inflation" encapsulates actual inflation data alongside key metadata, including categories (an ordered list of demographic classifications).Associated Vignettes describe more in detail the features of the `inflationinequality` package.  
-
-The package also includes  plotting functions, such as time series visualizations and grouped bar charts, enabling users to analyze contributions to inflation and compare inflation rates across countries for specific years. 
-
-
-
-
-
-\section{Impact of Monetary Policy on Inflation Inequalities}
-
-Faced with the recent inflationary shock, monetary policy has been tightened in the euro area since July 2022. The rate-tightening cycle, combined with the decline in wholesale gas and electricity prices, has contributed to the slowdown in inflation since mid-2023.
-
-While inflation has clear distributional effects, monetary policy also generates distributional consequences (\cite{ampudia2024shopping}). Rate hikes can increase income from savings but also raise debt costs, disproportionately affecting lower-income households. Direct effects occur through changes in income from savings and loan interest (rate increases benefit wealth holders). Indirect effects are transmitted via the labor market, where higher rates can depress job creation and increase inequality through job losses (Hubert and Savignac, 2024).
-
-% to redraf:
-%In the long term, maintaining price stability is best ways to . However, it is important to consider its potential implications for inequality. For example, prolonged periods of low-interest rates may benefit borrowers while disadvantaging savers, exacerbating wealth inequality over time. 
-
-
-
 \section{Validation Tests}
 
 This appendix reports validation checks for the inflation series recalculated with the package methodology. The objective is not to replicate the official aggregate index mechanically: household-group indices are built by combining official item prices and weights with group-specific expenditure shares, and the group average is then compared with the official all-items series. The validation is therefore a diagnostic on the size and time profile of the residual difference between the package recalculation and the published aggregate.
 
-Figure A.2 compares the French year-on-year inflation rate recomputed with the national-source level-3 INSEE workflow to the published all-items HICP. The level-3 workflow uses INSEE item price indices and index weights together with Budget de famille expenditure shares by standard-of-living group, after recoding the ECOICOP v2 product structure to the COICOP v1 structure used by the HICP/HBS bridge. The grey bars report the monthly difference between the package recalculation and the published all-items HICP, in percentage points.
+Figure~\ref{fig:fr-validation-rate} compares the French year-on-year inflation rate recomputed with the national-source level-3 INSEE workflow to the published all-items HICP. The level-3 workflow uses INSEE item price indices and index weights together with Budget de famille expenditure shares by standard-of-living group, after recoding the ECOICOP v2 product structure to the COICOP v1 structure used by the HICP/HBS bridge. The grey bars report the monthly difference between the package recalculation and the published all-items HICP, in percentage points.
 
-Figure A.3 performs a complementary validation in index levels. The package first constructs chained price indices for French income groups and then compares the average across household groups with the published all-items HICP rebased to the same base year. This level comparison is useful because small monthly rate differences can accumulate in long-run index measures.
+Figure~\ref{fig:fr-validation-level} performs a complementary validation in index levels. The package first constructs chained price indices for French income groups and then compares the average across household groups with the published all-items HICP rebased to the same base year. This level comparison is useful because small monthly rate differences can accumulate in long-run index measures.
 
-Finally, Table A.1 compares the package's annual inflation rates by French standard-of-living decile with the official annual INSEE decile series. The reported offsets remain small, although they should be read with the same caveat: the package combines detailed prices and expenditure structures rather than reproducing the exact INSEE production system.
+Finally, Table~\ref{tab:fr-decile-validation} compares the package's annual inflation rates by French standard-of-living decile with the official annual INSEE decile series. The reported offsets remain small, although they should be read with the same caveat: the package combines detailed prices and expenditure structures rather than reproducing the exact INSEE production system.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
 \caption{Comparison with national HICP: France, level-3 INSEE workflow (inflation in \%, offset in pp)}
-%\label{fig:Fig4.png}
-\includegraphics[scale=0.5]{fig/france_hicp_inflation_validation_level3_insee_recode_mean_vs_published.png}
+\label{fig:fr-validation-rate}
+\includegraphics[width=0.86\textwidth]{fig/france_hicp_inflation_validation_level3_insee_recode_mean_vs_published.png}
 \vspace{20pt} 
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Note: The blue line reports the published all-items HICP for France. The black line reports the package recalculation using INSEE level-3 item prices, INSEE index weights, and Budget de famille expenditure shares. Grey bars show the recalculation minus the published HICP, in percentage points.\\
@@ -776,11 +738,11 @@ Sources: INSEE, Eurostat, authors' calculation with \texttt{inflationinequality}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
 \caption{Comparison with national HICP: France (index level, offset in index points)}
-%\label{fig:Fig4.png}
-\includegraphics[scale=0.5]{fig/france_hicp_validation_level_mean_vs_published.png}
+\label{fig:fr-validation-level}
+\includegraphics[width=0.86\textwidth]{fig/france_hicp_validation_level_mean_vs_published.png}
 \vspace{20pt} 
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Note: This figure compares the average recalculated household-group price index with the published French all-items HICP, after rebasing both series to the same base year. Grey bars show the recalculation minus the published HICP, in index points.\\

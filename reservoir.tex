@@ -61,6 +61,41 @@ Sources: Eurostat, authors' calculation}
 \label{sec:analyse-donnees}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Material moved out of main.tex on 2026-05-25.
+% These sections used to appear as appendix sections B, C and D.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Using Scanner data to Mesure Inflation Inequality}
+
+Our approach can only capture the part of inflation inequality that appears between household categories (e.g., first and fifth quintiles). Recent advances in data availability, such as scanner data\footnote{ Scanner data are detailed data is available in supermarkets from the recording of the transaction. Private companies such as Nielsen is the most famous make available this kind of data.} from supermarkets and bank client data, allow for more granular insights into inflation experiences. Accurate measurement requires granular price and spending data due to aggregation bias.
+
+\cite{jaravel2024distributional} investigated inflation inequality in the United States from 2004 to 2023, highlighting a significant aggregation bias. Using  the Consumer Price Index (CPI) and Consumer Expenditure Survey (CEX) data, the calculated inflation gap is 0.37 percentage points. However, using scanner data revealed a considerably larger gap of 0.66 percentage points, with the first quintile  experiencing 1.87\% inflation and the fifth quintile experiencing 1.21\% inflation.
+
+%Inflation inequalities measured at the individual level are more important because they reflect inequality within household categories in detailed consumption categories (e.g. between organic tomatoes and regular tomatoes). 
+
+
+\section{The `inflationinequality`  package}
+
+All figures of the paper are plotted with the package `inflationinequality`. This package provides tools to measure inflation inequality. Its core functionalities include the calculation and visualization of inflation rates and contributions to inflation by household categories, as well as the simulation of counterfactual scenarios for unconventional price policies. 
+
+By default, the package retrieves datasets with the highest granularity of COICOP levels, specifically level 2. However, users can opt to download only COICOP level 1 data. Through integration with DBnomics\footnote{To construct these series we use data from DBnomics. The DBnomics API is called using the rdbnomics package.}, the package facilitates the retrieval and the updateof Consumer Price Index (CPI) and Household Budget Survey (HBS) data from any euro area country. This allows for cross-country comparisons, leveraging the standardized definitions of categories across the  euro area. 
+
+The inflationinequality package use  objects to manage metadata associated with its datasets efficiently. For example, the object of class "inflation" encapsulates actual inflation data alongside key metadata, including categories (an ordered list of demographic classifications).Associated Vignettes describe more in detail the features of the `inflationinequality` package.  
+
+The package also includes  plotting functions, such as time series visualizations and grouped bar charts, enabling users to analyze contributions to inflation and compare inflation rates across countries for specific years. 
+
+
+\section{Impact of Monetary Policy on Inflation Inequalities}
+
+Faced with the recent inflationary shock, monetary policy has been tightened in the euro area since July 2022. The rate-tightening cycle, combined with the decline in wholesale gas and electricity prices, has contributed to the slowdown in inflation since mid-2023.
+
+While inflation has clear distributional effects, monetary policy also generates distributional consequences (\cite{ampudia2024shopping}). Rate hikes can increase income from savings but also raise debt costs, disproportionately affecting lower-income households. Direct effects occur through changes in income from savings and loan interest (rate increases benefit wealth holders). Indirect effects are transmitted via the labor market, where higher rates can depress job creation and increase inequality through job losses (Hubert and Savignac, 2024).
+
+% to redraf:
+%In the long term, maintaining price stability is best ways to . However, it is important to consider its potential implications for inequality. For example, prolonged periods of low-interest rates may benefit borrowers while disadvantaging savers, exacerbating wealth inequality over time. 
 \newpage
 
 The contrasting experiences of Italy and Spain highlight how country-specific factors, including both economic structure and policy responses, shaped inflation inequality outcomes. Italy's wider inflation differentials reflect both its higher energy dependency and more limited deployment of price shield measures, while Spain's more moderate differentials suggest its price control policies were relatively effective at containing distributional impacts.
