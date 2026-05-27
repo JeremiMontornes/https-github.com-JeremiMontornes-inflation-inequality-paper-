@@ -706,7 +706,7 @@ While we calculate of inflation rates for different household categories, it rem
 \vspace{10pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Notes: The figure reports chained price indices from 1996 using the France level-3 workflow. The panels compare income quintiles, age groups, and residence areas.\\
-Sources: Eurostat HICP; INSEE Budget de famille 2017; authors' calculation.}
+Sources: Eurostat HICP; INSEE HBS 2017; authors' calculation.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -740,7 +740,7 @@ Sources: Eurostat HICP; INSEE Budget de famille 2017; authors' calculation.}
 \vspace{10pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Notes: The figure reports monthly year-on-year inflation rates using the France level-3 workflow. The panels compare income quintiles, age groups, and residence areas over the recent inflation episode.\\
-Sources: Eurostat HICP; INSEE Budget de famille 2017; authors' calculation.}
+Sources: Eurostat HICP; INSEE HBS 2017; authors' calculation.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -774,7 +774,7 @@ Sources: Eurostat HICP; INSEE Budget de famille 2017; authors' calculation.}
 \vspace{10pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Notes: Bars decompose the monthly inflation gap into broad consumption components; the black line reports the total gap. Positive values indicate higher inflation for the first group named in each panel.\\
-Sources: Eurostat HICP; INSEE Budget de famille 2017; authors' calculation.}
+Sources: Eurostat HICP; INSEE HBS 2017; authors' calculation.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -783,40 +783,37 @@ Sources: Eurostat HICP; INSEE Budget de famille 2017; authors' calculation.}
 
 This appendix reports validation checks for the inflation series recalculated with the package methodology. The objective is not to replicate the official aggregate index mechanically: household-group indices are built by combining official item prices and weights with group-specific expenditure shares, and the group average is then compared with the official all-items series. The validation is therefore a diagnostic on the size and time profile of the residual difference between the package recalculation and the published aggregate.
 
-Figure~\ref{fig:fr-validation-rate} compares the French year-on-year inflation rate recomputed with the national-source level-3 INSEE workflow to the published all-items HICP. The level-3 workflow uses INSEE item price indices and index weights together with Budget de famille expenditure shares by standard-of-living group, after recoding the ECOICOP v2 product structure to the COICOP v1 structure used by the HICP/HBS bridge. The grey bars report the monthly difference between the package recalculation and the published all-items HICP, in percentage points.
+Figure~\ref{fig:fr-validation-rate} compares the French year-on-year inflation rate recomputed with detailed item prices and household-group expenditure shares to the published all-items HICP. The grey bars report the monthly difference between the package recalculation and the published all-items HICP, in percentage points.
 
 Figure~\ref{fig:fr-validation-level} performs a complementary validation in index levels. The package first constructs chained price indices for French income groups and then compares the average across household groups with the published all-items HICP rebased to the same base year. This level comparison is useful because small monthly rate differences can accumulate in long-run index measures.
 
 Finally, Table~\ref{tab:fr-decile-validation} compares the package's annual inflation rates by French standard-of-living decile with the official annual INSEE decile series. The reported offsets remain small, although they should be read with the same caveat: the package combines detailed prices and expenditure structures rather than reproducing the exact INSEE production system.
 
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
+\begin{center}
 \centering
-\caption{Comparison with national HICP: France, level-3 INSEE workflow (inflation in \%, offset in pp)}
+\captionsetup{type=figure}
+\captionof{figure}{Comparison with national HICP: France (inflation in \%, offset in pp)}
 \label{fig:fr-validation-rate}
-\includegraphics[width=0.86\textwidth]{fig/fig_FR_2010_2026_hicp_inflation_validation_level3_insee_recode_mean_vs_published.png}
-\vspace{20pt} 
-\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Note: The blue line reports the published all-items HICP for France. The black line reports the package recalculation using INSEE level-3 item prices, INSEE index weights, and Budget de famille expenditure shares. Grey bars show the recalculation minus the published HICP, in percentage points.\\
+\includegraphics[width=0.82\textwidth,height=0.20\textheight,keepaspectratio]{fig/fig_FR_2010_2026_hicp_inflation_validation_level3_insee_recode_mean_vs_published.png}
+\vspace{2pt} 
+\captionsetup{font=scriptsize, format=hang, singlelinecheck=false, justification=justified}
+\caption*{Note: Blue line: published all-items HICP. Black line: package recalculation. Grey bars: recalculation minus published HICP, in percentage points.\\
 Sources: INSEE, Eurostat, authors' calculation.}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
+\vspace{8pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-\centering
-\caption{Comparison with national HICP: France (index level, offset in index points)}
+\captionsetup{type=figure}
+\captionof{figure}{Comparison with national HICP: France (index level, offset in index points)}
 \label{fig:fr-validation-level}
-\includegraphics[width=0.86\textwidth]{fig/fig_FR_2010_2026_hicp_validation_level_mean_vs_published.png}
-\vspace{20pt} 
-\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Note: This figure compares the average recalculated household-group price index with the published French all-items HICP, after rebasing both series to the same base year. Grey bars show the recalculation minus the published HICP, in index points.\\
+\includegraphics[width=0.82\textwidth,height=0.20\textheight,keepaspectratio]{fig/fig_FR_2010_2026_hicp_validation_level_mean_vs_published.png}
+\vspace{2pt} 
+\captionsetup{font=scriptsize, format=hang, singlelinecheck=false, justification=justified}
+\caption*{Note: Average recalculated household-group index and published all-items HICP, rebased to the same base year. Grey bars: recalculation minus published HICP, in index points.\\
 Sources: INSEE, Eurostat, authors' calculation.}
-\end{figure}
+\end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
