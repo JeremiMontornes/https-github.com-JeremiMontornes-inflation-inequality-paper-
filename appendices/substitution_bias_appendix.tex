@@ -7,8 +7,6 @@ alternative. The purpose of the exercise is not to replace the official HICP
 convention, but to quantify how sensitive measured inflation inequality is to
 the upper-level aggregation formula used to combine COICOP price relatives.
 
-\subsection{Conceptual background}
-
 In a fixed-basket price index, expenditure weights are held fixed while prices
 change. Such an index does not fully account for substitution across
 consumption categories when relative prices change. If households shift
@@ -17,8 +15,6 @@ fixed-weight index will generally grow faster than a symmetric index that uses
 information on both initial and later expenditure shares. This difference is
 usually interpreted as an upper-level substitution bias (Bureau of Labor Statistics, xxx).
 
-
-\subsection{Index definitions}
 
 Let \(p_{j,t}\) denote the elementary price index for COICOP category \(j\) in
 month \(t\). Let \(r_{j,t}\) denote the corresponding unchained price relative
@@ -38,13 +34,6 @@ L_{g,t}
 
 where \(s_{j,g,y(t)}\) denotes the normalized expenditure share for group
 \(g\), category \(j\), and the annual weight year associated with month \(t\).
-The monthly aggregates are then chain-linked to obtain a Eurostat-style chained
-Laspeyres index:
-
-\[
-P^{CL}_{g,t}
-= \operatorname{chain}\left(L_{g,t}\right).
-\]
 
 The comparison index uses the Tornqvist formula at the same upper level. Let
 \(s_{j,g,y(t)-1}\) and \(s_{j,g,y(t)}\) denote the previous-year and
@@ -55,15 +44,6 @@ T_{g,t}
 = \prod_j r_{j,t}^{\frac{1}{2}
 \left(s_{j,g,y(t)-1} + s_{j,g,y(t)}\right)}.
 \]
-
-These Tornqvist aggregates are also chain-linked:
-
-\[
-P^{CT}_{g,t}
-= \operatorname{chain}\left(T_{g,t}\right).
-\]
-
-\subsection{Annualized growth rates}
 
 For each group \(g\), the comparison is made using annualized growth rates over
 the selected sample window. If \(t_0\) and \(t_1\) are the first and last months
@@ -81,43 +61,42 @@ The upper-level substitution-bias diagnostic is then defined as:
 
 \[
 \operatorname{SB}_g
-= \gamma_g\left(P^{CL}\right)
-- \gamma_g\left(P^{CT}\right).
+= \text{chained Laspeyres growth}_g
+- \text{chained Tornqvist growth}_g.
 \]
 
 A positive value indicates that the chained Laspeyres aggregation grows faster
 than the chained Tornqvist alternative over the same period.
 
-\subsection{Example for France}
-
 Table~\ref{tab:fr-substitution-bias} reports the diagnostic for France by
-income quintile, using Eurostat HICP and HBS data at COICOP level 2 from 2019
-onwards. The calculation corresponds to:
+income quintile, using the national-source French level-3 workflow from 2019
+onwards. Compared with the level-2 calculation, the results are very close in
+aggregate but the quintile-specific substitution-bias estimates are slightly
+larger, especially for the first three income quintiles.
 
 
 \begin{table}[htbp]
 \centering
-\caption{Upper-level substitution bias by income group, France, COICOP level 2}
+\caption{Upper-level substitution bias by income group, France, COICOP level 3}
 \label{tab:fr-substitution-bias}
 \begin{tabular}{lrrr}
 \hline
 Income group & Chained Laspeyres growth & Chained Tornqvist growth & Substitution bias \\
 \hline
 Total & 2.96 & 2.90 & 0.06 \\
-First quintile & 2.83 & 2.74 & 0.10 \\
-Second quintile & 2.94 & 2.85 & 0.10 \\
-Third quintile & 2.98 & 2.90 & 0.09 \\
-Fourth quintile & 3.01 & 2.93 & 0.08 \\
-Fifth quintile & 2.99 & 2.92 & 0.07 \\
+First quintile & 2.96 & 2.84 & 0.11 \\
+Second quintile & 2.95 & 2.83 & 0.12 \\
+Third quintile & 2.95 & 2.84 & 0.11 \\
+Fourth quintile & 2.90 & 2.80 & 0.10 \\
+Fifth quintile & 2.91 & 2.82 & 0.09 \\
 \hline
 \end{tabular}
 \begin{minipage}{0.9\textwidth}
 \footnotesize
 \emph{Notes:} Growth rates and substitution-bias estimates are expressed in
-annualized percentage points over the selected sample window. The chained
-Laspeyres index follows the HICP-style aggregation with annual weights. The
-chained Tornqvist index uses previous-year and current-year category weights in
-the upper-level aggregation.
+annualized percentage points over the selected sample window. The calculation
+uses the French level-3 INSEE workflow with income quintiles obtained from
+adjacent standard-of-living deciles.
 \end{minipage}
 \end{table}
 
