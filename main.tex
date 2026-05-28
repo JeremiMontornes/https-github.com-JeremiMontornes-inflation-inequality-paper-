@@ -960,6 +960,85 @@ classification. We therefore use the harmonised Eurostat HBS residence-area
 table for Italy, which distinguishes rural areas, towns and suburbs, and
 cities.
 
+\subsection{Latent income-score extension}
+\label{sec:app-italy-latent-score}
+
+As a robustness and possible extension, one can use the household-level
+characteristics available in the Italian HBS public-use files to estimate
+probabilistic latent income groups. This approach does not require 2005
+microdata. The 2005 Eurostat income-quintile baskets are used only as an
+aggregate calibration target, while the 2015 and 2020 Istat microdata provide
+the household characteristics and expenditure patterns.
+
+For each household $i$ in target year $y$, let $X_{i,y}$ denote observed
+characteristics such as household size, age and education of the reference
+person, labour-market status, occupation, housing tenure, housing surface,
+number of rooms, ownership of durable goods, internet access, region,
+macro-region, and subjective economic-situation variables. A latent
+socio-economic score is defined as:
+
+\begin{equation}
+z_{i,y} = X_{i,y}\beta_y .
+\end{equation}
+
+Let $r_{i,y}(\beta_y)$ be the weighted rank of household $i$ in the target-year
+distribution of this score. The probability that household $i$ belongs to
+latent income group $g \in \{1,\ldots,5\}$ is:
+
+\begin{equation}
+p_{i,g,y}(\beta_y)
+=
+\frac{
+\exp\{-\tau [r_{i,y}(\beta_y)-m_g]^2\}
+}{
+\sum_{h=1}^{5}\exp\{-\tau [r_{i,y}(\beta_y)-m_h]^2\}
+},
+\end{equation}
+
+where $m_g \in \{0.1,0.3,0.5,0.7,0.9\}$ is the centre of quintile $g$ and
+$\tau$ governs the sharpness of the probabilistic assignment. This soft
+assignment avoids forcing households close to a quintile boundary into a single
+group with probability one.
+
+For COICOP division $j$, the probabilistic expenditure share of group $g$ in
+target year $y$ is:
+
+\begin{equation}
+\widehat s_{j,g,y}(\beta_y)
+=
+\frac{
+\sum_i w_{i,y} p_{i,g,y}(\beta_y) e_{i,j,y}
+}{
+\sum_k \sum_i w_{i,y} p_{i,g,y}(\beta_y) e_{i,k,y}
+},
+\end{equation}
+
+where $w_{i,y}$ is the household survey weight and $e_{i,j,y}$ is household
+expenditure on product division $j$. The score parameters are calibrated at the
+aggregate level by matching the target-year probabilistic baskets to the
+observed 2005 Eurostat income-quintile gradient:
+
+\begin{equation}
+\widehat\beta_y
+=
+\arg\min_{\beta_y}
+\sum_{g=1}^{5}\sum_j
+\left[
+\widehat s_{j,g,y}(\beta_y)
+-
+s^{Eurostat}_{j,g,2005}
+\right]^2
++ \lambda \|\beta_y\|^2 .
+\end{equation}
+
+This method uses individual and household characteristics in the 2015 and 2020
+Italian HBS files, but the calibration remains aggregate because the 2005
+Italian HBS microdata are not available in the workflow. The resulting groups
+should therefore be interpreted as latent income groups rather than observed
+income quintiles. Compared with the simpler aggregate projection above, the
+score model allows changes in the composition of households and their observed
+expenditure patterns in 2015 and 2020 to affect the estimated baskets.
+
 \newpage
 
 \section{Contribution to inflation}
