@@ -172,7 +172,7 @@ Figure 1 illustrates the developments across different HICP components in the eu
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
 \centering
-\caption{Inflation developments (Euro area, in \%}
+\caption{Inflation developments (Euro area, in \%)}
 \includegraphics[scale=0.6]{fig/fig_EA_2014_2026_hicp_components.png}
 \label{fig:hicp}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
@@ -197,11 +197,14 @@ HBS which are generally collected every five years. The most recent wave of the 
 \begin{figure}[!ht]
 \centering
 \caption{Consumption baskets by income quintiles (euro area, in \% of total expenditures)}
-\includegraphics[scale=0.5]{fig/fig_EA_2020_income_consumption_baskets.png}
+\includegraphics[width=0.86\textwidth,height=0.36\textheight,keepaspectratio]{fig/fig_EA_2015_income_consumption_baskets.png}
 \label{fig:hbs}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: Structure of consumption expenditure.
-Source: Eurostat HBS w2010, Istat for Italy, authors' calculation}
+\caption*{Notes: Structure of consumption expenditure by income quintile.
+The euro-area aggregate is computed as the unweighted average of available
+country-level HBS expenditure shares. Italy is taken from the Eurostat HBS
+income-quintile table.\\
+Source: Eurostat HBS 2015, authors' calculation}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -252,8 +255,6 @@ expenditure for all households. The group-specific product weight is then:
 \begin{equation}
 \omega_{j,g,y}
 =
-100
-\times
 \frac{
 \omega^{HICP}_{j,y}
 \cdot
@@ -280,16 +281,16 @@ The HBS correction alone gives adjusted, unnormalized weights:
 c^{HBS}_{j,g,y'}.
 \end{equation}
 
-These adjusted weights do not necessarily sum to 100, because the correction
+These adjusted weights do not necessarily sum to one, because the correction
 factor is a product-by-product ratio. It indicates whether group $g$ spends
 relatively more or less on product $j$ than all households, but the positive
 and negative deviations across products are not constrained to offset exactly.
 The denominator is therefore the normalization term. It rescales the adjusted
 weights so that each household group is assigned a complete basket whose
-product weights sum to 100:
+product weights sum to one:
 
 \begin{equation}
-\sum_{j \in \mathcal{J}_y} \omega_{j,g,y} = 100.
+\sum_{j \in \mathcal{J}_y} \omega_{j,g,y} = 1.
 \end{equation}
 
 Thus, differences in inflation across household groups come from differences
@@ -317,25 +318,22 @@ estimate the missing data.
 Let $p_{j,y,m}$ denote the HICP price index of product category $j$ in month
 $m$ of year $y$. Let $p_{j,y,0}$ denote the price reference used for the HICP
 weight year $y$; in the chained annual calculation this corresponds to the
-December price index of the previous year. The within-year price relative of
-product $j$ is:
-
-\begin{equation}
-r_{j,y,m}
-=
-\frac{p_{j,y,m}}{p_{j,y,0}}.
-\end{equation}
-
-The group-specific within-year price index combines product price relatives
-with the group-specific weights defined above:
+December price index of the previous year. Eurostat defines the HICP as a
+chain-linked Laspeyres-type index: item indices are first unchained within the
+weight year, aggregated with annual expenditure weights, and then chained
+again.\footnote{See the \texttt{hicp} package vignette, which implements the
+Eurostat HICP aggregation formulas:
+\url{https://cran.r-project.org/web/packages/hicp/vignettes/hicp_intro.html}.}
+The group-specific within-year price index therefore combines unchained product
+indices with the group-specific weights defined above:
 
 \begin{equation}
 P_{g,y,m}
 =
 \sum_{j \in \mathcal{J}_y}
-\frac{\omega_{j,g,y}}{100}
+\omega_{j,g,y}
 \cdot
-r_{j,y,m}.
+\frac{p_{j,y,m}}{p_{j,y,0}}.
 \end{equation}
 
 The chained price index for household group $g$, denoted $I_{g,y,m}$, is then
@@ -358,47 +356,12 @@ monthly chained price index for group $g$.
 
 %HICP weights, adjusted each year. In the calculations for France, the ‘national’ CPI is used for comparison with INSEE publications. HICP weights are used to ‘normalise’ consumption structures so that aggregation of the indices by category produces the HICP.
 
-\subsection*{Contributions to Inflation}
-
-The contribution of product $j$ to inflation for household group $g$ is
-computed using the product price movement and the group-specific product
-weight. Because the price index is chained annually, the contribution in month
-$m$ of year $y$ uses the relevant current and previous HICP weight years:
-
-\begin{equation}
-\begin{split} 
-\text{Contrib}_{j,g,y,m}
-=
-\frac{I_{g,y-1,12}}{I_{g,y-1,m}}
-\times
-\omega_{j,g,y-1}
-\times
-\left(
-\frac{p_{j,y,m} - p_{j,y-1,12}}{p_{j,y-1,12}}
-\right)
-+ \\
-\frac{I_{g,y-2,12}}{I_{g,y-1,m}}
-\times
-\omega_{j,g,y-2}
-\times
-\left(
-\frac{p_{j,y-1,12} - p_{j,y-1,m}}{p_{j,y-2,12}}
-\right).
-\end{split}
-\end{equation}\\
-
-where $p_{j,y,m}$ is the price index of product $j$ in month $m$ of year $y$,
-$I_{g,y,m}$ is the chained price index for group $g$, and
-$\omega_{j,g,y}$ is the group-specific HICP weight of product $j$ in weight
-year $y$.
-
-This approach ensures the consistency of inflation measures across different household categories with the aggregate inflation rate. This is essential for meaningful interpretation and comparison of inflation across various categories.
-
 \subsection*{Inflation and inflation gap}
 
 
 Inflation in a given month for each household group $g$ results from the sum
-of product-level contributions:
+of product-level contributions, defined in
+Appendix~\ref{sec:app-contributions}:
 
 \begin{equation} 
 \pi_{g,y,m}
@@ -456,6 +419,15 @@ This section present our main results. We  focus on the recent inflation episode
 
 
 %In 2022, the contributions of different product categories to the inflation gap (between low and high-income households) tended to cancel each other out (e.g., energy prices vs. services). However, in 2023, rising food prices disproportionately affected low-income households, increasing the inflation gap (Figure 3).
+
+Figure~\ref{fig:ea20_short_run_income} shows that the post-Covid inflation
+surge did not translate into a marked inflation inequality by income quintile
+at the euro-area aggregate level. Inflation rates for the first and fifth
+income quintiles move closely together throughout the 2020--2026 period. Energy
+and food shocks raised headline inflation sharply, but their effects on the
+relative inflation exposure of low- and high-income households largely offset
+once national consumption structures and country-level price dynamics are
+combined at the euro-area level.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
@@ -515,7 +487,16 @@ Sources: Eurostat, authors' calculation}
 \subsubsection{Long-Run Inflation Inequality}
 
 
-Figure 2 depicts the long-run inflation inequality in the euro area by income quintile, showcasing the price indices from January 2000 to April 2026. The long-run evolution of price indices by income quintile reveals persistent but relatively modest divergences over time. The cumulative effect of these differences, while not dramatic in any given year, suggests a structural pattern of different inflation exposure across income groups. This pattern became more pronounced during the 2021-2023 inflation surge, though the magnitude remained contained relative to historical standards.
+Figure~\ref{fig:ea20_long_run_income} depicts long-run inflation inequality in
+the euro area by income quintile, showing price indices from January 2000 to
+April 2026. The long-run evolution of price indices by income quintile reveals
+persistent but modest divergences over time. The post-Covid inflation episode
+is visible in the common increase in price levels after 2021, but it does not
+generate a large cumulative inflation gap between the first and fifth income
+quintiles at the euro-area aggregate level. This suggests that, once country
+aggregation is taken into account, the recent inflation surge was primarily a
+broad-based price-level shock rather than a strong source of income-based
+inflation inequality for the euro area as a whole.
 
 
 
@@ -812,7 +793,21 @@ While we calculate of inflation rates for different household categories, it rem
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \centering
-\caption{A1. Price indices by household group, France, COICOP level 3}
+\caption{A1. Essential and discretionary expenditures by income quintile, euro area}
+\label{fig:app-ea-essentials-discretionary}
+\includegraphics[width=0.88\textwidth,height=0.34\textheight,keepaspectratio]{fig/fig_EA_2015_income_essentials_discretionary_baskets.png}
+\vspace{8pt}
+\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
+\caption*{Notes: The figure partitions COICOP expenditure shares into essential expenditures and discretionary/transport expenditures. The euro-area aggregate is computed as the unweighted average of available country-level HBS expenditure shares.\\
+Source: Eurostat HBS 2015, authors' calculation.}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\centering
+\caption{A2. Price indices by household group, France, COICOP level 3}
 \label{fig:app-fr-level3-price-indices}
 \begin{subfigure}{0.88\textwidth}
   \centering
@@ -846,7 +841,7 @@ Sources: Eurostat HICP; INSEE HBS 2017; authors' calculation.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \centering
-\caption{A2. Inflation by household group, France, COICOP level 3}
+\caption{A3. Inflation by household group, France, COICOP level 3}
 \label{fig:app-fr-level3-inflation}
 \begin{subfigure}{0.88\textwidth}
   \centering
@@ -880,7 +875,7 @@ Sources: Eurostat HICP; INSEE HBS 2017; authors' calculation.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \centering
-\caption{A3. Contributions to inflation gaps, France, COICOP level 3}
+\caption{A4. Contributions to inflation gaps, France, COICOP level 3}
 \label{fig:app-fr-level3-contributions}
 \begin{subfigure}{0.88\textwidth}
   \centering
@@ -909,6 +904,48 @@ Sources: Eurostat HICP; INSEE HBS 2017; authors' calculation.}
 Sources: Eurostat HICP; INSEE HBS 2017; authors' calculation.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\section{Contribution to inflation}
+\label{sec:app-contributions}
+
+The contribution of product $j$ to inflation for household group $g$ is
+computed using the product price movement and the group-specific product
+weight. Because the price index is chained annually, the contribution in month
+$m$ of year $y$ uses the relevant current and previous HICP weight years:
+
+\begin{equation}
+\begin{split}
+\text{Contrib}_{j,g,y,m}
+=
+\frac{I_{g,y-1,12}}{I_{g,y-1,m}}
+\times
+\omega_{j,g,y-1}
+\times
+\left(
+\frac{p_{j,y,m} - p_{j,y-1,12}}{p_{j,y-1,12}}
+\right)
++ \\
+\frac{I_{g,y-2,12}}{I_{g,y-1,m}}
+\times
+\omega_{j,g,y-2}
+\times
+\left(
+\frac{p_{j,y-1,12} - p_{j,y-1,m}}{p_{j,y-2,12}}
+\right).
+\end{split}
+\end{equation}
+
+where $p_{j,y,m}$ is the price index of product $j$ in month $m$ of year $y$,
+$I_{g,y,m}$ is the chained price index for group $g$, and
+$\omega_{j,g,y}$ is the group-specific HICP weight of product $j$ in weight
+year $y$.
+
+This approach keeps product-level contributions consistent with the chained
+inflation measures used for each household group. It is therefore useful for
+interpreting which product categories drive the inflation rate and the
+inflation gap between groups.
+
 \newpage
 
 \section{Validation Tests}
