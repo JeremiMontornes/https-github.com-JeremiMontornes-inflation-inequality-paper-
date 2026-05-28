@@ -230,51 +230,129 @@ HBS contains many variables according to which consumption can be broken down. T
 
 \subsection*{Weights}
 
-The initial step involves calculating the ratio between the expenditure for each income quintile of this product $j$ and that observed for all households as defined by the HBS at year $y'$. This term "corrects" the annual CPI weight corresponding to product $j$, denoted $w^y_{\text{CPI},j}$, therefore 
+Let $\omega^{HICP}_{j,y}$ denote the official annual HICP weight of product
+category $j$ in weight year $y$. Let $g$ denote a household group, such as an
+income quintile, an age group, or a residence-area group. The HBS correction
+factor is defined as:
 
 \begin{equation}
-w^y_{j, \text{quintile}} = w^y_{\text{CPI},j} \times \frac{\text{HBS}^{y'}_{j, \text{quintile}}}{\text{HBS}^{y'}_{j, \text{total}}}
+c^{HBS}_{j,g,y'}
+=
+\frac{
+E^{HBS}_{j,g,y'}
+}{
+E^{HBS}_{j,\mathrm{all},y'}
+},
 \end{equation}
 
-
-
-% Weighting formula
-\begin{equation}
-w^{y}_{j,i} = W^{y}_{CPI,j} \times \frac{W^{\text{HBS year}}_{j,i}}{W^{\text{HBS year}}_{j,total}}
-\end{equation}
-
-% Price index formula
-\begin{equation}
-P^{0t,mt}_{i} = \sum_{j} \frac{p^{mt}_j}{p^{0t}_j} \cdot W^{0t}_{j,i}
-\end{equation}
+where $E^{HBS}_{j,g,y'}$ is HBS expenditure on product category $j$ by group
+$g$ in HBS wave $y'$, and $E^{HBS}_{j,\mathrm{all},y'}$ is the corresponding
+expenditure for all households. The group-specific product weight is then:
 
 \begin{equation}
-ChI^{b,mt}_{quintile} 
-= \left( P^{b,12(0)}_{quintile} \cdot P^{0(1),12(1)}_{quintile} \cdot \dots \cdot P^{0(t-1),12(t-1)}_{quintile} \right) 
-\cdot P^{0t,mt}_{quintile} 
-= ChI^{b,12(t-1)}_{quintile} \cdot P^{0t,mt}_{quintile}
+\omega_{j,g,y}
+=
+100
+\times
+\frac{
+\omega^{HICP}_{j,y}
+\cdot
+c^{HBS}_{j,g,y'}
+}{
+\sum_{k \in \mathcal{J}_y}
+\omega^{HICP}_{k,y}
+\cdot
+c^{HBS}_{k,g,y'_k}
+},
 \end{equation}
 
+where $\mathcal{J}_y$ is the set of product categories included in the HICP
+weighting structure in year $y$, and $y'_k$ is the HBS wave matched to product
+category $k$ and HICP weight year $y$.
 
+The HBS correction alone gives adjusted, unnormalized weights:
 
 \begin{equation}
-\frac{ChI^{b,mt}_{quintile}}{ChI^{b,m(t-1)}_{quintile}} 
-= \frac{P^{0(t-1),12(t-1)}_{quintile}}{P^{0(t-1),m(t-1)}_{quintile}} 
-\cdot P^{0(t),m(t)}_{quintile} 
-= P^{m(t-1),12(t-1)}_{quintile} \cdot P^{0(t),m(t)}_{quintile}
+\widetilde{\omega}_{j,g,y}
+=
+\omega^{HICP}_{j,y}
+\cdot
+c^{HBS}_{j,g,y'}.
 \end{equation}
 
+These adjusted weights do not necessarily sum to 100, because the correction
+factor is a product-by-product ratio. It indicates whether group $g$ spends
+relatively more or less on product $j$ than all households, but the positive
+and negative deviations across products are not constrained to offset exactly.
+The denominator is therefore the normalization term. It rescales the adjusted
+weights so that each household group is assigned a complete basket whose
+product weights sum to 100:
 
+\begin{equation}
+\sum_{j \in \mathcal{J}_y} \omega_{j,g,y} = 100.
+\end{equation}
 
+Thus, differences in inflation across household groups come from differences
+in the composition of the basket across products, not from differences in the
+total size of the basket.
 
+The Household Budget Survey is conducted only once every five years. In
+contrast, the expenditure weights used in the construction of the HICP are
+updated annually. The year of the HBS data $y'$ and the HICP weight year $y$
+may therefore differ. To align the two sources, each HICP weight year $y$ is
+matched with the most recent HBS wave available at or before that year. If no
+earlier HBS wave is available, the earliest HBS wave is used.
 
+As a rule, the HICP data is available on Eurostat at a level of detail
+corresponding to the 5-digit COICOP classification. However, certain product
+categories lack price data for specific periods. For instance, early-year
+price data for medical consultation services ("062") is often unavailable. To
+address these gaps, missing price indices are estimated based on the price
+developments of their parent product categories. In the case of "062", the
+price movements of the broader "health services" category ("06") are used to
+estimate the missing data.
 
+\subsection*{Price indices and notation}
 
-After this correction, the weights are then renormalized to sum to 100 for each income quintile.
+Let $p_{j,y,m}$ denote the HICP price index of product category $j$ in month
+$m$ of year $y$. Let $p_{j,y,0}$ denote the price reference used for the HICP
+weight year $y$; in the chained annual calculation this corresponds to the
+December price index of the previous year. The within-year price relative of
+product $j$ is:
 
-As a rule, the HICP data is available on Eurostat at level of detail corresponding to the 5-digit COICOP classification. However, certain product categories (COICOP)  lack price data for specific time periods. For instance, early-year price data for medical consultation services ("062") is often unavailable. To address these gaps, missing price indices are estimated based on the price developments of their parent product categories. In the case of "062," the price movements of the broader "health services" category ("06") are used to estimate the missing data. 
+\begin{equation}
+r_{j,y,m}
+=
+\frac{p_{j,y,m}}{p_{j,y,0}}.
+\end{equation}
 
-The Household Budget Survey is conducted only once every five years. In contrast, the expenditure weights used in the construction of the HICP are adjusted yearly and using various sources of information. The year of the HBS data $y'$ and the year of the CPI weight $y$ may be different. HBS data are released every five years while the CPI are updated annually so the following rules are established to properly align the HBS data with the CPI: i) For a given CPI weight released in year $y$, we use the most recent HBS data $y'$ ii) If there is no HBS data at the same year or earlier than $y$, then we use the earliest HBS data available.
+The group-specific within-year price index combines product price relatives
+with the group-specific weights defined above:
+
+\begin{equation}
+P_{g,y,m}
+=
+\sum_{j \in \mathcal{J}_y}
+\frac{\omega_{j,g,y}}{100}
+\cdot
+r_{j,y,m}.
+\end{equation}
+
+The chained price index for household group $g$, denoted $I_{g,y,m}$, is then
+obtained by linking each within-year index to the previous December:
+
+\begin{equation}
+I_{g,y,m}
+=
+I_{g,y-1,12}
+\cdot
+P_{g,y,m}.
+\end{equation}
+
+This notation keeps the two objects distinct: $\omega_{j,g,y}$ is the annual
+group-specific HICP weight of product $j$, while $I_{g,y,m}$ is the resulting
+monthly chained price index for group $g$.
+
 
 %The HICP data is available on Eurostat at a minimum level of detail corresponding to the 2-digit COICOP classification.
 
@@ -282,33 +360,72 @@ The Household Budget Survey is conducted only once every five years. In contrast
 
 \subsection*{Contributions to Inflation}
 
-The  contribution of categories*product to inflation is computed by weighting the inflation rate of a product based on the difference in its relative importance within the total consumption of low- versus high-income households. The price index is chained, the contributions to inflation are defined using the following formula:
+The contribution of product $j$ to inflation for household group $g$ is
+computed using the product price movement and the group-specific product
+weight. Because the price index is chained annually, the contribution in month
+$m$ of year $y$ uses the relevant current and previous HICP weight years:
 
 \begin{equation}
 \begin{split} 
-\text{Contrib}^{y,m}_{j,\text{quintile}} = \frac{p^{y-1,12}}{p^{y-1,m}}\times w^{y-1}_{j,\text{quintile}} \times \bigg(\frac{p^{y,m}_j - p^{y-1,12}_j}{p^{y-1,12}_j} \bigg) + \\
-\frac{p^{y-2,12}}{p^{y-1,m}} \times w^{y-2}_{j,\text{quintile}} \times \bigg(\frac{p^{y-1,12}_j - p^{y-1,m}_j}{p^{y-2,12}_j} \bigg)
+\text{Contrib}_{j,g,y,m}
+=
+\frac{I_{g,y-1,12}}{I_{g,y-1,m}}
+\times
+\omega_{j,g,y-1}
+\times
+\left(
+\frac{p_{j,y,m} - p_{j,y-1,12}}{p_{j,y-1,12}}
+\right)
++ \\
+\frac{I_{g,y-2,12}}{I_{g,y-1,m}}
+\times
+\omega_{j,g,y-2}
+\times
+\left(
+\frac{p_{j,y-1,12} - p_{j,y-1,m}}{p_{j,y-2,12}}
+\right).
 \end{split}
 \end{equation}\\
 
-where $p^{y,m}_j$ is the price index of product $j$ in month $m$ of year $y$ and  $p^{y,m}$ is the overall price index in month $m$ of year $y$
+where $p_{j,y,m}$ is the price index of product $j$ in month $m$ of year $y$,
+$I_{g,y,m}$ is the chained price index for group $g$, and
+$\omega_{j,g,y}$ is the group-specific HICP weight of product $j$ in weight
+year $y$.
 
 This approach ensures the consistency of inflation measures across different household categories with the aggregate inflation rate. This is essential for meaningful interpretation and comparison of inflation across various categories.
 
 \subsection*{Inflation and inflation gap}
 
 
-Inflation in a given month for each quintile results from the sum of the contributions of product $j$.
+Inflation in a given month for each household group $g$ results from the sum
+of product-level contributions:
 
 \begin{equation} 
-\pi^{y,m}_\text{quintile} = \sum_j \text{Contrib}^{y,m}_{j,\text{quintile}}
+\pi_{g,y,m}
+=
+\sum_{j \in \mathcal{J}_y}
+\text{Contrib}_{j,g,y,m}.
 \end{equation} 
 
 
-The inflation gap, the usual indicator of inflation inequalities is then defined as an inter-quintile range
+The inflation gap between two household groups $g_1$ and $g_2$ is defined as:
 
 \begin{equation} 
-\text{IQR}^{y,m} = \pi^{y,m}_{quintile1} - \pi^{y,m}_{quintile5}
+\Delta\pi_{g_1,g_2,y,m}
+=
+\pi_{g_1,y,m}
+-
+\pi_{g_2,y,m}.
+\end{equation}
+
+For income quintiles, the inter-quintile inflation gap is:
+
+\begin{equation} 
+\text{IQR}_{y,m}
+=
+\pi_{Q1,y,m}
+-
+\pi_{Q5,y,m}.
 \end{equation} \\
 
 %In one hand,at household category level (and not at the individual level) we ignore intra-group heterogeneity. On the other hand, this approach flully covers the household consumption basket and allows for cross-country comparisons. 
@@ -792,62 +909,6 @@ Sources: Eurostat HICP; INSEE HBS 2017; authors' calculation.}
 Sources: Eurostat HICP; INSEE HBS 2017; authors' calculation.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-
-\section{Derivation of group-specific product weights}
-
-Let $\omega^{HICP}_{j,y}$ denote the official annual HICP weight of product
-category $j$ in weight year $y$. Let $g$ denote a household group, such as an
-income quintile, an age group, or a residence-area group. The HBS correction
-factor is defined as:
-
-\[
-c^{HBS}_{j,g,y'}
-=
-\frac{
-E^{HBS}_{j,g,y'}
-}{
-E^{HBS}_{j,\mathrm{all},y'}
-},
-\]
-
-where $E^{HBS}_{j,g,y'}$ is HBS expenditure on product category $j$ by group
-$g$ in HBS wave $y'$, and $E^{HBS}_{j,\mathrm{all},y'}$ is the corresponding
-expenditure for all households.
-
-The group-specific product weight is then:
-
-\[
-\omega_{j,g,y}
-=
-\frac{
-\omega^{HICP}_{j,y}
-\cdot
-c^{HBS}_{j,g,y'}
-}{
-\sum_{k \in \mathcal{J}_y}
-\omega^{HICP}_{k,y}
-\cdot
-c^{HBS}_{k,g,y'_k}
-},
-\]
-
-where $\mathcal{J}_y$ is the set of product categories included in the HICP
-weighting structure in year $y$, and $y'_k$ is the HBS wave matched to product
-category $k$ and HICP weight year $y$.
-
-In words, each official HICP product weight is multiplied by an HBS correction
-factor measuring the relative expenditure intensity of group $g$ for that
-product. The denominator is the normalization term: it rescales the adjusted
-weights so that the product weights sum to one for each group and weight year:
-
-\[
-\sum_{j \in \mathcal{J}_y} \omega_{j,g,y} = 1.
-\]
-
-When weights are reported in HICP weight points rather than shares, the
-normalized weights are multiplied by 100.
-
 \newpage
 
 \section{Validation Tests}
