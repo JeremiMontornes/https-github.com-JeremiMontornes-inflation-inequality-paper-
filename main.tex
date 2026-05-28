@@ -794,6 +794,62 @@ Sources: Eurostat HICP; INSEE HBS 2017; authors' calculation.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
+\section{Derivation of group-specific product weights}
+
+Let $\omega^{HICP}_{j,y}$ denote the official annual HICP weight of product
+category $j$ in weight year $y$. Let $g$ denote a household group, such as an
+income quintile, an age group, or a residence-area group. The HBS correction
+factor is defined as:
+
+\[
+c^{HBS}_{j,g,y'}
+=
+\frac{
+E^{HBS}_{j,g,y'}
+}{
+E^{HBS}_{j,\mathrm{all},y'}
+},
+\]
+
+where $E^{HBS}_{j,g,y'}$ is HBS expenditure on product category $j$ by group
+$g$ in HBS wave $y'$, and $E^{HBS}_{j,\mathrm{all},y'}$ is the corresponding
+expenditure for all households.
+
+The group-specific product weight is then:
+
+\[
+\omega_{j,g,y}
+=
+\frac{
+\omega^{HICP}_{j,y}
+\cdot
+c^{HBS}_{j,g,y'}
+}{
+\sum_{k \in \mathcal{J}_y}
+\omega^{HICP}_{k,y}
+\cdot
+c^{HBS}_{k,g,y'_k}
+},
+\]
+
+where $\mathcal{J}_y$ is the set of product categories included in the HICP
+weighting structure in year $y$, and $y'_k$ is the HBS wave matched to product
+category $k$ and HICP weight year $y$.
+
+In words, each official HICP product weight is multiplied by an HBS correction
+factor measuring the relative expenditure intensity of group $g$ for that
+product. The denominator is the normalization term: it rescales the adjusted
+weights so that the product weights sum to one for each group and weight year:
+
+\[
+\sum_{j \in \mathcal{J}_y} \omega_{j,g,y} = 1.
+\]
+
+When weights are reported in HICP weight points rather than shares, the
+normalized weights are multiplied by 100.
+
+\newpage
+
 \section{Validation Tests}
 
 This appendix reports validation checks for the inflation series recalculated with the package methodology. The objective is not to replicate the official aggregate index mechanically: household-group indices are built by combining official item prices and weights with group-specific expenditure shares, and the group average is then compared with the official all-items series. The validation is therefore a diagnostic on the size and time profile of the residual difference between the package recalculation and the published aggregate.
