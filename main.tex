@@ -908,6 +908,60 @@ Sources: Eurostat HICP; INSEE HBS 2017; authors' calculation.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
+\section{Italy HBS inputs}
+\label{sec:app-italy-hbs}
+
+Italy requires a specific treatment for some household-group HBS inputs. The
+Eurostat harmonised HBS table reports income-quintile consumption baskets for
+Italy in 2005, but not complete income-quintile baskets for the 2015 and 2020
+waves. We therefore construct estimated 2015 and 2020 income-quintile baskets
+by preserving the relative expenditure intensities observed across income
+quintiles in 2005 and applying them to the Italian all-households HBS basket in
+the target year.
+
+Let $E_{j,g,2005}$ denote observed HBS expenditure on COICOP item $j$ for
+income quintile $g$ in 2005. Since income quintiles are equal-population
+groups, the 2005 all-households reference is approximated by the simple mean
+across quintiles:
+
+\begin{equation}
+\bar E_{j,2005} =
+\frac{1}{5}\sum_{g=1}^{5} E_{j,g,2005}.
+\end{equation}
+
+The relative expenditure intensity of quintile $g$ for item $j$ is:
+
+\begin{equation}
+c_{j,g,2005} =
+\frac{E_{j,g,2005}}{\bar E_{j,2005}}.
+\end{equation}
+
+For a target year $y \in \{2015,2020\}$, the estimated income-quintile
+expenditure is:
+
+\begin{equation}
+\widehat E_{j,g,y} =
+c_{j,g,2005} E_{j,\mathrm{all},y},
+\end{equation}
+
+where $E_{j,\mathrm{all},y}$ is the Italian all-households HBS expenditure in
+the target wave. The resulting baskets are then normalised within each
+quintile and year before being combined with HICP weights. This procedure
+updates the aggregate Italian consumption structure to the 2015 and 2020 HBS
+waves while keeping the cross-quintile relative gradient observed in 2005.
+
+For age groups, the Italian Istat public-use HBS files for 2015 and 2020 are
+read directly from the original files, using the ECOICOP v1 expenditure
+aggregates available in the microdata. These files provide direct division-level
+expenditure variables, which are used to build age-group HBS inputs by the age
+of the household reference person. For residence-area groups, the Istat
+public-use files used here do not expose the Eurostat degree-of-urbanisation
+classification. We therefore use the harmonised Eurostat HBS residence-area
+table for Italy, which distinguishes rural areas, towns and suburbs, and
+cities.
+
+\newpage
+
 \section{Contribution to inflation}
 \label{sec:app-contributions}
 
