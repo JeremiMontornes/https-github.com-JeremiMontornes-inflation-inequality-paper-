@@ -915,40 +915,10 @@ Italy requires a specific treatment for some household-group HBS inputs. The
 Eurostat harmonised HBS table reports income-quintile consumption baskets for
 Italy in 2005, but not complete income-quintile baskets for the 2015 and 2020
 waves. We therefore construct estimated 2015 and 2020 income-quintile baskets
-by preserving the relative expenditure intensities observed across income
-quintiles in 2005 and applying them to the Italian all-households HBS basket in
-the target year.
-
-Let $E_{j,g,2005}$ denote observed HBS expenditure on COICOP item $j$ for
-income quintile $g$ in 2005. Since income quintiles are equal-population
-groups, the 2005 all-households reference is approximated by the simple mean
-across quintiles:
-
-\begin{equation}
-\bar E_{j,2005} =
-\frac{1}{5}\sum_{g=1}^{5} E_{j,g,2005}.
-\end{equation}
-
-The relative expenditure intensity of quintile $g$ for item $j$ is:
-
-\begin{equation}
-c_{j,g,2005} =
-\frac{E_{j,g,2005}}{\bar E_{j,2005}}.
-\end{equation}
-
-For a target year $y \in \{2015,2020\}$, the estimated income-quintile
-expenditure is:
-
-\begin{equation}
-\widehat E_{j,g,y} =
-c_{j,g,2005} E_{j,\mathrm{all},y},
-\end{equation}
-
-where $E_{j,\mathrm{all},y}$ is the Italian all-households HBS expenditure in
-the target wave. The resulting baskets are then normalised within each
-quintile and year before being combined with HICP weights. This procedure
-updates the aggregate Italian consumption structure to the 2015 and 2020 HBS
-waves while keeping the cross-quintile relative gradient observed in 2005.
+with a latent income-score model. The 2005 Eurostat income-quintile baskets are
+used only as an aggregate calibration target; the household-level 2015 and 2020
+Istat HBS public-use files provide the characteristics and expenditure patterns
+used to form the target-year groups.
 
 For age groups, the Italian Istat public-use HBS files for 2015 and 2020 are
 read directly from the original files, using the ECOICOP v1 expenditure
@@ -959,16 +929,6 @@ public-use files used here do not expose the Eurostat degree-of-urbanisation
 classification. We therefore use the harmonised Eurostat HBS residence-area
 table for Italy, which distinguishes rural areas, towns and suburbs, and
 cities.
-
-\subsection{Latent income-score extension}
-\label{sec:app-italy-latent-score}
-
-As a robustness and possible extension, one can use the household-level
-characteristics available in the Italian HBS public-use files to estimate
-probabilistic latent income groups. This approach does not require 2005
-microdata. The 2005 Eurostat income-quintile baskets are used only as an
-aggregate calibration target, while the 2015 and 2020 Istat microdata provide
-the household characteristics and expenditure patterns.
 
 For each household $i$ in target year $y$, let $X_{i,y}$ denote observed
 characteristics such as household size, age and education of the reference
@@ -1035,9 +995,10 @@ This method uses individual and household characteristics in the 2015 and 2020
 Italian HBS files, but the calibration remains aggregate because the 2005
 Italian HBS microdata are not available in the workflow. The resulting groups
 should therefore be interpreted as latent income groups rather than observed
-income quintiles. Compared with the simpler aggregate projection above, the
-score model allows changes in the composition of households and their observed
-expenditure patterns in 2015 and 2020 to affect the estimated baskets.
+income quintiles. The score model allows changes in the composition of
+households and their observed expenditure patterns in 2015 and 2020 to affect
+the estimated baskets, while anchoring the gradient across groups on the
+observed 2005 income-quintile HBS structure.
 
 \newpage
 
