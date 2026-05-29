@@ -648,43 +648,6 @@ In the case of France, we do not estimate the underlying market prices, we rely 
 
 %We then scale the additional price growth of gas and electricity by their respective weights in the HICP to calculate the additional headline inflation shocks in the absence of energy price policies (Figure 8).
 
-We compare the actual and counterfactual inflation rates in France, to assess the impact of fiscal policies on inflation inequalities. The graph illustrates how targeted fiscal measures, such as the 'chèque énergie', have significantly mitigated inflation, particularly for lower-income households. The counterfactual scenario, which assumes unchanged fiscal policy, highlights the potential for higher inflation in the absence of these interventions.
-
-Figure 8 simulates a counterfactual index for fuel between April 2022 and February 2023, with the hypothesis that without government intervention, the price index for petrol would have increased by 40\% on April 2022 and remained the same throughout the inflation period.
-
-[...]
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!ht]
-\centering
-\caption{ Inflation in France: Actual and counterfactual (in \%)}
-\label{fig:conterfactual}
-\includegraphics[scale=0.6]{fig/fig_FR_2019_2024_counterfactual_inflation.png}
-\vspace{20pt} 
-\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Note: .
-Sources: Eurostat, authors' calculation}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Figure~\ref{fig:fr-inflation-burden-level3} reports the cumulative inflation burden by income quintile in France since 2019, using the level-3 income-group calculation.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!ht]
-\centering
-\caption{Inflation burden in France by income quintile, COICOP level 3}
-\label{fig:fr-inflation-burden-level3}
-\includegraphics[width=0.75\textwidth]{fig/fig_FR_2019_2026_income_inflation_burden_level3_Q1_Q5.png}
-\vspace{8pt}
-\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Note: Cumulative inflation burden by income quintile since 2019.\\
-Sources: INSEE, Eurostat, authors' calculation.}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-
-
 \subsection{Spain}
 
 %The increase in VAT on food in Spain on 1st October was almost immediate and symmetrical to the reduction that took place almost 2 years ago. The second stage, before the return to normal rates, is scheduled for 1st January 2025.
@@ -713,6 +676,36 @@ For Spain, the indicative market prices for electricity come from IMF staff esti
 %Fiscal policy can best contribute to mitigating the negative impact of inflation on households through targeted and temporary support measures (tariff protection, increases in pensions and social benefits).
 
 % These measures must be temporary; fiscal policy is not intended to combat inflation, particularly in indebted countries. Monetary and fiscal policies each have a role to play in addressing the consequences of high inflation. In the long run, only monetary policy is effective in bringing inflation back to its target.
+
+\subsection{Inflation Burden}
+
+Inflation gaps measure differences in the growth rate of household-group price
+indices, but they do not directly express the cost of inflation relative to
+household resources. To complement the group-specific inflation rate
+$\pi_{g,y,m}$ defined above, we compute an inflation burden indicator by scaling
+inflation by the consumption-to-income ratio of group $g$. Let $c^Y_g$ denote
+consumption as a percentage of disposable income in the latest annual source
+year $Y$ available before year $y$. The burden is defined as:
+\[
+B_{g,y,m} = \pi_{g,y,m}\frac{c^Y_g}{100},
+\]
+and is expressed in percentage points of disposable income. Hence, two groups
+with similar inflation rates may face different burdens when their propensities
+to consume out of income differ. The figure reports this indicator for France
+by income quintile, using level-3 consumption baskets.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!ht]
+\centering
+\caption{Inflation burden in France by income quintile (in \% of revenues)}
+\label{fig:fr-inflation-burden-level3}
+\includegraphics[width=0.75\textwidth]{fig/fig_FR_2019_2026_income_inflation_burden_level3_Q1_Q5.png}
+\vspace{8pt}
+\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
+\caption*{Sources: Eurostat HICP, EU-SILC, INSEE HBS, author's calculations.}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 
 \section{Conclusion}
 
