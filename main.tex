@@ -937,15 +937,15 @@ aggregates available in the microdata. These files provide direct division-level
 expenditure variables, which are used to build age-group HBS inputs by the age
 of the household reference person. For residence-area groups, the Istat
 public-use files used here do not expose the Eurostat degree-of-urbanisation
-classification. We therefore use the harmonised Eurostat HBS residence-area
-table for Italy, which distinguishes rural areas, towns and suburbs, and
-cities.
+classification. We therefore leave the residence-area totals blank in this
+appendix table rather than infer them from basket shares or from an imperfect
+housing-type proxy.
 
 For each household $i$ in target year $y$, let $X_{i,y}$ denote observed
-characteristics such as household size, age and education of the reference
-person, labour-market status, occupation, housing tenure, housing surface,
-number of rooms, ownership of durable goods, internet access, region,
-macro-region, and subjective economic-situation variables. A latent
+characteristics such as age and education of the reference person,
+labour-market status, occupation, housing tenure, housing surface, ownership of
+durable goods, internet access, subjective economic resources and situation,
+the absolute-poverty indicator, and household consumption level. A latent
 socio-economic score is defined as:
 
 \begin{equation}
@@ -1008,8 +1008,26 @@ Italian HBS microdata are not available in the workflow. The resulting groups
 should therefore be interpreted as latent income groups rather than observed
 income quintiles. The score model allows changes in the composition of
 households and their observed expenditure patterns in 2015 and 2020 to affect
-the estimated baskets, while anchoring the gradient across groups on the
-observed 2005 income-quintile HBS structure.
+the estimated level-2 COICOP baskets, while anchoring the broad income gradient
+on the observed 2005 income-quintile HBS structure.
+
+Table~\ref{tab:it-hbs-all-products} reports the aggregate all-products
+consumption shares used to document the available Italian HBS inputs. For age
+groups, the entries are true survey-weighted shares of annual household
+consumption in the target year, computed as group consumption divided by total
+household consumption. For income groups, the 2015 and 2020 groups are latent
+rather than directly observed survey groups; their aggregate shares are
+therefore kept anchored to the 2005 Eurostat income-quintile distribution. This
+normalisation fixes the size of the latent income groups in the descriptive
+table, but it does not freeze their baskets: the level-2 COICOP composition used
+by the inflation calculations can vary across HBS waves and across latent
+groups. Table~\ref{tab:it-hbs-latent-income-coefficients} reports the
+coefficients of the latent income-score model used to construct these
+target-year baskets.
+
+\input{tables/tab_IT_hbs_all_products_by_group}
+
+\input{tables/tab_IT_hbs_latent_income_coefficients}
 
 \newpage
 
