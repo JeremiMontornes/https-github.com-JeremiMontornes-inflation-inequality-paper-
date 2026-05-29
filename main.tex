@@ -85,8 +85,8 @@
 
 
 % Title information
-\title{Inflation Inequalities Across the Euro Area\thanks{This paper presents the authors’ views and should not be interpreted as reflecting the views of
- the Banque de France or the Eurosystem. This article is accompanied by an R package that allows to replicate the results or make new calculations}}
+\title{Inflation Inequalities Across the Euro Area\thanks{This paper presents the authors' views and should not be interpreted as reflecting the views of
+ the Banque de France or the Eurosystem. This article is accompanied by an R package that allows users to replicate the results or make new calculations}}
 \author{Pradana Aumars\thanks{\quad ENSIMAG. pradana.aumars@courrier.dev} \and Erwan Gautier\thanks{\quad Banque de France and Université Dauphine. erwan.gautier@banque-france.fr} \and Jeremi Montornès\thanks{\quad Banque de France. jeremi.montornes@banque-france.fr}}
 %\date{August 2024}
 
@@ -104,7 +104,7 @@
 \vspace{1em}
 
 \begin{abstract}
-This article examines the heterogeneous effects of inflation on households' categories in the euro area. Differences in consumption patterns between households and inflation dispersion across products have generated inflation inequalities. The inflationary episode, driven by rising imported prices, has mainly affected households who spend a larger share of their income on energy and food. In large countries of the euro area, inflation differentials between income quintiles have been low over the period, but differentials by age and residence area have been more pronounced. The tariff shields have significantly contributed to reduce inflation inequalities.
+This article examines the heterogeneous effects of inflation across household categories in the euro area. Differences in consumption patterns between households and inflation dispersion across products have generated inflation inequalities. The inflationary episode, driven by rising imported prices, has mainly affected households who spend a larger share of their income on energy and food. In large countries of the euro area, inflation differentials between income quintiles have been low over the period, but differentials by age and residence area have been more pronounced. The tariff shields have significantly contributed to reducing inflation inequalities.
 
 
 \vspace{1em} 
@@ -121,29 +121,29 @@ This article examines the heterogeneous effects of inflation on households' cate
 \section*{Introduction}
 
 
-This study examines the effect of the recent inflation surge in the euro area households. Since mid-2021, inflation rates in the euro area have risen sharply, displaying considerable dispersion across countries and socio-demographic groups. High inflation disproportionately impacts households with differing consumption patterns, such as higher spending on energy and food. 
+This study examines the effect of the recent inflation surge on euro area households. Since mid-2021, inflation rates in the euro area rose sharply, displaying considerable dispersion across countries and socio-demographic groups. High inflation disproportionately impacts households with differing consumption patterns, such as higher spending on energy and food. 
 
 %The consumer price index (CPI) typically reflects an average rate of price change for an average household. However, households consume different baskets of goods, leading to wide variations around the average. The main objective of this paper is to document how households face heterogeneous inflation because of the differences in their consumption patterns, and to measure the effects of unconventional fiscal policies decided in 2022-2023.
 
 
-The literature identifies three channels through which inflation produces heterogeneous effects: wealth, income, and consumption. Inflation negatively impacts wealth by eroding the real value of nominal assets. Conversely, it benefits indebted households, particularly those with fixed interest rate loans, as the real value of their debt diminishes. Moreover, inflation reduces purchasing power of revenues, especially for households with incomes and savings not fully adjusted to inflation. Base wages, which often do not fully adjust to inflation, remain unchanged for the typical one-year wage contract period. Recent studies, such as \cite{cardoso2022heterogeneous} and \cite{pallotti2024bears}, have sought to estimate these three channels simultaneously. Their analysis leverages newly available granular bank account data, which offer detailed insights into household financial positions and variations in consumption structures.
+The literature identifies three channels through which inflation produces heterogeneous effects: wealth, income, and consumption. Inflation negatively impacts wealth by eroding the real value of nominal assets. Conversely, it benefits indebted households, particularly those with fixed interest rate loans, as the real value of their debt diminishes. Moreover, inflation reduces the purchasing power of income, especially for households with incomes and savings not fully adjusted to inflation. Base wages, which often do not fully adjust to inflation, remain unchanged for the typical one-year wage contract period. Recent studies, such as \cite{cardoso2022heterogeneous} and \cite{pallotti2024bears}, have sought to estimate these three channels simultaneously. Their analysis leverages newly available granular bank account data, which offer detailed insights into household financial positions and variations in consumption structures.
 
-This work builds on studies by \cite{bobasu2023impact} and \cite{claeys2022inflation} that analyzed inflation inequality by households categories, with slightly differing methodologies and results. \cite{bobasu2023impact} estimates inter-quintile inflation gaps of approximately 0.8 percentage points in September 2022, which narrowed to zero by early 2023 for the euro area, using 2015 household budget survey weights. The Bruegel Institute has published and updated inflation rates by income quintile for European Union countries. Their findings align with our results.  However, the methodology exclusively uses HBS weights, without adjusting the weights based on HBS-corrected price indices for quintile-specific inflation (Q1 and Q5). This adjustment leads to slight discrepancies between their overall inflation estimates and the harmonized price indices of the respective countries. Using individual data from the Family Budget survey, OFCE (2022) calculates a specific inflation rate for each household in France. The study stresses the fact that the differences between income deciles are small, but much greater within each decile, where age and area of residence explain the dispersion. Thus, in the first decile, 25\% of households have an average inflation of 3.9\%, but another quarter have an inflation of 6.8\%, with smaller intra-decile differences as income rises. 
+This work builds on studies by \cite{bobasu2023impact} and \cite{claeys2022inflation} that analyzed inflation inequality by household category, with slightly differing methodologies and results. \cite{bobasu2023impact} estimates inter-quintile inflation gaps of approximately 0.8 percentage points in September 2022, which narrowed to zero by early 2023 for the euro area, using 2015 household budget survey weights. The Bruegel Institute has published and updated inflation rates by income quintile for European Union countries. Their findings align with our results. However, the methodology exclusively uses HBS weights, without adjusting the weights based on HBS-corrected price indices for quintile-specific inflation (Q1 and Q5). This adjustment leads to slight discrepancies between their overall inflation estimates and the harmonized price indices of the respective countries. Using individual data from the Family Budget survey, OFCE (2022) calculates a specific inflation rate for each household in France. The study stresses the fact that the differences between income deciles are small, but much greater within each decile, where age and area of residence explain the dispersion. Thus, in the first decile, 25\% of households have an average inflation of 3.9\%, but another quarter have an inflation of 6.8\%, with smaller intra-decile differences as income rises. 
 
-Scanner data captures price changes at the barcode level, allowing detailed analysis of inflation within specific product categories (e.g., organic vs. regular products). For instance, \cite{jaravel2024distributional} shows that the inflation gap calculated using scanner data for organic versus conventional
-products in the United States was nearly double that observed using aggregated CPI data
+Scanner data capture price changes at the barcode level, allowing detailed analysis of inflation within specific product categories (e.g., organic vs. regular products). For instance, \cite{jaravel2024distributional} shows that the inflation gap calculated using scanner data for organic versus conventional
+products in the United States was nearly double that observed using aggregated CPI data.
 
 
 
 We calculate inflation rates experienced by households across different categories within each euro area country, as well as for the euro area as a whole. Inflation rates by categories are first computed at the country level and then aggregated for the euro area following the HICP methodology. 
 
-This paper makes two contributions to the renewed interest in inflation inequality. First, it provides a publicly available and easily updatable dataset constructed using harmonized country-level inflation rates by household categories, ensuring consistency with the official Harmonized Consumer Price Index. Second, It examines the effect of unconventional fiscal policies, with a particular focus on the mitigating impacts of tariff shield policies and temporary VAT cuts implemented across euro area countries. The study also underscores disparities in fiscal policy outcomes, highlighting the success of energy-focused measures, such as VAT reductions.
+This paper makes two contributions to the renewed interest in inflation inequality. First, it provides a publicly available and easily updatable dataset constructed using harmonized country-level inflation rates by household categories, ensuring consistency with the official Harmonized Consumer Price Index. Second, it examines the effect of unconventional fiscal policies, with a particular focus on the mitigating impacts of tariff shield policies and temporary VAT cuts implemented across euro area countries. The study also underscores disparities in fiscal policy outcomes, highlighting the success of energy-focused measures, such as VAT reductions.
 
 %This paper contributes to the understanding of inflation inequality by constructing publicly available and easily updatable inflation indicators for various household categories in the euro area. These indicators are based on harmonized country-level inflation data and are consistent with the official Harmonised Consumer Price Index (HICP). Additionally, the study assesses the effect of unconventional fiscal policies implemented in 2022-2023, highlighting the mitigating effects of tariff shield policies and temporary VAT cuts across euro area countries.
 
-Our main results are the following. Inflation inequality exhibits substantial variation across euro area countries. Within large economies, such as Germany and France, inflation inequality remains relatively low since 2021. An exception is Italy, where disparities became pronounced during the energy price surge.  In large countries, the inflation gap between the first and the fifth income quintiles is negligible. However, more significant differences emerge when considering demographic factors such as age and geographical factors, particularly between urban and rural households.
+Our main results are the following. Inflation inequality exhibits substantial variation across euro area countries. Within large economies, such as Germany and France, inflation inequality remains relatively low since 2021. An exception is Italy, where disparities became pronounced during the energy price surge. In large countries, the inflation gap between the first and the fifth income quintiles is negligible. However, more significant differences emerge when considering demographic factors such as age and geographical factors, particularly between urban and rural households.
 
-The remainder of the paper is organized as follows. The first section describes the data and the methodology. The second section examines the developments of inflation inequality in the euro area. The third section analyzes the effect of unconventional fiscal policies, such as price shields and temporary VAT reductions on price dynamics, in France and Spain.
+The remainder of the paper is organized as follows. The first section describes the data and the methodology. The second section examines the developments of inflation inequality in the euro area. The third section presents simulation exercises, including input-output price shocks and the effect of unconventional fiscal policies in France and Spain.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -161,13 +161,13 @@ Headline inflation represents the spending patterns of an average household. Est
 
 \subsection*{The Harmonized Index of Consumer Prices}
 
-This analysis is based on publicly available data and mostly based on the Harmonized Index of Consumer Prices (HICP) constructed by national statistical institutes in collaboration with Eurostat. 
+This analysis is based on publicly available data, primarily the Harmonized Index of Consumer Prices (HICP) constructed by national statistical institutes in collaboration with Eurostat. 
 
-The HICP offers a standardized measure of inflation, ensuring comparability among member states with 2015 as the base year. Eurostat aggregates national HICPs. Each country's HICP is based on price changes for a fixed basket of goods and services, weighted according to household expenditure from various sources according countries (national accounts, HBS, etc.). These indices are then combined into the aggregate HICP using country-specific weights that reflect their share of total EU household consumption expenditure. The calculation ensures comparability by adhering to EU regulations and consistent data collection practices.
+The HICP offers a standardized measure of inflation, ensuring comparability among member states with 2015 as the base year. Eurostat aggregates national HICPs. Each country's HICP is based on price changes for a fixed basket of goods and services, weighted according to household expenditure from country-specific sources (national accounts, HBS, etc.). These indices are then combined into the aggregate HICP using country-specific weights that reflect their share of total EU household consumption expenditure. The calculation ensures comparability by adhering to EU regulations and consistent data collection practices.
 
 To ensure the HICP accurately represents current consumption patterns, Eurostat updates its weighting structure annually. The updated weights are implemented with the January release of the HICP each year and remain fixed throughout the calendar year. This practice ensures consistency in the measurement of price changes over the year. This approach aligns with the Laspeyres index formula, which uses fixed base-period weights to measure price changes over time. 
 
-Figure 1 illustrates the developments across different HICP components in the euro area since 2014. HICP shows the significant volatility in energy and fuel prices. The sharp rise starting around mid-2021, peaking in 2022, is due to post-COVID recovery, supply chain disruptions, and geopolitical tensions. After the peaks in 2022, there is a visible correction across most components. Energy prices dropped sharply, while food prices and other components showed more gradual stabilization.
+Figure 1 illustrates the developments across different HICP components in the euro area since 2014. The HICP components show significant volatility in energy and fuel prices. The sharp rise starting around mid-2021, peaking in 2022, is due to post-COVID recovery, supply chain disruptions, and geopolitical tensions. After the peaks in 2022, there is a visible correction across most components. Energy prices dropped sharply, while food prices and other components showed more gradual stabilization.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
@@ -177,7 +177,7 @@ Figure 1 illustrates the developments across different HICP components in the eu
 \label{fig:hicp}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{%Notes:\\ 
-Source: Eurostat HICP, authors' calculation}
+Source: Eurostat HICP, authors' calculations}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -189,9 +189,9 @@ Source: Eurostat HICP, authors' calculation}
 
 The heterogeneity of consumption patterns among households is a well-documented pattern (e.g. "Engel's laws"). However, the accurate measurement of household-level consumption continues to present significant challenges. 
 
-The Household Budget Surveys (HBS) are conducted on a large sample of households in each  euro area countries. Households are required to document their expenditures on consumer goods and services over a designated period, typically two weeks. These surveys capture the values of expenditures across COICOP categories.
+The Household Budget Surveys (HBS) are conducted on a large sample of households in each euro area country. Households are required to document their expenditures on consumer goods and services over a designated period, typically two weeks. These surveys capture the values of expenditures across COICOP categories.
 
-HBS which are generally collected every five years. The most recent wave of the HBS generally took place in 2020. The wave 2020 of HBS  was actually conducted between 2018 and 2022 in most EU Member States, while data for Cyprus, Malta, and France were gathered earlier, between 2015 and 2017.\footnote{The next HBS wave is scheduled for 2025 with an increased harmonization between countries.}
+HBS data are generally collected every five years. The most recent HBS wave generally took place in 2020. The 2020 HBS wave was actually conducted between 2018 and 2022 in most EU Member States, while data for Cyprus, Malta, and France were gathered earlier, between 2015 and 2017.\footnote{The following HBS wave is the 2025 wave, with increased harmonization between countries.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
@@ -206,13 +206,13 @@ of available country-level income-quintile expenditures, renormalised to 100
 within each quintile. Countries without available HBS data for the wave are not
 included in the aggregate. Italy is taken from the Eurostat HBS income-quintile
 table.\\
-Source: Eurostat HBS 2020, authors' calculation}
+Source: Eurostat HBS 2020, authors' calculations}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
 
-This infrequent collection may not fully capture short-term fluctuations in consumption patterns, particularly during periods of rapid price changes (e.g. COVID-19), potentially leading to bias in inflation inequality during such periods.\footnote{\cite{accardo2023measuring} developed a methodology to address the issue of low-frequency data in household consumption surveys.} Significant changes in weights between successive waves of HBS can also result in abrupt variations in inflation estimates by category. To address this, a linear interpolation method is proposed to smooth variations.\footnote{To mitigate this issue, two approaches are available in the package: linearly interpolate the HBS weights to smooth out the changes in weights over time,  apply a specific year's HBS weights for all months when calculating inflation rates (or contributions to inflation).}
+This infrequent collection may not fully capture short-term fluctuations in consumption patterns, particularly during periods of rapid price changes (e.g. COVID-19), potentially leading to bias in inflation inequality during such periods.\footnote{\cite{accardo2023measuring} developed a methodology to address the issue of low-frequency data in household consumption surveys.} Significant changes in weights between successive waves of HBS can also result in abrupt variations in inflation estimates by category. To address this, a linear interpolation method is proposed to smooth variations.\footnote{To mitigate this issue, two approaches are available in the package: linearly interpolate the HBS weights to smooth out the changes in weights over time, or apply a specific year's HBS weights for all months when calculating inflation rates (or contributions to inflation).}
 
 
 
@@ -220,8 +220,8 @@ Figure 2 presents the consumption baskets by income quintiles, revealing the dis
 
 
 
-Depending on the level of data available, HICP and HBS are merged at the lowest COICOP level possible in each countries. In certain cases, such as for France's Insee or Italy's Istat, data published directly by national statistical institutes can be utilized instead of relying on the Eurostat dataset. This approach is particularly valuable when the nationally published data provides greater granularity, recency, or frequency. \footnote{The companion R package allows the use of custom data.}
-HBS contains many variables according to which consumption can be broken down. To study the heterogeneous effects of inflation, we use income, age and residence area. Moreover, Eurostat  provides HBS with breakdowns at 2-digit COICOP. At the level 2 of the COICOP, the merge is bijective. In line with the Eurostat HICP methodology, imputed rent is excluded from the analysis. This analysis uses all available waves of the HBS since 1999 and matches them with the closest corresponding HICP year. 
+Depending on the level of data available, HICP and HBS are merged at the lowest COICOP level possible in each country. In certain cases, such as for France's Insee or Italy's Istat, data published directly by national statistical institutes can be utilized instead of relying on the Eurostat dataset. This approach is particularly valuable when the nationally published data provide greater granularity, recency, or frequency. \footnote{The companion R package allows the use of custom data.}
+HBS contains many variables according to which consumption can be broken down. To study the heterogeneous effects of inflation, we use income, age and residence area. Moreover, Eurostat provides HBS with breakdowns at 2-digit COICOP. At level 2 of the COICOP, the merge is bijective. In line with the Eurostat HICP methodology, imputed rent is excluded from the analysis. This analysis uses all available waves of the HBS since 1999 and matches them with the closest corresponding HICP year. 
 
 
 %The Consumer Price Index (CPI) and Household Budget Surveys (HBS) are categorized according to the COICOP nomenclature. However, the relationship between the COICOP-CPI and COICOP-HBS classifications is not bijective. To address this, all CPI items are retained while expenditures from the HBS that fall outside the scope of consumption—such as taxes and work-related investment expenditures—are excluded. 
@@ -393,13 +393,13 @@ For income quintiles, the inter-quintile inflation gap is:
 
 The inflation gap, a measure of inflation inequality, offers several advantages over using scanner data (Appendix A). First, the inflation gap encompasses the entire household consumption basket, unlike scanner data, which is limited to supermarket products. This broader scope is essential to remain consistent with the basket of the HICP. Second, the inflation gap can be updated monthly, providing timely insights into recent inflation developments to monitor the distributional effects of price changes. Third, the inflation gap is comparable across euro area countries, facilitating analysis of inflation inequality patterns and policy effectiveness within a monetary union.
 
- However, the inflation gap does not account for changes in household behavior in response to rising prices. Wealthier households have greater flexibility to mitigate the effects of inflation by reducing discretionary spending, such as on leisure activities, or by substituting with lower-cost or lower-quality goods and services. \footnote{Recent households surveys conducted in France have explored how households adapt their consumption habits to inflation. These surveys show that lower-income households are more likely than higher-income households to report changes in their consumption patterns in response to rising prices (Credoc (2024), Insee (2024))}
+ However, the inflation gap does not account for changes in household behavior in response to rising prices. Wealthier households have greater flexibility to mitigate the effects of inflation by reducing discretionary spending, such as on leisure activities, or by substituting with lower-cost or lower-quality goods and services. \footnote{Recent household surveys conducted in France have explored how households adapt their consumption habits to inflation. These surveys show that lower-income households are more likely than higher-income households to report changes in their consumption patterns in response to rising prices (Credoc (2024), Insee (2024))}
  
 %In contrast, essential expenditures, such as housing, food, healthcare, and transportation, constitute almost two-thirds of total consumption for lower-income households, compared to less than half for higher-income households. 
 
 \section{Main Results}
 
-This section present our main results. We  focus on the recent inflation episode, in the wake of the energy crisis for the whole euro area. We also present findings on short-run and long-run inflation inequality.
+This section presents our main results. We focus on the recent inflation episode, in the wake of the energy crisis for the whole euro area. We also present findings on short-run and long-run inflation inequality.
 
 
 
@@ -434,7 +434,7 @@ combined at the euro-area level.
 \vspace{20pt} 
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Note: This figure reports year-on-year inflation rates for the first and fifth income quintiles in the euro area, January 2020 to April 2026.\\
-Sources: Eurostat, authors' calculation}
+Sources: Eurostat, authors' calculations}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -444,17 +444,15 @@ Sources: Eurostat, authors' calculation}
 
 %Studies of inflation inequality focus on inequality according to household income brackets. However, in the case of most countries, it was inflation differentials between age groups or residence areas that were much more pronounced during the 2021-2023 period.
 
-Figure 4 presents the inflation rates by household categories in Euro area, segmented by age and residence areas. Panel (a) illustrates the inflation disparities by age, showing that older households experienced higher inflation rates due to their greater expenditure on essential goods. Panel (b) highlights the inflation differences by residence areas with rural households facing higher inflation rates compared to those living in cities.
+Figure 4 presents the inflation rates by household categories in the euro area, segmented by age and residence area. Panel (a) illustrates the inflation disparities by age, showing that older households experienced higher inflation rates due to their greater expenditure on essential goods. Panel (b) highlights the inflation differences by residence area, with rural households facing higher inflation rates compared to those living in cities.
 
 %In 2022, a household with a reference person over age 60 was subjected to an average inflation rate around 2 percentage points higher than a household with a reference person under age 25. This disparity reflects older households' higher expenditure shares on essential goods like food and heating, particularly during energy price surges. The relative weight of energy and food in the consumption structure of older households helps to maintain the gap between the oldest and the youngest households (see Panel a). Despite falling inflation in 2023, cumulative price increases in recent years have remained substantially different from one age bracket to the next. Between 2021 and 2023, the cumulative gap was just over 2 percentage points between households under 30 and those 60 and over. The inflation gap was at its widest between late 2022 and early 2023, when it reached over 2 percentage points before narrowing significantly in the second half of 2023.
 
 %The share of energy spending on housing and fuel was highest for both these categories in rural areas, decreasing elsewhere according to the size of the urban area. The area of residence determines mobility, the number of kilometers, and the transports modes. Altogether, in cumulative terms over the period, rural households suffered from a rate of inflation 2.5 percentage points higher compared with those living in Paris (see Figure b). The inflation gap peaked at the beginning of 2022 under the effect of the rise in fuel prices, before gradually receding
-[...]
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
 \centering
-\caption{Inflation by Household Categories in Euro Area (in \%)}
+\caption{Inflation by Household Categories in the Euro Area (in \%)}
 \label{fig:age_rural}
 \begin{subfigure}{0.48\textwidth} 
   \centering
@@ -472,7 +470,7 @@ Figure 4 presents the inflation rates by household categories in Euro area, segm
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Note: This figure reports year-on-year inflation rates by
 age (panel a) and residence area (panel b), January 2020 to April 2026.\\
-Sources: Eurostat, authors' calculation}
+Sources: Eurostat, authors' calculations}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -505,14 +503,12 @@ inflation inequality for the euro area as a whole.
 \vspace{20pt} 
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Note: This figure shows monthly price indices for the first and fifth income quintiles in the euro area, January 2000 to April 2026. Indices are rebased to 2000 = 100.\\
-Sources: Eurostat, authors' calculation}
+Sources: Eurostat, authors' calculations}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
 %\cite{jaravel2021inflation} identifies two key factors explain the different consumption patterns of households. First, technological progress tend to disproportionately benefit higher-income households. Second, globalization has not provided significant compensatory benefits to lower-income households. Instead, its advantages have largely bypassed these groups, exacerbating existing disparities rather than mitigating.
-
-[...]
 
 \subsection{Heterogeneity Across Countries}
 
@@ -520,7 +516,7 @@ Sources: Eurostat, authors' calculation}
 
 \subsection*{Four different Patterns of Inflation Inequality}
 
-There is significant heterogeneity among countries within euro area, particularly between older and newer member states. Figure 6 provides a comparison of inflation by income quintiles across different groups of countries in 2022. Panel (a) focuses on Baltic countries, revealing significant inflation disparities, particularly in the lower quintile. Panels (b) and (c) present data for Austria, Finland, Luxembourg and Germany, Spain, France, respectively. The figures highlight the varying degrees of inflation inequality, with notable differences in the impact of energy and food prices on different income groups.
+There is significant heterogeneity among countries within the euro area, particularly between older and newer member states. Figure 6 provides a comparison of inflation by income quintiles across different groups of countries in 2022. Panel (a) focuses on Baltic countries, revealing significant inflation disparities, particularly in the lower quintile. Panels (b) and (c) present data for Austria, Finland, Luxembourg and Germany, Spain, France, respectively. The figures highlight the varying degrees of inflation inequality, with notable differences in the impact of energy and food prices on different income groups.
 
 Inflation inequality varies significantly across euro area countries but remains relatively limited within the larger European economies. Italy, for example, experienced a 1.2 percentage point inflation gap during 2022, driven primarily by surging energy prices, whereas France's gap was mitigated by targeted fiscal interventions. In contrast, smaller countries with economies highly dependent on natural gas, such as Lithuania, Latvia, and Slovakia, experience both high inflation rates and pronounced inflation inequality.
 
@@ -560,7 +556,7 @@ Variations in consumption patterns between high- and low-income groups significa
 \vspace{20pt} 
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{%Note: 2022.
-Sources: Eurostat, authors' calculation}
+Sources: Eurostat, authors' calculations}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -575,9 +571,7 @@ Sources: Eurostat, authors' calculation}
 
 Countries with similar distributions of consumption patterns can nonetheless experience varying degrees of inflation inequality if the price dynamics of goods predominantly consumed by specific income groups differ across nations. For example, inflation inequality driven by rising energy prices may be mitigated in cases where high-income households allocate a larger proportion of their consumption expenditure to goods experiencing rapid price increases. Such variations highlight the interplay between consumption patterns and country-specific price trajectories in shaping inflation inequality.
 
-Figure 7(a) shows the evolution of inflation by income quintile in Spain during the recent inflationary cycle. Figure 7 (b) details the contributions to inflation inequality in Spain, measured in percentage points. The graph highlights the dynamic interplay between energy, food, and services prices, with energy prices initially dominating the inequality dynamics and food prices emerging as a more persistent driver in later periods. 
-
-[...]
+Figure 7(a) shows the evolution of inflation by income quintile in Spain during the recent inflationary cycle. Figure 7(b) details the contributions to inflation inequality in Spain, measured in percentage points. The graph highlights the dynamic interplay between energy, food, and services prices, with energy prices initially dominating the inequality dynamics and food prices emerging as a more persistent driver in later periods. 
 
 %The offsetting effect of services prices is particularly
 
@@ -606,8 +600,38 @@ Figure 7(a) shows the evolution of inflation by income quintile in Spain during 
 
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{%Note:.\\
-Sources: Eurostat, authors' calculation}
+Sources: Eurostat, authors' calculations}
 \label{sec:analyse-donnees}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\subsection{Inflation Burden}
+
+Inflation gaps measure differences in the growth rate of household-group price
+indices, but they do not directly express the cost of inflation relative to
+household resources. To complement the group-specific inflation rate
+$\pi_{g,y,m}$ defined above, we compute an inflation burden indicator by scaling
+inflation by the consumption-to-income ratio of group $g$. Let $c^Y_g$ denote
+consumption as a percentage of disposable income in the latest annual source
+year $Y$ available before year $y$. The burden is defined as:
+\[
+B_{g,y,m} = \pi_{g,y,m}\frac{c^Y_g}{100},
+\]
+and is expressed in percentage points of disposable income. Hence, two groups
+with similar inflation rates may face different burdens when their propensities
+to consume out of income differ. The figure reports this indicator for France
+by income quintile, using level-3 consumption baskets.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!ht]
+\centering
+\caption{Inflation burden in France by income quintile (in \% of disposable income)}
+\label{fig:fr-inflation-burden-level3}
+\includegraphics[width=0.75\textwidth]{fig/fig_FR_2019_2026_income_inflation_burden_level3_Q1_Q5.png}
+\vspace{8pt}
+\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
+\caption*{Sources: Eurostat HICP, EU-SILC, INSEE HBS, author's calculations.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -616,7 +640,7 @@ Sources: Eurostat, authors' calculation}
 \section{Simulations}
 
 
-\subsection{Heterogenous Effects of Shocks}
+\subsection{Heterogeneous Effects of Shocks}
 
 \input{fig/tab_shock_tables_2023}
 
@@ -627,7 +651,7 @@ Sources: Eurostat, authors' calculation}
 
 
 
-\subsection{Effects of  unconventional  Fiscal  Policies in the 2021-23 inflation episode}
+\subsection{Effects of Unconventional Fiscal Policies in the 2021-2023 Inflation Episode}
 
 This section evaluates the distributional impact of unconventional fiscal policies on inflation inequality, with a particular focus on targeted interventions such as energy price shields and VAT reductions in France and Spain.
 
@@ -638,9 +662,9 @@ In France, income-based instruments such as the 'chèque énergie' were specific
 To quantify the effect of these fiscal measures on inflation inequality, we construct a counterfactual scenario in which no such policies were enacted. Specifically, we compare the actual trajectory of retail gas and electricity prices with the estimated evolution of market prices in the absence of intervention. This comparison allows us to isolate the extent to which fiscal policy contributed to reducing inflationary pressures and their unequal distribution across households.
 
 
-\subsection{France }
+\subsection{France}
 
-In the case of France, we do not estimate the underlying market prices, we rely on estimates from official sources. For gas, we use a series of 'market' retail prices from the French Energy Regulatory Commission ("CRE"). The CRE provides indicative market retail prices in the absence of energy price measures.
+In the case of France, we do not estimate the underlying market prices; we rely on estimates from official sources. For gas, we use a series of 'market' retail prices from the French Energy Regulatory Commission ("CRE"). The CRE provides indicative market retail prices in the absence of energy price measures.
 
 %For electricity, we use the CRE’s monthly series of theoretical retail electricity prices, which are constructed similarly based on wholesale market contract price movements. 
 
@@ -653,8 +677,6 @@ In the case of France, we do not estimate the underlying market prices, we rely 
 %The increase in VAT on food in Spain on 1st October was almost immediate and symmetrical to the reduction that took place almost 2 years ago. The second stage, before the return to normal rates, is scheduled for 1st January 2025.
 
 For Spain, the indicative market prices for electricity come from IMF staff estimates, prepared for the 2022 Spain Article IV Consultation staff report. Given the strong historical correlation between retail and wholesale electricity prices prior to the energy crisis, we compute the counterfactual retail electricity prices in Spain using the estimated historical relationship between retail and wholesale electricity prices before the 2022 price surge.
-
-[...]
 
 %The Spanish Government has introduced temporary VAT rate changes  including  a temporary 0\% VAT on basic foodstuffs, and new VAT rates of 5\% and 7.5\%
 %\cite{forteza2024analysing} study the price effects of the temporary VAT rate reduction  find the pass-through was almost complete between 1 January 2023 and 2025. 
@@ -677,50 +699,20 @@ For Spain, the indicative market prices for electricity come from IMF staff esti
 
 % These measures must be temporary; fiscal policy is not intended to combat inflation, particularly in indebted countries. Monetary and fiscal policies each have a role to play in addressing the consequences of high inflation. In the long run, only monetary policy is effective in bringing inflation back to its target.
 
-\subsection{Inflation Burden}
-
-Inflation gaps measure differences in the growth rate of household-group price
-indices, but they do not directly express the cost of inflation relative to
-household resources. To complement the group-specific inflation rate
-$\pi_{g,y,m}$ defined above, we compute an inflation burden indicator by scaling
-inflation by the consumption-to-income ratio of group $g$. Let $c^Y_g$ denote
-consumption as a percentage of disposable income in the latest annual source
-year $Y$ available before year $y$. The burden is defined as:
-\[
-B_{g,y,m} = \pi_{g,y,m}\frac{c^Y_g}{100},
-\]
-and is expressed in percentage points of disposable income. Hence, two groups
-with similar inflation rates may face different burdens when their propensities
-to consume out of income differ. The figure reports this indicator for France
-by income quintile, using level-3 consumption baskets.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!ht]
-\centering
-\caption{Inflation burden in France by income quintile (in \% of revenues)}
-\label{fig:fr-inflation-burden-level3}
-\includegraphics[width=0.75\textwidth]{fig/fig_FR_2019_2026_income_inflation_burden_level3_Q1_Q5.png}
-\vspace{8pt}
-\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Sources: Eurostat HICP, EU-SILC, INSEE HBS, author's calculations.}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-
 \section{Conclusion}
 
 
 %This paper a set of public indicators to measure inflation inequalities in real-time monthly across socio-demographic groups in the Euro Area.
 
-This paper presents a methodology to build easily implementable inflation inequalities indicators in the euro area. The approach presented in this paper involves  indicators based on the Consumer Price Index (CPI) and household budget surveys. 
+This paper presents a methodology to build easily implementable inflation inequality indicators in the euro area. The approach presented in this paper involves indicators based on the Consumer Price Index (CPI) and household budget surveys. 
 
 %results
-Our results show that inflation inequality across income groups in the euro area has remained relatively contained during the recent inflationary episode, especially in large countries such as Germany, France, Spain. We also document strong cross-country heterogeneity in inflation inequality, between large countries and dependent on natural gas imports, such as the Baltic states. 
+Our results show that inflation inequality across income groups in the euro area has remained relatively contained during the recent inflationary episode, especially in large countries such as Germany, France, and Spain. We also document strong cross-country heterogeneity in inflation inequality, particularly in countries dependent on natural gas imports, such as the Baltic states. 
 
 Inflation inequalities by age and residence are more pronounced, with older and rural households facing consistently higher inflation due to their larger share of spending on essential goods like food and energy. We also find that unconventional fiscal measures, including VAT cuts and energy price shields, have significantly mitigated inflation inequality in countries like France and Spain, especially among lower-income households.
 
 %limit
-While we calculate of inflation rates for different household categories, it remains subject to aggregation bias. To improve accuracy, it is essential to compute inflation inequality indicators at the most granular level available within the consumption product classification.  Recent advances in data availability, such as supermarket scanner data at the bar-code level or bank transaction records provide new opportunities to improve the precision of inflation and consumption measurement. 
+While we calculate inflation rates for different household categories, the measure remains subject to aggregation bias. To improve accuracy, it is essential to compute inflation inequality indicators at the most granular level available within the consumption product classification. Recent advances in data availability, such as supermarket scanner data at the bar-code level or bank transaction records, provide new opportunities to improve the precision of inflation and consumption measurement. 
 
 %Granular data make it possible to take into account the income channels, wage indexation to inflation, as well as wealth effects. \cite{cardoso2022heterogeneous} show that in Spain, the distributional effects of inflation through household wealth and income outweigh those arising from consumption patterns. Similarly, \cite{pallotti2024bears} find that net household wealth is the primary driver of inflation inequality across six euro area countries (Germany, France, Italy, Spain, the Netherlands, and Belgium). Their findings highlight that older households are disproportionately affected, primarily due to the adverse impact of inflation on their wealth.
 
@@ -799,7 +791,7 @@ While we calculate of inflation rates for different household categories, it rem
 \vspace{8pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Notes: The figure partitions COICOP expenditure shares into essential expenditures and discretionary/transport expenditures. The euro-area aggregate is computed as the unweighted average of available country-level HBS expenditure shares.\\
-Source: Eurostat HBS 2015, authors' calculation.}
+Source: Eurostat HBS 2015, authors' calculations.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -833,7 +825,7 @@ Source: Eurostat HBS 2015, authors' calculation.}
 \vspace{10pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Notes: The figure reports chained price indices from 1996 using the France level-3 workflow. The panels compare income quintiles, age groups, and residence areas.\\
-Sources: Eurostat HICP; INSEE HBS 2017; authors' calculation.}
+Sources: Eurostat HICP; INSEE HBS 2017; authors' calculations.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -867,7 +859,7 @@ Sources: Eurostat HICP; INSEE HBS 2017; authors' calculation.}
 \vspace{10pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Notes: The figure reports monthly year-on-year inflation rates using the France level-3 workflow. The panels compare income quintiles, age groups, and residence areas over the recent inflation episode.\\
-Sources: Eurostat HICP; INSEE HBS 2017; authors' calculation.}
+Sources: Eurostat HICP; INSEE HBS 2017; authors' calculations.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -901,7 +893,7 @@ Sources: Eurostat HICP; INSEE HBS 2017; authors' calculation.}
 \vspace{10pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Notes: Bars decompose the monthly inflation gap into broad consumption components; the black line reports the total gap. Positive values indicate higher inflation for the first group named in each panel.\\
-Sources: Eurostat HICP; INSEE HBS 2017; authors' calculation.}
+Sources: Eurostat HICP; INSEE HBS 2017; authors' calculations.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -1064,7 +1056,7 @@ Finally, Table~\ref{tab:fr-decile-validation} compares the package's annual infl
 \vspace{2pt} 
 \captionsetup{font=scriptsize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Note: Blue line: published all-items HICP. Black line: package recalculation. Grey bars: recalculation minus published HICP, in percentage points.\\
-Sources: INSEE, Eurostat, authors' calculation.}
+Sources: INSEE, Eurostat, authors' calculations.}
 \vspace{8pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1075,7 +1067,7 @@ Sources: INSEE, Eurostat, authors' calculation.}
 \vspace{2pt} 
 \captionsetup{font=scriptsize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Note: Average recalculated household-group index and published all-items HICP, rebased to the same base year. Grey bars: recalculation minus published HICP, in index points.\\
-Sources: INSEE, Eurostat, authors' calculation.}
+Sources: INSEE, Eurostat, authors' calculations.}
 \end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
