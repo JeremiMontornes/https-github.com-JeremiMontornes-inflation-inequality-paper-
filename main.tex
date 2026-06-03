@@ -693,11 +693,45 @@ In the case of France, we do not estimate the underlying market prices; we rely 
 
 %We then scale the additional price growth of gas and electricity by their respective weights in the HICP to calculate the additional headline inflation shocks in the absence of energy price policies (Figure 8).
 
+Figure~\ref{fig:fr_fuel_hicp_counterfactual} focuses on the fuel-price rebate. Consistent with the unconventional fiscal policy framework in \cite{dao2023unconventional}, the counterfactual removes the price-based intervention by adding back the public rebate to retail fuel prices. The gap between the two indices is therefore confined to the period during which the rebate was in force.
+
+\begin{figure}[H]
+\centering
+\caption{France: fuel HICP counterfactual}
+\includegraphics[width=0.86\textwidth,height=0.34\textheight,keepaspectratio]{fig/fig_FR_fuel_hicp_counterfactual.png}
+\label{fig:fr_fuel_hicp_counterfactual}
+\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
+\caption*{Notes: The figure reports the observed fuel HICP index and a no-rebate counterfactual for France. The counterfactual is obtained by adding back the public fuel rebates to monthly road-fuel prices and applying the resulting price ratio to the observed HICP fuel index. The rebate is treated as expired after December 2022, so that the observed and counterfactual indices coincide from January 2023 onward. Unit: HICP index, 2015 = 100.\\
+Source: Eurostat HICP, French Ministry for Ecological Transition fuel-price data, authors' calculations.}
+\end{figure}
+
 \subsection{Spain}
 
 %The increase in VAT on food in Spain on 1st October was almost immediate and symmetrical to the reduction that took place almost 2 years ago. The second stage, before the return to normal rates, is scheduled for 1st January 2025.
 
 For Spain, the indicative market prices for electricity come from IMF staff estimates, prepared for the 2022 Spain Article IV Consultation staff report. Given the strong historical correlation between retail and wholesale electricity prices prior to the energy crisis, we compute the counterfactual retail electricity prices in Spain using the estimated historical relationship between retail and wholesale electricity prices before the 2022 price surge.
+
+Figure~\ref{fig:es_energy_hicp_counterfactuals} reports the Spanish electricity and fuel counterfactuals. The electricity exercise follows the logic of \cite{dao2023unconventional}: the observed HICP is compared with a counterfactual path that removes the effect of the Iberian electricity-price cap and related retail-price measures. The fuel panel applies the same accounting principle to the temporary transport-fuel rebate.
+
+\begin{figure}[H]
+\centering
+\caption{Spain: electricity and fuel HICP counterfactuals}
+\begin{subfigure}{0.86\textwidth}
+  \centering
+  \caption{Electricity}
+  \includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]{fig/fig_ES_electricity_hicp_counterfactual.png}
+\end{subfigure}
+
+\begin{subfigure}{0.86\textwidth}
+  \centering
+  \caption{Transport fuels}
+  \includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]{fig/fig_ES_fuel_hicp_counterfactual.png}
+\end{subfigure}
+\label{fig:es_energy_hicp_counterfactuals}
+\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
+\caption*{Notes: Panel (a) compares the observed electricity HICP with a counterfactual index based on the historical relationship between retail electricity prices and wholesale electricity prices, augmented by the calibration to the Iberian electricity-price cap. Panel (b) compares the observed transport-fuel HICP with a no-rebate counterfactual based on public fuel-price data; the counterfactual line is shown only during the period in which it differs from the observed index. Unit: HICP index, 2015 = 100.\\
+Source: Eurostat HICP, OMIE wholesale electricity prices, European Commission Weekly Oil Bulletin, IMF staff estimates, authors' calculations.}
+\end{figure}
 
 %The Spanish Government has introduced temporary VAT rate changes  including  a temporary 0\% VAT on basic foodstuffs, and new VAT rates of 5\% and 7.5\%
 %\cite{forteza2024analysing} study the price effects of the temporary VAT rate reduction  find the pass-through was almost complete between 1 January 2023 and 2025. 
