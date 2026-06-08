@@ -137,7 +137,7 @@ products in the United States was nearly double that observed using aggregated C
 
 We calculate inflation rates experienced by households across different categories within each euro area country, as well as for the euro area as a whole. Inflation rates by categories are first computed at the country level and then aggregated for the euro area following the HICP methodology. 
 
-This paper makes two contributions to the renewed interest in inflation inequality. First, it provides a publicly available and easily updatable dataset constructed using harmonized country-level inflation rates by household categories, ensuring consistency with the official Harmonized Consumer Price Index. Second, it examines the effect of unconventional fiscal policies, with a particular focus on the mitigating impacts of tariff shield policies and temporary VAT cuts implemented across euro area countries. The study also underscores disparities in fiscal policy outcomes, highlighting the success of energy-focused measures, such as VAT reductions.
+This paper makes two contributions to the renewed interest in inflation inequality. First, it provides a publicly available and easily updatable dataset constructed using harmonized country-level inflation rates by household categories, ensuring consistency with the official Harmonised Index of Consumer Prices (HICP). Second, it examines the effect of unconventional fiscal policies, with a particular focus on the mitigating impacts of tariff shield policies and temporary VAT cuts implemented across euro area countries. The study also underscores disparities in fiscal policy outcomes, highlighting the success of energy-focused measures, such as VAT reductions.
 
 %This paper contributes to the understanding of inflation inequality by constructing publicly available and easily updatable inflation indicators for various household categories in the euro area. These indicators are based on harmonized country-level inflation data and are consistent with the official Harmonised Consumer Price Index (HICP). Additionally, the study assesses the effect of unconventional fiscal policies implemented in 2022-2023, highlighting the mitigating effects of tariff shield policies and temporary VAT cuts across euro area countries.
 
@@ -159,9 +159,9 @@ This section introduces the data sources and methodological framework employed i
 
 Headline inflation represents the spending patterns of an average household. Estimating inflation for specific household categories requires the use of Household Budget Surveys (HBS), which are national surveys on consumer expenditure. These surveys offer detailed insights into household characteristics, including income levels, the age of the household reference person, and the area of residence.
 
-\subsection*{The Harmonized Index of Consumer Prices}
+\subsection*{The Harmonised Index of Consumer Prices}
 
-This analysis is based on publicly available data, primarily the Harmonized Index of Consumer Prices (HICP) constructed by national statistical institutes in collaboration with Eurostat. 
+This analysis is based on publicly available data, primarily the Harmonised Index of Consumer Prices (HICP) constructed by national statistical institutes in collaboration with Eurostat. 
 
 The HICP offers a standardized measure of inflation, ensuring comparability among member states. Eurostat aggregates national HICPs. Each country's HICP is based on price changes for a fixed basket of goods and services, weighted according to household expenditure from country-specific sources (national accounts, HBS, etc.). These indices are then combined into the aggregate HICP using country-specific weights that reflect their share of total  household consumption expenditure. The calculation ensures comparability by adhering tothe Regulation EU 2016/796 and consistent data collection practices. The HICP is compiled according to the classificication of houshold expenditures ECOICOP ver. 2.
 
@@ -722,7 +722,86 @@ Source: Eurostat HICP, OMIE wholesale electricity prices, European Commission We
 
 \subsection{Policy Options}
 
-This exercise is motivated by the estimation of counterfactual price indices under the policies actually implemented, which provides a direct way to measure how alternative interventions on electricity, gas, and motor fuel prices would have reshaped households' inflation exposure and the distribution of compensating needs. The underlying framework can be generalized to a partial-equilibrium model of household demand for multiple energy goods, such as electricity, gas, and motor fuel. Household $i$ consumes a vector of energy goods $e_{ik}$, indexed by $k \in K$, and a composite numeraire good $y_i$, subject to the budget constraint $y_i + \sum_{k \in K} p_k e_{ik} = Y_i$. Preferences are quasi-linear, $U_i(y_i,\{e_{ik}\}) = y_i + u_i(e_{i1},\ldots,e_{iK})$, so that local demand responses can be summarized by own- and cross-price elasticities, $d\log e_{ik} = \sum_{\ell \in K} \varepsilon_{k\ell} d\log p_\ell$. The welfare loss from a vector of energy price shocks is approximated at first order by $EV_i = \sum_{k \in K} s_{ik} d\log p_k$, where $s_{ik}=p_k e_{ik}/Y_i$ is household $i$'s budget share for energy good $k$. Empirically, the model is implemented as a weighted micro-simulation using household survey data: each $s_{ik}$ is measured by observed expenditure on energy good $k$ relative to total household expenditure, households are ranked by equivalised income, and policy transfers are computed as functions of household-specific compensating variation. The econometric object is therefore the empirical distribution of exposure to different energy price shocks, the associated compensating variation, and the resulting over- or under-compensation under alternative policy rules, rather than a full structural estimate of household energy demand.
+To complement the price-index counterfactuals, we introduce a simple
+household-level model of energy demand and compensating needs. This framework
+is a deliberately simplified version of \cite{levell2026welfare}, who study
+the welfare effects of energy price shocks and relief packages using rich
+household panel data. Household $i$ consumes a vector of energy goods
+$e_{ik}$, indexed by $k \in K$, and a composite numeraire good $y_i$, subject
+to the budget constraint:
+
+\begin{equation}
+y_i + \sum_{k \in K} p_k e_{ik} = Y_i .
+\end{equation}
+
+Preferences are quasi-linear,
+$U_i(y_i,\{e_{ik}\})=y_i+u_i(e_{i1},\ldots,e_{iK})$, so local demand
+responses can be summarized by own- and cross-price elasticities:
+
+\begin{equation}
+d\log e_{ik}
+=
+\sum_{\ell \in K}
+\varepsilon_{k\ell}
+d\log p_{\ell}.
+\end{equation}
+
+The first-order welfare loss from a vector of energy price shocks is:
+
+\begin{equation}
+EV_i
+=
+\sum_{k \in K}
+s_{ik}
+d\log p_k,
+\end{equation}
+
+where $s_{ik}=p_k e_{ik}/Y_i$ is household $i$'s budget share for energy good
+$k$. In this version of the paper, we implement the model in a reduced form by
+estimating own-price elasticities for Spain. Spain is a natural first case
+because the EPF microdata are available year by year and report both
+expenditure and quantities for electricity, gas, and motor fuels. For household
+$i$, energy good $k$, autonomous community $r$, and year $y$, the estimated
+equation is:
+
+\begin{equation}
+\log q_{i,k,r,y}
+=
+\alpha_k
++
+\varepsilon_k \log p_{i,k,r,y}
++
+X_{i,y}'\beta_k
++
+\mu_{r,k}
++
+\lambda_{y,k}
++
+u_{i,k,r,y},
+\end{equation}
+
+where $k$ denotes electricity, gas, or motor fuels. The variable $q_{i,k,r,y}$
+is the reported quantity consumed, and $p_{i,k,r,y}$ is either the household
+unit value, measured as expenditure divided by quantity, or a local price proxy
+measured as the median unit value by autonomous community, year, and energy
+good. The vector $X_{i,y}$ includes log total expenditure, log equivalised
+income, and household size. The coefficient $\varepsilon_k$ is the estimated
+price elasticity for energy good $k$. These estimates are intended as a
+first-pass calibration of local demand responses for the Spanish policy
+simulations, rather than as a fully structural demand system.
+
+\input{tables/tab_ES_epf_energy_elasticity_estimates}
+
+The estimates in Table~\ref{tab:es-epf-energy-elasticities} imply negative
+price elasticities for all three energy goods. The household-unit-value
+specification gives elasticities close to one in absolute value for electricity
+and gas, and a larger response for motor fuels. The local-price-proxy
+specification gives larger elasticities in absolute value, especially for gas
+and motor fuels, reflecting the fact that identification comes from
+cross-regional price variation in the currently available one-year sample. In
+the policy simulations, we therefore treat the household-unit-value estimates
+as the conservative benchmark and the local-price-proxy estimates as an upper
+bound on short-run demand adjustment.
 
 %The Spanish Government has introduced temporary VAT rate changes  including  a temporary 0\% VAT on basic foodstuffs, and new VAT rates of 5\% and 7.5\%
 %\cite{forteza2024analysing} study the price effects of the temporary VAT rate reduction  find the pass-through was almost complete between 1 January 2023 and 2025. 
@@ -750,7 +829,7 @@ This exercise is motivated by the estimation of counterfactual price indices und
 
 %This paper a set of public indicators to measure inflation inequalities in real-time monthly across socio-demographic groups in the Euro Area.
 
-This paper presents a methodology to build easily implementable inflation inequality indicators in the euro area. The approach presented in this paper involves indicators based on the Consumer Price Index (CPI) and household budget surveys. 
+This paper presents a methodology to build easily implementable inflation inequality indicators in the euro area. The approach presented in this paper involves indicators based on the Harmonised Index of Consumer Prices (HICP) and household budget surveys. 
 
 %results
 Our results show that inflation inequality across income groups in the euro area has remained relatively contained during the recent inflationary episode, especially in large countries such as Germany, France, and Spain. We also document strong cross-country heterogeneity in inflation inequality, particularly in countries dependent on natural gas imports, such as the Baltic states. 
@@ -831,7 +910,7 @@ While we calculate inflation rates for different household categories, the measu
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \centering
-\caption{A1. Essential and discretionary expenditures by income quintile, euro area}
+\caption{Essential and discretionary expenditures by income quintile, euro area}
 \label{fig:app-ea-essentials-discretionary}
 \includegraphics[width=0.88\textwidth,height=0.34\textheight,keepaspectratio]{fig/fig_EA_2015_income_essentials_discretionary_baskets.png}
 \vspace{8pt}
@@ -845,7 +924,7 @@ Source: Eurostat HBS 2015, authors' calculations.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \centering
-\caption{A2. Price indices by household group, France, COICOP level 3}
+\caption{Price indices by household group, France, COICOP level 3}
 \label{fig:app-fr-level3-price-indices}
 \begin{subfigure}{0.88\textwidth}
   \centering
@@ -879,7 +958,7 @@ Sources: Eurostat HICP; INSEE HBS 2017; authors' calculations.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \centering
-\caption{A3. Inflation by household group, France, COICOP level 3}
+\caption{Inflation by household group, France, COICOP level 3}
 \label{fig:app-fr-level3-inflation}
 \begin{subfigure}{0.88\textwidth}
   \centering
@@ -913,7 +992,7 @@ Sources: Eurostat HICP; INSEE HBS 2017; authors' calculations.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \centering
-\caption{A4. Contributions to inflation gaps, France, COICOP level 3}
+\caption{Contributions to inflation gaps, France, COICOP level 3}
 \label{fig:app-fr-level3-contributions}
 \begin{subfigure}{0.88\textwidth}
   \centering

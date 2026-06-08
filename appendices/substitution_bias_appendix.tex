@@ -13,44 +13,64 @@ does not model within-category variety substitution, but provides a diagnostic
 for the role of upper-level substitution in measured inflation inequality.
 
 
-Let \(p_{j,t}\) denote the elementary price index for COICOP category \(j\) in
-month \(t\). Let \(r_{j,t}\) denote the corresponding unchained price relative
-used in the monthly aggregation. For household group \(g\), let \(w_{j,g,y}\)
-be the annual expenditure weight assigned to COICOP category \(j\) in year
-\(y\). These weights are obtained by combining official HICP item weights with
-HBS expenditure shares by income group.
+Let \(p_{j,y,m}\) denote the HICP price index of COICOP category \(j\) in
+month \(m\) of year \(y\), and let \(p_{j,y,0}\) denote the price reference
+used for the HICP weight year \(y\), as in the main-text price-index
+notation. For household group \(g\), let \(\omega_{j,g,y}\) be the annual
+group-specific HICP weight assigned to COICOP category \(j\) in year \(y\).
+These weights are obtained by combining official HICP item weights with HBS
+expenditure shares by income group.
 
-For each household group \(g\), the package first computes a Laspeyres-type
-monthly aggregate using the annual weights available for the corresponding
-link period:
+For each household group \(g\), the baseline calculation first computes the
+Laspeyres-type within-year aggregate \(P^L_{g,y,m}\) using the annual weights
+available for the corresponding link period:
 
 \[
-L_{g,t}
-= \sum_j s_{j,g,y(t)} r_{j,t},
+P^L_{g,y,m}
+=
+\sum_{j \in \mathcal{J}_y}
+\omega_{j,g,y}
+\cdot
+\frac{p_{j,y,m}}{p_{j,y,0}},
 \]
 
-where \(s_{j,g,y(t)}\) denotes the normalized expenditure share for group
-\(g\), category \(j\), and the annual weight year associated with month \(t\).
+where \(\mathcal{J}_y\) is the set of COICOP categories available in weight
+year \(y\). The chained Laspeyres-type group index \(I^L_{g,y,m}\) is then
+obtained by linking \(P^L_{g,y,m}\) to the previous December.
 
 The comparison index uses the Tornqvist formula at the same upper level. Let
-\(s_{j,g,y(t)-1}\) and \(s_{j,g,y(t)}\) denote the previous-year and
-current-year shares used for the link. The monthly Tornqvist aggregate is:
+\(\omega_{j,g,y-1}\) and \(\omega_{j,g,y}\) denote the previous-year and
+current-year group-specific weights used for the link. The within-year
+Tornqvist aggregate is:
 
 \[
-T_{g,t}
-= \prod_j r_{j,t}^{\frac{1}{2}
-\left(s_{j,g,y(t)-1} + s_{j,g,y(t)}\right)}.
+P^T_{g,y,m}
+=
+\prod_{j \in \mathcal{J}_y}
+\left(
+\frac{p_{j,y,m}}{p_{j,y,0}}
+\right)^{
+\frac{1}{2}
+\left(
+\omega_{j,g,y-1} + \omega_{j,g,y}
+\right)
+}.
 \]
 
+The chained Tornqvist group index \(I^T_{g,y,m}\) is obtained by applying the
+same annual chaining convention as for \(I^L_{g,y,m}\).
+
 For each group \(g\), the comparison is made using annualized growth rates over
-the selected sample window. If \(t_0\) and \(t_1\) are the first and last months
-available in the comparison, and \(m=t_1-t_0\) is the number of elapsed months,
-the annualized growth rate of index \(P\) is:
+the selected sample window. If \((y_0,m_0)\) and \((y_1,m_1)\) are the first
+and last months available in the comparison, and \(n\) is the number of elapsed
+months, the annualized growth rate of chained index \(I\) is:
 
 \[
-\gamma_g(P)
+\gamma_g(I)
 = \left[
-\left(\frac{P_{g,t_1}}{P_{g,t_0}}\right)^{12/m} - 1
+\left(
+\frac{I_{g,y_1,m_1}}{I_{g,y_0,m_0}}
+\right)^{12/n} - 1
 \right] \times 100.
 \]
 
@@ -58,8 +78,10 @@ The upper-level substitution-bias diagnostic is then defined as:
 
 \[
 \operatorname{SB}_g
-= \text{chained Laspeyres growth}_g
-- \text{chained Tornqvist growth}_g.
+=
+\gamma_g(I^L)
+-
+\gamma_g(I^T).
 \]
 
 A positive value indicates that the chained Laspeyres aggregation grows faster
