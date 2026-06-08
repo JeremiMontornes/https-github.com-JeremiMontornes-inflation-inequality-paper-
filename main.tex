@@ -163,7 +163,7 @@ Headline inflation represents the spending patterns of an average household. Est
 
 This analysis is based on publicly available data, primarily the Harmonized Index of Consumer Prices (HICP) constructed by national statistical institutes in collaboration with Eurostat. 
 
-The HICP offers a standardized measure of inflation, ensuring comparability among member states with 2015 as the base year. Eurostat aggregates national HICPs. Each country's HICP is based on price changes for a fixed basket of goods and services, weighted according to household expenditure from country-specific sources (national accounts, HBS, etc.). These indices are then combined into the aggregate HICP using country-specific weights that reflect their share of total EU household consumption expenditure. The calculation ensures comparability by adhering to EU regulations and consistent data collection practices.
+The HICP offers a standardized measure of inflation, ensuring comparability among member states. Eurostat aggregates national HICPs. Each country's HICP is based on price changes for a fixed basket of goods and services, weighted according to household expenditure from country-specific sources (national accounts, HBS, etc.). These indices are then combined into the aggregate HICP using country-specific weights that reflect their share of total  household consumption expenditure. The calculation ensures comparability by adhering tothe Regulation EU 2016/796 and consistent data collection practices. The HICP is compiled according to the classificication of houshold expenditures ECOICOP ver. 2.
 
 To ensure the HICP accurately represents current consumption patterns, Eurostat updates its weighting structure annually. The updated weights are implemented with the January release of the HICP each year and remain fixed throughout the calendar year. This practice ensures consistency in the measurement of price changes over the year. This approach aligns with the Laspeyres index formula, which uses fixed base-period weights to measure price changes over time. 
 
@@ -252,46 +252,47 @@ E^{HBS}_{j,\mathrm{all},y'}
 
 where $E^{HBS}_{j,g,y'}$ is HBS expenditure on product category $j$ by group
 $g$ in HBS wave $y'$, and $E^{HBS}_{j,\mathrm{all},y'}$ is the corresponding
-expenditure for all households. The group-specific product weight is then:
+expenditure for all households. The correction factor indicates whether group
+$g$ spends relatively more or less on product $j$ than the average household.
+The simpler within-group normalization of these adjusted weights is reported
+in Appendix~\ref{sec:app-weight-normalization}. In the baseline specification,
+we instead use the RAS calibration described below.
+
+\subsection*{RAS calibration of group weights}
+
+The group-specific weights used in the baseline calculations are obtained by a
+bi-proportional RAS calibration of the group-specific expenditure matrix. Let
+$s_g$ denote the population share of group $g$, let $\mathcal{J}_y$ be the set
+of product categories included in the HICP weighting structure in year $y$,
+and define the initial cell mass
 
 \begin{equation}
-\omega_{j,g,y}
+M^{(0)}_{j,g,y}
 =
-\frac{
-\omega^{HICP}_{j,y}
-\cdot
-c^{HBS}_{j,g,y'}
-}{
-\sum_{k \in \mathcal{J}_y}
-\omega^{HICP}_{k,y}
-\cdot
-c^{HBS}_{k,g,y'_k}
-},
+s_g\omega^{HICP}_{j,y}c^{HBS}_{j,g,y'}.
 \end{equation}
 
-where $\mathcal{J}_y$ is the set of product categories included in the HICP
-weighting structure in year $y$, and $y'_k$ is the HBS wave matched to product
-category $k$ and HICP weight year $y$.
-
-The HBS correction alone gives adjusted, unnormalized weights:
+The RAS procedure iteratively rescales rows and columns of this matrix so that
+two sets of constraints hold simultaneously:
 
 \begin{equation}
-\widetilde{\omega}_{j,g,y}
-=
-\omega^{HICP}_{j,y}
-\cdot
-c^{HBS}_{j,g,y'}.
+\sum_{j \in \mathcal{J}_y} M_{j,g,y} = s_g
+\quad \text{for all } g,
+\qquad
+\sum_g M_{j,g,y} = \omega^{HICP}_{j,y}
+\quad \text{for all } j.
 \end{equation}
 
-These adjusted weights do not necessarily sum to one, because the correction
-factor is a product-by-product ratio. It indicates whether group $g$ spends
-relatively more or less on product $j$ than all households, but the positive
-and negative deviations across products are not constrained to offset exactly.
-The denominator is therefore the normalization term. It rescales the adjusted
-weights so that each household group is assigned a complete basket whose
-product weights sum to one. Thus, differences in inflation across household groups come from differences
-in the composition of the basket across products, not from differences in the
-total size of the basket.
+The calibrated group-specific weights are then obtained as
+$\omega^{RAS}_{j,g,y}=M_{j,g,y}/s_g$. This preserves the relative information
+contained in the HBS expenditure profiles  and that the
+population-weighted average of group baskets exactly reproduces the official
+HICP item weights over the matched set of products. In the empirical
+implementation for income groups, quintiles and deciles are treated as
+equal-population groups, so $s_g=1/5$ or $s_g=1/10$. [to be done for age and residence area] The aggregate index
+obtained by averaging the group-specific indices is therefore mechanically
+consistent with the published HICP aggregation target, up to the remaining
+differences induced by product coverage and COICOP matching.
 
 The Household Budget Survey is conducted only once every five years. In
 contrast, the expenditure weights used in the construction of the HICP are
@@ -309,7 +310,7 @@ developments of their parent product categories. In the case of "062", the
 price movements of the broader "health services" category ("06") are used to
 estimate the missing data.
 
-\subsection*{Price indices and notation}
+\subsection*{Price indices }
 
 Let $p_{j,y,m}$ denote the HICP price index of product category $j$ in month
 $m$ of year $y$. Let $p_{j,y,0}$ denote the price reference used for the HICP
@@ -352,48 +353,10 @@ monthly chained price index for group $g$.
 
 %HICP weights, adjusted each year. In the calculations for France, the ‘national’ CPI is used for comparison with INSEE publications. HICP weights are used to ‘normalise’ consumption structures so that aggregation of the indices by category produces the HICP.
 
-\subsection*{Inflation and inflation gap}
-
-
-Inflation in a given month for each household group $g$ results from the sum
-of product-level contributions, defined in
-Appendix~\ref{sec:app-contributions}:
-
-\begin{equation} 
-\pi_{g,y,m}
-=
-\sum_{j \in \mathcal{J}_y}
-\text{Contrib}_{j,g,y,m}.
-\end{equation} 
-
-
-The inflation gap between two household groups $g_1$ and $g_2$ is defined as:
-
-\begin{equation} 
-\Delta\pi_{g_1,g_2,y,m}
-=
-\pi_{g_1,y,m}
--
-\pi_{g_2,y,m}.
-\end{equation}
-
-For income quintiles, the inter-quintile inflation gap is:
-
-\begin{equation} 
-\text{IQR}_{y,m}
-=
-\pi_{Q1,y,m}
--
-\pi_{Q5,y,m}.
-\end{equation} \\
-
-%In one hand,at household category level (and not at the individual level) we ignore intra-group heterogeneity. On the other hand, this approach flully covers the household consumption basket and allows for cross-country comparisons. 
-
-%ICompared to scanner data (Appendix A) which are available only for supermarket products, the inflation gap offers at least three key advantages. First, it encompasses the entire household consumption basket. Second, it can be updated monthly to compute recent developments. Third, it is comparable across euro area countries.
 
 The inflation gap, a measure of inflation inequality, offers several advantages over using scanner data (Appendix A). First, the inflation gap encompasses the entire household consumption basket, unlike scanner data, which is limited to supermarket products. This broader scope is essential to remain consistent with the basket of the HICP. Second, the inflation gap can be updated monthly, providing timely insights into recent inflation developments to monitor the distributional effects of price changes. Third, the inflation gap is comparable across euro area countries, facilitating analysis of inflation inequality patterns and policy effectiveness within a monetary union.
 
- However, the inflation gap does not account for changes in household behavior in response to rising prices. Wealthier households have greater flexibility to mitigate the effects of inflation by reducing discretionary spending, such as on leisure activities, or by substituting with lower-cost or lower-quality goods and services. \footnote{Recent household surveys conducted in France have explored how households adapt their consumption habits to inflation. These surveys show that lower-income households are more likely than higher-income households to report changes in their consumption patterns in response to rising prices (Credoc (2024), Insee (2024))}
+ However, the inflation gap does not account for changes in household behavior in response to rising prices. Wealthier households have greater flexibility to mitigate the effects of inflation by reducing discretionary spending, such as on leisure activities, or by substituting with lower-cost or lower-quality goods and services. \footnote{Recent household surveys conducted in France have explored how households adapt their consumption habits to inflation. These surveys show that lower-income households are more likely than higher-income households to report changes in their consumption patterns in response to rising prices (Sanganai (2024)}
  
 %In contrast, essential expenditures, such as housing, food, healthcare, and transportation, constitute almost two-thirds of total consumption for lower-income households, compared to less than half for higher-income households. 
 
@@ -757,6 +720,10 @@ Figure~\ref{fig:es_energy_hicp_counterfactuals} reports the Spanish electricity 
 Source: Eurostat HICP, OMIE wholesale electricity prices, European Commission Weekly Oil Bulletin, IMF staff estimates, authors' calculations.}
 \end{figure}
 
+\subsection{Policy Options}
+
+This exercise is motivated by the estimation of counterfactual price indices under the policies actually implemented, which provides a direct way to measure how alternative interventions on electricity, gas, and motor fuel prices would have reshaped households' inflation exposure and the distribution of compensating needs. The underlying framework can be generalized to a partial-equilibrium model of household demand for multiple energy goods, such as electricity, gas, and motor fuel. Household $i$ consumes a vector of energy goods $e_{ik}$, indexed by $k \in K$, and a composite numeraire good $y_i$, subject to the budget constraint $y_i + \sum_{k \in K} p_k e_{ik} = Y_i$. Preferences are quasi-linear, $U_i(y_i,\{e_{ik}\}) = y_i + u_i(e_{i1},\ldots,e_{iK})$, so that local demand responses can be summarized by own- and cross-price elasticities, $d\log e_{ik} = \sum_{\ell \in K} \varepsilon_{k\ell} d\log p_\ell$. The welfare loss from a vector of energy price shocks is approximated at first order by $EV_i = \sum_{k \in K} s_{ik} d\log p_k$, where $s_{ik}=p_k e_{ik}/Y_i$ is household $i$'s budget share for energy good $k$. Empirically, the model is implemented as a weighted micro-simulation using household survey data: each $s_{ik}$ is measured by observed expenditure on energy good $k$ relative to total household expenditure, households are ranked by equivalised income, and policy transfers are computed as functions of household-specific compensating variation. The econometric object is therefore the empirical distribution of exposure to different energy price shocks, the associated compensating variation, and the resulting over- or under-compensation under alternative policy rules, rather than a full structural estimate of household energy demand.
+
 %The Spanish Government has introduced temporary VAT rate changes  including  a temporary 0\% VAT on basic foodstuffs, and new VAT rates of 5\% and 7.5\%
 %\cite{forteza2024analysing} study the price effects of the temporary VAT rate reduction  find the pass-through was almost complete between 1 January 2023 and 2025. 
 
@@ -1091,7 +1058,49 @@ target-year baskets.
 
 \newpage
 
-\section{Contribution to inflation}
+\section{Alternative within-group normalization}
+\label{sec:app-weight-normalization}
+
+A simpler alternative starts from the unnormalized HBS-adjusted weight
+
+\begin{equation}
+\widetilde{\omega}_{j,g,y}
+=
+\omega^{HICP}_{j,y}
+\cdot
+c^{HBS}_{j,g,y'}.
+\end{equation}
+
+Because the correction factor is a product-by-product ratio, these adjusted
+weights do not necessarily sum to one within each household group. The
+within-group normalized weight is therefore
+
+\begin{equation}
+\omega^{norm}_{j,g,y}
+=
+\frac{
+\omega^{HICP}_{j,y}
+\cdot
+c^{HBS}_{j,g,y'}
+}{
+\sum_{k \in \mathcal{J}_y}
+\omega^{HICP}_{k,y}
+\cdot
+c^{HBS}_{k,g,y'_k}
+},
+\end{equation}
+
+where $y'_k$ is the HBS wave matched to product category $k$ and HICP weight
+year $y$. This normalization gives each household group a complete basket, so
+differences in inflation across groups come from differences in basket
+composition rather than from differences in total basket size. However, it does
+not impose that the population-weighted average of group-specific item weights
+matches the official HICP item weights. For this reason, the baseline
+specification uses the RAS calibration described in the main text.
+
+\section*{Notations and formulas}
+
+\subsection*{Contribution to inflation}
 \label{sec:app-contributions}
 
 The contribution of product $j$ to inflation for household group $g$ is
@@ -1130,6 +1139,46 @@ This approach keeps product-level contributions consistent with the chained
 inflation measures used for each household group. It is therefore useful for
 interpreting which product categories drive the inflation rate and the
 inflation gap between groups.
+
+
+\subsection*{Inflation and inflation gap}
+
+
+Inflation in a given month for each household group $g$ results from the sum
+of product-level contributions, defined in
+Appendix~\ref{sec:app-contributions}:
+
+\begin{equation} 
+\pi_{g,y,m}
+=
+\sum_{j \in \mathcal{J}_y}
+\text{Contrib}_{j,g,y,m}.
+\end{equation} 
+
+
+The inflation gap between two household groups $g_1$ and $g_2$ is defined as:
+
+\begin{equation} 
+\Delta\pi_{g_1,g_2,y,m}
+=
+\pi_{g_1,y,m}
+-
+\pi_{g_2,y,m}.
+\end{equation}
+
+For income quintiles, the inter-quintile inflation gap is:
+
+\begin{equation} 
+\text{IQR}_{y,m}
+=
+\pi_{Q1,y,m}
+-
+\pi_{Q5,y,m}.
+\end{equation} \\
+
+%In one hand,at household category level (and not at the individual level) we ignore intra-group heterogeneity. On the other hand, this approach flully covers the household consumption basket and allows for cross-country comparisons. 
+
+%ICompared to scanner data (Appendix A) which are available only for supermarket products, the inflation gap offers at least three key advantages. First, it encompasses the entire household consumption basket. Second, it can be updated monthly to compute recent developments. Third, it is comparable across euro area countries.
 
 \newpage
 
