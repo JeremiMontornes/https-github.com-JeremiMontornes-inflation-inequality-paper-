@@ -1,28 +1,29 @@
+\begin{table}[H]
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{0.95}
 
-\begin{table}[H] \centering 
-  \caption{Latent income-score model, Italy} 
-  \label{tab:it-hbs-latent-income-coefficients} 
-\small 
-\setlength{\tabcolsep}{6pt}
-\renewcommand{\arraystretch}{1.05}
-\begin{tabular}{lcc} 
+\caption{\label{tab:it-hbs-latent-income-coefficients}Latent income-score model, Italy}
+\centering
+\begin{tabular}[t]{lll}
 \toprule
-Variable & 2015 & 2020 \\ 
+Variable & 2015 & 2020\\
 \midrule
-Absolute-poverty indicator & 0.142 & 0.001 \\ 
-Age of reference person & 0.139 & 0.007 \\ 
-Consumption level & 0.157 & -0.017 \\ 
-Economic resources & 0.144 & 0.017 \\ 
-Education of reference person & 0.151 & 0.010 \\ 
-Housing surface per person & 0.149 & -0.006 \\ 
-Housing tenure & 0.145 & 0.002 \\ 
-Labour-market status & 0.137 & -0.000 \\ 
-Occupation & 0.143 & 0.001 \\ 
-Subjective economic situation & 0.145 & -0.002 \\ 
+Consumption level & 0.433 & 0.164\\
+Age of reference person & -0.146 & 0.134\\
+Education of reference person & 0.210 & 0.151\\
+Labour-market status & -0.164 & 0.134\\
+Occupation & 0.006 & 0.144\\
+\addlinespace
+Housing tenure & 0.068 & 0.144\\
+Housing surface per person & 0.156 & 0.147\\
+Economic resources & 0.021 & 0.143\\
+Subjective economic situation & 0.074 & 0.144\\
+Absolute-poverty indicator & 0.006 & 0.139\\
 \bottomrule
-\end{tabular} 
+\end{tabular}
 \vspace{-0.6em}
 \begin{flushleft}
-\footnotesize{Notes. Coefficients define the latent socio-economic score used to construct probabilistic income groups in the 2015 and 2020 Istat HBS files. Significance: n.a.; the calibration output contains no finite Hessian-based standard errors, so stars are not reported. Coefficients are calibration score weights, not causal estimates. Continuous variables are standardised. Sources: Istat HBS public-use files, Eurostat HBS, authors' calculations.}
+\footnotesize{Notes. Coefficients define the latent socio-economic score used to construct probabilistic income groups in the 2015 and 2020 Istat HBS files. The calibration targets are bridge-corrected income-quintile baskets obtained from target-year expenditure-quintile baskets and the 2005 income/expenditure-quintile bridge. Significance: n.a.; the calibration output contains no finite Hessian-based standard errors, so stars are not reported. Coefficients are calibration score weights, not causal estimates. Continuous variables are standardised. Sources: Istat HBS public-use files, Eurostat HBS, authors' calculations.}
 \end{flushleft}
-\end{table} 
+\end{table}

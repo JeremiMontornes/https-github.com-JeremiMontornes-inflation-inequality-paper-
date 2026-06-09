@@ -90,7 +90,7 @@ latex_escape <- function(x) {
 
 manifest <- read_csv(manifest_path, show_col_types = FALSE) |>
   filter(status != "excluded_by_user") |>
-  filter(country != "France") |>
+  filter(!country %in% c("France", "Spain")) |>
   mutate(
     component_label = pretty_component(coicop, component),
     method_label = method_title(method_family),
