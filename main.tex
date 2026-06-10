@@ -131,11 +131,6 @@ The literature identifies three channels through which inflation produces hetero
 
 This work builds on studies by \cite{bobasu2023impact} and \cite{claeys2022inflation} that analyzed inflation inequality by household category, with slightly differing methodologies and results. \cite{bobasu2023impact} estimates inter-quintile inflation gaps of approximately 0.8 percentage points in September 2022, which narrowed to zero by early 2023 for the euro area, using 2015 household budget survey weights. The Bruegel Institute has published and updated inflation rates by income quintile for European Union countries. Their findings align with our results. However, the methodology exclusively uses HBS weights, without adjusting the weights based on HBS-corrected price indices for quintile-specific inflation (Q1 and Q5). This adjustment leads to slight discrepancies between their overall inflation estimates and the harmonized price indices of the respective countries. 
 
-Scanner data capture price changes at the barcode level, allowing detailed analysis of inflation within specific product categories (e.g., organic vs. regular products). For instance, \cite{jaravel2024distributional} shows that the inflation gap calculated using scanner data for organic versus conventional
-products in the United States was nearly double that observed using aggregated CPI data.
-
-
-
 We calculate inflation rates experienced by households across different categories within each euro area country, as well as for the euro area as a whole. The objective is to provide a simple and replicable methodology for estimating inflation by income group, age group, and area of residence using harmonized and publicly available sources. Inflation rates by categories are first computed at the country level and then aggregated for the euro area following the HICP methodology. The approach is deliberately parsimonious: it can be updated at monthly frequency, extended to many countries, and used to compare whether inflation inequality is primarily a short-run phenomenon associated with specific price shocks or a more persistent long-run pattern.
 
 This paper makes two contributions to the renewed interest in inflation inequality. First, it provides a publicly available and easily updatable dataset constructed using harmonized country-level inflation rates by household categories, ensuring consistency with the official Harmonised Index of Consumer Prices (HICP). Second, it examines the effect of unconventional fiscal policies, with a particular focus on the mitigating impacts of tariff shield policies and temporary VAT cuts implemented across euro area countries. Understanding the heterogeneous effects of inflation is important for assessing the effectiveness of policy responses during the 2022 energy crisis, because measures that reduce average inflation may have different distributional effects depending on which prices they affect.
@@ -644,47 +639,65 @@ Figure~\ref{fig:es-inflation-burden} reports this indicator for Spain. The first
 
 \subsection{Household-level inflation}
 
-The previous indicators aggregate households into income groups. This aggregation is useful for comparability across countries, but it only captures the component of inflation inequality that arises between broad household categories, such as the first and fifth income quintiles. It can therefore hide substantial dispersion within the same group. To document this within-group heterogeneity, we use Spanish EPF household-level expenditure data and compute household-specific inflation rates. In the empirical exercise, household baskets are fixed at their 2020 EPF composition, but the notation below is written for a generic survey year $y'$. For each household, expenditure shares from EPF wave $y'$ are matched to annual COICOP inflation rates from the HICP. Household-level inflation is then obtained as the weighted sum of COICOP inflation rates using the household's own expenditure shares. The distributions below are weighted with the EPF survey weights.
+The previous indicators aggregate households into income groups. This aggregation is useful for comparability across countries, but it only captures the component of inflation inequality that arises between broad household categories, such as the first and fifth income quintiles. It can therefore hide substantial dispersion within the same group. To document this within-group heterogeneity, we use household-level HBS expenditure data and compute household-specific inflation rates. In the empirical exercise, we use the Spanish EPF, a publicly available HBS microdata source, and fix household baskets at their 2020 EPF composition. The notation below is written for a generic survey year $y'$. For each household, expenditure shares from HBS wave $y'$ are matched to monthly COICOP price indices from the HICP. Household-level inflation is then obtained from the household-specific price index implied by the household's own expenditure shares. The distributions below are weighted with the EPF survey weights.
 
 The calculation follows a fixed-basket Laspeyres logic at the household level.
-Let $e^{EPF}_{i,j,y'}$ denote household $i$'s expenditure on COICOP item $j$ in
-EPF wave $y'$, and let
+Let $e^{HBS}_{i,j,y'}$ denote household $i$'s expenditure on COICOP item $j$ in
+HBS wave $y'$, and let
 \[
-\omega^{EPF}_{j,i,y'}
+\omega^{HBS}_{j,i,y'}
 =
-\frac{e^{EPF}_{i,j,y'}}{\sum_{k \in \mathcal{J}_{i,y'}} e^{EPF}_{i,k,y'}}
+\frac{e^{HBS}_{i,j,y'}}{\sum_{k \in \mathcal{J}_{i,y'}} e^{HBS}_{i,k,y'}}
 \]
 be the corresponding household expenditure share, using the same convention as
-the group-specific weights $\omega_{j,g,y}$ defined above. For each COICOP
-item, annual inflation is computed from the HICP as the average of monthly
-year-on-year inflation rates,
+the group-specific weights $\omega_{j,g,y}$ defined above. For household $i$,
+the within-year price index in month $m$ of year $y$ is
 \[
-\pi^{HICP}_{j,y}
-=
-\frac{1}{|\mathcal{T}_{j,y}|}
-\sum_{m \in \mathcal{T}_{j,y}}
-\left(\frac{p_{j,y,m}}{p_{j,y-1,m}} - 1\right)100,
-\]
-where $\mathcal{T}_{j,y}$ is the set of months with valid HICP observations for
-item $j$ in year $y$. We use $\mathcal{T}$ for the month set to keep it
-distinct from the RAS matrix $M_{j,g,y}$ introduced above. The household-level
-annual inflation rate is then
-\[
-\pi_{i,y}
+P^{(y')}_{i,y,m}
 =
 \frac{
-\sum_{j \in \mathcal{J}_{i,y',y}} \omega^{EPF}_{j,i,y'}\pi^{HICP}_{j,y}
+\sum_{j \in \mathcal{J}_{i,y',y}}
+\omega^{HBS}_{j,i,y'}
+\frac{p_{j,y,m}}{p_{j,y,0}}
 }{
-\sum_{j \in \mathcal{J}_{i,y',y}} \omega^{EPF}_{j,i,y'}
+\sum_{j \in \mathcal{J}_{i,y',y}} \omega^{HBS}_{j,i,y'}
 },
 \]
 where $\mathcal{J}_{i,y',y}$ is the set of household expenditure items observed
-in EPF wave $y'$ that can be matched to HICP inflation in year $y$. The
+in HBS wave $y'$ that can be matched to HICP prices in year $y$. The
 denominator renormalizes the basket over matched items; in the empirical
 implementation, households are retained only when the matched expenditure share
-is at least 80 percent.
+is at least 80 percent. The household-level chained index is then obtained as
+\[
+I^{(y')}_{i,y,m}
+=
+I^{(y')}_{i,y-1,12}
+\cdot
+P^{(y')}_{i,y,m}.
+\]
+Monthly household inflation is computed from this household-level chained
+index,
+\[
+\pi^{(y')}_{i,y,m}
+=
+\left(
+\frac{I^{(y')}_{i,y,m}}{I^{(y')}_{i,y-1,m}} - 1
+\right)100,
+\]
+and the annual household inflation rate is the average over valid months,
+\[
+\pi^{(y')}_{i,y}
+=
+\frac{1}{|\mathcal{T}_{i,y}|}
+\sum_{m \in \mathcal{T}_{i,y}}
+\pi^{(y')}_{i,y,m}.
+\]
+This formula loops over households, product categories, and months. It is more
+computationally demanding than the faster approximation that first aggregates
+item-level annual inflation and then applies household expenditure shares, but
+it is closer to the index construction used for the group-level indicators.
 
-A related literature uses scanner data from sources such as Nielsen or Kantar to measure household inflation at a finer level of product detail. \citet{jaravel2019unequal}, for example, shows that in the United States lower-income households benefited less from product innovation and faced different effective price changes across detailed retail products. Our approach differs in three ways: we use Spanish HBS/EPF expenditure records rather than scanner data, we match those baskets to aggregate HICP inflation rather than household-specific transaction prices, and we keep a fixed 2020 household basket rather than tracking product substitution within households. The exercise therefore does not reproduce scanner-data granularity, but it moves one step closer to the household level by replacing group-average expenditure shares with household-specific baskets.
+Scanner data capture price changes at the barcode level, allowing detailed analysis of inflation within specific product categories (e.g., organic vs. regular products). For instance, \cite{jaravel2024distributional} shows that the inflation gap calculated using scanner data for organic versus conventional products in the United States was nearly double that observed using aggregated CPI data. \citet{jaravel2019unequal} also shows that lower-income households benefited less from product innovation and faced different effective price changes across detailed retail products. Our approach differs in three ways: we use Spanish HBS/EPF expenditure records rather than scanner data, we match those baskets to aggregate HICP price indices rather than household-specific transaction prices, and we keep a fixed 2020 household basket rather than tracking product substitution within households. The exercise therefore does not reproduce scanner-data granularity, but it moves one step closer to the household level by replacing group-average expenditure shares with household-specific baskets.
 
 Figure~\ref{fig:es-household-level-distribution} overlays the cross-household distributions for 2021, 2022, and 2023 using bins of 0.1 percentage point. Weighted mean household inflation is about 3.1 percent in 2021, 7.0 percent in 2022, and 2.8 percent in 2023. The distribution shifts markedly to the right in 2022 and becomes more dispersed, with a visible upper tail above 10 percent. This pattern is consistent with the broad-based energy and food price shock observed in Spain during that year. In 2021 and 2023, household-level inflation is lower and the mass of the distribution is closer to the 2--4 percent range, although both years retain non-negligible heterogeneity across households.
 
@@ -808,7 +821,7 @@ Source: Eurostat HICP, OMIE wholesale electricity prices, European Commission We
 
 \subsection{Policy Options}
 
-To complement the price-index counterfactuals, we introduce a simple
+To complement the price-index counterfactuals, we estimate a simple
 household-level model of energy demand and compensating needs. This framework
 is a deliberately simplified version of \cite{levell2026welfare}, who study
 the welfare effects of energy price shocks and relief packages using rich
@@ -915,7 +928,7 @@ bound on short-run demand adjustment.
 
 %This paper a set of public indicators to measure inflation inequalities in real-time monthly across socio-demographic groups in the Euro Area.
 
-This paper presents a methodology to build easily implementable inflation inequality indicators in the euro area. The approach presented in this paper involves indicators based on the Harmonised Index of Consumer Prices (HICP) and household budget surveys. It provides a transparent framework for monitoring how aggregate inflation translates into different household-group inflation rates across countries and over time.
+This paper presents a methodology to build timely inflation inequality indicators in the euro area. The approach presented in this paper involves indicators based on the Harmonised Index of Consumer Prices (HICP) and household budget surveys. It provides a framework for monitoring how aggregate inflation translates into different household-group inflation rates across countries and over time.
 
 %results
 Our results show that inflation inequality across income groups in the euro area has remained relatively contained during the recent inflationary episode, especially in large countries such as Germany, France, and Spain. We also document strong cross-country heterogeneity in inflation inequality, particularly in countries dependent on natural gas imports, such as the Baltic states. 
@@ -923,7 +936,7 @@ Our results show that inflation inequality across income groups in the euro area
 Inflation inequalities by age and residence are more pronounced, with older and rural households facing consistently higher inflation due to their larger share of spending on essential goods like food and energy. We also find that unconventional fiscal measures, including VAT cuts and energy price shields, have significantly mitigated inflation inequality in countries like France and Spain, especially among lower-income households. These measures operated directly on relative prices, particularly energy prices, and therefore reduced both average inflation and the inflation exposure of groups whose baskets were more energy intensive.
 
 %limit
-While we calculate inflation rates for different household categories, the measure remains subject to aggregation bias. To improve accuracy, it is essential to compute inflation inequality indicators at the most granular level available within the consumption product classification. Recent advances in data availability, such as supermarket scanner data at the bar-code level or bank transaction records, provide new opportunities to improve the precision of inflation and consumption measurement; Appendix~\ref{app:substitution-bias} provides a first diagnostic in this direction.
+The group-level indicators remain subject to aggregation bias. To improve accuracy, it is essential to compute inflation inequality indicators at the most granular level available within the consumption product classification. Recent advances in data availability, such as supermarket scanner data at the bar-code level or bank transaction records, provide new opportunities to improve the precision of inflation and consumption measurement; Appendix~\ref{app:substitution-bias} provides a first diagnostic in this direction.
 
 The policy interpretation is therefore twofold. Fiscal interventions such as VAT reductions, fuel rebates, and tariff shields can have immediate effects on measured prices and can change relative prices across consumption categories. They are particularly relevant during energy shocks because they can reduce the inflation burden of households whose expenditure is concentrated on regulated or subsidized items. By contrast, monetary policy affects the aggregate price level through broader transmission channels, with lags generally estimated at around 18 months. In the long run, monetary policy remains the instrument responsible for bringing inflation back to its target, including the 2 percent objective in the euro area, while fiscal policy is better understood as a temporary instrument for cushioning distributional effects during large relative-price shocks.
 
@@ -1295,11 +1308,21 @@ not impose that the population-weighted average of group-specific item weights
 matches the official HICP item weights. For this reason, the baseline
 specification uses the RAS calibration described in the main text.
 
+This within-group normalization can be interpreted as a special case of the
+general RAS framework when household groups are given equal aggregate weights,
+that is, when $s_g=1/n$ for $n$ groups, rather than using the observed
+consumption share of each group. Equivalently, the recalculated aggregate index
+is obtained as a simple average of the group-specific indices. This relative
+expenditure approach is often used in empirical applications because it only
+requires group-specific HBS expenditure profiles and aggregate price indices;
+for example, it is close to the strategy used in the Bruegel inflation
+inequality updates for EU households \citep{claeys2022inflation}.
+
 Figures~\ref{fig:de-validation-ras} and
 \ref{fig:de-validation-relative-expenditure} compare the two normalizations for
 Germany at COICOP level 2 over the period beginning in 2019. The recalculated
-series is the simple average of the five income-group inflation rates, and the
-grey bars report the difference between this recalculated average and the
+series is the simple average of the five income-group inflation rates, which
+corresponds to setting $s_g=1/5$, and the grey bars report the difference between this recalculated average and the
 published all-items HICP inflation rate. Units are percentage points of
 year-on-year inflation. In the RAS specification, the row targets are the
 income-group shares of total consumption expenditure, $s_g$, rather than equal
