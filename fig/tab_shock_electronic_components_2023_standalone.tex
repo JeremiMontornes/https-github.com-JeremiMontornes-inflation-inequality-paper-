@@ -1,39 +1,36 @@
 \documentclass[11pt]{article}
-\usepackage[margin=0.35in,landscape]{geometry}
-\usepackage{pdflscape}
+\usepackage[margin=0.65in]{geometry}
 \usepackage{booktabs}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \begin{document}
-\begin{landscape}
 \begin{table}[!htbp]
 \centering
 \caption{Effect of a 10 Percent Shock to Electronic Component Prices, 2023}
 \tiny
-\setlength{\tabcolsep}{1.8pt}
-\begin{tabular}{lrrrrrrrrrrrr}
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lrrrrrr}
 \toprule
-Country & \shortstack{Average inflation\\Total} & \shortstack{Average inflation\\Direct} & \shortstack{Average inflation\\Indirect} & \shortstack{Income inflation gap\\Total} & \shortstack{Income inflation gap\\Direct} & \shortstack{Income inflation gap\\Indirect} & \shortstack{Age inflation gap\\Total} & \shortstack{Age inflation gap\\Direct} & \shortstack{Age inflation gap\\Indirect} & \shortstack{Rural-urban inflation gap\\Total} & \shortstack{Rural-urban inflation gap\\Direct} & \shortstack{Rural-urban inflation gap\\Indirect}
+Country & \shortstack{Average inflation\\Total} & \shortstack{Average inflation\\Direct} & \shortstack{Average inflation\\Indirect} & \shortstack{Income inflation\\gap} & \shortstack{Age inflation\\gap} & \shortstack{Rural-urban\\inflation gap}
  \\
 \midrule
-DE & 0.2 & 0.1 & 0.1 & -0.0 & -0.0 & -0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0
+DE & 0.2 & 0.1 & 0.1 & -0.0 & 0.0 & 0.0
  \\
-FR & 0.2 & 0.1 & 0.1 & -0.0 & -0.0 & -0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0
+FR & 0.2 & 0.1 & 0.1 & -0.0 & 0.0 & 0.0
  \\
-IT & 0.2 & 0.1 & 0.1 & -0.0 & -0.0 & -0.0 & 0.0 & -0.0 & 0.0 & 0.0 & 0.0 & 0.0
+IT & 0.2 & 0.1 & 0.1 & -0.0 & 0.0 & 0.0
  \\
-ES & 0.1 & 0.0 & 0.1 & -0.0 & -0.0 & -0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0
+ES & 0.1 & 0.0 & 0.1 & -0.0 & 0.0 & 0.0
  \\
-NL & 0.2 & 0.1 & 0.1 & -0.0 & -0.0 & -0.0 & 0.0 & -0.0 & 0.0 & 0.0 & 0.0 & 0.0
+NL & 0.2 & 0.1 & 0.1 & -0.0 & 0.0 & 0.0
  \\
-BE & 0.2 & 0.0 & 0.1 & -0.0 & -0.0 & -0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0
+BE & 0.2 & 0.0 & 0.1 & -0.0 & 0.0 & 0.0
  \\
-EA20 & 0.2 & 0.1 & 0.1 & -0.0 & -0.0 & -0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0
+EA20 & 0.2 & 0.1 & 0.1 & -0.0 & 0.0 & 0.0
  \\
 \bottomrule
 \end{tabular}
 \par\vspace{0.35em}\footnotesize\noindent Sources: Eurostat HICP, HBS, FIGARO, author's calculations.
 \par\vspace{0.25em}\footnotesize\noindent Notes. Entries are percentage-point effects of a 10 percent sectoral input price shock. The price response is computed as $\Delta p = (I - A^{\prime})^{-1}s$, with $A$ built from FIGARO. The direct effect is the component from the shocked sector in the household consumption basket. Indirect is the Leontief propagation component. Total = Direct + Indirect before rounding. Income inflation gap = Q1 - Q5 of revenues; age inflation gap = over 60 years - less than 30 years; rural-urban inflation gap = rural areas - cities.
 \end{table}
-\end{landscape}
 \end{document}
