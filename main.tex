@@ -258,19 +258,32 @@ expenditure for all households. $E^{HBS}_{g,y'}$ and
 $E^{HBS}_{\mathrm{all},y'}$ denote total HBS consumption expenditure by group
 $g$ and by all households, respectively. The coefficient $c^{HBS}_{j,g,y'}$
 therefore measures the share of aggregate HBS expenditure on product $j$
-accounted for by group $g$. In the paper,
-we use the RAS calibration described below.
+accounted for by group $g$.
 
-%The relative expenditures weihted  is reported
-%in Appendix~\ref{sec:app-weight-normalization}.
 
-The baseline weights, denoted $\omega_{j,g,y}$ in the formulas below, are
-obtained from the RAS calibration implemented in the package function
-\texttt{calculate\_}\allowbreak\texttt{weights()}. The algorithm preserves the
+The weights $\omega_{j,g,y}$ are obtained from the RAS calibration. The algorithm preserves the
 relative HBS expenditure profiles while making the expenditure-weighted average
 of group baskets reproduce the official HICP item weights. Appendix
 \ref{sec:app-weight-normalization} describes the RAS algorithm and compares it
-with the simpler relative-expenditure normalization.
+with the relative-expenditure normalization.
+
+The calibrated
+aggregate expenditure matrix $M_{j,g,y}$ is required to satisfy the original
+HICP item-weight margins:
+\begin{equation}
+\sum_{j \in \mathcal{J}_y} M_{j,g,y}
+=
+s_{g,y}\sum_{j \in \mathcal{J}_y}\omega^{HICP}_{j,y}
+\quad \text{for all } g,
+\qquad
+\sum_g M_{j,g,y}
+=
+\omega^{HICP}_{j,y}
+\quad \text{for all } j.
+\end{equation}
+
+After aggregation, this calibration closely reproduces the official inflation
+rate (see Appendix~\ref{sec:app-weight-normalization}).
 
 The Household Budget Survey is conducted only once every five years. In
 contrast, the expenditure weights used in the construction of the HICP are
@@ -296,9 +309,8 @@ weight year $y$; in the chained annual calculation this corresponds to the
 December price index of the previous year. Eurostat defines the HICP as a
 chain-linked Laspeyres-type index: item indices are first unchained within the
 weight year, aggregated with annual expenditure weights, and then chained
-again.\footnote{See the \texttt{hicp} package vignette, which implements the
-Eurostat HICP aggregation formulas:
-\url{https://cran.r-project.org/web/packages/hicp/vignettes/hicp_intro.html}.}
+again.\footnote{See the \texttt{hicp} package, which implements the
+Eurostat HICP aggregation.}
 The group-specific within-year price index therefore combines unchained product
 indices with the group-specific weights defined above:
 
@@ -564,9 +576,7 @@ Panel (a) of Figure~\ref{fig:contrib_spain} shows the evolution of inflation by 
 %Inflation gaps measure differences in the growth rate of household-group price
 %indices, but they do not directly express the cost of inflation relative to
 %household resources. 
-To complement the group-specific inflation rate
-$\pi_{g,y,m}$, derived from the chained group price index $I_{g,y,m}$, we
-compute an inflation burden indicator by scaling inflation by the
+We compute an inflation burden indicator by scaling inflation by the
 consumption-to-income ratio of group $g$. To avoid confusing this object with
 the HBS correction factor $c^{HBS}_{j,g,y'}$ used in the construction of
 weights, let $\kappa_{g,y'}$ denote consumption expenditure as a percentage
@@ -627,19 +637,11 @@ P_{i,y,m}
 ,
 \end{equation}
 where $\mathcal{J}_{i,y',y}$ is the set of household expenditure items observed
-in HBS wave $y'$ that can be matched to HICP prices in year $y$. In the package
-implementation, households are passed to the same price-index routine as
-household groups: the within-year Laspeyres movements are chain-linked by
-household, and year-on-year monthly inflation rates $\pi_{i,y,m}$ are computed
-from the resulting chained household price index. The annual household
-inflation rate is the average over valid months,
-\begin{equation}
-\pi_{i,y}
-=
-\frac{1}{|\mathcal{T}_{i,y}|}
-\sum_{m \in \mathcal{T}_{i,y}}
-\pi_{i,y,m}.
-\end{equation}
+in HBS wave $y'$ that can be matched to HICP prices in year $y$. Households are
+therefore treated as elementary household groups: the within-year Laspeyres
+movements are chain-linked at the household level, and year-on-year monthly
+inflation rates $\pi_{i,y,m}$ are computed from the resulting chained household
+price index.
 
 %This formula loops over households, product categories, and months. It is more
 %computationally demanding than the faster approximation that first aggregates
@@ -783,7 +785,7 @@ Appendix Figures~\ref{fig:app-fr-level3-price-indices},
 \ref{fig:app-fr-level3-inflation}, and
 \ref{fig:app-fr-level3-contributions}. They document the long-run level
 indices, year-on-year inflation rates, and contribution gaps obtained with the
-detailed French COICOP matching used in the package.
+detailed French COICOP level 4.
 
 Figure~\ref{fig:fr_fuel_hicp_counterfactual} focuses on the fuel-price rebate. Consistent with the unconventional fiscal policy framework in \cite{dao2023unconventional}, the counterfactual removes the price-based intervention by adding back the public rebate to retail fuel prices. The gap between the two indices is therefore confined to the period during which the rebate was in force.
 
@@ -1367,7 +1369,7 @@ s_{g,y}\omega^{HICP}_{j,y}c^{HBS}_{j,g,y'},\epsilon
 \qquad
 \epsilon=10^{-12}.
 \end{equation}
-The small positive floor is a numerical safeguard used in the package to keep
+The small positive floor is a numerical safeguard  to keep
 the RAS problem strictly non-negative after HICP-HBS matching. The calibrated
 aggregate expenditure matrix $M_{j,g,y}$ is required to satisfy the original
 HICP item-weight margins:
@@ -1478,7 +1480,7 @@ inflation with published all-items HICP.
 \includegraphics[width=0.95\textwidth,height=0.31\textheight,keepaspectratio]{fig/fig_FR_2010_2026_hicp_inflation_validation_level2_recode_mean_vs_published.png}
 \vspace{2pt} 
 \captionsetup{font=scriptsize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Note: Blue line: published all-items HICP. Black line: package recalculation from 2019 onward. Grey bars: recalculation minus published HICP, in percentage points.\\
+\caption*{Note: Blue line: published all-items HICP. Black line:  recalculation from 2019 onward. Grey bars: recalculation minus published HICP, in percentage points.\\
 Sources: INSEE, Eurostat, authors' calculations.}
 \end{figure}
 
@@ -1512,7 +1514,7 @@ level 3  with the official INSEE income decile series.
 \label{fig:fr-decile-published-recalculated}
 \includegraphics[width=0.95\textwidth,height=0.34\textheight,keepaspectratio]{fig/france-insee-decile-published-vs-recalculated-D1-D10-2010-2023.png}
 \captionsetup{font=scriptsize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Note: Official INSEE annual inflation rates by standard-of-living decile are compared with the package recalculation at COICOP level 3.\\
+\caption*{Note: Official INSEE annual inflation rates by standard-of-living decile are compared with the recalculation at COICOP level 3.\\
 Sources: INSEE, Eurostat, authors' calculations.}
 \end{figure}
 
