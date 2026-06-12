@@ -1,27 +1,26 @@
-﻿order,file,caption,status,message
-1,fig_EA_2014_2026_headline_inflation.png,"Inflation developments, euro area",skipped,No package-native builder yet.
-2,fig_EA_2014_2026_hicp_components.png,Euro-area HICP annual inflation by component,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_EA_2014_2026_hicp_components.png
-3,fig_EA_2020_income_consumption_baskets.png,"Consumption baskets by income quintiles, euro area",skipped,No package-native builder yet.
-4,fig_EA_2019_2026_income_inflation_short_run.png,Short-run inflation inequality in the euro area by income quintile,skipped,No package-native builder yet.
-5,fig_EA_2019_2026_age_inflation.png,Inflation by age in the euro area,skipped,No package-native builder yet.
-6,fig_EA_2019_2026_urban_inflation.png,Inflation by residence area in the euro area,skipped,No package-native builder yet.
-7,fig_EA_2000_2026_income_price_index_long_run.png,Long-run inflation inequality in the euro area by income quintile,skipped,No package-native builder yet.
-8,fig_EE_LV_LT_2022_income_inflation.png,"Inflation by income quintiles, Baltic countries, 2022",exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_EE_LV_LT_2022_income_inflation.png
-9,fig_EA_2000_2026_hicp_price_index.png,Euro-area HICP price index,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_EA_2000_2026_hicp_price_index.png
-10,fig_DE_ES_FR_2022_income_inflation.png,"Inflation by income quintiles, Germany, Spain, France, 2022",exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_DE_ES_FR_2022_income_inflation.png
-11,fig_AT_FI_LU_2022_income_inflation.png,"Inflation by income quintiles, Austria, Finland, Luxembourg, 2022",exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_AT_FI_LU_2022_income_inflation.png
-12,fig_ES_2019_2026_income_inflation.png,Inflation inequality developments in Spain: inflation by income quintile,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_ES_2019_2026_income_inflation.png
-13,fig_ES_2019_2026_income_contribution_gap.png,Inflation inequality developments in Spain: contribution to inflation inequality,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_ES_2019_2026_income_contribution_gap.png
-14,fig_FR_2019_2024_counterfactual_inflation.png,Inflation in France: actual and counterfactual,skipped,No package-native builder yet.
-15,fig_DE_2000_2024_income_inflation_fixed_hbs_2000.png,Analysis with fixed expenditure shares: fixed weights,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_DE_2000_2024_income_inflation_fixed_hbs_2000.png
-16,fig_DE_2000_2024_income_inflation_rolling_hbs.png,Analysis with fixed expenditure shares: rolling HBS waves,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_DE_2000_2024_income_inflation_rolling_hbs.png
-17,fig_FR_2019_2026_hicp_validation.png,Comparison with national CPI: France,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_2019_2026_hicp_validation.png
-18,fig_FR_2010_2026_coicop_level_validation.png,Effect of COICOP level: France,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_2010_2026_coicop_level_validation.png
-19,fig_FR_2019_2026_income_inflation_level3_Q1_Q5.png,Additional figure A: France level-3 inflation by income quintile,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_2019_2026_income_inflation_level3_Q1_Q5.png
-20,fig_FR_2019_2026_age_inflation_level3_under25_65plus.png,Additional figure A: France level-3 inflation by age group,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_2019_2026_age_inflation_level3_under25_65plus.png
-21,fig_FR_2019_2026_urban_inflation_level3_rural_paris.png,Additional figure A: France level-3 inflation by residence area,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_2019_2026_urban_inflation_level3_rural_paris.png
-22,fig_FR_2019_2026_income_contribution_gap_level3_Q1_Q5.png,Additional figure A: France level-3 contributions to the Q1-Q5 inflation gap,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_2019_2026_income_contribution_gap_level3_Q1_Q5.png
-23,fig_FR_2019_2026_age_contribution_gap_level3_65plus_under25.png,Additional figure A: France level-3 contributions to the 65+ minus under-25 inflation gap,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_2019_2026_age_contribution_gap_level3_65plus_under25.png
-24,fig_FR_2019_2026_urban_contribution_gap_level3_rural_paris.png,Additional figure A: France level-3 contributions to the rural-Paris inflation gap,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_2019_2026_urban_contribution_gap_level3_rural_paris.png
-25,fig_FR_2010_2026_income_price_index_level3_Q1_Q5_first_available.png,Additional figure A: France level-3 Q1-Q5 price indices from first available year,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_2010_2026_income_price_index_level3_Q1_Q5_first_available.png
-
+order,file,caption,status,message
+1,fig_EA_headline_inflation.png,"Inflation developments, euro area",skipped,No package-native builder yet.
+2,fig_EA_hicp_component.png,Euro-area HICP annual inflation by component,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_EA_hicp_component.png
+3,fig_EA_income_baskets.png,"Consumption baskets by income quintiles, euro area",skipped,No package-native builder yet.
+4,fig_EA_income_inflation_short_run.png,Short-run inflation inequality in the euro area by income quintile,skipped,No package-native builder yet.
+5,fig_EA_age_inflation.png,Inflation by age in the euro area,skipped,No package-native builder yet.
+6,fig_EA_urban_inflation.png,Inflation by residence area in the euro area,skipped,No package-native builder yet.
+7,fig_EA_income_price_index_long_run.png,Long-run inflation inequality in the euro area by income quintile,skipped,No package-native builder yet.
+8,fig_Baltics_income_inflation_2022.png,"Inflation by income quintiles, Baltic countries, 2022",exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_Baltics_income_inflation_2022.png
+9,fig_EA_hicp_price_index.png,Euro-area HICP price index,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_EA_hicp_price_index.png
+10,fig_DE_ES_FR_income_inflation_2022.png,"Inflation by income quintiles, Germany, Spain, France, 2022",exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_DE_ES_FR_income_inflation_2022.png
+11,fig_AT_FI_LU_income_inflation_2022.png,"Inflation by income quintiles, Austria, Finland, Luxembourg, 2022",exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_AT_FI_LU_income_inflation_2022.png
+12,fig_ES_income_inflation_timeseries.png,Inflation inequality developments in Spain: inflation by income quintile,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_ES_income_inflation_timeseries.png
+13,fig_ES_income_contribution_gap.png,Inflation inequality developments in Spain: contribution to inflation inequality,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_ES_income_contribution_gap.png
+14,fig_FR_counterfactual_inflation.png,Inflation in France: actual and counterfactual,skipped,No package-native builder yet.
+15,fig_DE_income_inflation_fixed_hbs_2000.png,Analysis with fixed expenditure shares: fixed weights,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_DE_income_inflation_fixed_hbs_2000.png
+16,fig_DE_income_inflation_rolling_hbs.png,Analysis with fixed expenditure shares: rolling HBS waves,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_DE_income_inflation_rolling_hbs.png
+17,fig_FR_hicp_validation.png,Comparison with national CPI: France,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_hicp_validation.png
+18,fig_FR_coicop_level_validation.png,Effect of COICOP level: France,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_coicop_level_validation.png
+19,fig_FR_income_inflation_level3_Q1_Q5.png,Additional figure A: France level-3 inflation by income quintile,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_income_inflation_level3_Q1_Q5.png
+20,fig_FR_age_inflation_level3_under25_65plus.png,Additional figure A: France level-3 inflation by age group,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_age_inflation_level3_under25_65plus.png
+21,fig_FR_urban_inflation_level3_rural_paris.png,Additional figure A: France level-3 inflation by residence area,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_urban_inflation_level3_rural_paris.png
+22,fig_FR_income_contribution_gap_level3_Q1_Q5.png,Additional figure A: France level-3 contributions to the Q1-Q5 inflation gap,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_income_contribution_gap_level3_Q1_Q5.png
+23,fig_FR_age_contribution_gap_level3_65plus_under25.png,Additional figure A: France level-3 contributions to the 65+ minus under-25 inflation gap,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_age_contribution_gap_level3_65plus_under25.png
+24,fig_FR_urban_contribution_gap_level3_rural_paris.png,Additional figure A: France level-3 contributions to the rural-Paris inflation gap,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_urban_contribution_gap_level3_rural_paris.png
+25,fig_FR_income_price_index_level3_Q1_Q5_first_available.png,Additional figure A: France level-3 Q1-Q5 price indices from first available year,exported,C:\Users\jerem\Documents\GitHub\inflation-inequality-paper\fig\fig_FR_income_price_index_level3_Q1_Q5_first_available.png

@@ -32,6 +32,147 @@
 
 
 
+
+\section*{Notations and formulas}
+
+\subsection*{Contribution to inflation}
+\label{sec:app-contributions}
+
+The contribution of product $j$ to inflation for household group $g$ is
+computed using the product price movement and the group-specific product
+weight. Because the price index is chained annually, the contribution in month
+$m$ of year $y$ uses the relevant current and previous HICP weight years:
+
+\begin{equation}
+\begin{split}
+\text{Contrib}_{j,g,y,m}
+=
+\frac{I_{g,y-1,12}}{I_{g,y-1,m}}
+\times
+\omega_{j,g,y-1}
+\times
+\left(
+\frac{p_{j,y,m} - p_{j,y-1,12}}{p_{j,y-1,12}}
+\right)
++ \\
+\frac{I_{g,y-2,12}}{I_{g,y-1,m}}
+\times
+\omega_{j,g,y-2}
+\times
+\left(
+\frac{p_{j,y-1,12} - p_{j,y-1,m}}{p_{j,y-2,12}}
+\right).
+\end{split}
+\end{equation}
+where $p_{j,y,m}$ is the price index of product $j$ in month $m$ of year $y$,
+$I_{g,y,m}$ is the chained price index for group $g$, and
+$\omega_{j,g,y}$ is the group-specific HICP weight of product $j$ in weight
+year $y$.
+
+This approach keeps product-level contributions consistent with the chained
+inflation measures used for each household group. It is therefore useful for
+interpreting which product categories drive the inflation rate and the
+inflation gap between groups.
+
+
+
+A simpler alternative starts from the unnormalized HBS-adjusted weight
+
+\begin{equation}
+\widetilde{\omega}_{j,g,y}
+=
+\omega^{HICP}_{j,y}
+\cdot
+c^{HBS}_{j,g,y'}.
+\end{equation}
+
+Because the correction factor is a product-by-product ratio, these adjusted
+weights do not necessarily sum to one within each household group. The
+within-group normalized weight is therefore
+
+\begin{equation}
+\omega^{norm}_{j,g,y}
+=
+\frac{
+\omega^{HICP}_{j,y}
+\cdot
+c^{HBS}_{j,g,y'}
+}{
+\sum_{k \in \mathcal{J}_y}
+\omega^{HICP}_{k,y}
+\cdot
+c^{HBS}_{k,g,y'}
+},
+\end{equation}
+
+where $y'$ is the HBS wave matched to HICP weight year $y$. This normalization gives each household group a complete basket, so
+differences in inflation across groups come from differences in basket
+composition rather than from differences in total basket size. However, it does
+not impose that the population-weighted average of group-specific item weights
+matches the official HICP item weights. For this reason, the baseline
+specification uses the RAS calibration described below.
+
+This within-group normalization can be interpreted as a special case in which
+household groups are given equal aggregate weights, denoted $a_g=1/n$ for $n$
+groups, rather than using the observed consumption share $s_g$ of each group.
+Equivalently, the recalculated aggregate index is obtained as a simple average
+of the group-specific indices. This relative
+expenditure approach is often used in empirical applications because it only
+requires group-specific HBS expenditure profiles and aggregate price indices;
+for example, it is close to the strategy used in the Bruegel inflation
+inequality updates for EU households \citep{claeys2022inflation}.
+
+\paragraph{RAS.}
+
+
+
+
+
+
+
+
+
+\subsection*{Inflation and inflation gap}
+
+
+Inflation in a given month for each household group $g$ results from the sum
+of product-level contributions, defined in
+Appendix~\ref{sec:app-contributions}:
+
+\begin{equation} 
+\pi_{g,y,m}
+=
+\sum_{j \in \mathcal{J}_y}
+\text{Contrib}_{j,g,y,m}.
+\end{equation} 
+
+
+The inflation gap between two household groups $g_1$ and $g_2$ is defined as:
+
+\begin{equation} 
+\Delta\pi_{g_1,g_2,y,m}
+=
+\pi_{g_1,y,m}
+-
+\pi_{g_2,y,m}.
+\end{equation}
+
+For income quintiles, the inter-quintile inflation gap is:
+
+\begin{equation} 
+\text{IQR}_{y,m}
+=
+\pi_{Q1,y,m}
+-
+\pi_{Q5,y,m}.
+\end{equation} \\
+
+%In one hand,at household category level (and not at the individual level) we ignore intra-group heterogeneity. On the other hand, this approach flully covers the household consumption basket and allows for cross-country comparisons. 
+
+%ICompared to scanner data (Appendix A) which are available only for supermarket products, the inflation gap offers at least three key advantages. First, it encompasses the entire household consumption basket. Second, it can be updated monthly to compute recent developments. Third, it is comparable across euro area countries.
+
+\newpage
+
 \subsection{Inflation Inequalities Developments}
 \label{sec:analyse-donnees}
 
@@ -159,6 +300,32 @@ Figure 4 illustrates the inflation rates experienced by the first and fifth inco
 
 
 %Bank client data offers high-frequency insights into consumption and income, enabling a more comprehensive analysis of both inflation exposure and experiences.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\centering
+\caption{Analysis with fixed expenditure shares, Germany}
+\label{fig:app-de-fixed-rolling-hbs}
+\begin{subfigure}{0.88\textwidth}
+  \centering
+  \caption{Fixed HBS weights: 2015}
+  \includegraphics[width=\linewidth,height=0.22\textheight,keepaspectratio]{fig/fig_DE_2000_2024_income_inflation_fixed_hbs_2015.png}
+\end{subfigure}
+
+\vspace{6pt}
+
+\begin{subfigure}{0.88\textwidth}
+  \centering
+  \caption{Rolling HBS waves}
+  \includegraphics[width=\linewidth,height=0.22\textheight,keepaspectratio]{fig/fig_DE_2000_2024_income_inflation_rolling_hbs.png}
+\end{subfigure}
+\vspace{10pt}
+\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
+\caption*{Notes: Panel (a) keeps German income-quintile expenditure shares fixed at the 2015 HBS wave. Panel (b) uses the rolling HBS-wave assignment used in the baseline package workflow.\\
+Sources: Eurostat HICP; Eurostat HBS; authors' calculations.}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 

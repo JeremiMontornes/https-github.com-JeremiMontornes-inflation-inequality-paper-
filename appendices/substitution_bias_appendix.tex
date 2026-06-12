@@ -1,127 +1,49 @@
 \section{Upper-Level Substitution Bias}
 \label{app:substitution-bias}
 
-The Boskin Commission (1996) emphasized that fixed-basket price indexes may
-overstate changes in the cost of living when they do not account for
-substitution across products or categories after relative price changes. This
-appendix applies this insight to our distributional setting by asking whether
-the measured inflation gaps across income groups are sensitive to the
-upper-level aggregation formula used to combine COICOP price relatives. We
-compare the baseline group-specific HICP aggregation with a chained Tornqvist
-alternative that uses information from adjacent expenditure shares. The exercise
-does not model within-category variety substitution, but provides a diagnostic
-for the role of upper-level substitution in measured inflation inequality.
+Fixed-basket indices can overstate the cost of living when households substitute
+away from products whose relative prices increase. Our baseline follows a
+Laspeyres-type HICP aggregation, because this is the convention needed to stay
+close to official consumer price indices. As a simple diagnostic, this appendix
+compares the baseline aggregation with a Tornqvist alternative for France in
+2020, using the same COICOP level-3 price data and income-quintile expenditure
+weights.
 
+The exercise is deliberately narrow. For each group, we compute the annual
+growth rate directly between January and December 2020 under the two aggregation
+formulas. The substitution-bias diagnostic is the Laspeyres annual growth rate
+minus the Tornqvist annual growth rate, in percentage points. A positive value
+means that the fixed-weight aggregation grows faster than the Tornqvist
+alternative over the same year.
 
-Let \(p_{j,y,m}\) denote the HICP price index of COICOP category \(j\) in
-month \(m\) of year \(y\), and let \(p_{j,y,0}\) denote the price reference
-used for the HICP weight year \(y\), as in the main-text price-index
-notation. For household group \(g\), let \(\omega_{j,g,y}\) be the annual
-group-specific HICP weight assigned to COICOP category \(j\) in year \(y\).
-These weights are obtained by combining official HICP item weights with HBS
-expenditure shares by income group.
-
-For each household group \(g\), the baseline calculation first computes the
-Laspeyres-type within-year aggregate \(P^L_{g,y,m}\) using the annual weights
-available for the corresponding link period:
-
-\[
-P^L_{g,y,m}
-=
-\sum_{j \in \mathcal{J}_y}
-\omega_{j,g,y}
-\cdot
-\frac{p_{j,y,m}}{p_{j,y,0}},
-\]
-
-where \(\mathcal{J}_y\) is the set of COICOP categories available in weight
-year \(y\). The chained Laspeyres-type group index \(I^L_{g,y,m}\) is then
-obtained by linking \(P^L_{g,y,m}\) to the previous December.
-
-The comparison index uses the Tornqvist formula at the same upper level. Let
-\(\omega_{j,g,y-1}\) and \(\omega_{j,g,y}\) denote the previous-year and
-current-year group-specific weights used for the link. The within-year
-Tornqvist aggregate is:
-
-\[
-P^T_{g,y,m}
-=
-\prod_{j \in \mathcal{J}_y}
-\left(
-\frac{p_{j,y,m}}{p_{j,y,0}}
-\right)^{
-\frac{1}{2}
-\left(
-\omega_{j,g,y-1} + \omega_{j,g,y}
-\right)
-}.
-\]
-
-The chained Tornqvist group index \(I^T_{g,y,m}\) is obtained by applying the
-same annual chaining convention as for \(I^L_{g,y,m}\).
-
-For each group \(g\), the comparison is made using annualized growth rates over
-the selected sample window. If \((y_0,m_0)\) and \((y_1,m_1)\) are the first
-and last months available in the comparison, and \(n\) is the number of elapsed
-months, the annualized growth rate of chained index \(I\) is:
-
-\[
-\gamma_g(I)
-= \left[
-\left(
-\frac{I_{g,y_1,m_1}}{I_{g,y_0,m_0}}
-\right)^{12/n} - 1
-\right] \times 100.
-\]
-
-The upper-level substitution-bias diagnostic is then defined as:
-
-\[
-\operatorname{SB}_g
-=
-\gamma_g(I^L)
--
-\gamma_g(I^T).
-\]
-
-A positive value indicates that the chained Laspeyres aggregation grows faster
-than the chained Tornqvist alternative over the same period.
-
-Table~\ref{tab:fr-substitution-bias} reports the diagnostic for France by
-income quintile, using the national-source French level-3 workflow from 2019
-onwards. Compared with the level-2 calculation, the results are very close in
-aggregate but the quintile-specific substitution-bias estimates are slightly
-larger, especially for the first three income quintiles.
-
-
-\begin{table}[htbp]
+\begin{table}[H]
 \centering
-\caption{Upper-level substitution bias by income group, France, COICOP level 3}
+\caption{Upper-level substitution bias by income group, France, 2020}
 \label{tab:fr-substitution-bias}
+\small
 \begin{tabular}{lrrr}
-\hline
-Income group & Chained Laspeyres growth & Chained Tornqvist growth & Substitution bias \\
-\hline
-Total & 2.96 & 2.90 & 0.06 \\
-First quintile & 2.96 & 2.84 & 0.11 \\
-Second quintile & 2.95 & 2.83 & 0.12 \\
-Third quintile & 2.95 & 2.84 & 0.11 \\
-Fourth quintile & 2.90 & 2.80 & 0.10 \\
-Fifth quintile & 2.91 & 2.82 & 0.09 \\
-\hline
+\toprule
+Income group & Laspeyres annual growth & Tornqvist annual growth & Difference \\
+\midrule
+Total & 0.56 & 0.51 & 0.04 \\
+First quintile & 0.10 & 0.04 & 0.06 \\
+Second quintile & -0.09 & -0.17 & 0.08 \\
+Third quintile & -0.11 & -0.19 & 0.08 \\
+Fourth quintile & 0.09 & 0.02 & 0.07 \\
+Fifth quintile & 0.41 & 0.37 & 0.05 \\
+\bottomrule
 \end{tabular}
-\begin{minipage}{0.9\textwidth}
+\begin{minipage}{0.88\textwidth}
 \footnotesize
-\emph{Notes:} Growth rates and substitution-bias estimates are expressed in
-annualized percentage points over the selected sample window. The calculation
-uses detailed French item prices and weights with income quintiles obtained from
-adjacent standard-of-living deciles.
+\emph{Notes:} Growth rates are annual percentage changes computed directly
+between January and December 2020. The calculation uses French COICOP level-3
+prices and income-quintile expenditure weights. Difference is Laspeyres minus
+Tornqvist, in percentage points.
 \end{minipage}
 \end{table}
 
-
-The estimates in Table~\ref{tab:fr-substitution-bias} are small but positive
-for all income groups. The difference is somewhat larger for the first income quintile than for the fifth quintile in
-this example, suggesting that the choice of upper-level formula can affect the
-measured distributional profile of inflation, even when the magnitude remains
-modest.
+The estimates are small for all groups. In this example, switching from the
+baseline Laspeyres-type aggregation to the Tornqvist alternative changes annual
+inflation by less than one tenth of a percentage point for each income quintile.
+This suggests that upper-level substitution is not a major driver of the
+income-gradient in measured inflation in this year.
