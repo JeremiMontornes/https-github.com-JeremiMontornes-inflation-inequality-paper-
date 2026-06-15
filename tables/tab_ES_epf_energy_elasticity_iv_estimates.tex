@@ -1,0 +1,57 @@
+\begin{table}[H]
+\centering
+\caption{IV energy demand estimates, Spain}
+\label{tab:es-epf-energy-elasticities-iv}
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.05}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+Dependent variable: $\log$ quantity & \multicolumn{6}{c}{Energy good and price measure} \\
+\cmidrule(lr){2-7}
+ & Electricity & Electricity & Gas & Gas & Motor fuels & Motor fuels \\
+ & unit value & local proxy & unit value & local proxy & unit value & local proxy \\
+\midrule
+$\log(p)$: household unit value
+  & -0.445$^{***}$ &  & -0.368$^{***}$ &  & 0.406$^{***}$ &  \\
+  & (0.0419) &  & (0.0735) &  & (0.0652) &  \\
+$\log(p)$: local price proxy
+  &  & -0.389$^{***}$ &  & -0.327$^{***}$ &  & 0.404$^{***}$ \\
+  &  & (0.0390) &  & (0.0683) &  & (0.0644) \\
+$\log$ total expenditure
+  & 0.611$^{***}$ & 0.606$^{***}$ & 0.570$^{***}$ & 0.578$^{***}$ & 0.896$^{***}$ & 0.899$^{***}$ \\
+  & (0.0046) & (0.0048) & (0.0123) & (0.0127) & (0.0123) & (0.0121) \\
+$\log$ equivalised income
+  & -0.112$^{***}$ & -0.114$^{***}$ & -0.153$^{***}$ & -0.144$^{***}$ & 0.038$^{**}$ & 0.038$^{**}$ \\
+  & (0.0054) & (0.0057) & (0.0146) & (0.0152) & (0.0154) & (0.0152) \\
+Household size
+  & -0.024$^{***}$ & -0.021$^{***}$ & -0.084$^{***}$ & -0.086$^{***}$ & -0.051$^{***}$ & -0.052$^{***}$ \\
+  & (0.0023) & (0.0024) & (0.0060) & (0.0062) & (0.0063) & (0.0062) \\
+\midrule
+Autonomous-community fixed effects & Yes & Yes & Yes & Yes & Yes & Yes \\
+Year fixed effects & No & No & No & No & No & No \\
+\midrule
+Observations & 56,681 & 56,681 & 30,418 & 30,418 & 30,142 & 30,142 \\
+First-stage F-statistic & 2,628.5 & 42,895.3 & 1,540.6 & 63,583.5 & 16,641.5 & 134,972.0 \\
+\bottomrule
+\end{tabular}%
+}
+\begin{minipage}{0.96\linewidth}
+\footnotesize
+\emph{Notes:} Heteroskedasticity-robust standard errors are in parentheses.
+Prices are instrumented with the annual product-specific policy wedge generated
+by Spanish energy measures: electricity VAT reductions, gas VAT reductions, and
+the 2022 transport-fuel price subsidy. The instrument is the annual average
+log no-policy price wedge implied by the statutory measure or by the
+public-data fuel counterfactual. Because the instrument varies at the
+product-year level, the product-specific IV specifications include autonomous
+community fixed effects but not year fixed effects. The positive IV coefficients
+for motor fuels indicate that this instrument is not reliable for that product
+in the annual EPF design; those columns should therefore be interpreted as a
+diagnostic robustness check rather than as causal demand elasticities.
+Significance levels: $^{***}$ 1 percent, $^{**}$ 5 percent, $^{*}$ 10 percent.
+The sample covers EPF waves 2020--2022. Source: INE EPF microdata, Eurostat
+HICP, Spain policy counterfactual replication, authors' calculations.
+\end{minipage}
+\end{table}
