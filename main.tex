@@ -28,6 +28,7 @@
 \usepackage[colorlinks,pdfborder=false]{hyperref}
 \usepackage{subcaption} % Package pour les sous-figures
 \usepackage{float}
+\usepackage{placeins}
 \usepackage{chngcntr}
 \usepackage{hyperref}
 
@@ -175,7 +176,7 @@ This analysis is based on publicly available data, primarily the Harmonised Inde
 The HICP offers a standardized measure of inflation, ensuring comparability among member states. Eurostat aggregates national HICPs. Each country's HICP is based on price changes for a fixed basket of goods and services, weighted according to household expenditure from country-specific sources (national accounts, HBS, etc.). These indices are then combined into the aggregate HICP using country-specific weights that reflect their share of total household consumption expenditure. The calculation ensures comparability by adhering to Regulation EU 2016/796 and consistent data collection practices. The HICP is compiled according to the classification of household expenditures, ECOICOP ver. 2.
 
 To ensure the HICP accurately represents current consumption patterns, Eurostat updates its weighting structure annually. The updated weights are implemented with the January release of the HICP each year and remain fixed throughout the calendar year. This practice ensures consistency in the measurement of price changes over the year. This approach aligns with the Laspeyres index formula, which uses fixed base-period weights to measure price changes over time. 
-Appendix~\ref{app:substitution-bias} reports a simple diagnostic of the potential upper-level substitution bias implied by this fixed-weight logic.
+Appendix~\ref{app:substitution-bias} reports a diagnostic of the potential upper-level substitution bias implied by fixed-weights.
 
 Figure~\ref{fig:hicp} illustrates the developments across different HICP components in the euro area since 2014. The HICP components show significant volatility in energy and fuel prices. The sharp rise starting around mid-2021, peaking in 2022, is due to post-COVID recovery, supply chain disruptions, and geopolitical tensions. After the peaks in 2022, there is a visible correction across most components. Energy prices dropped sharply, while food prices and other components showed more gradual stabilization.
 
@@ -197,16 +198,16 @@ Source: Eurostat HICP, authors' calculations}
 \subsection*{Household Budget Survey} 
 
 
-The heterogeneity of consumption patterns among households is a well-documented pattern (e.g. "Engel's laws"). However, the accurate measurement of household-level consumption continues to present significant challenges. 
+The heterogeneity of consumption patterns among households is well-documented (e.g. "Engel's laws"). However, the accurate measurement of household-level consumption continues to present significant challenges. 
 
 The Household Budget Surveys (HBS) are conducted on a large sample of households in each euro area country. Households are required to document their expenditures on consumer goods and services over a designated period, typically two weeks. These surveys capture the values of expenditures across COICOP categories.
 
-HBS data are generally collected every five years. Some countries, such as Italy and Spain, have yearly HBS surveys. The most recent and complete HBS wave generally took place in 2020. The 2020 HBS wave was actually conducted between 2018 and 2022 in most EU Member States, while data for Cyprus, Malta, and France were gathered earlier, between 2015 and 2017.\footnote{The following HBS wave is the 2025 wave, with increased harmonization between countries.}
+HBS data are generally collected every five years. The most recent and complete HBS wave generally took place in 2020. The 2020 HBS wave was actually conducted between 2018 and 2022 in most EU Member States, while data for Cyprus, Malta, and France were gathered earlier, between 2015 and 2017.\footnote{The following HBS wave is the 2025 wave, with increased harmonization between countries.} Few countries, such as Italy and Spain, have yearly HBS surveys. 
 
-However, using Spain as an example, Figure~\ref{fig:app-es-income-coicop-weights} suggests that, while behavioural changes over the course of a couple of years were significant, the percentage-point differences in the weights of the main consumption categories between low- and high-income households remained relatively stable. This is the dimension that matters most for our estimates. Despite changes in overall consumption patterns, the impact of recent behavioural changes on inflation inequality may therefore be limited, since consumption shares often move in the same direction for different income groups. If this pattern also holds in other countries, using the same expenditure weights over short periods is unlikely to be a major source of bias.
+Using Spain as an example, Figure~\ref{fig:app-es-income-coicop-weights} suggests that, while behavioural changes over the course of a couple of years were significant, the percentage-point differences in the weights of the main consumption categories between low- and high-income households remained relatively stable. This is the dimension that matters most for our estimates. Despite changes in overall consumption patterns, the impact of recent behavioural changes on inflation inequality may therefore be limited, since consumption shares often move in the same direction for different income groups. If this pattern also holds in other countries, using the same expenditure weights over short periods is unlikely to be a major source of bias.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
 \caption{Consumption baskets by income quintiles (euro area, in \% of total expenditures)}
 \includegraphics[width=0.86\textwidth,height=0.36\textheight,keepaspectratio]{fig/fig_EA_2020_income_consumption_baskets.png}
@@ -318,7 +319,7 @@ Figures~\ref{fig:fr-validation-rate}, \ref{fig:fr-validation-level}, and
 validation checks for France.
 
 
-The Household Budget Survey is conducted only once every five years. In
+We use the Household Budget Survey as realeased by Eurostat once every five years. In
 contrast, the expenditure weights used in the construction of the HICP are
 updated annually. The year of the HBS data $y'$ and the HICP weight year $y$
 may therefore differ. To align the two sources, each HICP weight year $y$ is
@@ -336,11 +337,10 @@ estimate the missing data.
 
 \subsection*{Group-level Consumer Price Indices}
 
-Let $p_{j,y,m}$ denote the HICP price index of product category $j$ in month
+Let $p_{j,y,m}$ denote the Laspeyres price index of product category $j$ in month
 $m$ of year $y$. Let $p_{j,y,0}$ denote the price reference used for the HICP
 weight year $y$; in the chained annual calculation this corresponds to the
-December price index of the previous year. Eurostat defines the HICP as a
-chain-linked Laspeyres-type index: item indices are first unchained within the
+December price index of the previous year. The agregation procedure is flowwing: item indices are first unchained within the
 weight year, aggregated with annual expenditure weights, and then chained
 again.\footnote{See Eurostat's \texttt{hicp} R package, which implements the
 Eurostat HICP aggregation.}
@@ -384,7 +384,7 @@ chain-linking structure.
 
 \section{Main Results}
 
-This section presents our main results. We focus on the recent inflation episode, in the wake of the energy crisis for the whole euro area. We also present findings on short-run and long-run inflation inequality.
+This section presents our main results. We focus on inflation inequality in the wake of the 2022-23 energy crisis. We also present findings on long-run inflation inequality in the euro area.
 
 
 
@@ -402,7 +402,7 @@ This section presents our main results. We focus on the recent inflation episode
 %In 2022, the contributions of different product categories to the inflation gap (between low and high-income households) tended to cancel each other out (e.g., energy prices vs. services). However, in 2023, rising food prices disproportionately affected low-income households, increasing the inflation gap (Figure 3).
 
 Figure~\ref{fig:ea20_short_run_income} shows that the post-Covid inflation
-surge did not translate into a marked inflation inequality by income quintile
+surge did not translate into  inflation inequality by income quintile
 at the euro-area aggregate level. Inflation rates for the first and fifth
 income quintiles move closely together throughout the 2020--2026 period. Energy
 and food shocks raised headline inflation sharply, but their effects on the
@@ -431,7 +431,7 @@ Sources: Eurostat, authors' calculations}
 
 Figure~\ref{fig:age_rural} presents the inflation rates by household categories in the euro area, segmented by age and residence area. Panel (a) illustrates the inflation disparities by age, showing that older households experienced higher inflation rates due to their greater expenditure on essential goods. Panel (b) highlights the inflation differences by residence area, with rural households facing higher inflation rates compared to those living in cities.
 
-The residence-area gradient is consistent with differences in the structure of energy demand. Rural households tend to spend a larger share of their budget on transport fuels and home energy, partly because commuting distances are longer and the set of available transport substitutes is more limited. During an energy-price shock, these structural features translate into larger short-run inflation exposure, even when income-based inflation gaps remain small.
+The residence-area differentials is consistent with differences in the structure of energy demand. Rural households tend to spend a larger share of their budget on transport fuels and home energy, partly because commuting distances are longer and the set of available transport substitutes is more limited. During an energy-price shock, these structural features translate into larger short-run inflation exposure.
 
 %In 2022, a household with a reference person over age 60 was subjected to an average inflation rate around 2 percentage points higher than a household with a reference person under age 25. This disparity reflects older households' higher expenditure shares on essential goods like food and heating, particularly during energy price surges. The relative weight of energy and food in the consumption structure of older households helps to maintain the gap between the oldest and the youngest households (see Panel a). Despite falling inflation in 2023, cumulative price increases in recent years have remained substantially different from one age bracket to the next. Between 2021 and 2023, the cumulative gap was just over 2 percentage points between households under 30 and those 60 and over. The inflation gap was at its widest between late 2022 and early 2023, when it reached over 2 percentage points before narrowing significantly in the second half of 2023.
 
@@ -483,11 +483,10 @@ This pattern contrasts with the larger long-run gaps documented for the United
 States in \cite{jaravel2024distributional}. Several differences may account for
 this comparison. First, the euro-area indices reported here aggregate national
 indices and therefore average across countries
-with different price dynamics and fiscal responses. The smaller long-run
-income gap in Figure~\ref{fig:ea20_long_run_income} should therefore be read as
-a broad-basket, cross-country comparable measure of inflation inequality, not as
-evidence that within-product or household-level heterogeneity is absent.
-
+with different price dynamics and fiscal responses. The  long-run
+inflation inequality between top and bottom income quintile is reported in Figure~\ref{fig:ea20_long_run_income}. 
+Inflation differentials by age and residence area are available in appendix for France 
+(see Appendix Figure~\ref{fig:app-additional-figures}). 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!ht]
@@ -505,52 +504,50 @@ Sources: Eurostat, authors' calculations}
 
 %\cite{jaravel2021inflation} identifies two key factors explain the different consumption patterns of households. First, technological progress tend to disproportionately benefit higher-income households. Second, globalization has not provided significant compensatory benefits to lower-income households. Instead, its advantages have largely bypassed these groups, exacerbating existing disparities rather than mitigating.
 
-\subsection{Heterogeneity Across Countries}
+\subsection{Heterogeneous Effects of the 2022--23 Energy Shock Across Countries}
 
 %We observe heterogeneity in inflation inequalities across the euro area, with larger inequalities in Italy and smaller ones in France. Is there a link between inflation inequalities and inflation levels? 
 
-\subsection*{Four different Patterns of Inflation Inequality}
+%\subsection*{Four different Patterns of Inflation Inequality}
 
-There is significant heterogeneity among countries within the euro area, particularly between older and newer member states. Figure~\ref{fig:country_heterogeneity} provides a comparison of inflation by income quintiles across different groups of countries in 2022. Panel (a) focuses on Baltic countries, revealing significant inflation disparities, particularly in the lower quintile. Panels (b), (c), and (d) present data for Austria, Finland, Luxembourg; Italy, Ireland, Greece; and Germany, Spain, France, respectively. The figures highlight the varying degrees of inflation inequality, with notable differences in the impact of energy and food prices on different income groups.
-
-Inflation inequality varies significantly across euro area countries but remains relatively limited within the larger European economies. Italy, for example, experienced a 1.2 percentage point inflation gap during 2022, driven primarily by surging energy prices, whereas France's gap was mitigated by targeted fiscal interventions. In contrast, smaller countries with economies highly dependent on natural gas, such as Lithuania, Latvia, and Slovakia, experience both high inflation rates and pronounced inflation inequality.
-
-%Heterogeneity is linked to the sensitivity of the economy to an energy shock (annual average 2022) and fiscal measures to support vulnerable households in the context of the energy crisis 
-
-%The first group of countries is Baltic countries
+There is significant heterogeneity among countries within the euro area. The 2022--23 inflation episode was marked by a large gas price shock following Russia's invasion of Ukraine, with uneven exposure across countries depending on their energy mix, import dependence, and policy responses. Figure~\ref{fig:country_heterogeneity} provides a comparison of inflation by income quintiles across different groups of countries in 2022. Panel (a) focuses on Estonia, Lithuania, Latvia, and Slovakia, revealing significant inflation differentials, particularly in the lower quintile. Panels (b), (c), and (d) present data for Austria, Finland, Luxembourg, and the Netherlands; Greece, Ireland, Portugal, and Cyprus; and Germany, France, Italy, and Spain, respectively. The figures highlight the varying degrees of inflation inequality, with notable differences in the impact of energy and food prices on different income groups. 
 
 Variations in consumption patterns between high- and low-income groups significantly influence the extent to which each group is affected by price changes within a specific consumption category. When the share of consumption for a particular good is substantially higher among lower-income households compared to higher-income households, price increases for that good disproportionately impact poorer households. Conversely, when both lower- and higher-income groups allocate similar proportions of their income to a given good, price changes tend to affect all households uniformly, thereby reducing disparities in inflation's impact and mitigating overall inflation inequality.
 
+Heterogeneity is linked to the sensitivity of the economy to an energy shock (annual average 2022) and fiscal measures to support vulnerable households in the context of the energy crisis. Countries with similar distributions of consumption patterns can nonetheless experience varying degrees of inflation inequality if the price dynamics of goods predominantly consumed by specific income groups differ across nations. For example, inflation inequality driven by rising energy prices may be mitigated in cases where high-income households allocate a larger proportion of their consumption expenditure to goods experiencing rapid price increases. Such variations highlight the interplay between consumption patterns and country-specific fiscal package during the energy crisis.
+
+Inflation inequality varies significantly across euro area countries but remains relatively limited within the larger European economies. France's gap was mitigated by targeted fiscal interventions. In contrast, smaller countries with economies highly dependent on natural gas, such as Lithuania, Latvia, and Slovakia, experience both high inflation rates and pronounced inflation inequality.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
 \caption{Inflation by income quintiles (2022, in \%)}
 \label{fig:country_heterogeneity}
 \begin{subfigure}{0.48\textwidth} 
   \centering
-  \caption{Baltic countries}
-  \includegraphics[width=\linewidth,height=7cm]{fig/fig_EE_LV_LT_2022_income_inflation.png}
+  \caption{Estonia, Lithuania, Latvia, Slovakia}
+  \includegraphics[width=\linewidth,height=7cm]{fig/fig_EE_LT_LV_SK_2022_income_inflation.png}
 \end{subfigure}
 \hfill 
 \begin{subfigure}{0.48\textwidth} 
   \centering
-  \caption{Austria, Finland, Luxembourg}
-  \includegraphics[width=\linewidth,height=7cm]{fig/fig_AT_FI_LU_2022_income_inflation.png}
+  \caption{Austria, Finland, Luxembourg, Netherlands}
+  \includegraphics[width=\linewidth,height=7cm]{fig/fig_AT_FI_LU_NL_2022_income_inflation.png}
 \end{subfigure}
 
 \vspace{10pt} % Espace entre les deux lignes de graphiques
 
 \begin{subfigure}{0.48\textwidth}
   \centering
-  \caption{Italy, Ireland, Greece}
-  \includegraphics[width=\linewidth,height=6cm]{fig/fig_IT_IE_GR_2022_income_inflation.png}
+  \caption{Greece, Ireland, Portugal, Cyprus}
+  \includegraphics[width=\linewidth,height=6cm]{fig/fig_EL_IE_PT_CY_2022_income_inflation.png}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.48\textwidth}
   \centering
-  \caption{Germany, Spain, France}
-  \includegraphics[width=\linewidth,height=6cm]{fig/fig_DE_ES_FR_2022_income_inflation.png}
+  \caption{Germany, France, Italy, Spain}
+  \includegraphics[width=\linewidth,height=6cm]{fig/fig_DE_FR_IT_ES_2022_income_inflation.png}
 \end{subfigure}
 
 \vspace{20pt} 
@@ -559,14 +556,57 @@ Variations in consumption patterns between high- and low-income groups significa
 Sources: Eurostat, authors' calculations}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
 
 
+Following the input-output price approach, we trace sectoral cost shocks through
+production networks and map their incidence onto household consumption baskets.
+This simulation delivers a
+decomposition of the direct and indirect components of cost pass-through. We map
+$\Delta p=(I-A')^{-1}s$ to consumption categories using the NACE--COICOP bridge
+from \citet{cai2020bridging} and aggregate with group-specific expenditure
+weights. The simulated inflation effect for group $g$ is $w_g'\Delta p$, and
+inflation inequality is measured as the difference between group-specific
+effects, for example $(w_{Q1}-w_{Q5})'\Delta p$ for the income gap.
+
+\begin{table}[H]
+\centering
+\caption{Effect of a 10 Percent Shock to Crude Oil and Gas Prices, 2022 (effects in pp)}
+\label{tab:oil-gas-shock}
+\scriptsize
+\setlength{\tabcolsep}{4.2pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+Country & \shortstack{Average inflation\\Total} & \shortstack{Average inflation\\Direct} & \shortstack{Average inflation\\Indirect} & \shortstack{Income inflation\\gap} & \shortstack{Age inflation\\gap} & \shortstack{Rural-urban\\inflation gap}
+ \\
+\midrule
+DE & 0.6 & 0.1 & 0.5 & 0.1 & 0.0 & 0.2
+ \\
+FR & 0.6 & 0.0 & 0.6 & -0.0 & 0.1 & 0.2
+ \\
+IT & 1.0 & 0.4 & 0.7 & -0.1 & -0.1 & 0.2
+ \\
+ES & 0.8 & 0.0 & 0.8 & 0.1 & 0.1 & 0.1
+ \\
+NL & 1.1 & 0.2 & 0.8 & -0.1 & 0.2 & 0.2
+ \\
+BE & 0.8 & 0.0 & 0.8 & -0.1 & 0.1 & 0.2
+ \\
+EA20 & 0.8 & 0.1 & 0.6 & 0.0 & 0.0 & 0.2
+ \\
+\bottomrule
+\end{tabular}
+\par\vspace{0.35em}\footnotesize\noindent Sources: Eurostat HICP, HBS, FIGARO, author's calculations.
+\par\vspace{0.25em}\footnotesize\noindent Notes. Entries are percentage-point effects of a 10 percent sectoral input price shock. The price response is computed as $\Delta p = (I - A^{\prime})^{-1}s$, with $A$ built from FIGARO. The direct effect is the component from the shocked sector in the household consumption basket. Indirect is the Leontief propagation component. Total = Direct + Indirect before rounding. Income inflation gap = Q1 - Q5 of revenues; age inflation gap = over 60 years - less than 30 years; rural-urban inflation gap = rural areas - cities.
+\end{table}
+\vspace{0.6em}
+
+Table~\ref{tab:oil-gas-shock} shows that a crude-oil and gas input-price shock mainly affects household prices through indirect production-network channels rather than through direct household energy consumption alone. The simulated average effect is largest in the Netherlands and Italy, while the income-quintile gaps remain small relative to the aggregate shock. By contrast, rural-urban gaps are systematically positive, consistent with stronger exposure of rural households to energy-intensive consumption and transport needs.
+
+\FloatBarrier
 
 \subsection{Spain}
 
 
-Countries with similar distributions of consumption patterns can nonetheless experience varying degrees of inflation inequality if the price dynamics of goods predominantly consumed by specific income groups differ across nations. For example, inflation inequality driven by rising energy prices may be mitigated in cases where high-income households allocate a larger proportion of their consumption expenditure to goods experiencing rapid price increases. Such variations highlight the interplay between consumption patterns and country-specific price trajectories in shaping inflation inequality.
 
 Panel (a) of Figure~\ref{fig:contrib_spain} shows the evolution of inflation by income quintile in Spain during the recent inflationary cycle. Panel (b) of Figure~\ref{fig:contrib_spain} details the contributions to inflation inequality in Spain, measured in percentage points. The figure highlights the dynamic interplay between energy, food, and services prices, with energy prices initially dominating the inequality dynamics and food prices emerging as a more persistent driver in later periods. 
 
@@ -605,8 +645,7 @@ This qualitative pattern is consistent with the micro-simulation evidence in \ci
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-%\subsection{Inflation Burden}
-
+\paragraph{Inflation Burden}
 
 
 %Inflation gaps measure differences in the growth rate of household-group price
@@ -625,13 +664,13 @@ to consume out of income differ. This distinction is also relevant for the
 interpretation of policy incidence. Higher-income households generally have
 more scope to cushion a price shock by reducing discretionary expenditure or
 substituting towards cheaper varieties, whereas lower-income households devote
-a larger share of expenditure to essential goods. Appendix
+a larger share of expenditure to essential goods. [Appendix]
 Figure~\ref{fig:app-ea-essentials-discretionary} documents this difference in
 the composition of euro-area consumption baskets.
 Figure~\ref{fig:es-inflation-burden} reports this indicator for Spain. The first quintile faces a systematically larger burden than the fifth quintile during the inflationary episode, reflecting both higher inflation exposure and a higher ratio of consumption to disposable income.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
+\begin{figure}[!ht]
 \centering
 \caption{Inflation burden in Spain by income quintile (in \% of disposable income)}
 \label{fig:es-inflation-burden}
@@ -644,9 +683,7 @@ Figure~\ref{fig:es-inflation-burden} reports this indicator for Spain. The first
 \newpage
 
 
-The inflation gap offers several advantages over scanner data for this type of comparison. First, it encompasses the entire household consumption basket, whereas scanner data are generally limited to supermarket products. This broader scope is essential to remain consistent with the basket of the HICP. Second, the inflation gap can be updated monthly, providing timely evidence on the distributional effects of price changes. Third, the indicator is comparable across euro area countries, facilitating cross-country analysis of inflation inequality and policy effectiveness. Appendix~\ref{app:substitution-bias} discusses a related aggregation-bias diagnostic.
 
-The indicator also has limits. It measures changes in group-specific price indices for fixed or slowly updated consumption baskets, but it does not account for contemporaneous changes in household behavior in response to rising prices. Wealthier households may have greater flexibility to mitigate the effects of inflation by reducing discretionary spending, such as on leisure activities, or by substituting with lower-cost or lower-quality goods and services.
 
 \subsection{Household-level inflation}
 
@@ -724,7 +761,7 @@ Sources: INE EPF 2020 microdata, Eurostat HICP, authors' calculations.}
 \newpage
 
 
-\section{Simulations}
+\section{Counterfactuals}
 
 This section evaluates the distributional impact of unconventional fiscal
 policies on inflation inequality, with a particular focus on targeted
@@ -735,13 +772,13 @@ France, Germany, Italy, and Spain.
 
 In response to the energy crisis, euro area governments introduced a broad array of measures to cushion households from surging energy costs \citep{sgaravatti2021national,arregui2022targeted}. These included both direct income support, such as cash transfers to vulnerable groups, and price-based interventions, including temporary VAT reductions and price ceilings on gas, electricity, and fuel. While the latter are not explicitly targeted at lower-income households, they can still reduce inflation inequality by moderating the price increases of essential energy products. Cross-country evidence is consistent with this mechanism: countries with larger price-based support measures tended to display lower income-based inflation gaps during the energy crisis, whereas inflation inequality was more pronounced in countries where such measures were less extensive \citep{claeys2022inflation}.
 
-The main measures differ across the four large economies considered in the simulations. France combined income-based instruments, such as the energy voucher, with gas and electricity tariff shields and a temporary fuel rebate. Spain relied on electricity tax and VAT cuts, a gas VAT reduction, the Iberian electricity-price mechanism, and a fuel rebate. Germany reduced VAT on gas and introduced gas and electricity price brakes, while Italy combined a gas VAT cut with system-charge reductions, fuel-tax measures, and targeted social energy bonuses. Table~\ref{tab:ea20-price-counterfactual-measures} in the appendix reports the corresponding euro-area inventory and indicates which measures are directly simulated in our price counterfactuals. Beyond France and Spain, we also construct counterfactual price indices for the countries and policy instruments for which the necessary statutory, price, and unit-conversion information is available; Appendix~\ref{sec:app-counterfactuals} reports these country-level counterfactual series.
+The main measures differ across the four large economies considered in the simulations. France combined income-based instruments, such as the energy voucher, with gas and electricity tariff shields and a temporary fuel rebate. Spain relied on electricity tax and VAT cuts, a gas VAT reduction, the Iberian electricity-price mechanism, and a fuel rebate. Germany temporarily reduced fuel taxes, reduced VAT on gas, and introduced gas and electricity price brakes, while Italy combined a gas VAT cut with system-charge reductions, fuel-tax measures, and targeted social energy bonuses. Table~\ref{tab:ea20-price-counterfactual-measures} in the appendix reports the corresponding euro-area inventory and indicates which measures are directly simulated in our price counterfactuals. Beyond France and Spain, we also construct counterfactual price indices for the countries and policy instruments for which the necessary statutory, price, and unit-conversion information is available; Appendix~\ref{sec:app-counterfactuals} reports these country-level counterfactual series.
 
 To quantify the effect of these fiscal measures on inflation inequality, we construct a counterfactual scenario in which no such policies were enacted. Specifically, we compare the actual trajectory of retail gas and electricity prices with the estimated evolution of market prices in the absence of intervention. This comparison allows us to isolate the extent to which fiscal policy contributed to reducing inflationary pressures and their unequal distribution across households. These measures are temporary support instruments rather than substitutes for monetary policy: their direct effect operates through administered prices, tax-inclusive prices, or retail price ceilings, and is therefore concentrated in the product categories to which they apply.
 
 \subsection{Methods}
 
-We distinguish three cases. First, for regulated-price shields, we use official or external price-index or tariff series, such as the CRE information for France or the retail-wholesale electricity relationship for Spain, to recover the no-policy path. Second, for VAT and excise changes, we back out the reduced tax-inclusive price and reapply the normal rate. Third, for unit subsidies and fuel rebates, we add the statutory support amount back to reconstructed retail unit prices. 
+We distinguish three cases. First, for regulated-price shields, we use official  information for France or the retail-wholesale electricity relationship for Spain, to recover the no-policy path. Second, for VAT and excise changes, we back out the reduced tax-inclusive price and reapply the normal rate. Third, for unit subsidies and fuel rebates, we add the statutory support amount back to reconstructed retail unit prices. Evidence from \citet{drolsbach2023pass} suggests that temporary fuel-tax reductions and discounts in France, Germany, and Italy were largely passed through to consumer prices in 2022, although pass-through varied over time and by fuel type. This supports treating these measures as retail-price wedges in the counterfactual construction. 
 %Fourth, for targeted social bonuses, we construct aggregate-equivalent tests when the information is sufficient, and otherwise flag the measure as pending when the statutory schedule or consumption denominator is missing. For Germany, Italy, Spain, and the remaining euro-area measures, the identification of these cases combines the policy inventory in \citet{arregui2022targeted} with the  dataset of \citet{sgaravatti2021national}.
 
 
@@ -753,7 +790,7 @@ P_{j,t}
 \frac{\widetilde p_{j,t}}{p_{j,t}} .
 \end{equation}
 
-\paragraph{VAT reductions.}
+\paragraph{VAT and excise-tax reductions.}
 For VAT or excise-tax reductions, the observed retail price includes the reduced policy tax rate. The no-policy price is obtained by backing out the reduced tax-inclusive price and reapplying the normal tax rate:
 \begin{equation}
 \widetilde p_{j,t}
@@ -928,174 +965,6 @@ Figure~\ref{fig:es_energy_hicp_counterfactuals} reports the Spanish electricity 
 Source: Eurostat HICP, OMIE wholesale electricity prices, European Commission Weekly Oil Bulletin, authors' calculations.}
 \end{figure}
 
-\subsection{Policy Options}
-
-We estimate a simple household-level model of energy demand and compensating
-needs. This framework is a simplified version of \cite{levell2026welfare}, who study
-the welfare effects of energy price shocks and relief packages using rich
-household panel data. Related policy evaluations include the comparison of fuel
-price subsidies and transfers for France in \citet{bonnet2025compensating}, and
-evidence on the distributional effects of the energy crisis and cost-of-living
-measurement for the United Kingdom in \citet{levell2024distributional} and
-\citet{martin2022revisiting}. Household $i$ consumes a vector of energy goods
-$q_{ik}$, indexed by $k \in K$, and a composite numeraire good $y_i$, subject
-to the budget constraint:
-
-\begin{equation}
-y_i + \sum_{k \in K} p_k q_{ik} = Y_i .
-\end{equation}
-
-Preferences are quasi-linear,
-$U_i(y_i,\{q_{ik}\})=y_i+u_i(q_{i1},\ldots,q_{iK})$, so local demand
-responses can be summarized by own- and cross-price elasticities:
-
-\begin{equation}
-d\log q_{ik}
-=
-\sum_{\ell \in K}
-\varepsilon_{k\ell}
-d\log p_{\ell}.
-\end{equation}
-
-A welfare benchmark can be expressed through compensating variation. Let
-$e_i(p,u)$ denote the expenditure function, where $p$ is the full price vector
-and $u$ a utility level. The compensating variation associated with a move from
-$p^0$ to $p^1$ is:
-
-[....]
-\begin{comment}
-
-\begin{equation}
-CV_i
-=
-e_i(p^1,u_i^0)-e_i(p^0,u_i^0),
-\end{equation}
-
-so that, with $C_i=e_i(p^0,u_i^0)$,
-
-\begin{equation}
-\frac{CV_i}{C_i}
-=
-\frac{e_i(p^1,u_i^0)}{e_i(p^0,u_i^0)}-1 ,
-\end{equation}
-
-which is the household cost-of-living index minus one.
-
-Estimating the exact COLI would require specifying household preferences and
-substitution possibilities. We therefore rely on a first-order
-expenditure-variation measure based on initial budget shares:
-
-\begin{equation}
-EV^{exp}_i
-=
-\sum_{k \in K}
-s_{ik}
-\Delta \log p_k,
-\end{equation}
-
-where $s_{ik}=p_k^0 q_{ik}^0/C_i$ is household $i$'s initial budget share for
-energy good $k$. For small price changes, this fixed-basket measure approximates
-the normalized compensating variation:
-
-\begin{equation}
-\frac{CV_i}{C_i}
-\simeq
-EV^{exp}_i
-=
-\sum_{k \in K}
-s_{ik}
-\Delta \log p_k .
-\end{equation}
-
-The approximation has a direct welfare interpretation under quasi-linear
-preferences. Because the marginal utility of income is constant and income
-effects are absent, compensating variation, equivalent variation, and changes in
-Marshallian consumer surplus coincide for price changes in non-numeraire goods.
-The fixed-basket expenditure variation can therefore be interpreted as the
-first-order monetary welfare loss from the price shock, expressed as a share of
-total household expenditure.
-
-\end{comment}
-
-We implement the model in a reduced form by estimating own-price elasticities
-for Spain. Spain is a natural first case because the EPF microdata are available
-year by year and report both expenditure and quantities for electricity, gas,
-and motor fuels. For household
-$i$, energy good $k$, autonomous community $r$, and year $y$, the estimated
-equation is:
-
-\begin{equation}
-\log q_{i,k,r,y}
-=
-\alpha_k
-+
-\varepsilon_k \log p_{i,k,r,y}
-+
-X_{i,y}'\beta_k
-+
-\mu_{r,k}
-+
-\lambda_{y,k}
-+
-u_{i,k,r,y},
-\end{equation}
-
-where $k$ denotes electricity, gas, or motor fuels. The variable $q_{i,k,r,y}$
-is the reported quantity consumed. We use two measures of $p_{i,k,r,y}$. The
-household unit value is the household's own expenditure divided by its reported
-quantity, and therefore uses within-household variation in average paid prices.
-This measure is close to the price faced by the household, but it may also
-reflect quality differences, tariff characteristics, or measurement error in
-reported quantities. The local price proxy is the median unit value for the same
-energy good, autonomous community, and year. It removes household-specific unit
-value variation and identifies demand responses from local price differences
-across regions and years. This is a standard strategy in household-survey
-demand estimation: unit values proxy the prices actually paid, while
-within-market aggregation limits the influence of household-specific quality
-choice and measurement error \citep{coxWohlgenant1986prices,deaton1988quality}.
-The vector $X_{i,y}$ includes log total expenditure,
-log equivalised income, and household size.
-
-To address the possible endogeneity of household unit values and local price
-proxies, we also estimate an instrumental-variable version of the same
-specification. The instrument is the annual product-specific policy wedge
-generated by Spanish energy-price measures: the VAT reductions on electricity
-and gas, and the 2022 transport-fuel price subsidy. Formally, we instrument
-$\log p_{i,k,r,y}$ with the average log gap between the no-policy and observed
-price implied by these measures for product $k$ and year $y$. Because this
-instrument varies at the product-year level, the product-specific IV
-specifications include autonomous-community fixed effects but not year fixed
-effects.
-
-\input{tables/tab_ES_epf_energy_elasticity_iv_estimates}
-
-The OLS estimates reported in Appendix
-Table~\ref{tab:es-epf-energy-elasticities} imply negative price elasticities for
-all three energy goods. The IV estimates in
-Table~\ref{tab:es-epf-energy-elasticities-iv} are smaller in absolute value for
-electricity and gas, consistent with the concern that unit values partly reflect
-quality or measurement error. For motor fuels, however, the IV coefficient has
-the wrong sign in this annual EPF design, suggesting that the fuel-rebate
-instrument is not reliable for estimating fuel demand in this sample. In the
-policy simulations, we therefore treat the household-unit-value OLS estimates
-as the conservative benchmark and use the IV results as a diagnostic robustness
-check rather than as the preferred elasticity input.
-
-%The Spanish Government has introduced temporary VAT rate changes  including  a temporary 0\% VAT on basic foodstuffs, and new VAT rates of 5\% and 7.5\%
-%\cite{forteza2024analysing} study the price effects of the temporary VAT rate reduction  find the pass-through was almost complete between 1 January 2023 and 2025. 
-
-%In a close simulation, \cite{dao2023unconventional} estimate headline inflation would have been higher in 2022 by about 2 percentage points in the euro area.
-
-
-%\ref{gautier2013vat} show This article empirically assesses the direct impact on inflation of VAT changes since 1995. VAT changes have often had significant but temporary effects on retailers' adjustment behavior and on inflation. We conclude that around 80\% of VAT changes are passed on to consumer prices one quarter after a VAT rate change
-
-%Changes in VAT rates impact consumer prices. According to an IMF study across 17 Euro countries (1999-2013), the pass-through of VAT changes to consumer prices is 100\% for standard rates but only 30\% for reduced rates,
-
-%Ability of VAT policy to stimulate spending depends on price pass-through.
-%Evidence on pass-through is very mixed
-%If pass-through is limited then most of VAT change reected in markups.
-% Example. In July 2009, VAT rate for meals consumed in French sit-down restaurants was reduced from 19.6 \% to 5.5 \%. Limited effect on prices and employment. Large effect on markups. 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Fiscal policy can best contribute to mitigating the negative impact of inflation on households through targeted and temporary support measures (tariff protection, increases in pensions and social benefits).
@@ -1116,7 +985,7 @@ Inflation inequalities by age and residence are more pronounced, with older and 
 
 %Consumption-based inflation inequality captures only one dimension of the distributional effects of inflation. A complete assessment also requires accounting for income indexation, transfers, and wealth effects, which may dominate consumption-basket effects for some households \citep{cardoso2022heterogeneous,pallotti2024bears}.
 
-Fiscal packages such as VAT reductions, fuel rebates, and tariff shields can have immediate effects on measured prices and can change relative prices across consumption categories. They can reduce the inflation burden of households whose expenditure is concentrated on regulated or subsidized items. At the same time, income breakdown is not sufficient to identify vulnerable households: exposure also depends on residence area, heating technology, mobility constraints, and the capacity to substitute away from energy-intensive consumption (see Appendix Figure~\ref{fig:app-ea-essentials-discretionary}). 
+Fiscal packages such as VAT reductions, fuel rebates, and tariff shields can have immediate effects on measured prices and can change relative prices across consumption categories. They can reduce the inflation burden of households whose expenditure is concentrated on regulated or subsidized items. At the same time, income breakdown is not sufficient to identify vulnerable households: exposure also depends on residence area, heating technology, mobility constraints, and the capacity to substitute away from energy-intensive consumption 
 
 By contrast, monetary policy affects the aggregate price level through broader transmission channels, with lags generally estimated at around 18 months. In the long run, monetary policy remains the instrument responsible for bringing inflation back to its target, including the 2 percent objective in the euro area, while fiscal policy is better understood as a temporary instrument for cushioning distributional effects during large relative-price shocks.
 
@@ -1194,20 +1063,6 @@ The group-level indicators remain subject to aggregation bias. To improve accura
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \centering
-\caption{Essential and discretionary expenditures by income quintile, euro area (in \% of total expenditure)}
-\label{fig:app-ea-essentials-discretionary}
-\includegraphics[width=0.88\textwidth,height=0.34\textheight,keepaspectratio]{fig/fig_EA_2015_income_essentials_discretionary_baskets.png}
-\vspace{8pt}
-\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: The figure partitions COICOP expenditure shares into essential expenditures and discretionary/transport expenditures. The euro-area aggregate is computed as the unweighted average of available country-level HBS expenditure shares.\\
-Source: Eurostat HBS 2015, authors' calculations.}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-\centering
 \caption{Main COICOP expenditure weights by income quintile, Spain (in \% of total expenditure)}
 \label{fig:app-es-income-coicop-weights}
 \includegraphics[width=0.98\textwidth,height=0.86\textheight,keepaspectratio]{fig/fig_ES_income_quintile_coicop_weights_2020_2023_grouped_bar.png}
@@ -1219,9 +1074,7 @@ Source: INE Encuesta de Presupuestos Familiares public-use microdata, authors' c
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-\input{tables/tab_ES_epf_energy_elasticity_estimates}
 
-\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
@@ -1324,6 +1177,25 @@ Sources: Eurostat HICP; INSEE HBS 2017; authors' calculations.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\centering
+\caption{Essential and discretionary expenditures by income quintile, euro area (in \% of total expenditure)}
+\label{fig:app-ea-essentials-discretionary}
+\includegraphics[width=0.88\textwidth,height=0.34\textheight,keepaspectratio]{fig/fig_EA_2015_income_essentials_discretionary_baskets.png}
+\vspace{8pt}
+\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
+\caption*{Notes: The figure partitions COICOP expenditure shares into essential expenditures and discretionary/transport expenditures. The euro-area aggregate is computed as the unweighted average of available country-level HBS expenditure shares.\\
+Source: Eurostat HBS 2015, authors' calculations.}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+
+
 
 \section{The Household Budget Survey in Italy}
 \label{sec:app-italy-hbs}
@@ -1644,15 +1516,7 @@ Sources: INSEE, Eurostat, authors' calculations.}
 \section{Heterogeneous Effects of Shocks}
 \label{sec:app-heterogeneous-shocks}
 
-Following the input-output price approach, we trace sectoral cost shocks through
-production networks and map their incidence onto household consumption baskets.
-This simulation delivers a
-decomposition of the direct and indirect components of cost pass-through. We map
-$\Delta p=(I-A')^{-1}s$ to consumption categories using the NACE--COICOP bridge
-from \citet{cai2020bridging} and aggregate with group-specific expenditure
-weights. The simulated inflation effect for group $g$ is $w_g'\Delta p$, and
-inflation inequality is measured as the difference between group-specific
-effects, for example $(w_{Q1}-w_{Q5})'\Delta p$ for the income gap.
+
 
 \input{fig/tab_shock_tables_2023}
 
