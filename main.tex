@@ -133,9 +133,9 @@ This paper examines the effect of the recent inflation surge on euro area househ
 
 The literature identifies three channels through which inflation produces heterogeneous effects: wealth, income, and consumption \citep{pallotti2024bears}. Inflation negatively impacts wealth by eroding the real value of nominal assets \citep{doepke2006inflation}. Conversely, it benefits indebted households, particularly those with fixed interest rate loans, as the real value of their debt diminishes. Moreover, inflation reduces the purchasing power of income, especially for households with incomes and savings not fully adjusted to inflation. Base wages, which often do not fully adjust to inflation, remain unchanged for the typical one-year wage contract period. The income channel is often assessed using tax-benefit microsimulation methods that combine household microdata with fiscal measures and income-indexation rules \citep{amores2025inflation}. Recent work has also paid renewed attention to the consumption channel, since households buy different baskets of goods and services and are therefore exposed differently when relative prices change \citep{jaravel2021inflation,cravino2020household,argente2021cost}. This consumption channel can be measured using category-level inflation rates for household groups \citep{hobijn2005inflation}, or with more granular household-level expenditure and price data \citep{kaplan2017inflation}.
 
+This work builds on the literature on inflation inequality. Adapting the distributional CPI approach developed for the United States by \cite{jaravel2024distributional} to the euro area requires one important modification. In the United States, the Consumer Price Index weights are derived directly from the Consumer Expenditure Survey, which is also the household expenditure source used to construct distributional CPI weights. In Europe, by contrast, HICP weights often combine national accounts, household budget surveys, and other national sources, while the HBS is observed less frequently and is not always the direct source of the official item weights. A simple transposition of the U.S. procedure would therefore generate group-specific baskets that need not aggregate back to the published HICP. Our method keeps the household-group expenditure heterogeneity observed in the HBS, but calibrates it to official HICP item weights so that the resulting indicators remain comparable with Eurostat inflation. 
 Relative to \cite{pallotti2024bears}, who assess the distributional incidence of the 2021--2023 inflation shock through wealth, income, and consumption channels, this paper focuses on consumption baskets. We therefore abstract from wealth and income mechanisms and provide harmonized public indicators by income, age, and residence area for the euro area.
-
-This work also builds on the academic literature on distributional price indices. Adapting the distributional CPI approach developed for the United States by \cite{jaravel2024distributional} to the euro area requires one important modification. In the United States, the Consumer Price Index weights are derived directly from the Consumer Expenditure Survey, which is also the household expenditure source used to construct distributional CPI weights. In Europe, by contrast, HICP weights often combine national accounts, household budget surveys, and other national sources, while the HBS is observed less frequently and is not always the direct source of the official item weights. A simple transposition of the U.S. procedure would therefore generate group-specific baskets that need not aggregate back to the published HICP. Our method keeps the household-group expenditure heterogeneity observed in the HBS, but calibrates it to official HICP item weights so that the resulting indicators remain comparable with Eurostat inflation. It is also related to policy work by \cite{bobasu2023impact} and \cite{claeys2022inflation}, who analyze inflation inequality at the euro area level.
+It is also related to policy work by \cite{bobasu2023impact} and \cite{claeys2022inflation}, who analyze inflation inequality at the euro area level.
 
 A related strand of recent literature emphasizes the distinction between homothetic and non-homothetic preferences. Inflation inequality through the consumption channel requires two ingredients: relative price shocks, such as an asymmetric energy shock, and heterogeneity in household consumption baskets. If all prices increased proportionally, as in a purely symmetric shock to the aggregate price level, households with homothetic preferences would face the same inflation rate despite having different income levels. In contrast, when price changes differ across products, household inflation can be written as the interaction between budget shares and item-level price changes. With homothetic preferences, these budget shares may still differ across households at a given point in time because households consume different baskets. With non-homothetic preferences, they also vary systematically with living standards, providing an additional mechanism through which households can experience different inflation rates. This connects exact cost-of-living index theory to the recent literature on cheapflation, which examines how price changes can differ across the varieties and quality segments consumed by different households \citep{chen2024cheapflation,sangani2026cheapflation}. Our empirical approach is closer to the expenditure-share channel: we measure how HBS budget shares by income, age, and residence area interact with common item-level price changes, rather than estimating household-specific price changes within narrowly defined products.
 
@@ -163,24 +163,49 @@ The remainder of the paper is organized as follows. The first section describes 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Data and Methodology}
 
-This section introduces the data sources and methodological framework employed in the analysis to build the inflation inequality indicators.
+This section explains how the household-group inflation indicators are built from the same accounting logic as the Harmonised Index of Consumer Prices (HICP). We first define the price-index object to be measured, then describe the data sources and harmonisation challenges that motivate the calibration of household-group weights to official HICP weights.
 % Moreover, we provide an open-access package that enables users to replicate and update our indicators.
 
-\subsection{Data}
+\subsection{Computing HICP by Household Categories}
 
 %The aim of calculating inflation  by household category is to construct inflation  that takes account of differences in household consumption structure. The data includes HICP by country, HBS weights (with a discussion on harmonization), and country weights based on country consumption.
 
 
-Headline inflation represents the spending patterns of an average household. Estimating inflation for specific household categories requires the use of Household Budget Surveys (HBS), which are national surveys on consumer expenditure. These surveys offer detailed insights into household characteristics, including income levels, the age of the household reference person, and the area of residence.
+Headline HICP inflation represents the price change faced by an average household basket. The object of interest in this paper is the corresponding price index for household categories: income groups, age groups, and residence areas. Prices are common within each product category, as in the official HICP, but the expenditure weights differ across household groups. The measurement problem is therefore to construct group-specific baskets that preserve observed household expenditure heterogeneity while remaining consistent with the published HICP aggregation.
 
-\subsection*{Consumer Price Indices}
+This analysis is based on publicly available data, primarily the Harmonised Index of Consumer Prices (HICP) constructed by national statistical institutes in collaboration with Eurostat. The HICP offers a standardized measure of inflation, ensuring comparability among member states. Eurostat aggregates national HICPs. Each country's HICP is based on price changes for a fixed basket of goods and services, weighted according to household expenditure from country-specific sources, including national accounts, household budget surveys, and other national sources. The national indices are then aggregated into the European HICP using country-specific weights that reflect their share of total household consumption expenditure. The calculation ensures comparability by adhering to Regulation EU 2016/796 and consistent data collection practices. The HICP is compiled according to the classification of household expenditures, ECOICOP ver. 2.
 
-This analysis is based on publicly available data, primarily the Harmonised Index of Consumer Prices (HICP) constructed by national statistical institutes in collaboration with Eurostat. 
+To ensure the HICP reflects recent consumption patterns, Eurostat updates its
+weighting structure annually. The updated weights are implemented with the
+January release of the HICP and remain fixed throughout the calendar year,
+which is the basis for the within-year Laspeyres aggregation\footnote{Appendix~\ref{app:substitution-bias} reports a diagnostic of the potential
+upper-level substitution bias implied by this fixed-weight aggregation.}. Let $p_{j,y,m}$ denote the price index of product category $j$ in month $m$ of
+year $y$, and let $p_{j,y,0}$ denote the price reference for the HICP weight
+year, corresponding to the previous December. The official within-year
+Laspeyres index is obtained by aggregating unchained product indices with the
+annual HICP product weights:
 
-The HICP offers a standardized measure of inflation, ensuring comparability among member states. Eurostat aggregates national HICPs. Each country's HICP is based on price changes for a fixed basket of goods and services, weighted according to household expenditure from country-specific sources (national accounts, HBS, etc.). These indices are then combined into the aggregate HICP using country-specific weights that reflect their share of total household consumption expenditure. The calculation ensures comparability by adhering to Regulation EU 2016/796 and consistent data collection practices. The HICP is compiled according to the classification of household expenditures, ECOICOP ver. 2.
+\begin{equation}
+P_{y,m}
+=
+\sum_{j \in \mathcal{J}_y}
+\omega^{HICP}_{j,y}
+\cdot
+\frac{p_{j,y,m}}{p_{j,y,0}}.
+\end{equation}
 
-To ensure the HICP accurately represents current consumption patterns, Eurostat updates its weighting structure annually. The updated weights are implemented with the January release of the HICP each year and remain fixed throughout the calendar year. This practice ensures consistency in the measurement of price changes over the year. This approach aligns with the Laspeyres index formula, which uses fixed base-period weights to measure price changes over time. 
-Appendix~\ref{app:substitution-bias} reports a diagnostic of the potential upper-level substitution bias implied by fixed-weights.
+The chained HICP index is then obtained by linking this within-year index to the
+previous December:
+
+\begin{equation}
+I_{y,m}
+=
+I_{y-1,12}
+\cdot
+P_{y,m}.
+\end{equation}
+
+
 
 Figure~\ref{fig:hicp} illustrates the developments across different HICP components in the euro area since 2014. The HICP components show significant volatility in energy and fuel prices. The sharp rise starting around mid-2021, peaking in 2022, is due to post-COVID recovery, supply chain disruptions, and geopolitical tensions. After the peaks in 2022, there is a visible correction across most components. Energy prices dropped sharply, while food prices and other components showed more gradual stabilization.
 
@@ -195,18 +220,14 @@ Figure~\ref{fig:hicp} illustrates the developments across different HICP compone
 Source: Eurostat HICP, authors' calculations}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
 
 
 
-\subsection*{Household Budget Survey} 
+\subsection*{Consumption Data and Harmonisation Challenges}
 
+The heterogeneity of consumption patterns among households is well-documented, but the accurate measurement of household-level consumption continues to present significant challenges. Estimating HICP inflation by household category therefore requires Household Budget Surveys (HBS), which are national surveys on consumer expenditure and household characteristics.
 
-The heterogeneity of consumption patterns among households is well-documented (e.g. "Engel's laws"). However, the accurate measurement of household-level consumption continues to present significant challenges. 
-
-The Household Budget Surveys (HBS) are conducted on a large sample of households in each euro area country. Households are required to document their expenditures on consumer goods and services over a designated period, typically two weeks. These surveys capture the values of expenditures across COICOP categories.
-
-HBS data are generally collected every five years. The most recent and complete HBS wave generally took place in 2020. The 2020 HBS wave was actually conducted between 2018 and 2022 in most EU Member States, while data for Cyprus, Malta, and France were gathered earlier, between 2015 and 2017.\footnote{The following HBS wave is the 2025 wave, with increased harmonization between countries.} A few countries, such as Italy and Spain, have yearly HBS surveys. 
+The Household Budget Surveys (HBS) are conducted on a large sample of households in each euro area country. Households are required to document their expenditures on consumer goods and services over a designated period, typically two weeks. These surveys capture the values of expenditures across COICOP categories. HBS data are generally collected every five years. The most recent and complete HBS wave generally took place in 2020. The 2020 HBS wave was actually conducted between 2018 and 2022 in most EU Member States, while data for Cyprus, Malta, and France were gathered earlier, between 2015 and 2017.\footnote{The following HBS wave is the 2025 wave, with increased harmonization between countries.} A few countries, such as Italy and Spain, have yearly HBS surveys. 
 
 Using Spain as an example, Figure~\ref{fig:app-es-income-coicop-weights} suggests that, while behavioural changes over the course of a couple of years were significant, the percentage-point differences in the weights of the main consumption categories between low- and high-income households remained relatively stable. This is the dimension that matters most for our estimates. Despite changes in overall consumption patterns, the impact of recent behavioural changes on inflation inequality may therefore be limited, since consumption shares often move in the same direction for different income groups. If this pattern also holds in other countries, using the same expenditure weights over short periods is unlikely to be a major source of bias.
 
@@ -222,37 +243,32 @@ The euro-area aggregate is computed from the 2020 HBS wave as the unweighted sum
 of available country-level income-quintile expenditures, renormalised to 100
 within each quintile. Countries without available HBS data for the wave are not
 included in the aggregate. Italy is taken from the Eurostat HBS income-quintile
-table.\\
+table when available and from the reconstructed Istat inputs otherwise.\\
 Source: Eurostat HBS 2020, authors' calculations}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
 
 
 %This infrequent collection may not fully capture short-term fluctuations in consumption patterns, particularly during periods of rapid price changes (e.g. COVID-19), potentially leading to bias in inflation inequality during such periods.\footnote{\cite{accardo2023measuring} developed a methodology to address the issue of low-frequency data in household consumption surveys.} Significant changes in weights between successive waves of HBS can also result in abrupt variations in inflation estimates by category. To address this, a linear interpolation method is proposed to smooth variations.\footnote{To mitigate this issue, two approaches are available in the package: linearly interpolate the HBS weights to smooth out the changes in weights over time, or apply a specific year's HBS weights for all months when calculating inflation rates (or contributions to inflation).}
 While HBS expenditure shares are observed only at low frequency, our weighting approach combines household-specific HBS expenditure structures with monthly HICP inflation rates. As a result, the average consumption trend can evolve continuously over the business cycle, reflecting changes in the HICP. However, because cross-household expenditure heterogeneity is assumed to remain constant between two HBS waves, a linear interpolation method is proposed to smooth variations at a specific date.
 
 
-Figure~\ref{fig:hbs} presents the consumption baskets by income quintiles, revealing the disparities in expenditure patterns across different income groups. Notably, lower-income households allocate a larger proportion of their expenditure to essential goods such as food and energy, making them more vulnerable to price shocks in these categories. This pattern is consistent with recent euro-area evidence based on HBS expenditure structures: housing and food account for a substantially larger share of expenditure among lower-income households. Energy-related expenditure for housing and private transport is also much higher in rural areas than in cities, reflecting differences in heating needs and mobility constraints.
+Figure~\ref{fig:hbs} presents the consumption baskets by income quintiles, revealing the disparities in expenditure patterns across different income groups. Notably, lower-income households allocate a larger proportion of their expenditure to essential goods such as food and energy, making them more vulnerable to price shocks in these categories.  Housing and food account for a substantially larger share of expenditure among lower-income households. Energy-related expenditure for housing and private transport is also much higher in rural areas than in cities, reflecting differences in heating needs and mobility constraints.
 
 
+HICP and HBS are not designed to fit together mechanically. HICP item weights are updated every year and may rely on national accounts or other national sources, while HBS expenditure structures are observed at lower frequency.  Depending on the level of data available, HICP and HBS are therefore merged at 3-digit COICOP in each country. In certain cases, such as for France's INSEE or Italy's Istat, data published directly by national statistical institutes can be used instead of relying on the Eurostat dataset. This approach is particularly valuable when the nationally published data provide greater granularity, recency, or frequency.\footnote{The \texttt{inflationinequality} R package allows the use of national data at 4-digit COICOP.}
 
-Depending on the level of data available, HICP and HBS are merged at the lowest COICOP level possible in each country. In certain cases, such as for France's INSEE or Italy's Istat, data published directly by national statistical institutes can be used instead of relying on the Eurostat dataset. This approach is particularly valuable when the nationally published data provide greater granularity, recency, or frequency.\footnote{The \texttt{inflationinequality} R package allows the use of national data at 4-digit COICOP.}
-HBS contains many household characteristics that can be used to segment inflation exposure. In this paper, we focus on three dimensions that are both economically meaningful and widely available across countries: income, the age of the household reference person, and the area of residence.\footnote{In recent HBS waves, Eurostat generally requests the Degree of Urbanisation (DEGURBA) variable, built from a common European methodology based on a 1 km$^2$ population grid. It classifies residence areas into cities (densely populated areas), towns and suburbs (intermediate density areas), and rural areas (thinly populated areas), using comparable thresholds across EU countries: urban centres of at least 50,000 inhabitants and 1,500 inhabitants per km$^2$, urban clusters of at least 5,000 inhabitants and 300 inhabitants per km$^2$, and all remaining areas.} These variables make it possible to compare inflation experiences not only across the income distribution, but also across demographic groups and territorial contexts. Moreover, Eurostat provides HBS with breakdowns at 3-digit COICOP. In line with the Eurostat HICP methodology, imputed rent is excluded from the analysis. This analysis uses all available waves of the HBS since 1999 and matches them with the closest corresponding HICP year. 
+HBS contains many household characteristics that can be used to segment inflation exposure. In this paper, we focus on three dimensions that are both economically meaningful and widely available across countries: income, the age of the household reference person, and the area of residence.\footnote{In recent HBS waves, Eurostat generally requests the Degree of Urbanisation (DEGURBA) variable, built from a common European methodology based on a 1 km$^2$ population grid. It classifies residence areas into cities (densely populated areas), towns and suburbs (intermediate density areas), and rural areas (thinly populated areas), using comparable thresholds across EU countries: urban centres of at least 50,000 inhabitants and 1,500 inhabitants per km$^2$, urban clusters of at least 5,000 inhabitants and 300 inhabitants per km$^2$, and all remaining areas.} These variables make it possible to compare inflation experiences not only across the income distribution, but also across demographic groups and territorial contexts. In line with the Eurostat HICP methodology, imputed rent is excluded from the analysis. This analysis uses all available waves of the HBS since 1999 and matches them with the closest corresponding HICP year. Italy is the main exception: after 2005, Eurostat does not provide the income, age, and residence-area breakdowns required for our analysis. We therefore reconstruct the 2015 and 2020 Italian household-group expenditure structures from the individual public-use HBS files available from Istat, following the procedure described in Appendix~\ref{sec:app-italy-hbs}. Appendix~\ref{sec:app-validation-tests} reports aggregation checks, while Figures~\ref{fig:app-fr-level3-price-indices}--\ref{fig:app-fr-level3-contributions} illustrate the France workflow at COICOP level 3.
 
 
 %The Consumer Price Index (CPI) and Household Budget Surveys (HBS) are categorized according to the COICOP nomenclature. However, the relationship between the COICOP-CPI and COICOP-HBS classifications is not bijective. To address this, all CPI items are retained while expenditures from the HBS that fall outside the scope of consumption--such as taxes and work-related investment expenditures--are excluded. 
 
 % for france Adjustments are made to the nomenclature for items that lack direct correspondence or are categorized differently. Where feasible, matching is conducted at level 3 of the COICOP consumption function nomenclature, and at level 2 where finer disaggregation is unavailable (e.g., transport services, where modal breakdowns are absent in the HBS), ensuring the inclusion of all CPI products. Ultimately, 75 products are matched.
 
-\subsection{Methodology}
-
 %We explain the harmonized methodology applied across all euro area countries, utilizing an R package. The average of inflation measures by categories equals average inflation (cf. Jaravel?). The package allows to use custom data . For the French case, we reference the annual inflation data from INSEE. 
-This section presents the weighting methodology used to combine HBS expenditure patterns with official HICP weights while ensuring consistency with the published aggregation.
+These data constraints motivate the weighting methodology below. A simple use of HBS expenditure shares would generally not aggregate back to the official HICP, because the HBS all-household basket does not necessarily coincide with the annually updated HICP item weights. We therefore start from the official HICP product weights and use HBS only to distribute each product's expenditure across household groups. The RAS calibration preserves the relative HBS expenditure profiles while imposing the row and column margins required by the HICP construction.
 
-The aggregate consumer price index can be interpreted as the price index faced by a representative household with the average consumption basket. This implicitly treats households as if they had the same expenditure structure, or equivalently as if a single homothetic basket were sufficient to summarize price changes for all groups. The purpose of the group-level indices is to relax this assumption in a transparent way: prices remain common within each product category, but expenditure weights vary across income groups, age groups, and residence areas.
-
-\subsection*{Weights}
+\subsection*{Group-Specific Weights}
 
 Let $\omega^{HICP}_{j,y}$ denote the official annual HICP weight of product
 category $j$ in weight year $y$. Let $g$ denote a household group, such as an
@@ -323,7 +339,7 @@ Figures~\ref{fig:fr-validation-rate}, \ref{fig:fr-validation-level}, and
 validation checks for France.
 
 
-We use the Household Budget Survey as realeased by Eurostat once every five years. In
+We use the Household Budget Survey as released by Eurostat once every five years. In
 contrast, the expenditure weights used in the construction of the HICP are
 updated annually. The year of the HBS data $y'$ and the HICP weight year $y$
 may therefore differ. To align the two sources, each HICP weight year $y$ is
@@ -519,15 +535,14 @@ shock was common to the euro area, its distributional effects differed across
 countries because energy mixes, import dependence, household consumption
 patterns, and fiscal responses were not uniform.
 
-Figure~\ref{fig:country_heterogeneity} documents this cross-country
-heterogeneity for income quintiles in 2022. The Baltic and Central European
-group in panel (a) displays both high inflation and pronounced differences
-between low- and high-income households. By contrast, the large economies in
-panel (d) exhibit more compressed inflation inequality, despite substantial
-headline inflation. This pattern is consistent with recent evidence on
-inflation inequality in the euro area \citep{claeys2022inflation}. The
-intermediate panels show that the sign and size of inflation inequality are
-not mechanically tied to the level of inflation alone.
+Table~\ref{tab:country-heterogeneity-cumulative-gap} documents this
+cross-country heterogeneity by reporting the cumulative 2020--2024 inflation
+gap between the first and fifth income quintiles. The Baltic countries and
+Ireland display large positive Q1--Q5 gaps, while several large economies show
+more compressed or slightly negative gaps despite substantial headline
+inflation. This pattern is consistent with recent evidence on inflation
+inequality in the euro area \citep{claeys2022inflation}. The sign and size of
+inflation inequality are not mechanically tied to the level of inflation alone.
 
 The relevant mechanism is the interaction between country-specific price
 dynamics and group-specific expenditure shares. A price increase in a product
@@ -542,41 +557,17 @@ energy components.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-\centering
-\caption{Inflation by income quintiles (2022, in \%)}
-\label{fig:country_heterogeneity}
-\begin{subfigure}{0.48\textwidth} 
-  \centering
-  \caption{Estonia, Lithuania, Latvia, Slovakia}
-  \includegraphics[width=\linewidth,height=7cm]{fig/fig_EE_LT_LV_SK_2022_income_inflation.png}
-\end{subfigure}
-\hfill 
-\begin{subfigure}{0.48\textwidth} 
-  \centering
-  \caption{Austria, Finland, Luxembourg, Netherlands}
-  \includegraphics[width=\linewidth,height=7cm]{fig/fig_AT_FI_LU_NL_2022_income_inflation.png}
-\end{subfigure}
+\input{tables/tab_EA20_country_income_q1_q5_cumulative_gap_2020_2024}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\vspace{10pt} % Espace entre les deux lignes de graphiques
+Table~\ref{tab:ea20-income-gap-product-contributions} decomposes the
+euro-area annual income inflation gaps into the main product groups used in the
+contribution figures. It shows which components account for the annual
+contribution difference between the first and fifth income quintiles over the
+2021--2024 shock period.
 
-\begin{subfigure}{0.48\textwidth}
-  \centering
-  \caption{Greece, Ireland, Portugal, Cyprus}
-  \includegraphics[width=\linewidth,height=6cm]{fig/fig_EL_IE_PT_CY_2022_income_inflation.png}
-\end{subfigure}
-\hfill
-\begin{subfigure}{0.48\textwidth}
-  \centering
-  \caption{Germany, France, Italy, Spain}
-  \includegraphics[width=\linewidth,height=6cm]{fig/fig_DE_FR_IT_ES_2022_income_inflation.png}
-\end{subfigure}
-
-\vspace{20pt} 
-\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{%Note: 2022.
-Sources: Eurostat, authors' calculations}
-\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{tables/tab_EA20_income_gap_product_contributions_2020_2024}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -592,43 +583,43 @@ groups, such as $(w_{Q1}-w_{Q5})'\Delta p$ for the income gap.
 
 \begin{table}[H]
 \centering
-\caption{Effect of a 10 Percent Shock to Crude Oil and Gas Prices, 2022 (effects in pp)}
+\caption{Effect of a 20.0 Percent Shock to Crude Oil and Gas Prices, 2022 (effects in pp)}
 \label{tab:oil-gas-shock}
 \scriptsize
 \setlength{\tabcolsep}{4.2pt}
-\begin{tabular}{lrrrrrr}
+\begin{tabular}{lrrrrr}
 \toprule
-Country & \shortstack{Average inflation\\Total} & \shortstack{Average inflation\\Direct} & \shortstack{Average inflation\\Indirect} & \shortstack{Income inflation\\gap} & \shortstack{Age inflation\\gap} & \shortstack{Rural-urban\\inflation gap}
+Country & \shortstack{Average inflation\\Total} & \shortstack{Average inflation\\Direct} & \shortstack{Income inflation\\gap} & \shortstack{Direct income\\inflation gap} & \shortstack{Indirect income\\inflation gap}
  \\
 \midrule
-DE & 0.6 & 0.1 & 0.5 & 0.1 & 0.0 & 0.2
+DE & 1.6 & 0.3 & -0.1 & 0.0 & -0.1
  \\
-FR & 0.6 & 0.0 & 0.6 & -0.0 & 0.1 & 0.2
+FR & 1.6 & 0.0 & -0.1 & 0.0 & -0.1
  \\
-IT & 1.0 & 0.4 & 0.7 & -0.1 & -0.1 & 0.2
+IT & 2.3 & 0.6 & -0.1 & -0.1 & -0.1
  \\
-ES & 0.8 & 0.0 & 0.8 & 0.1 & 0.1 & 0.1
+ES & 2.0 & 0.0 & 0.2 & 0.0 & 0.2
  \\
-NL & 1.1 & 0.2 & 0.8 & -0.1 & 0.2 & 0.2
+NL & 2.5 & 0.6 & -0.4 & -0.0 & -0.4
  \\
-BE & 0.8 & 0.0 & 0.8 & -0.1 & 0.1 & 0.2
+BE & 2.3 & 0.0 & -0.6 & 0.0 & -0.6
  \\
-EA20 & 0.8 & 0.1 & 0.6 & 0.0 & 0.0 & 0.2
+EA20 & 1.9 & 0.2 & -0.1 & -0.0 & -0.1
  \\
 \bottomrule
 \end{tabular}
 \par\vspace{0.35em}\footnotesize\noindent Sources: Eurostat HICP, HBS, FIGARO, authors' calculations.
-\par\vspace{0.25em}\footnotesize\noindent Notes. Entries are percentage-point effects of a 10 percent sectoral input price shock. The price response is computed as $\Delta p = (I - A^{\prime})^{-1}s$, with $A$ built from FIGARO. The direct effect is the component from the shocked sector in the household consumption basket. Indirect is the Leontief propagation component. Total = Direct + Indirect before rounding. Income inflation gap = Q1 - Q5; age inflation gap = over 60 years - less than 30 years; rural-urban inflation gap = rural areas - cities.
+\par\vspace{0.25em}\footnotesize\noindent Notes. Entries are percentage-point effects of a 20.0 percent sectoral input price shock. The shock size is the increase in the NYMEX natural gas futures price (NG=F), from 3.73 on December 31, 2021 to 4.475 on December 30, 2022, the last available trading day before December 31, 2022. The price response is computed as $\Delta p = (I - A^{\prime})^{-1}s$, with $A$ built from FIGARO. The direct effect is the component from the shocked sector in the household consumption basket. Indirect is the Leontief propagation component. Average inflation total includes direct and indirect effects before rounding. Income inflation gap = Q1 - Q5.
 \end{table}
 \vspace{0.6em}
 
 Table~\ref{tab:oil-gas-shock} shows that indirect production-network effects
 account for most of the simulated impact of a crude-oil and gas shock. The
 average effect is largest in the Netherlands and Italy, but income-quintile
-gaps remain small relative to the aggregate price effect. Rural-urban gaps are
-more systematic and positive, indicating that exposure to energy-intensive
-consumption and transport is better captured by residence area than by income
-alone in this stylized shock. Additional simulations for food-products price
+gaps remain small relative to the aggregate price effect. The decomposition of
+the income gap shows that direct household exposure and indirect
+production-network exposure partly offset each other in several countries.
+Additional simulations for food-products price
 shocks and electronic-component price shocks are reported in
 Appendix~\ref{sec:app-heterogeneous-shocks}.
 
@@ -1155,6 +1146,16 @@ The group-level indicators remain subject to aggregation bias. To improve accura
 %\renewcommand{\thetable}{\Alph{section}} 
 %\renewcommand{\thefigure}{\Alph{section}} 
 
+\section{Heterogeneous Effects of Shocks}
+\label{sec:app-heterogeneous-shocks}
+
+\input{fig/tab_shock_tables_2023}
+
+\clearpage
+
+\input{appendices/substitution_bias_appendix}
+
+\clearpage
 
 \section{Additional figures}
 
@@ -1611,16 +1612,7 @@ Sources: INSEE, Eurostat, authors' calculations.}
 
 
 
-\input{appendices/substitution_bias_appendix}
-
 \input{appendices/counterfactuals_appendix}
-
-\section{Heterogeneous Effects of Shocks}
-\label{sec:app-heterogeneous-shocks}
-
-
-
-\input{fig/tab_shock_tables_2023}
 
 \input{fig/tab_EA20_price_counterfactual_measures_annex}
 
