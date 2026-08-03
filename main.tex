@@ -749,8 +749,9 @@ To quantify the effect of these fiscal measures on inflation inequality, we cons
 
 \subsection{Counterfactuals}
 
-We distinguish three cases. First, for regulated-price shields, we use official information for France or the retail-wholesale electricity relationship for Spain, to recover the no-policy path. Second, for VAT and excise changes, we back out the reduced tax-inclusive price and reapply the normal rate. Third, for unit subsidies and fuel rebates, we add the statutory support amount back to reconstructed retail unit prices. Evidence from \citet{drolsbach2023pass} suggests that temporary fuel-tax reductions and discounts in France, Germany, and Italy were largely passed through to consumer prices in 2022, although pass-through varied over time and by fuel type. This supports treating these measures as retail-price wedges in the counterfactual construction. 
-%Fourth, for targeted social bonuses, we construct aggregate-equivalent tests when the information is sufficient, and otherwise flag the measure as pending when the statutory schedule or consumption denominator is missing. For Germany, Italy, Spain, and the remaining euro-area measures, the identification of these cases combines the policy inventory in \citet{arregui2022targeted} with the  dataset of \citet{sgaravatti2021national}.
+We distinguish three cases. First, for regulated-price shields, we use official information for France or the retail-wholesale electricity relationship for Spain, to recover the no-policy path. Second, for VAT and excise changes, we back out the reduced tax-inclusive price and reapply the normal rate. Third, for unit subsidies and fuel rebates, we add the statutory support amount back to reconstructed retail unit prices. Evidence from \citet{drolsbach2023pass} suggests that temporary fuel-tax reductions and discounts in France, Germany, and Italy were largely passed through to consumer prices in 2022, although pass-through varied over time and by fuel type. This supports treating these measures as retail-price wedges in the counterfactual construction.
+
+For a small set of price-relevant interventions, the policy inventories identify the measure but do not provide the monthly no-policy tariff schedule, tariff-block utilization, or eligible-household weights needed for a direct statutory reconstruction. We therefore add these cases as separate calibrated layers, identified from \citet{sgaravatti2021national} and \citet{arregui2022targeted}, rather than merging them with the VAT or unit-subsidy calculations. This applies to block-tariff or price-cap schemes in Germany, the Netherlands, Cyprus, Ireland, Italy, and Slovenia, and to Belgium's extension of the social energy tariff and basic energy package. The calibrated ratios are applied only to the relevant COICOP energy components and policy months, and the corresponding assumption tables are reported with the counterfactual outputs. These layers should be interpreted as aggregate-equivalent price effects, not as micro-founded statutory tariff reconstructions.
 
 
 Counterfactual price indices are constructed at the COICOP component level by replacing the observed policy-inclusive HICP component-index path with a no-policy component-index path. Let $P_{j,t}$ denote the observed HICP component index for product $j$ in month $t$, and let $\widetilde P_{j,t}$ denote the corresponding counterfactual index. For each simulated measure, we recover a counterfactual retail price $\widetilde p_{j,t}$ and apply the implied price ratio to the observed component index:
@@ -806,8 +807,7 @@ p_{j,t}+s_{j,t}.
 \end{equation}
 For the French transport-fuel rebate, $s_{j,t}$ is recovered directly from the
 statutory pump discount rather than estimated from the HICP series. The build
-script for Figure~\ref{fig:fr_fuel_hicp_counterfactual} uses the French
-government's open data on road-fuel prices,\footnote{\url{https://www.prix-carburants.gouv.fr/rubrique/opendata/}}
+script uses the French government's open data on road-fuel prices,\footnote{\url{https://www.prix-carburants.gouv.fr/rubrique/opendata/}}
 aggregates
 diesel, SP95, SP95-E10, and SP98 to a monthly composite pump price
 $p^{M}_{t}$, and adds the public rebate schedule. Following
@@ -861,79 +861,20 @@ package implementation:
 
 
 
-\subsection{France}
+\subsection{Euro area}
 
-%In the case of France, we do not estimate the underlying market prices; we rely on estimates from official sources. For gas, we use a series of 'market' retail prices from the French Energy Regulatory Commission ("CRE"). The CRE provides indicative market retail prices in the absence of energy price measures.
+We aggregate the country-level policy counterfactuals to the euro-area level using Eurostat country weights for the HICP. The aggregation is performed over the set of countries for which a price-policy counterfactual is simulated, with country weights renormalized within this policy sample in each year. This produces a common-scope comparison between the observed country-weighted policy-sample index and the corresponding no-policy counterfactual. We also report the official euro-area HICP index as an external benchmark for the observed aggregate series.
 
-%For electricity, we use the CRE's monthly series of theoretical retail electricity prices, which are constructed similarly based on wholesale market contract price movements. 
-
-% For fuel, we derive a rebate the 8\%
-
-%We then scale the additional price growth of gas and electricity by their respective weights in the HICP to calculate the additional headline inflation shocks in the absence of energy price policies (Figure 8).
-
-
-Figure~\ref{fig:fr_fuel_hicp_counterfactual} focuses on the fuel-price rebate. Consistent with the French policy-counterfactual simulation in \cite{gautier2024effects}, the counterfactual removes the price-based intervention by adding back the public rebate to retail fuel prices. In line with \citet{bonnet2025compensating}, this measure is interpreted economically as a subsidy to pump prices, while its implementation operated through fuel excise-tax rebates, including VAT. The gap between the two indices is therefore confined to the period during which the rebate was in force.
+Figure~\ref{fig:ea_policy_total_cpi_counterfactual} shows that the simulated fiscal measures compressed euro-area inflation during the energy crisis. The gap between the observed policy-sample index and the counterfactual index is largest around the peak of the 2022--23 energy shock, when VAT reductions, fuel rebates, price shields, regulated-price caps, and calibrated block-tariff layers were simultaneously active across countries. The official euro-area HICP remains close to the observed policy-sample aggregate, while not coinciding exactly because the policy sample excludes countries without a simulated price-policy layer and because the aggregation is restricted to the countries covered by the counterfactual exercise.
 
 \begin{figure}[H]
 \centering
-\caption{France: fuel HICP counterfactual (index, 2015 = 100)}
-\includegraphics[width=0.86\textwidth,height=0.34\textheight,keepaspectratio]{fig/fig_FR_fuel_hicp_counterfactual.png}
-\label{fig:fr_fuel_hicp_counterfactual}
+\caption{Euro area: country-weighted policy counterfactual and official HICP inflation (in \%)}
+\includegraphics[width=0.86\textwidth,height=0.42\textheight,keepaspectratio]{fig/policy_total_cpi_counterfactual_inflation_EA_policy_sample.png}
+\label{fig:ea_policy_total_cpi_counterfactual}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: The figure reports the observed fuel HICP index and a no-rebate counterfactual for France. The counterfactual is obtained by adding back the public fuel rebates to monthly road-fuel prices and applying the resulting price ratio to the observed HICP fuel index. The rebate is an economic pump-price subsidy implemented through fuel excise-tax rebates, including VAT. It is treated as expired after December 2022, so that the observed and counterfactual indices coincide from January 2023 onward. Unit: HICP index, 2015 = 100.\\
-Source: Eurostat HICP, French government fuel-price open data (\url{https://www.prix-carburants.gouv.fr/rubrique/opendata/}), authors' calculations.}
-\end{figure}
-
-Figure~\ref{fig:fr_electricity_cre_counterfactual} reports the corresponding simulation for electricity prices. The observed HICP reflects the regulated-tariff increases allowed under the electricity price shield, while the counterfactual uses CRE tariff information to recover the larger price adjustment that would have occurred in the absence of the ceiling. The comparison therefore isolates the period during which the electricity shield compressed retail electricity inflation.
-
-\begin{figure}[H]
-\centering
-\caption{France: electricity HICP counterfactual (index, 2015 = 100)}
-\includegraphics[width=0.86\textwidth,height=0.34\textheight,keepaspectratio]{fig/fig_FR_electricity_cre_counterfactual.png}
-\label{fig:fr_electricity_cre_counterfactual}
-\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: The figure compares the observed electricity HICP with a policy counterfactual based on CRE information on regulated electricity tariffs and theoretical tariff adjustments. The vertical bars mark the start and end of the electricity price ceiling. Unit: HICP index, 2015 = 100.\\
-Source: Eurostat HICP, CRE tariff data, authors' calculations.}
-\end{figure}
-
-Figure~\ref{fig:fr_gas_cre_counterfactual} presents the same type of comparison for natural gas. The observed HICP follows retail prices under the regulated-tariff freeze, whereas the counterfactual uses CRE information on the residential gas tariff path in the absence of the freeze and the subsequent CRE reference-price series. The gap between the two curves documents the mechanical price-index effect of the gas price ceiling during the energy crisis.
-
-\begin{figure}[H]
-\centering
-\caption{France: gas HICP counterfactual (index, 2015 = 100)}
-\includegraphics[width=0.86\textwidth,height=0.34\textheight,keepaspectratio]{fig/fig_FR_gas_cre_counterfactual.png}
-\label{fig:fr_gas_cre_counterfactual}
-\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: The figure compares the observed gas HICP with a policy counterfactual based on CRE information on residential gas tariffs and the no-freeze tariff path. The vertical bars mark the start and end of the gas price ceiling. Unit: HICP index, 2015 = 100.\\
-Source: Eurostat HICP, CRE gas tariff and reference-price data, authors' calculations.}
-\end{figure}
-
-\subsection{Spain}
-
-%The increase in VAT on food in Spain on 1st October was almost immediate and symmetrical to the reduction that took place almost 2 years ago. The second stage, before the return to normal rates, is scheduled for 1st January 2025.
-
-For Spain, given the strong historical correlation between retail and wholesale electricity prices prior to the energy crisis, we compute the counterfactual retail electricity prices using the estimated historical relationship between retail and wholesale electricity prices before the 2022 price surge, following \cite{dao2023unconventional}.
-
-Figure~\ref{fig:es_energy_hicp_counterfactuals} reports the Spanish electricity and fuel counterfactuals. The observed HICP is compared with a counterfactual path that removes the effect of the Iberian electricity-price cap and related retail-price measures. The fuel panel applies the same accounting principle to the temporary transport-fuel rebate.
-
-\begin{figure}[H]
-\centering
-\caption{Spain: electricity and fuel HICP counterfactuals (index, 2015 = 100)}
-\begin{subfigure}{0.86\textwidth}
-  \centering
-  \caption{Electricity}
-  \includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]{fig/fig_ES_electricity_hicp_counterfactual.png}
-\end{subfigure}
-
-\begin{subfigure}{0.86\textwidth}
-  \centering
-  \caption{Transport fuels}
-  \includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]{fig/fig_ES_fuel_hicp_counterfactual.png}
-\end{subfigure}
-\label{fig:es_energy_hicp_counterfactuals}
-\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{Notes: Panel (a) compares the observed electricity HICP with a counterfactual index based on the historical relationship between retail electricity prices and wholesale electricity prices, augmented by the calibration to the Iberian electricity-price cap. Panel (b) compares the observed transport-fuel HICP with a no-rebate counterfactual based on public fuel-price data; the counterfactual line is shown only during the period in which it differs from the observed index. Unit: HICP index, 2015 = 100.\\
-Source: Eurostat HICP, OMIE wholesale electricity prices, European Commission Weekly Oil Bulletin, authors' calculations.}
+\caption*{Notes: The figure compares three year-on-year inflation series: observed headline HICP inflation aggregated from the countries covered by the policy counterfactual exercise, the corresponding counterfactual inflation rate without the simulated price-policy measures, and official euro-area HICP inflation. Country aggregation uses Eurostat EA20 country weights, renormalized within the policy sample in each year. Unit: year-on-year inflation rate, in percent.\\
+Source: Eurostat HICP and country weights, Bruegel energy-policy dataset, IMF policy inventory, national policy sources, authors' calculations.}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
