@@ -1,0 +1,17 @@
+{
+  "key": "claeys2022inflation",
+  "status": "corrected",
+  "one_sentence": "Inflation inequality in the European Union and its drivers",
+  "canonical_url": "https://doi.org/10.64153/jmzf6457",
+  "issues": [
+    {
+      "field": "year",
+      "original": "2022",
+      "corrected": "2025",
+      "reason": "Crossref canonical metadata differs"
+    }
+  ],
+  "note": "",
+  "original_bib": "@misc{claeys2022inflation,\n  title={Inflation inequality in the European Union and its drivers},\n  author={Claeys, G. and Guetta-Jeanrenaud, L. and McCaffrey, C. and Welslau, L.},\n  year={2022},\n  note={Bruegel},\n  url={https://www.bruegel.org/dataset/inflation-inequality-european-union-and-its-drivers}\n}\n",
+  "corrected_bib": "@misc{claeys2022inflation,\n  title={Inflation inequality in the European Union and its drivers},\n  author={Claeys, G. and Guetta-Jeanrenaud, L. and McCaffrey, C. and Welslau, L.},\n  year={2022},\n  note={Bruegel},\n  url={https://www.bruegel.org/dataset/inflation-inequality-european-union-and-its-drivers}\n}\n"
+}

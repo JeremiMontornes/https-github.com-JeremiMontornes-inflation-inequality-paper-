@@ -1,0 +1,10 @@
+{
+  "key": "bobasu2023impact",
+  "status": "unverifiable",
+  "one_sentence": "The impact of the recent inflation surge across households",
+  "canonical_url": null,
+  "issues": [],
+  "note": "Crossref top hit title mismatch: Inflation Heterogeneity Across Households",
+  "original_bib": "@article{bobasu2023impact,\n  title={The impact of the recent inflation surge across households},\n  author={Bobasu, A. and Di Nino, V. and Osbat, C.},\n  journal={ECB Economic Bulletin},\n  number={3},\n  year={2023}\n}\n",
+  "corrected_bib": "@article{bobasu2023impact,\n  title={The impact of the recent inflation surge across households},\n  author={Bobasu, A. and Di Nino, V. and Osbat, C.},\n  journal={ECB Economic Bulletin},\n  number={3},\n  year={2023}\n}\n"
+}

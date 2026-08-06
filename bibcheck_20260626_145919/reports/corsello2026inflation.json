@@ -1,0 +1,10 @@
+{
+  "key": "corsello2026inflation",
+  "status": "clean",
+  "one_sentence": "Inflation is not equal for all: The heterogeneous effects of energy shocks",
+  "canonical_url": "https://doi.org/10.1016/j.euroecorev.2026.105298",
+  "issues": [],
+  "note": "",
+  "original_bib": "@article{corsello2026inflation,\n  title = {Inflation is not equal for all: The heterogeneous effects of energy shocks},\n  author = {Corsello, Francesco and Riggi, Marianna},\n  journal = {European Economic Review},\n  volume = {187},\n  pages = {105298},\n  year = {2026},\n  issn = {0014-2921},\n  doi = {10.1016/j.euroecorev.2026.105298},\n  url = {https://www.sciencedirect.com/science/article/pii/S0014292126000425}\n}\n",
+  "corrected_bib": "@article{corsello2026inflation,\n  title = {Inflation is not equal for all: The heterogeneous effects of energy shocks},\n  author = {Corsello, Francesco and Riggi, Marianna},\n  journal = {European Economic Review},\n  volume = {187},\n  pages = {105298},\n  year = {2026},\n  issn = {0014-2921},\n  doi = {10.1016/j.euroecorev.2026.105298},\n  url = {https://www.sciencedirect.com/science/article/pii/S0014292126000425}\n}\n"
+}

@@ -1,0 +1,17 @@
+{
+  "key": "bacharach1965estimating",
+  "status": "corrected",
+  "one_sentence": "Estimating Nonnegative Matrices from Marginal Data",
+  "canonical_url": "https://doi.org/10.2307/2525582",
+  "issues": [
+    {
+      "field": "pages",
+      "original": "294--310",
+      "corrected": "294",
+      "reason": "Crossref canonical metadata differs"
+    }
+  ],
+  "note": "",
+  "original_bib": "@article{bacharach1965estimating,\n  title={Estimating Nonnegative Matrices from Marginal Data},\n  author={Bacharach, Michael},\n  journal={International Economic Review},\n  volume={6},\n  number={3},\n  pages={294--310},\n  year={1965},\n  doi={10.2307/2525582}\n}\n",
+  "corrected_bib": "@article{bacharach1965estimating,\n  title={Estimating Nonnegative Matrices from Marginal Data},\n  author={Bacharach, Michael},\n  journal={International Economic Review},\n  volume={6},\n  number={3},\n  pages={294--310},\n  year={1965},\n  doi={10.2307/2525582}\n}\n"
+}

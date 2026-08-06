@@ -1,0 +1,38 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.65in]{geometry}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\begin{table}[H]
+\centering
+\caption{Effect of a 40 Percent Shock to Electronic Component Prices, 2023}
+\scriptsize
+\setlength{\tabcolsep}{4.2pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+Country & \shortstack{Effect on average\\inflation -- Total} & \shortstack{Direct effect on\\average inflation} & \shortstack{Indirect effect on\\average inflation} & \shortstack{Effect on\\inflation gap} & \shortstack{Direct effect on\\inflation gap} & \shortstack{Indirect effect on\\inflation gap}
+ \\
+\midrule
+Germany & 0.8 & 0.4 & 0.4 & -0.2 & -0.1 & -0.1
+ \\
+France & 0.9 & 0.4 & 0.5 & -0.2 & -0.0 & -0.1
+ \\
+Italy & 0.6 & 0.3 & 0.4 & -0.1 & -0.0 & -0.0
+ \\
+Spain & 0.4 & 0.1 & 0.3 & -0.0 & -0.0 & -0.0
+ \\
+Netherlands & 0.8 & 0.4 & 0.5 & -0.2 & -0.0 & -0.1
+ \\
+Belgium & 0.6 & 0.2 & 0.4 & -0.1 & -0.0 & -0.1
+ \\
+Euro area & 0.7 & 0.3 & 0.4 & -0.1 & -0.0 & -0.1
+ \\
+\bottomrule
+\end{tabular}
+\par\vspace{0.35em}\footnotesize\noindent Sources: Eurostat HICP, HBS, FIGARO, authors' calculations.
+\par\vspace{0.25em}\footnotesize\noindent Notes. Entries are percentage-point effects of the sectoral input price shock shown in the table title. The price response is computed as $\Delta p = (I - A^{\prime})^{-1}s$, with $A$ built from FIGARO. The direct effect is the component from the shocked sector in the household consumption basket. Indirect is the Leontief propagation component. Average inflation total includes direct and indirect effects before rounding. Income inflation gap = Q1 - Q5 of revenues.
+\end{table}
+\vspace{0.6em}
+\end{document}

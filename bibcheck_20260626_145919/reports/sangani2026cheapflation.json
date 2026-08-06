@@ -1,0 +1,10 @@
+{
+  "key": "sangani2026cheapflation",
+  "status": "clean",
+  "one_sentence": "Cheapflation Cycles",
+  "canonical_url": "https://doi.org/10.3386/w35235",
+  "issues": [],
+  "note": "",
+  "original_bib": "@techreport{sangani2026cheapflation,\n  title = {Cheapflation Cycles},\n  author = {Sangani, Kunal},\n  institution = {National Bureau of Economic Research},\n  type = {NBER Working Paper},\n  number = {35235},\n  year = {2026},\n  doi = {10.3386/w35235},\n  url = {https://www.nber.org/papers/w35235}\n}\n",
+  "corrected_bib": "@techreport{sangani2026cheapflation,\n  title = {Cheapflation Cycles},\n  author = {Sangani, Kunal},\n  institution = {National Bureau of Economic Research},\n  type = {NBER Working Paper},\n  number = {35235},\n  year = {2026},\n  doi = {10.3386/w35235},\n  url = {https://www.nber.org/papers/w35235}\n}\n"
+}

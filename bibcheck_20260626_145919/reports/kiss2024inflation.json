@@ -1,0 +1,10 @@
+{
+  "key": "kiss2024inflation",
+  "status": "clean",
+  "one_sentence": "Inflation Heterogeneity Across Households",
+  "canonical_url": "https://doi.org/10.2139/ssrn.4711249",
+  "issues": [],
+  "note": "",
+  "original_bib": "@techreport{kiss2024inflation,\n  title={Inflation Heterogeneity Across Households},\n  author={Kiss, Regina and Strasser, Georg},\n  institution={European Central Bank},\n  type={ECB Working Paper},\n  number={2898},\n  year={2024},\n  month={January}\n}\n",
+  "corrected_bib": "@techreport{kiss2024inflation,\n  title={Inflation Heterogeneity Across Households},\n  author={Kiss, Regina and Strasser, Georg},\n  institution={European Central Bank},\n  type={ECB Working Paper},\n  number={2898},\n  year={2024},\n  month={January}\n}\n"
+}

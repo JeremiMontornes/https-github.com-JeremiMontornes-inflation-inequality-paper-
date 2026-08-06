@@ -1,0 +1,10 @@
+{
+  "key": "deaton1988quality",
+  "status": "unverifiable",
+  "one_sentence": "Quality, Quantity, and Spatial Variation of Price",
+  "canonical_url": null,
+  "issues": [],
+  "note": "Crossref top hit title mismatch: Quality, quantity, and spatial variation of price: Back to the bog",
+  "original_bib": "@article{deaton1988quality,\n  title={Quality, Quantity, and Spatial Variation of Price},\n  author={Deaton, Angus},\n  journal={American Economic Review},\n  volume={78},\n  number={3},\n  pages={418--430},\n  year={1988}\n}\n",
+  "corrected_bib": "@article{deaton1988quality,\n  title={Quality, Quantity, and Spatial Variation of Price},\n  author={Deaton, Angus},\n  journal={American Economic Review},\n  volume={78},\n  number={3},\n  pages={418--430},\n  year={1988}\n}\n"
+}

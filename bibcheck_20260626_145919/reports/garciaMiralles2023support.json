@@ -1,0 +1,23 @@
+{
+  "key": "garciaMiralles2023support",
+  "status": "corrected",
+  "one_sentence": "Support measures in the face of the energy crisis and the rise in inflation: an analysis of the cost and distributional effects of some of the measures rolled out based on their degree of targeting",
+  "canonical_url": "https://doi.org/10.53479/29769",
+  "issues": [
+    {
+      "field": "journal",
+      "original": "Economic Bulletin - Banco de Espa{\\~n}a",
+      "corrected": "Economic Bulletin",
+      "reason": "Crossref canonical metadata differs"
+    },
+    {
+      "field": "number",
+      "original": "15",
+      "corrected": "2023/Q1",
+      "reason": "Crossref canonical metadata differs"
+    }
+  ],
+  "note": "",
+  "original_bib": "@article{garciaMiralles2023support,\n  title={Support measures in the face of the energy crisis and the rise in inflation: an analysis of the cost and distributional effects of some of the measures rolled out based on their degree of targeting},\n  author={Garc{\\'i}a-Miralles, Esteban},\n  journal={Economic Bulletin - Banco de Espa{\\~n}a},\n  volume={2023/Q1},\n  number={15},\n  year={2023},\n  doi={10.53479/29769}\n}\n",
+  "corrected_bib": "@article{garciaMiralles2023support,\n  title={Support measures in the face of the energy crisis and the rise in inflation: an analysis of the cost and distributional effects of some of the measures rolled out based on their degree of targeting},\n  author={Garc{\\'i}a-Miralles, Esteban},\n  journal={Economic Bulletin - Banco de Espa{\\~n}a},\n  volume={2023/Q1},\n  number={15},\n  year={2023},\n  doi={10.53479/29769}\n}\n"
+}

@@ -1,0 +1,10 @@
+{
+  "key": "sgaravatti2021national",
+  "status": "unverifiable",
+  "one_sentence": "National policies to shield consumers from rising energy prices",
+  "canonical_url": null,
+  "issues": [],
+  "note": "Crossref top hit title mismatch: Fiscal and Monetary Policies in Tackling Inflation Amid Rising Global Energy Prices",
+  "original_bib": "@misc{sgaravatti2021national,\n  title={National policies to shield consumers from rising energy prices},\n  author={Sgaravatti, G. and Tagliapietra, S. and Trasi, C. and Zachmann, G.},\n  year={2021},\n  note={Bruegel Datasets},\n  url={https://www.bruegel.org/dataset/national-policies-shield-consumers-rising-energy-prices}\n}\n",
+  "corrected_bib": "@misc{sgaravatti2021national,\n  title={National policies to shield consumers from rising energy prices},\n  author={Sgaravatti, G. and Tagliapietra, S. and Trasi, C. and Zachmann, G.},\n  year={2021},\n  note={Bruegel Datasets},\n  url={https://www.bruegel.org/dataset/national-policies-shield-consumers-rising-energy-prices}\n}\n"
+}

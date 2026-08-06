@@ -1,0 +1,23 @@
+{
+  "key": "cravino2020household",
+  "status": "corrected",
+  "one_sentence": "Household Heterogeneity and the Transmission of Foreign Shocks",
+  "canonical_url": "https://doi.org/10.2139/ssrn.3476482",
+  "issues": [
+    {
+      "field": "year",
+      "original": "2020",
+      "corrected": "2019",
+      "reason": "Crossref canonical metadata differs"
+    },
+    {
+      "field": "journal",
+      "original": "Journal of International Economics",
+      "corrected": "SSRN Electronic Journal",
+      "reason": "Crossref canonical metadata differs"
+    }
+  ],
+  "note": "",
+  "original_bib": "@article{cravino2020household,\n  title={Household heterogeneity and the transmission of foreign shocks},\n  author={Cravino, Javier and Levchenko, Andrei A},\n  journal={Journal of International Economics},\n  volume={124},\n  pages={103303},\n  year={2020},\n  publisher={Elsevier}\n}\n",
+  "corrected_bib": "@article{cravino2020household,\n  title={Household heterogeneity and the transmission of foreign shocks},\n  author={Cravino, Javier and Levchenko, Andrei A},\n  journal={Journal of International Economics},\n  volume={124},\n  pages={103303},\n  year={2020},\n  publisher={Elsevier}\n}\n"
+}
