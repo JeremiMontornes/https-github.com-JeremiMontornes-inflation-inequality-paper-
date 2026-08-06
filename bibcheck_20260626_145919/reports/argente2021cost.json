@@ -1,0 +1,17 @@
+{
+  "key": "argente2021cost",
+  "status": "corrected",
+  "one_sentence": "Cost of Living Inequality During the Great Recession",
+  "canonical_url": "https://doi.org/10.1093/jeea/jvaa018",
+  "issues": [
+    {
+      "field": "year",
+      "original": "2021",
+      "corrected": "2020",
+      "reason": "Crossref canonical metadata differs"
+    }
+  ],
+  "note": "",
+  "original_bib": "@article{argente2021cost,\n  title={Cost of living inequality during the great recession},\n  author={Argente, D. and Lee, M.},\n  journal={Journal of the European Economic Association},\n  volume={19},\n  number={2},\n  pages={913--952},\n  year={2021}\n}\n",
+  "corrected_bib": "@article{argente2021cost,\n  title={Cost of living inequality during the great recession},\n  author={Argente, D. and Lee, M.},\n  journal={Journal of the European Economic Association},\n  volume={19},\n  number={2},\n  pages={913--952},\n  year={2021}\n}\n"
+}

@@ -1,0 +1,10 @@
+{
+  "key": "hobijn2005inflation",
+  "status": "unverifiable",
+  "one_sentence": "Inflation inequality in the United States",
+  "canonical_url": null,
+  "issues": [],
+  "note": "HTTP Error 404: Not Found",
+  "original_bib": "@article{hobijn2005inflation,\n  title={Inflation inequality in the United States},\n  author={Hobijn, B. and Lagakos, D.},\n  journal={Review of Income and Wealth},\n  volume={51},\n  number={4},\n  pages={581-606},\n  year={2005},\n  doi={10.1111/j.1475-4991.2005.00184.x}\n}\n",
+  "corrected_bib": "@article{hobijn2005inflation,\n  title={Inflation inequality in the United States},\n  author={Hobijn, B. and Lagakos, D.},\n  journal={Review of Income and Wealth},\n  volume={51},\n  number={4},\n  pages={581-606},\n  year={2005},\n  doi={10.1111/j.1475-4991.2005.00184.x}\n}\n"
+}
