@@ -1,4 +1,4 @@
-\begin{thebibliography}{37}
+\begin{thebibliography}{38}
 \newcommand{\enquote}[1]{``#1''}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
@@ -116,6 +116,13 @@
 \textsc{Doepke, M. and M.~Schneider} (2006): \enquote{Inflation and the
   redistribution of nominal wealth,} \emph{Journal of Political Economy}, 114,
   1069--1097.
+
+\bibitem[\protect\citeauthoryear{Donatiello, D'Orazio, Frattarola, and
+  Spaziani}{Donatiello et~al.}{2022}]{donatiello2022joint}
+\textsc{Donatiello, G., M.~D'Orazio, D.~Frattarola, and M.~Spaziani} (2022):
+  \enquote{The Joint Distribution of Income and Consumption in Italy: An
+  In-Depth Analysis on Statistical Matching,} \emph{Rivista di Statistica
+  Ufficiale/Review of Official Statistics}.
 
 \bibitem[\protect\citeauthoryear{Drolsbach, Gail, and Klotz}{Drolsbach
   et~al.}{2023}]{drolsbach2023pass}
