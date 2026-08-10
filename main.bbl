@@ -1,4 +1,4 @@
-\begin{thebibliography}{36}
+\begin{thebibliography}{37}
 \newcommand{\enquote}[1]{``#1''}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
@@ -141,6 +141,11 @@
 \textsc{Gautier, E. and J.~Montornes} (2024): \enquote{The Heterogeneous
   Effects of Inflation in France and in the Eurozone,} \emph{Revue
   d'{\'E}conomie Financi{\`e}re}, 153, 193--211.
+
+\bibitem[\protect\citeauthoryear{Geerolf}{Geerolf}{2023}]{geerolf2023inflation}
+\textsc{Geerolf, F.} (2023): \enquote{L'analyse de l'inflation par cat\'egories
+  de m\'enages : quelques probl\`emes m\'ethodologiques,} Working Paper
+  hal-05555599, HAL Open Science.
 
 \bibitem[\protect\citeauthoryear{Hobijn and Lagakos}{Hobijn and
   Lagakos}{2005}]{hobijn2005inflation}
