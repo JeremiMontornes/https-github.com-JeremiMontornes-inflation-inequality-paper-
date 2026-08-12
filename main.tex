@@ -1082,13 +1082,10 @@ price index.
 
 \subsection{Household Characteristics and Inflation Exposure}
 
-We next pool individual household records from Belgium, Germany, Spain, France, and the Netherlands
-to examine whether differences in consumption baskets translate into systematic differences in
-inflation exposure. Italy is not included in these regressions because sufficiently recent and
-comparable household-level microdata are not available for the common specification; the
-Italy-specific data used elsewhere in the paper do not provide the same set of individual-level
-variables. The estimation sample therefore contains five countries, even though the broader
-descriptive analysis covers a larger set of euro-area economies.
+We next pool individual household records from the euro area to examine whether
+differences in consumption baskets translate into systematic differences in inflation exposure.
+The harmonised specification applies the same household-level variables and price-matching method
+throughout the euro area.
 
 The dependent variable is the mean annual inflation rate implied by each household's own expenditure
 shares. The regressors are equivalised-income-quintile indicators, household size, and the degree of
@@ -1102,58 +1099,63 @@ interpreted as descriptive conditional associations, not as causal effects.
 
 \begin{table}[H]
 \centering
-\caption{Household-level inflation regressions by year, five-country sample}
+\caption{Household-level inflation regressions by year, euro-area sample}
 \label{tab:hbs-inflation-regressions-by-year}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{0.9}
-\input{tables/tab_BE_DE_ES_FR_IT_NL_hbs_inflation_regressions_by_year}
+\input{tables/tab_AT_BE_CY_DE_EE_EL_ES_FI_FR_HR_IE_IT_LT_LU_LV_MT_NL_PT_SI_SK_hbs_inflation_regressions_by_year}
 \vspace{4pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{\emph{Notes:} The dependent variable is household-level mean annual inflation, in percent. Regressions are estimated separately by inflation year using household survey weights and include country fixed effects. The omitted categories are income quintile 1 and rural areas. The sample covers Belgium, Germany, Spain, France, and the Netherlands; Italy is excluded because comparable household-level variables are unavailable. Heteroskedasticity-robust standard errors are reported in parentheses.\\
+\caption*{\emph{Notes:} The dependent variable is household-level mean annual inflation, in percent. Regressions are estimated separately by inflation year using household survey weights and include country fixed effects. The omitted categories are income quintile 1 and rural areas. The sample covers the euro area. Heteroskedasticity-robust standard errors are reported in parentheses.\\
 \emph{Sources:} Household Budget Survey microdata; Eurostat HICP; authors' calculations.}
 \end{table}
 
 \begin{table}[H]
 \centering
-\caption{Pooled household-level inflation regression, five-country sample}
+\caption{Pooled household-level inflation regression, euro-area sample}
 \label{tab:hbs-inflation-regressions-pooled}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{0.9}
-\input{tables/tab_BE_DE_ES_FR_IT_NL_hbs_inflation_regression_pooled}
+\input{tables/tab_AT_BE_CY_DE_EE_EL_ES_FI_FR_HR_IE_IT_LT_LU_LV_MT_NL_PT_SI_SK_hbs_inflation_regression_pooled}
 \vspace{4pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
-\caption*{\emph{Notes:} The dependent variable is household-level mean annual inflation, in percent. The regression uses household survey weights and includes country and inflation-year fixed effects. The omitted categories are income quintile 1 and rural areas. The sample covers Belgium, Germany, Spain, France, and the Netherlands; Italy is excluded because comparable household-level variables are unavailable. Heteroskedasticity-robust standard errors are reported in parentheses.\\
+\caption*{\emph{Notes:} The dependent variable is household-level mean annual inflation, in percent. The regression uses household survey weights and includes country and inflation-year fixed effects. The omitted categories are income quintile 1 and rural areas. The sample covers the euro area. Heteroskedasticity-robust standard errors are reported in parentheses.\\
 \emph{Sources:} Household Budget Survey microdata; Eurostat HICP; authors' calculations.}
 \end{table}
 
-The income coefficients are small in economic terms but reveal that the gradient is neither stable
-nor monotonic over time. Relative to the first quintile, households in the upper quintiles experienced
-somewhat higher inflation in 2021: the difference rises from 0.16 percentage point for the second
-quintile to 0.36 percentage point for the fifth. The gradient largely disappears in 2022, when the
-shock was broad-based: the fifth-quintile coefficient is slightly negative and statistically
-insignificant, while the other differences remain below 0.07 percentage point. In 2023, the third to
-fifth quintiles again record slightly higher inflation than the first, but the estimated gaps do not
-exceed 0.09 percentage point. In the pooled specification, all four income coefficients are positive
-and statistically significant, ranging from 0.07 to 0.14 percentage point, with the largest estimate
-for the fourth rather than the fifth quintile. The results therefore do not support a simple linear
-relationship between income rank and household inflation over this period.
+The income gradient changes sign over time. Relative to the first quintile, households in the upper
+quintiles experienced higher inflation in 2021: the coefficients rise from 0.11 percentage point for
+the second quintile to 0.31 percentage point for the fifth. In 2022, all four coefficients are
+negative and statistically significant, ranging from $-0.63$ to $-0.85$ percentage point, with the
+largest difference for the fifth quintile. The coefficients remain negative in 2023, between
+$-0.15$ and $-0.22$ percentage point. In the pooled specification, they range from $-0.24$ to
+$-0.29$ percentage point and are all statistically significant. Thus, higher-income households had
+slightly higher inflation in 2021 but lower inflation during 2022--23; the results do not support a
+stable linear relationship between income rank and household inflation over the full period.
+
+Age differences are largest during the energy-price shock. Relative to households whose reference
+person is aged 60 or over, households under 30 experienced 2.01 percentage points lower inflation in
+2022 and 0.67 percentage point lower inflation in 2023. The corresponding differences for households
+aged 30--44 were $-1.39$ and $-0.57$ percentage points, and those for households aged 45--59 were
+$-0.89$ and $-0.30$ percentage point. The pooled coefficients preserve this age gradient, ranging
+from $-0.40$ percentage point for ages 45--59 to $-0.95$ for households under 30.
 
 Household size is also associated with inflation exposure, but its sign varies across years. Each
-additional household member is associated with 0.02 percentage point higher inflation in 2021,
-0.08 percentage point lower inflation in 2022, and 0.14 percentage point higher inflation in 2023.
+additional household member is associated with 0.04 percentage point higher inflation in 2021,
+0.07 percentage point lower inflation in 2022, and 0.12 percentage point higher inflation in 2023.
 The pooled estimate is positive but small, at 0.03 percentage point. This instability suggests that
 household size mainly proxies for differences in baskets whose inflation sensitivity depends on the
 composition of the shock, rather than a persistent exposure gradient.
 
-The most consistent pattern concerns location. Conditional on income, household size, and country
-effects, households in intermediate-density and densely populated areas experience lower inflation
-than households in rural areas in every year. The urban--rural gap is especially large in 2022:
-inflation is estimated to be 0.67 percentage point lower in intermediate areas and 1.52 percentage
-points lower in densely populated areas. The pooled estimates are respectively $-0.38$ and $-0.85$
-percentage point. These gaps are consistent with rural households allocating larger shares to home
-energy and private transport, the categories most exposed to the energy-price shock.
+Location differences are concentrated in 2021--22. Conditional on the other covariates and country
+effects, inflation in 2022 is estimated to be 0.74 percentage point lower in intermediate-density
+areas and 1.43 percentage points lower in densely populated areas than in rural areas. In 2023, the
+differences narrow to 0.02 percentage point higher inflation in intermediate areas and 0.04 point
+lower inflation in densely populated areas. The pooled estimates are respectively $-0.33$ and
+$-0.69$ percentage point. The large 2022 gaps are consistent with rural households allocating larger
+shares to home energy and private transport, the categories most exposed to the energy-price shock.
 
 \section{Conclusion}
 
@@ -1170,9 +1172,9 @@ Spain, but were larger in Germany and varied substantially across countries. In 
 including all 20 countries, the cumulative Quintile 1--Quintile 5 gap was 0.5 percentage point. Differences by
 age and residence were concentrated around the 2022 energy-price surge rather than persistent:
 older and rural households initially faced higher inflation, but both gaps narrowed and the
-rural--city ordering temporarily reversed in 2023. In household-level regressions for Belgium,
-Germany, Spain, France, and the Netherlands, residence density is consistently associated with
-inflation exposure, whereas the income and household-size coefficients vary across years.
+rural--city ordering temporarily reversed in 2023. In household-level regressions for the euro area,
+income, age, household size, and residence density are associated with inflation exposure, but the
+income, household-size, and residence gradients vary across years.
 VAT reductions, fuel rebates, and energy price shields reduced average inflation and compressed the
 aggregate income-quintile gap in the no-policy comparison. In the 20-country aggregate, the
 simulated measures lowered average cumulative inflation by 1.3 percentage points and reduced the
@@ -1623,7 +1625,5 @@ Sources: INSEE, Eurostat, authors' calculations.}
 
 
 \input{appendices/counterfactuals_appendix}
-
-\input{fig/tab_EA20_price_counterfactual_measures_annex}
 
 \end{document}
