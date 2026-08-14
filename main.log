@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.8)  12 AUG 2026 18:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.8)  14 AUG 2026 14:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -998,133 +998,135 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 m/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [2] [3]
 [4]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 299.
+(Font)              scaled to size 11.40997pt on input line 298.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 299.
+(Font)              scaled to size 8.33606pt on input line 298.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 299.
+(Font)              scaled to size 6.25204pt on input line 298.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 299.
+(Font)              scaled to size 11.40997pt on input line 298.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 299.
+(Font)              scaled to size 8.33606pt on input line 298.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 299.
+(Font)              scaled to size 6.25204pt on input line 298.
  [5]
-<fig/fig_EA_2014_2026_hicp_components.png, id=271, 578.16pt x 433.62pt>
+<fig/fig_EA_2014_2026_hicp_components.png, id=263, 578.16pt x 433.62pt>
 File: fig/fig_EA_2014_2026_hicp_components.png Graphic file (type png)
 <use fig/fig_EA_2014_2026_hicp_components.png>
 Package pdftex.def Info: fig/fig_EA_2014_2026_hicp_components.png  used on inpu
-t line 344.
+t line 343.
 (pdftex.def)             Requested size: 346.89867pt x 260.17401pt.
  [6 <./fig/fig_EA_2014_2026_hicp_components.png>]
-<fig/fig_EA_2020_income_consumption_baskets.png, id=288, 578.16pt x 361.35pt>
+<fig/fig_EA_2020_income_consumption_baskets.png, id=280, 578.16pt x 361.35pt>
 File: fig/fig_EA_2020_income_consumption_baskets.png Graphic file (type png)
 <use fig/fig_EA_2020_income_consumption_baskets.png>
 Package pdftex.def Info: fig/fig_EA_2020_income_consumption_baskets.png  used o
-n input line 382.
+n input line 381.
 (pdftex.def)             Requested size: 374.65268pt x 234.15793pt.
  [7]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 42
-0.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 41
+8.
 
 (C:\Users\jerem\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 [8 <./fig/fig_EA_2020_income_consumption_baskets.png>] [9]
-Overfull \hbox (4.64221pt too wide) in paragraph at lines 498--501
+Overfull \hbox (4.64221pt too wide) in paragraph at lines 496--499
 []\T1/ppl/m/n/10.95 After ag-gre-ga-tion, this cal-i-bra-tion closely re-pro-du
 ces the of-fi-cial in-fla-tion rate (see Ap-pendix [][]D[][]),
  []
 
-[10]
-<fig/fig_EA20_2020_2026_income_inflation_Q1_Q5.png, id=327, 578.16pt x 361.35pt
+[10] [11]
+<fig/fig_EA20_2020_2026_income_inflation_Q1_Q5.png, id=330, 578.16pt x 361.35pt
 >
 File: fig/fig_EA20_2020_2026_income_inflation_Q1_Q5.png Graphic file (type png)
 
 <use fig/fig_EA20_2020_2026_income_inflation_Q1_Q5.png>
 Package pdftex.def Info: fig/fig_EA20_2020_2026_income_inflation_Q1_Q5.png  use
-d on input line 592.
+d on input line 589.
 (pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
- [11] [12 <./fig/fig_EA20_2020_2026_income_inflation_Q1_Q5.png>]
-<fig/fig_EA20_2020_2026_age_inflation_under30_60plus.png, id=342, 578.16pt x 36
+ [12 <./fig/fig_EA20_2020_2026_income_inflation_Q1_Q5.png>]
+<fig/fig_EA20_2020_2026_age_inflation_under30_60plus.png, id=336, 578.16pt x 36
 1.35pt>
 File: fig/fig_EA20_2020_2026_age_inflation_under30_60plus.png Graphic file (typ
 e png)
 <use fig/fig_EA20_2020_2026_age_inflation_under30_60plus.png>
 Package pdftex.def Info: fig/fig_EA20_2020_2026_age_inflation_under30_60plus.pn
-g  used on input line 628.
+g  used on input line 626.
 (pdftex.def)             Requested size: 225.47267pt x 170.71672pt.
-<fig/fig_EA20_2020_2026_urban_inflation_rural_cities.png, id=343, 578.16pt x 36
+<fig/fig_EA20_2020_2026_urban_inflation_rural_cities.png, id=337, 578.16pt x 36
 1.35pt>
 File: fig/fig_EA20_2020_2026_urban_inflation_rural_cities.png Graphic file (typ
 e png)
 <use fig/fig_EA20_2020_2026_urban_inflation_rural_cities.png>
 Package pdftex.def Info: fig/fig_EA20_2020_2026_urban_inflation_rural_cities.pn
-g  used on input line 634.
+g  used on input line 632.
 (pdftex.def)             Requested size: 225.47267pt x 170.71672pt.
- [13 <./fig/fig_EA20_2020_2026_age_inflation_under30_60plus.png> <./fig/fig_EA2
-0_2020_2026_urban_inflation_rural_cities.png>]
-<fig/fig_EA20_2000_2026_income_price_index_Q1_Q5_base2000.png, id=351, 578.16pt
+ [13]
+[14 <./fig/fig_EA20_2020_2026_age_inflation_under30_60plus.png> <./fig/fig_EA20
+_2020_2026_urban_inflation_rural_cities.png>]
+<fig/fig_EA20_2000_2026_income_price_index_Q1_Q5_base2000.png, id=349, 578.16pt
  x 361.35pt>
 File: fig/fig_EA20_2000_2026_income_price_index_Q1_Q5_base2000.png Graphic file
  (type png)
 <use fig/fig_EA20_2000_2026_income_price_index_Q1_Q5_base2000.png>
 Package pdftex.def Info: fig/fig_EA20_2000_2026_income_price_index_Q1_Q5_base20
-00.png  used on input line 666.
+00.png  used on input line 669.
 (pdftex.def)             Requested size: 280.98952pt x 175.61844pt.
- [14 <./fig/fig_EA20_2000_2026_income_price_index_Q1_Q5_base2000.png>]
+ [15 <./fig/fig_EA20_2000_2026_income_price_index_Q1_Q5_base2000.png>]
 (tables/tab_EA20_country_income_q1_q5_cumulative_gap_2021_06_2023_06.tex
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 7.91925pt on input line 8.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.91925pt on input line 8.
 )
-[15] (tables/tab_EA20_income_gap_product_contributions_2021_06_2023_06.tex)
-[16]
+[16] (tables/tab_EA20_income_gap_product_contributions_2021_06_2023_06.tex)
+[17]
 (tables/tab_shock_oil_gas_chain_40pct_EA20_intercountry_2021_06_2023_06.tex)
-[17] [18]
-<fig/fig_EA20_2019_2026_income_inflation_burden_Q1_Q5.png, id=391, 578.16pt x 3
-61.35pt>
-File: fig/fig_EA20_2019_2026_income_inflation_burden_Q1_Q5.png Graphic file (ty
-pe png)
-<use fig/fig_EA20_2019_2026_income_inflation_burden_Q1_Q5.png>
-Package pdftex.def Info: fig/fig_EA20_2019_2026_income_inflation_burden_Q1_Q5.p
-ng  used on input line 777.
-(pdftex.def)             Requested size: 322.61171pt x 201.63232pt.
- [19 <./fig/fig_EA20_2019_2026_income_inflation_burden_Q1_Q5.png>]
-[20] [21] [22]
-<fig/policy_total_cpi_counterfactual_inflation_EA_policy_sample.png, id=459, 57
+[18] [19] [20] [21] [22]
+<fig/policy_total_cpi_counterfactual_inflation_EA_policy_sample.png, id=441, 57
 8.16pt x 346.896pt>
 File: fig/policy_total_cpi_counterfactual_inflation_EA_policy_sample.png Graphi
 c file (type png)
 <use fig/policy_total_cpi_counterfactual_inflation_EA_policy_sample.png>
 Package pdftex.def Info: fig/policy_total_cpi_counterfactual_inflation_EA_polic
-y_sample.png  used on input line 966.
+y_sample.png  used on input line 943.
 (pdftex.def)             Requested size: 403.98584pt x 242.3915pt.
- [23]
-<fig/fig_EA20_2021_2026_counterfactual_income_inflation_Q1_Q5.png, id=468, 578.
+ [23] [24 <./fig/policy_total_cpi_counterfactual_inflation_EA_policy_sample.png
+>]
+<fig/fig_EA20_2021_2026_counterfactual_income_inflation_Q1_Q5.png, id=456, 578.
 16pt x 361.35pt>
 File: fig/fig_EA20_2021_2026_counterfactual_income_inflation_Q1_Q5.png Graphic 
 file (type png)
 <use fig/fig_EA20_2021_2026_counterfactual_income_inflation_Q1_Q5.png>
 Package pdftex.def Info: fig/fig_EA20_2021_2026_counterfactual_income_inflation
-_Q1_Q5.png  used on input line 998.
+_Q1_Q5.png  used on input line 973.
 (pdftex.def)             Requested size: 346.89867pt x 216.81168pt.
- [24 <./fig/policy_total_cpi_counterfactual_inflation_EA_policy_sample.png>]
+
 (tables/tab_EA20_country_income_q1_q5_counterfactual_gap_2021_06_2023_06.tex)
 [25 <./fig/fig_EA20_2021_2026_counterfactual_income_inflation_Q1_Q5.png>]
 (tables/tab_EA20_counterfactual_income_gap_product_contributions_2021_06_2023_0
 6.tex) [26] [27] [28]
+<fig/fig_EA20_2019_2026_income_inflation_burden_Q1_Q5.png, id=486, 578.16pt x 3
+61.35pt>
+File: fig/fig_EA20_2019_2026_income_inflation_burden_Q1_Q5.png Graphic file (ty
+pe png)
+<use fig/fig_EA20_2019_2026_income_inflation_burden_Q1_Q5.png>
+Package pdftex.def Info: fig/fig_EA20_2019_2026_income_inflation_burden_Q1_Q5.p
+ng  used on input line 1124.
+(pdftex.def)             Requested size: 322.61171pt x 201.63232pt.
+ [29]
 (tables/tab_AT_BE_CY_DE_EE_EL_ES_FI_FR_HR_IE_IT_LT_LU_LV_MT_NL_PT_SI_SK_hbs_inf
-lation_regressions_by_year.tex) [29]
+lation_regressions_by_year.tex) [30 <./fig/fig_EA20_2019_2026_income_inflation_
+burden_Q1_Q5.png>]
 (tables/tab_AT_BE_CY_DE_EE_EL_ES_FI_FR_HR_IE_IT_LT_LU_LV_MT_NL_PT_SI_SK_hbs_inf
-lation_regression_pooled.tex) [30] [31] [32] (main.bbl [33] [34] [35]) [36]
+lation_regression_pooled.tex) [31] [32] [33] (main.bbl [34] [35] [36]) [37]
 (appendices/substitution_bias_appendix.tex)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1266 
+l.1311 
         [1
 
 ]
@@ -1132,191 +1134,191 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1267 \clearpage
+l.1312 \clearpage
                   [2]
-<fig/fig_ES_income_quintile_coicop_weights_2020_2023_grouped_bar.png, id=551, 7
+<fig/fig_ES_income_quintile_coicop_weights_2020_2023_grouped_bar.png, id=549, 7
 22.7pt x 758.835pt>
 File: fig/fig_ES_income_quintile_coicop_weights_2020_2023_grouped_bar.png Graph
 ic file (type png)
 <use fig/fig_ES_income_quintile_coicop_weights_2020_2023_grouped_bar.png>
 Package pdftex.def Info: fig/fig_ES_income_quintile_coicop_weights_2020_2023_gr
-ouped_bar.png  used on input line 1281.
+ouped_bar.png  used on input line 1326.
 (pdftex.def)             Requested size: 460.354pt x 483.37172pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1288 \newpage
+l.1333 \newpage
                 [3
 
  <./fig/fig_ES_income_quintile_coicop_weights_2020_2023_grouped_bar.png>]
-<fig/fig_EA_2015_income_essentials_discretionary_baskets.png, id=556, 578.16pt 
+<fig/fig_EA_2015_income_essentials_discretionary_baskets.png, id=554, 578.16pt 
 x 346.896pt>
 File: fig/fig_EA_2015_income_essentials_discretionary_baskets.png Graphic file 
 (type png)
 <use fig/fig_EA_2015_income_essentials_discretionary_baskets.png>
 Package pdftex.def Info: fig/fig_EA_2015_income_essentials_discretionary_basket
-s.png  used on input line 1297.
+s.png  used on input line 1342.
 (pdftex.def)             Requested size: 368.57433pt x 221.14459pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1304 \newpage
+l.1349 \newpage
                 [4 <./fig/fig_EA_2015_income_essentials_discretionary_baskets.p
 ng>]
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1344 \clearpage
+l.1389 \clearpage
                   [5] (tables/tab_IT_hbs_all_products_by_group.tex)
 pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1348 \newpage
+l.1393 \newpage
                 [6
 
 ]
-<fig/fig_IT_1996_2026_income_price_index_level2_Q1_Q5.png, id=571, 578.16pt x 3
+<fig/fig_IT_1996_2026_income_price_index_level2_Q1_Q5.png, id=570, 578.16pt x 3
 61.35pt>
 File: fig/fig_IT_1996_2026_income_price_index_level2_Q1_Q5.png Graphic file (ty
 pe png)
 <use fig/fig_IT_1996_2026_income_price_index_level2_Q1_Q5.png>
 Package pdftex.def Info: fig/fig_IT_1996_2026_income_price_index_level2_Q1_Q5.p
-ng  used on input line 1358.
+ng  used on input line 1403.
 (pdftex.def)             Requested size: 312.21057pt x 195.1316pt.
-<fig/fig_IT_1996_2026_age_price_index_level2_young_old.png, id=572, 578.16pt x 
+<fig/fig_IT_1996_2026_age_price_index_level2_young_old.png, id=571, 578.16pt x 
 361.35pt>
 File: fig/fig_IT_1996_2026_age_price_index_level2_young_old.png Graphic file (t
 ype png)
 <use fig/fig_IT_1996_2026_age_price_index_level2_young_old.png>
 Package pdftex.def Info: fig/fig_IT_1996_2026_age_price_index_level2_young_old.
-png  used on input line 1364.
+png  used on input line 1409.
 (pdftex.def)             Requested size: 312.21057pt x 195.1316pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1371 \newpage
+l.1416 \newpage
                 [7 <./fig/fig_IT_1996_2026_income_price_index_level2_Q1_Q5.png>
  <./fig/fig_IT_1996_2026_age_price_index_level2_young_old.png>]
-<fig/fig_IT_2019_2026_income_inflation_level2_Q1_Q5.png, id=579, 578.16pt x 361
+<fig/fig_IT_2019_2026_income_inflation_level2_Q1_Q5.png, id=577, 578.16pt x 361
 .35pt>
 File: fig/fig_IT_2019_2026_income_inflation_level2_Q1_Q5.png Graphic file (type
  png)
 <use fig/fig_IT_2019_2026_income_inflation_level2_Q1_Q5.png>
 Package pdftex.def Info: fig/fig_IT_2019_2026_income_inflation_level2_Q1_Q5.png
-  used on input line 1380.
+  used on input line 1425.
 (pdftex.def)             Requested size: 312.21057pt x 195.1316pt.
-<fig/fig_IT_2019_2026_age_inflation_level2_under30_60plus.png, id=580, 578.16pt
+<fig/fig_IT_2019_2026_age_inflation_level2_under30_60plus.png, id=578, 578.16pt
  x 361.35pt>
 File: fig/fig_IT_2019_2026_age_inflation_level2_under30_60plus.png Graphic file
  (type png)
 <use fig/fig_IT_2019_2026_age_inflation_level2_under30_60plus.png>
 Package pdftex.def Info: fig/fig_IT_2019_2026_age_inflation_level2_under30_60pl
-us.png  used on input line 1386.
+us.png  used on input line 1431.
 (pdftex.def)             Requested size: 312.21057pt x 195.1316pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1393 \newpage
+l.1438 \newpage
                 [8 <./fig/fig_IT_2019_2026_income_inflation_level2_Q1_Q5.png> <
 ./fig/fig_IT_2019_2026_age_inflation_level2_under30_60plus.png>]
-<fig/fig_IT_2019_2026_income_contribution_gap_level2_Q1_Q5.png, id=586, 578.16p
+<fig/fig_IT_2019_2026_income_contribution_gap_level2_Q1_Q5.png, id=584, 578.16p
 t x 361.35pt>
 File: fig/fig_IT_2019_2026_income_contribution_gap_level2_Q1_Q5.png Graphic fil
 e (type png)
 <use fig/fig_IT_2019_2026_income_contribution_gap_level2_Q1_Q5.png>
 Package pdftex.def Info: fig/fig_IT_2019_2026_income_contribution_gap_level2_Q1
-_Q5.png  used on input line 1402.
+_Q5.png  used on input line 1447.
 (pdftex.def)             Requested size: 312.21057pt x 195.1316pt.
-<fig/fig_IT_2019_2026_age_contribution_gap_level2_60plus_under30.png, id=587, 5
+<fig/fig_IT_2019_2026_age_contribution_gap_level2_60plus_under30.png, id=585, 5
 78.16pt x 361.35pt>
 File: fig/fig_IT_2019_2026_age_contribution_gap_level2_60plus_under30.png Graph
 ic file (type png)
 <use fig/fig_IT_2019_2026_age_contribution_gap_level2_60plus_under30.png>
 Package pdftex.def Info: fig/fig_IT_2019_2026_age_contribution_gap_level2_60plu
-s_under30.png  used on input line 1408.
+s_under30.png  used on input line 1453.
 (pdftex.def)             Requested size: 312.21057pt x 195.1316pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1415 \newpage
+l.1460 \newpage
                 [9 <./fig/fig_IT_2019_2026_income_contribution_gap_level2_Q1_Q5
 .png> <./fig/fig_IT_2019_2026_age_contribution_gap_level2_60plus_under30.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1464 \end{equation}
+l.1509 \end{equation}
                       [10]
 pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1562 
+l.1608 
         [11]
 pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1566 \clearpage
+l.1612 \clearpage
                   [12]
-Overfull \hbox (6.76105pt too wide) in paragraph at lines 1584--1587
+Overfull \hbox (6.76105pt too wide) in paragraph at lines 1630--1633
 \T1/ppl/m/n/10.95 HICP. Fig-ure [][]E.2[][] com-pares the to-tal in-fla-tion ra
 te with the expenditure-weighted av-er-age of income-
  []
 
 <fig/fig_FR_2010_2026_hicp_inflation_validation_level2_recode_mean_vs_published
-.png, id=620, 614.295pt x 346.896pt>
+.png, id=619, 650.43pt x 397.485pt>
 File: fig/fig_FR_2010_2026_hicp_inflation_validation_level2_recode_mean_vs_publ
 ished.png Graphic file (type png)
 <use fig/fig_FR_2010_2026_hicp_inflation_validation_level2_recode_mean_vs_publi
 shed.png>
 Package pdftex.def Info: fig/fig_FR_2010_2026_hicp_inflation_validation_level2_
-recode_mean_vs_published.png  used on input line 1592.
-(pdftex.def)             Requested size: 253.39981pt x 143.09636pt.
-<fig/fig_FR_2010_2026_hicp_validation_level_mean_vs_published.png, id=621, 614.
-295pt x 346.896pt>
+recode_mean_vs_published.png  used on input line 1638.
+(pdftex.def)             Requested size: 234.16454pt x 143.10056pt.
+<fig/fig_FR_2010_2026_hicp_validation_level_mean_vs_published.png, id=620, 650.
+43pt x 397.485pt>
 File: fig/fig_FR_2010_2026_hicp_validation_level_mean_vs_published.png Graphic 
 file (type png)
 <use fig/fig_FR_2010_2026_hicp_validation_level_mean_vs_published.png>
 Package pdftex.def Info: fig/fig_FR_2010_2026_hicp_validation_level_mean_vs_pub
-lished.png  used on input line 1603.
-(pdftex.def)             Requested size: 253.39981pt x 143.09636pt.
+lished.png  used on input line 1649.
+(pdftex.def)             Requested size: 234.16454pt x 143.10056pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.13}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1612 \clearpage
+l.1658 \clearpage
                   [13
 
  <./fig/fig_FR_2010_2026_hicp_inflation_validation_level2_recode_mean_vs_publis
 hed.png> <./fig/fig_FR_2010_2026_hicp_validation_level_mean_vs_published.png>]
-<fig/france-insee-decile-published-vs-recalculated-D1-D10-2010-2023.png, id=629
+<fig/france-insee-decile-published-vs-recalculated-D1-D10-2010-2023.png, id=627
 , 1084.05pt x 578.16pt>
 File: fig/france-insee-decile-published-vs-recalculated-D1-D10-2010-2023.png Gr
 aphic file (type png)
 <use fig/france-insee-decile-published-vs-recalculated-D1-D10-2010-2023.png>
 Package pdftex.def Info: fig/france-insee-decile-published-vs-recalculated-D1-D
-10-2010-2023.png  used on input line 1622.
+10-2010-2023.png  used on input line 1668.
 (pdftex.def)             Requested size: 414.63951pt x 221.14107pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.14}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1628 \newpage
+l.1674 \newpage
                 [14
 
  <./fig/france-insee-decile-published-vs-recalculated-D1-D10-2010-2023.png>] (a
@@ -1336,8 +1338,18 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
+[]|\T1/ppl/m/n/8 COICOP com-po-
+ []
+
+
 Underfull \hbox (badness 10000) in alignment at lines 11--15
 [] [] [] [] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/ppl/m/n/8 COICOP com-po-
  []
 
 
@@ -1356,127 +1368,217 @@ Underfull \hbox (badness 10000) in alignment at lines 22--24
  []
 
 
-Underfull \hbox (badness 4266) in paragraph at lines 28--28
-[]|\T1/ppl/m/n/8 Electricity cost brake re-duced phase: sub-sidy
+Underfull \hbox (badness 3039) in paragraph at lines 25--26
+[]|\T1/ppl/m/n/8 4 of 4 mea-sures use aggregate-
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 49--49
-[]|\T1/ppl/m/n/8 Statutory no-policy/observed price ra-tio:
+Underfull \hbox (badness 3039) in paragraph at lines 26--27
+[]|\T1/ppl/m/n/8 2 of 4 mea-sures use aggregate-
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 50--50
-[]|\T1/ppl/m/n/8 Statutory no-policy/observed price ra-tio:
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]|\T1/ppl/m/n/8 CP0112, CP0113,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
-[]|\T1/ppl/m/n/8 Cash trans-fers ex-cluded from HICP
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+\T1/ppl/m/n/8 CP0114, CP0115,
  []
 
 
-Overfull \hbox (1.00845pt too wide) in paragraph at lines 72--72
-[]|\T1/ppl/m/n/8 Luxembourg| 
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+\T1/ppl/m/n/8 CP0116, CP0117,
  []
 
 
-Overfull \hbox (1.00845pt too wide) in paragraph at lines 73--73
-[]|\T1/ppl/m/n/8 Luxembourg| 
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+\T1/ppl/m/n/8 CP0451, CP0452,
  []
 
 
-Overfull \hbox (1.00845pt too wide) in paragraph at lines 74--74
-[]|\T1/ppl/m/n/8 Luxembourg| 
+Underfull \hbox (badness 1478) in paragraph at lines 27--28
+[]|\T1/ppl/m/n/8 4 of 10 mea-sures use aggregate-
  []
 
 
-Overfull \hbox (1.00845pt too wide) in paragraph at lines 75--75
-[]|\T1/ppl/m/n/8 Luxembourg| 
+Underfull \hbox (badness 3039) in paragraph at lines 28--29
+[]|\T1/ppl/m/n/8 1 of 1 mea-sures use aggregate-
  []
 
 
-Overfull \hbox (1.00845pt too wide) in paragraph at lines 76--76
-[]|\T1/ppl/m/n/8 Luxembourg| 
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+[]|\T1/ppl/m/n/8 CP0451, CP0452,
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 86--86
-[]|\T1/ppl/m/n/8 Statutory no-policy/observed price ra-tio:
+Underfull \hbox (badness 3039) in paragraph at lines 29--30
+[]|\T1/ppl/m/n/8 5 of 5 mea-sures use aggregate-
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 87--87
-[]|\T1/ppl/m/n/8 Statutory no-policy/observed price ra-tio:
+Underfull \hbox (badness 3039) in paragraph at lines 30--31
+[]|\T1/ppl/m/n/8 1 of 2 mea-sures use aggregate-
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 88--88
-[]|\T1/ppl/m/n/8 Statutory no-policy/observed price ra-tio:
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+[]|\T1/ppl/m/n/8 CP0451, CP0452,
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 89--89
-[]|\T1/ppl/m/n/8 Statutory no-policy/observed price ra-tio:
+Underfull \hbox (badness 3039) in paragraph at lines 32--33
+[]|\T1/ppl/m/n/8 3 of 4 mea-sures use aggregate-
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 90--90
-[]|\T1/ppl/m/n/8 Statutory no-policy/observed price ra-tio:
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+[]|\T1/ppl/m/n/8 CP0451, CP0452,
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 91--91
-[]|\T1/ppl/m/n/8 Statutory no-policy/observed price ra-tio:
+Underfull \hbox (badness 3039) in paragraph at lines 33--34
+[]|\T1/ppl/m/n/8 3 of 3 mea-sures use aggregate-
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 92--92
-[]|\T1/ppl/m/n/8 Statutory no-policy/observed price ra-tio:
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+[]|\T1/ppl/m/n/8 CP0451, CP0452,
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 93--93
-[]|\T1/ppl/m/n/8 Statutory no-policy/observed price ra-tio:
+Underfull \hbox (badness 3039) in paragraph at lines 34--35
+[]|\T1/ppl/m/n/8 3 of 5 mea-sures use aggregate-
  []
 
 
-Underfull \hbox (badness 5460) in paragraph at lines 97--97
-[]|\T1/ppl/m/n/8 Temporary ex-emp-tion from elec-tric-ity net-work
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+[]|\T1/ppl/m/n/8 CP0451, CP0452,
  []
 
 
-Underfull \hbox (badness 1859) in paragraph at lines 98--98
-[]|\T1/ppl/m/n/8 Temporary ex-emp-tion from natural-gas net-work
+Underfull \hbox (badness 3039) in paragraph at lines 35--36
+[]|\T1/ppl/m/n/8 4 of 6 mea-sures use aggregate-
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 109--109
-[]|\T1/ppl/m/n/8 Statutory no-policy/observed price ra-tio:
+Underfull \hbox (badness 5147) in paragraph at lines 35--36
+\T1/ppl/m/n/8 equivalent in-puts; one mea-sure
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 110--110
-[]|\T1/ppl/m/n/8 Statutory no-policy/observed price ra-tio:
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+[]|\T1/ppl/m/n/8 CP0451, CP0452,
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 111--111
-[]|\T1/ppl/m/n/8 Statutory no-policy/observed price ra-tio:
+Underfull \hbox (badness 3039) in paragraph at lines 36--37
+[]|\T1/ppl/m/n/8 3 of 3 mea-sures use aggregate-
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 112--112
-[]|\T1/ppl/m/n/8 Statutory no-policy/observed price ra-tio:
+Underfull \hbox (badness 3039) in paragraph at lines 37--38
+[]|\T1/ppl/m/n/8 2 of 2 mea-sures use aggregate-
  []
 
 
-Underfull \hbox (badness 1910) in paragraph at lines 113--113
-[]|\T1/ppl/m/n/8 Statutory no-policy/observed price ra-tio:
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+[]|\T1/ppl/m/n/8 CP0451, CP0452,
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 24--114
+Underfull \hbox (badness 3039) in paragraph at lines 38--39
+[]|\T1/ppl/m/n/8 5 of 5 mea-sures use aggregate-
+ []
+
+
+Underfull \hbox (badness 3039) in paragraph at lines 39--40
+[]|\T1/ppl/m/n/8 2 of 2 mea-sures use aggregate-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+[]|\T1/ppl/m/n/8 CP0451, CP0452,
+ []
+
+
+Underfull \hbox (badness 3039) in paragraph at lines 40--41
+[]|\T1/ppl/m/n/8 3 of 5 mea-sures use aggregate-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+[]|\T1/ppl/m/n/8 CP0111, CP0112,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T1/ppl/m/n/8 CP0113, CP0114,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T1/ppl/m/n/8 CP0115, CP0116,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+\T1/ppl/m/n/8 CP0117, CP0122,
+ []
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 41--42
+[]|\T1/ppl/m/n/8 9 of 10 mea-sures use aggregate-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+[]|\T1/ppl/m/n/8 CP0451, CP0452,
+ []
+
+
+Underfull \hbox (badness 3039) in paragraph at lines 42--43
+[]|\T1/ppl/m/n/8 3 of 3 mea-sures use aggregate-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
+[]|\T1/ppl/m/n/8 CP0451, CP0452,
+ []
+
+
+Underfull \hbox (badness 3039) in paragraph at lines 43--44
+[]|\T1/ppl/m/n/8 6 of 6 mea-sures use aggregate-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+[]|\T1/ppl/m/n/8 CP0111, CP0114,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+\T1/ppl/m/n/8 CP0115, CP0116,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+\T1/ppl/m/n/8 CP0117, CP0451,
+ []
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 44--45
+[]|\T1/ppl/m/n/8 6 of 11 mea-sures use aggregate-
+ []
+
+
+Underfull \hbox (badness 5147) in paragraph at lines 44--45
+\T1/ppl/m/n/8 equivalent in-puts; one mea-sure
+ []
+
+
+Underfull \hbox (badness 10000) in alignment at lines 24--45
 [] [] [] [] []
  []
 
@@ -1485,47 +1587,23 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.16}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.114 \end{longtable}
-                      [16
+l.45 \end{longtable}
+                     [16
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{page.17}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.114 \end{longtable}
-                      [17]
+l.45 \end{longtable}
+                     [17]
 pdfTeX warning (ext4): destination with the same identifier (name{page.18}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.114 \end{longtable}
-                      [18]
-pdfTeX warning (ext4): destination with the same identifier (name{page.19}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.114 \end{longtable}
-                      [19]
-pdfTeX warning (ext4): destination with the same identifier (name{page.20}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.114 \end{longtable}
-                      [20]
-pdfTeX warning (ext4): destination with the same identifier (name{page.21}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.114 \end{longtable}
-                      [21]
-pdfTeX warning (ext4): destination with the same identifier (name{page.22}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.116 \end{landscape}
-                      [22])
-<fig/policy_total_cpi_counterfactual_inflation_BE_belgium.png, id=660, 650.43pt
+l.47 \end{landscape}
+                     [18])
+<fig/policy_total_cpi_counterfactual_inflation_BE_belgium.png, id=646, 650.43pt
  x 375.804pt>
 File: fig/policy_total_cpi_counterfactual_inflation_BE_belgium.png Graphic file
  (type png)
@@ -1533,7 +1611,7 @@ File: fig/policy_total_cpi_counterfactual_inflation_BE_belgium.png Graphic file
 Package pdftex.def Info: fig/policy_total_cpi_counterfactual_inflation_BE_belgi
 um.png  used on input line 14.
 (pdftex.def)             Requested size: 403.99686pt x 233.42041pt.
-<fig/policy_total_cpi_counterfactual_inflation_CY_cyprus.png, id=661, 650.43pt 
+<fig/policy_total_cpi_counterfactual_inflation_CY_cyprus.png, id=647, 650.43pt 
 x 375.804pt>
 File: fig/policy_total_cpi_counterfactual_inflation_CY_cyprus.png Graphic file 
 (type png)
@@ -1541,7 +1619,7 @@ File: fig/policy_total_cpi_counterfactual_inflation_CY_cyprus.png Graphic file
 Package pdftex.def Info: fig/policy_total_cpi_counterfactual_inflation_CY_cypru
 s.png  used on input line 21.
 (pdftex.def)             Requested size: 403.99686pt x 233.42041pt.
-<fig/policy_total_cpi_counterfactual_inflation_DE_germany.png, id=662, 650.43pt
+<fig/policy_total_cpi_counterfactual_inflation_DE_germany.png, id=648, 650.43pt
  x 375.804pt>
 File: fig/policy_total_cpi_counterfactual_inflation_DE_germany.png Graphic file
  (type png)
@@ -1550,17 +1628,17 @@ Package pdftex.def Info: fig/policy_total_cpi_counterfactual_inflation_DE_germa
 ny.png  used on input line 28.
 (pdftex.def)             Requested size: 403.99686pt x 233.42041pt.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.23}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.19}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.31 
-      [23
+      [19
 
 
  <./fig/policy_total_cpi_counterfactual_inflation_BE_belgium.png> <./fig/policy
 _total_cpi_counterfactual_inflation_CY_cyprus.png>]
-<fig/policy_total_cpi_counterfactual_inflation_EL_greece.png, id=668, 650.43pt 
+<fig/policy_total_cpi_counterfactual_inflation_EL_greece.png, id=654, 650.43pt 
 x 375.804pt>
 File: fig/policy_total_cpi_counterfactual_inflation_EL_greece.png Graphic file 
 (type png)
@@ -1568,7 +1646,7 @@ File: fig/policy_total_cpi_counterfactual_inflation_EL_greece.png Graphic file
 Package pdftex.def Info: fig/policy_total_cpi_counterfactual_inflation_EL_greec
 e.png  used on input line 35.
 (pdftex.def)             Requested size: 403.99686pt x 233.42041pt.
-<fig/policy_total_cpi_counterfactual_inflation_ES_spain.png, id=669, 650.43pt x
+<fig/policy_total_cpi_counterfactual_inflation_ES_spain.png, id=655, 650.43pt x
  375.804pt>
 File: fig/policy_total_cpi_counterfactual_inflation_ES_spain.png Graphic file (
 type png)
@@ -1577,14 +1655,14 @@ Package pdftex.def Info: fig/policy_total_cpi_counterfactual_inflation_ES_spain
 .png  used on input line 42.
 (pdftex.def)             Requested size: 403.99686pt x 233.42041pt.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.24}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.20}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.45 
-      [24 <./fig/policy_total_cpi_counterfactual_inflation_DE_germany.png> <./f
+      [20 <./fig/policy_total_cpi_counterfactual_inflation_DE_germany.png> <./f
 ig/policy_total_cpi_counterfactual_inflation_EL_greece.png>]
-<fig/policy_total_cpi_counterfactual_inflation_FI_finland.png, id=675, 650.43pt
+<fig/policy_total_cpi_counterfactual_inflation_FI_finland.png, id=661, 650.43pt
  x 375.804pt>
 File: fig/policy_total_cpi_counterfactual_inflation_FI_finland.png Graphic file
  (type png)
@@ -1592,7 +1670,7 @@ File: fig/policy_total_cpi_counterfactual_inflation_FI_finland.png Graphic file
 Package pdftex.def Info: fig/policy_total_cpi_counterfactual_inflation_FI_finla
 nd.png  used on input line 49.
 (pdftex.def)             Requested size: 403.99686pt x 233.42041pt.
-<fig/policy_total_cpi_counterfactual_inflation_FR_france.png, id=676, 650.43pt 
+<fig/policy_total_cpi_counterfactual_inflation_FR_france.png, id=662, 650.43pt 
 x 375.804pt>
 File: fig/policy_total_cpi_counterfactual_inflation_FR_france.png Graphic file 
 (type png)
@@ -1601,14 +1679,14 @@ Package pdftex.def Info: fig/policy_total_cpi_counterfactual_inflation_FR_franc
 e.png  used on input line 56.
 (pdftex.def)             Requested size: 403.99686pt x 233.42041pt.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.25}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.21}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.59 
-      [25 <./fig/policy_total_cpi_counterfactual_inflation_ES_spain.png> <./fig
+      [21 <./fig/policy_total_cpi_counterfactual_inflation_ES_spain.png> <./fig
 /policy_total_cpi_counterfactual_inflation_FI_finland.png>]
-<fig/policy_total_cpi_counterfactual_inflation_HR_croatia.png, id=683, 650.43pt
+<fig/policy_total_cpi_counterfactual_inflation_HR_croatia.png, id=668, 650.43pt
  x 375.804pt>
 File: fig/policy_total_cpi_counterfactual_inflation_HR_croatia.png Graphic file
  (type png)
@@ -1616,7 +1694,7 @@ File: fig/policy_total_cpi_counterfactual_inflation_HR_croatia.png Graphic file
 Package pdftex.def Info: fig/policy_total_cpi_counterfactual_inflation_HR_croat
 ia.png  used on input line 63.
 (pdftex.def)             Requested size: 403.99686pt x 233.42041pt.
-<fig/policy_total_cpi_counterfactual_inflation_IE_ireland.png, id=684, 650.43pt
+<fig/policy_total_cpi_counterfactual_inflation_IE_ireland.png, id=669, 650.43pt
  x 375.804pt>
 File: fig/policy_total_cpi_counterfactual_inflation_IE_ireland.png Graphic file
  (type png)
@@ -1625,14 +1703,14 @@ Package pdftex.def Info: fig/policy_total_cpi_counterfactual_inflation_IE_irela
 nd.png  used on input line 70.
 (pdftex.def)             Requested size: 403.99686pt x 233.42041pt.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.26}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.22}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.73 
-      [26 <./fig/policy_total_cpi_counterfactual_inflation_FR_france.png> <./fi
+      [22 <./fig/policy_total_cpi_counterfactual_inflation_FR_france.png> <./fi
 g/policy_total_cpi_counterfactual_inflation_HR_croatia.png>]
-<fig/policy_total_cpi_counterfactual_inflation_IT_italy.png, id=690, 650.43pt x
+<fig/policy_total_cpi_counterfactual_inflation_IT_italy.png, id=675, 650.43pt x
  375.804pt>
 File: fig/policy_total_cpi_counterfactual_inflation_IT_italy.png Graphic file (
 type png)
@@ -1640,7 +1718,7 @@ type png)
 Package pdftex.def Info: fig/policy_total_cpi_counterfactual_inflation_IT_italy
 .png  used on input line 77.
 (pdftex.def)             Requested size: 403.99686pt x 233.42041pt.
-<fig/policy_total_cpi_counterfactual_inflation_LT_lithuania.png, id=691, 650.43
+<fig/policy_total_cpi_counterfactual_inflation_LT_lithuania.png, id=676, 650.43
 pt x 375.804pt>
 File: fig/policy_total_cpi_counterfactual_inflation_LT_lithuania.png Graphic fi
 le (type png)
@@ -1649,14 +1727,14 @@ Package pdftex.def Info: fig/policy_total_cpi_counterfactual_inflation_LT_lithu
 ania.png  used on input line 84.
 (pdftex.def)             Requested size: 403.99686pt x 233.42041pt.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.27}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.23}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.87 
-      [27 <./fig/policy_total_cpi_counterfactual_inflation_IE_ireland.png> <./f
+      [23 <./fig/policy_total_cpi_counterfactual_inflation_IE_ireland.png> <./f
 ig/policy_total_cpi_counterfactual_inflation_IT_italy.png>]
-<fig/policy_total_cpi_counterfactual_inflation_NL_netherlands.png, id=697, 650.
+<fig/policy_total_cpi_counterfactual_inflation_NL_netherlands.png, id=682, 650.
 43pt x 375.804pt>
 File: fig/policy_total_cpi_counterfactual_inflation_NL_netherlands.png Graphic 
 file (type png)
@@ -1664,7 +1742,7 @@ file (type png)
 Package pdftex.def Info: fig/policy_total_cpi_counterfactual_inflation_NL_nethe
 rlands.png  used on input line 91.
 (pdftex.def)             Requested size: 403.99686pt x 233.42041pt.
-<fig/policy_total_cpi_counterfactual_inflation_PT_portugal.png, id=698, 650.43p
+<fig/policy_total_cpi_counterfactual_inflation_PT_portugal.png, id=683, 650.43p
 t x 375.804pt>
 File: fig/policy_total_cpi_counterfactual_inflation_PT_portugal.png Graphic fil
 e (type png)
@@ -1673,14 +1751,14 @@ Package pdftex.def Info: fig/policy_total_cpi_counterfactual_inflation_PT_portu
 gal.png  used on input line 98.
 (pdftex.def)             Requested size: 403.99686pt x 233.42041pt.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.28}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.24}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.101 
-       [28 <./fig/policy_total_cpi_counterfactual_inflation_LT_lithuania.png> <
+       [24 <./fig/policy_total_cpi_counterfactual_inflation_LT_lithuania.png> <
 ./fig/policy_total_cpi_counterfactual_inflation_NL_netherlands.png>]
-<fig/policy_total_cpi_counterfactual_inflation_SI_slovenia.png, id=704, 650.43p
+<fig/policy_total_cpi_counterfactual_inflation_SI_slovenia.png, id=690, 650.43p
 t x 375.804pt>
 File: fig/policy_total_cpi_counterfactual_inflation_SI_slovenia.png Graphic fil
 e (type png)
@@ -1689,12 +1767,12 @@ Package pdftex.def Info: fig/policy_total_cpi_counterfactual_inflation_SI_slove
 nia.png  used on input line 105.
 (pdftex.def)             Requested size: 403.99686pt x 233.42041pt.
 )
-pdfTeX warning (ext4): destination with the same identifier (name{page.29}) has
+pdfTeX warning (ext4): destination with the same identifier (name{page.25}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1635 \end{document}
-                      [29 <./fig/policy_total_cpi_counterfactual_inflation_PT_p
+l.1681 \end{document}
+                      [25 <./fig/policy_total_cpi_counterfactual_inflation_PT_p
 ortugal.png> <./fig/policy_total_cpi_counterfactual_inflation_SI_slovenia.png>]
 (main.aux)
  ***********
@@ -1702,14 +1780,14 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0F0122AC3DD119FE2CED680CAF6C8F8A;7023.
+(rerunfilecheck)             Checksum: 1896EBC1BC1E492BEC2940CDE944BC6F;7347.
  ) 
 Here is how much of TeX's memory you used:
- 24846 strings out of 467871
- 475532 string characters out of 5418377
- 922376 words of memory out of 5000000
- 53002 multiletter control sequences out of 15000+600000
- 691543 words of font info for 189 fonts, out of 8000000 for 9000
+ 24855 strings out of 467871
+ 475706 string characters out of 5418377
+ 855519 words of memory out of 5000000
+ 53007 multiletter control sequences out of 15000+600000
+ 692474 words of font info for 190 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,13n,94p,1477b,718s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/jerem/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
@@ -1723,9 +1801,9 @@ rograms/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/jerem/AppData/Local
 /Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/jerem/AppData/Lo
 cal/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/jerem/AppData
 /Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (65 pages, 4911723 bytes).
+Output written on main.pdf (62 pages, 4807456 bytes).
 PDF statistics:
- 797 PDF objects out of 1000 (max. 8388607)
- 196 named destinations out of 1000 (max. 500000)
- 495 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 784 PDF objects out of 1000 (max. 8388607)
+ 200 named destinations out of 1000 (max. 500000)
+ 503 words of extra memory for PDF output out of 10000 (max. 10000000)
 
