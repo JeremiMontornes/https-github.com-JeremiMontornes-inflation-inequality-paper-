@@ -1,0 +1,10 @@
+{
+  "key": "charalampakis2022impact",
+  "status": "unverifiable",
+  "one_sentence": "The impact of the recent rise in inflation on low-income households",
+  "canonical_url": null,
+  "issues": [],
+  "note": "Crossref top hit title mismatch: Impact of Inflation on Low-Income Households in Nepal",
+  "original_bib": "@article{charalampakis2022impact,\n  title={The impact of the recent rise in inflation on low-income households},\n  author={Charalampakis, E. and Fagandini, B. and Henkel, L. and Osbat, C.},\n  journal={ECB Economic Bulletin},\n  number={7},\n  year={2022}\n}\n",
+  "corrected_bib": "@article{charalampakis2022impact,\n  title={The impact of the recent rise in inflation on low-income households},\n  author={Charalampakis, E. and Fagandini, B. and Henkel, L. and Osbat, C.},\n  journal={ECB Economic Bulletin},\n  number={7},\n  year={2022}\n}\n"
+}

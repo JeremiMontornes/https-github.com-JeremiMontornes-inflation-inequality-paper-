@@ -1,0 +1,17 @@
+{
+  "key": "accardo2023measuring",
+  "status": "corrected",
+  "one_sentence": "Measuring and Comparing Consumption Inequality between France and the United States",
+  "canonical_url": "https://doi.org/10.2139/ssrn.4336389",
+  "issues": [
+    {
+      "field": "journal",
+      "original": "Banque de France Working Paper No. 904",
+      "corrected": "SSRN Electronic Journal",
+      "reason": "Crossref canonical metadata differs"
+    }
+  ],
+  "note": "",
+  "original_bib": "@article{accardo2023measuring,\n  title={Measuring and Comparing Consumption Inequality between France and the United States},\n  author={Accardo, Aliocha and Herbert, Sylv{\\'e}rie and Jude, Cristina and Penalver, Adrian},\n  year={2023},\n journal={Banque de France Working Paper No. 904}\n}\n",
+  "corrected_bib": "@article{accardo2023measuring,\n  title={Measuring and Comparing Consumption Inequality between France and the United States},\n  author={Accardo, Aliocha and Herbert, Sylv{\\'e}rie and Jude, Cristina and Penalver, Adrian},\n  year={2023},\n journal={Banque de France Working Paper No. 904}\n}\n"
+}

@@ -1,0 +1,23 @@
+{
+  "key": "cardoso2022heterogeneous",
+  "status": "corrected",
+  "one_sentence": "The Heterogeneous Impact of Inflation on Households’ Balance Sheets",
+  "canonical_url": "https://doi.org/10.2139/ssrn.4655163",
+  "issues": [
+    {
+      "field": "year",
+      "original": "2022",
+      "corrected": "2023",
+      "reason": "Crossref canonical metadata differs"
+    },
+    {
+      "field": "journal",
+      "original": "Bank of Spain WP",
+      "corrected": "SSRN Electronic Journal",
+      "reason": "Crossref canonical metadata differs"
+    }
+  ],
+  "note": "",
+  "original_bib": "@article{cardoso2022heterogeneous,\n  title={The heterogeneous impact of inflation on households balance sheets},\n  author={Cardoso, M. and Ferreira, C. and Leiva, J. M. and Nu{\\~n}o, G. and Ortiz, {\\'A}. and Rodrigo, T. and Vazquez, S.},\n  year={2022},\n  journal={Bank of Spain WP}\n}\n",
+  "corrected_bib": "@article{cardoso2022heterogeneous,\n  title={The heterogeneous impact of inflation on households balance sheets},\n  author={Cardoso, M. and Ferreira, C. and Leiva, J. M. and Nu{\\~n}o, G. and Ortiz, {\\'A}. and Rodrigo, T. and Vazquez, S.},\n  year={2022},\n  journal={Bank of Spain WP}\n}\n"
+}

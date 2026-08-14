@@ -1,0 +1,17 @@
+{
+  "key": "gautier2024effects",
+  "status": "corrected",
+  "one_sentence": "The Heterogeneous Effects of Inflation in France and in the Eurozone",
+  "canonical_url": "https://doi.org/10.3917/ecofi.153.0193",
+  "issues": [
+    {
+      "field": "volume",
+      "original": "153",
+      "corrected": "No 153",
+      "reason": "Crossref canonical metadata differs"
+    }
+  ],
+  "note": "",
+  "original_bib": "@article{gautier2024effects,\n  title        = {The Heterogeneous Effects of Inflation in France and in the Eurozone},\n  author       = {Gautier, E. and Montornes, J.},\n  journal      = {Revue d'{\\'E}conomie Financi{\\`e}re},\n  volume       = {153},\n  number       = {1},\n  pages        = {193--211},\n  year         = {2024}\n}\n",
+  "corrected_bib": "@article{gautier2024effects,\n  title        = {The Heterogeneous Effects of Inflation in France and in the Eurozone},\n  author       = {Gautier, E. and Montornes, J.},\n  journal      = {Revue d'{\\'E}conomie Financi{\\`e}re},\n  volume       = {153},\n  number       = {1},\n  pages        = {193--211},\n  year         = {2024}\n}\n"
+}

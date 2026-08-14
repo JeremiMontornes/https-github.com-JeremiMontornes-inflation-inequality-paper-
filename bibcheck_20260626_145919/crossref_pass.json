@@ -1,0 +1,454 @@
+[
+  {
+    "key": "accardo2023measuring",
+    "status": "corrected",
+    "one_sentence": "Measuring and Comparing Consumption Inequality between France and the United States",
+    "canonical_url": "https://doi.org/10.2139/ssrn.4336389",
+    "issues": [
+      {
+        "field": "journal",
+        "original": "Banque de France Working Paper No. 904",
+        "corrected": "SSRN Electronic Journal",
+        "reason": "Crossref canonical metadata differs"
+      }
+    ],
+    "note": "",
+    "original_bib": "@article{accardo2023measuring,\n  title={Measuring and Comparing Consumption Inequality between France and the United States},\n  author={Accardo, Aliocha and Herbert, Sylv{\\'e}rie and Jude, Cristina and Penalver, Adrian},\n  year={2023},\n journal={Banque de France Working Paper No. 904}\n}\n",
+    "corrected_bib": "@article{accardo2023measuring,\n  title={Measuring and Comparing Consumption Inequality between France and the United States},\n  author={Accardo, Aliocha and Herbert, Sylv{\\'e}rie and Jude, Cristina and Penalver, Adrian},\n  year={2023},\n journal={Banque de France Working Paper No. 904}\n}\n"
+  },
+  {
+    "key": "ampudia2024shopping",
+    "status": "clean",
+    "one_sentence": "Shopping behavior and the effect of monetary policy on inflation heterogeneity along the income distribution",
+    "canonical_url": "https://doi.org/10.1016/j.jmoneco.2024.103618",
+    "issues": [],
+    "note": "",
+    "original_bib": "@article{ampudia2024shopping,\n  title={Shopping behavior and the effect of monetary policy on inflation heterogeneity along the income distribution},\n  author={Ampudia, Miguel and Ehrmann, Michael and Strasser, Georg},\n  journal={Journal of Monetary Economics},\n  pages={103618},\n  year={2024},\n  publisher={Elsevier}\n}\n",
+    "corrected_bib": "@article{ampudia2024shopping,\n  title={Shopping behavior and the effect of monetary policy on inflation heterogeneity along the income distribution},\n  author={Ampudia, Miguel and Ehrmann, Michael and Strasser, Georg},\n  journal={Journal of Monetary Economics},\n  pages={103618},\n  year={2024},\n  publisher={Elsevier}\n}\n"
+  },
+  {
+    "key": "argente2021cost",
+    "status": "corrected",
+    "one_sentence": "Cost of Living Inequality During the Great Recession",
+    "canonical_url": "https://doi.org/10.1093/jeea/jvaa018",
+    "issues": [
+      {
+        "field": "year",
+        "original": "2021",
+        "corrected": "2020",
+        "reason": "Crossref canonical metadata differs"
+      }
+    ],
+    "note": "",
+    "original_bib": "@article{argente2021cost,\n  title={Cost of living inequality during the great recession},\n  author={Argente, D. and Lee, M.},\n  journal={Journal of the European Economic Association},\n  volume={19},\n  number={2},\n  pages={913--952},\n  year={2021}\n}\n",
+    "corrected_bib": "@article{argente2021cost,\n  title={Cost of living inequality during the great recession},\n  author={Argente, D. and Lee, M.},\n  journal={Journal of the European Economic Association},\n  volume={19},\n  number={2},\n  pages={913--952},\n  year={2021}\n}\n"
+  },
+  {
+    "key": "arregui2022targeted",
+    "status": "corrected",
+    "one_sentence": "Targeted, Implementable, and Practical Energy Relief Measures for Households in Europe",
+    "canonical_url": "https://doi.org/10.5089/9798400227400.001",
+    "issues": [
+      {
+        "field": "number",
+        "original": "WP/22/262",
+        "corrected": "262",
+        "reason": "Crossref canonical metadata differs"
+      }
+    ],
+    "note": "",
+    "original_bib": "@techreport{arregui2022targeted,\n  title={Targeted, Implementable, and Practical Energy Relief Measures for Households in Europe},\n  author={Arregui, Nicolas and Celasun, Oya and Iakova, Dora and Mineshima, Aiko and Mylonas, Victor and Toscani, Frederik and Wong, Yu Ching and Zeng, Li and Zhou, Jing},\n  institution={International Monetary Fund},\n  type={IMF Working Paper},\n  number={WP/22/262},\n  year={2022},\n  month={December},\n  url={https://www.imf.org/en/Publications/WP/Issues/2022/12/16/Targeted-Implementable-and-Practical-Energy-Relief-Measures-for-Households-in-Europe-526980}\n}\n",
+    "corrected_bib": "@techreport{arregui2022targeted,\n  title={Targeted, Implementable, and Practical Energy Relief Measures for Households in Europe},\n  author={Arregui, Nicolas and Celasun, Oya and Iakova, Dora and Mineshima, Aiko and Mylonas, Victor and Toscani, Frederik and Wong, Yu Ching and Zeng, Li and Zhou, Jing},\n  institution={International Monetary Fund},\n  type={IMF Working Paper},\n  number={WP/22/262},\n  year={2022},\n  month={December},\n  url={https://www.imf.org/en/Publications/WP/Issues/2022/12/16/Targeted-Implementable-and-Practical-Energy-Relief-Measures-for-Households-in-Europe-526980}\n}\n"
+  },
+  {
+    "key": "bacharach1965estimating",
+    "status": "corrected",
+    "one_sentence": "Estimating Nonnegative Matrices from Marginal Data",
+    "canonical_url": "https://doi.org/10.2307/2525582",
+    "issues": [
+      {
+        "field": "pages",
+        "original": "294--310",
+        "corrected": "294",
+        "reason": "Crossref canonical metadata differs"
+      }
+    ],
+    "note": "",
+    "original_bib": "@article{bacharach1965estimating,\n  title={Estimating Nonnegative Matrices from Marginal Data},\n  author={Bacharach, Michael},\n  journal={International Economic Review},\n  volume={6},\n  number={3},\n  pages={294--310},\n  year={1965},\n  doi={10.2307/2525582}\n}\n",
+    "corrected_bib": "@article{bacharach1965estimating,\n  title={Estimating Nonnegative Matrices from Marginal Data},\n  author={Bacharach, Michael},\n  journal={International Economic Review},\n  volume={6},\n  number={3},\n  pages={294--310},\n  year={1965},\n  doi={10.2307/2525582}\n}\n"
+  },
+  {
+    "key": "bobasu2023impact",
+    "status": "unverifiable",
+    "one_sentence": "The impact of the recent inflation surge across households",
+    "canonical_url": null,
+    "issues": [],
+    "note": "Crossref top hit title mismatch: Inflation Heterogeneity Across Households",
+    "original_bib": "@article{bobasu2023impact,\n  title={The impact of the recent inflation surge across households},\n  author={Bobasu, A. and Di Nino, V. and Osbat, C.},\n  journal={ECB Economic Bulletin},\n  number={3},\n  year={2023}\n}\n",
+    "corrected_bib": "@article{bobasu2023impact,\n  title={The impact of the recent inflation surge across households},\n  author={Bobasu, A. and Di Nino, V. and Osbat, C.},\n  journal={ECB Economic Bulletin},\n  number={3},\n  year={2023}\n}\n"
+  },
+  {
+    "key": "bonnet2025compensating",
+    "status": "clean",
+    "one_sentence": "Compensating against fuel price inflation: Price subsidies or transfers?",
+    "canonical_url": "https://doi.org/10.1016/j.jeem.2024.103079",
+    "issues": [],
+    "note": "",
+    "original_bib": "@article{bonnet2025compensating,\n  title={Compensating against fuel price inflation: Price subsidies or transfers?},\n  author={Bonnet, Odran and Fize, {\\'E}tienne and Loisel, Tristan and Wilner, Lionel},\n  journal={Journal of Environmental Economics and Management},\n  volume={129},\n  pages={103079},\n  year={2025},\n  doi={10.1016/j.jeem.2024.103079},\n  url={https://www.sciencedirect.com/science/article/abs/pii/S0095069624001530}\n}\n",
+    "corrected_bib": "@article{bonnet2025compensating,\n  title={Compensating against fuel price inflation: Price subsidies or transfers?},\n  author={Bonnet, Odran and Fize, {\\'E}tienne and Loisel, Tristan and Wilner, Lionel},\n  journal={Journal of Environmental Economics and Management},\n  volume={129},\n  pages={103079},\n  year={2025},\n  doi={10.1016/j.jeem.2024.103079},\n  url={https://www.sciencedirect.com/science/article/abs/pii/S0095069624001530}\n}\n"
+  },
+  {
+    "key": "cai2020bridging",
+    "status": "clean",
+    "one_sentence": "Bridging between economy-wide activity and household-level consumption data: Matrices for European countries",
+    "canonical_url": "https://doi.org/10.1016/j.dib.2020.105395",
+    "issues": [],
+    "note": "",
+    "original_bib": "@article{cai2020bridging,\n  title={Bridging between economy-wide activity and household-level consumption data: Matrices for European countries},\n  author={Cai, M. and Vandyck, T.},\n  journal={Data in Brief},\n  volume={30},\n  pages={105395},\n  year={2020},\n  doi={10.1016/j.dib.2020.105395}\n}\n",
+    "corrected_bib": "@article{cai2020bridging,\n  title={Bridging between economy-wide activity and household-level consumption data: Matrices for European countries},\n  author={Cai, M. and Vandyck, T.},\n  journal={Data in Brief},\n  volume={30},\n  pages={105395},\n  year={2020},\n  doi={10.1016/j.dib.2020.105395}\n}\n"
+  },
+  {
+    "key": "cardoso2022heterogeneous",
+    "status": "corrected",
+    "one_sentence": "The Heterogeneous Impact of Inflation on Households’ Balance Sheets",
+    "canonical_url": "https://doi.org/10.2139/ssrn.4655163",
+    "issues": [
+      {
+        "field": "year",
+        "original": "2022",
+        "corrected": "2023",
+        "reason": "Crossref canonical metadata differs"
+      },
+      {
+        "field": "journal",
+        "original": "Bank of Spain WP",
+        "corrected": "SSRN Electronic Journal",
+        "reason": "Crossref canonical metadata differs"
+      }
+    ],
+    "note": "",
+    "original_bib": "@article{cardoso2022heterogeneous,\n  title={The heterogeneous impact of inflation on households balance sheets},\n  author={Cardoso, M. and Ferreira, C. and Leiva, J. M. and Nu{\\~n}o, G. and Ortiz, {\\'A}. and Rodrigo, T. and Vazquez, S.},\n  year={2022},\n  journal={Bank of Spain WP}\n}\n",
+    "corrected_bib": "@article{cardoso2022heterogeneous,\n  title={The heterogeneous impact of inflation on households balance sheets},\n  author={Cardoso, M. and Ferreira, C. and Leiva, J. M. and Nu{\\~n}o, G. and Ortiz, {\\'A}. and Rodrigo, T. and Vazquez, S.},\n  year={2022},\n  journal={Bank of Spain WP}\n}\n"
+  },
+  {
+    "key": "charalampakis2022impact",
+    "status": "unverifiable",
+    "one_sentence": "The impact of the recent rise in inflation on low-income households",
+    "canonical_url": null,
+    "issues": [],
+    "note": "Crossref top hit title mismatch: Impact of Inflation on Low-Income Households in Nepal",
+    "original_bib": "@article{charalampakis2022impact,\n  title={The impact of the recent rise in inflation on low-income households},\n  author={Charalampakis, E. and Fagandini, B. and Henkel, L. and Osbat, C.},\n  journal={ECB Economic Bulletin},\n  number={7},\n  year={2022}\n}\n",
+    "corrected_bib": "@article{charalampakis2022impact,\n  title={The impact of the recent rise in inflation on low-income households},\n  author={Charalampakis, E. and Fagandini, B. and Henkel, L. and Osbat, C.},\n  journal={ECB Economic Bulletin},\n  number={7},\n  year={2022}\n}\n"
+  },
+  {
+    "key": "chen2024cheapflation",
+    "status": "clean",
+    "one_sentence": "Cheapflation and the rise of inflation inequality",
+    "canonical_url": "https://doi.org/10.1920/wp.ifs.2024.3624",
+    "issues": [],
+    "note": "",
+    "original_bib": "@article{chen2024cheapflation,\n  title={Cheapflation and the rise of inflation inequality},\n  author={Chen, Tao and Levell, Peter and O'Connell, Martin},\n  year={2024},\n  journal={CEPR Discussion Paper No. 19388}\n}\n",
+    "corrected_bib": "@article{chen2024cheapflation,\n  title={Cheapflation and the rise of inflation inequality},\n  author={Chen, Tao and Levell, Peter and O'Connell, Martin},\n  year={2024},\n  journal={CEPR Discussion Paper No. 19388}\n}\n"
+  },
+  {
+    "key": "claeys2022inflation",
+    "status": "corrected",
+    "one_sentence": "Inflation inequality in the European Union and its drivers",
+    "canonical_url": "https://doi.org/10.64153/jmzf6457",
+    "issues": [
+      {
+        "field": "year",
+        "original": "2022",
+        "corrected": "2025",
+        "reason": "Crossref canonical metadata differs"
+      }
+    ],
+    "note": "",
+    "original_bib": "@misc{claeys2022inflation,\n  title={Inflation inequality in the European Union and its drivers},\n  author={Claeys, G. and Guetta-Jeanrenaud, L. and McCaffrey, C. and Welslau, L.},\n  year={2022},\n  note={Bruegel},\n  url={https://www.bruegel.org/dataset/inflation-inequality-european-union-and-its-drivers}\n}\n",
+    "corrected_bib": "@misc{claeys2022inflation,\n  title={Inflation inequality in the European Union and its drivers},\n  author={Claeys, G. and Guetta-Jeanrenaud, L. and McCaffrey, C. and Welslau, L.},\n  year={2022},\n  note={Bruegel},\n  url={https://www.bruegel.org/dataset/inflation-inequality-european-union-and-its-drivers}\n}\n"
+  },
+  {
+    "key": "corsello2026inflation",
+    "status": "clean",
+    "one_sentence": "Inflation is not equal for all: The heterogeneous effects of energy shocks",
+    "canonical_url": "https://doi.org/10.1016/j.euroecorev.2026.105298",
+    "issues": [],
+    "note": "",
+    "original_bib": "@article{corsello2026inflation,\n  title = {Inflation is not equal for all: The heterogeneous effects of energy shocks},\n  author = {Corsello, Francesco and Riggi, Marianna},\n  journal = {European Economic Review},\n  volume = {187},\n  pages = {105298},\n  year = {2026},\n  issn = {0014-2921},\n  doi = {10.1016/j.euroecorev.2026.105298},\n  url = {https://www.sciencedirect.com/science/article/pii/S0014292126000425}\n}\n",
+    "corrected_bib": "@article{corsello2026inflation,\n  title = {Inflation is not equal for all: The heterogeneous effects of energy shocks},\n  author = {Corsello, Francesco and Riggi, Marianna},\n  journal = {European Economic Review},\n  volume = {187},\n  pages = {105298},\n  year = {2026},\n  issn = {0014-2921},\n  doi = {10.1016/j.euroecorev.2026.105298},\n  url = {https://www.sciencedirect.com/science/article/pii/S0014292126000425}\n}\n"
+  },
+  {
+    "key": "coxWohlgenant1986prices",
+    "status": "clean",
+    "one_sentence": "Prices and Quality Effects in Cross‐Sectional Demand Analysis",
+    "canonical_url": "https://doi.org/10.2307/1242137",
+    "issues": [],
+    "note": "",
+    "original_bib": "@article{coxWohlgenant1986prices,\n  title={Prices and Quality Effects in Cross-Sectional Demand Analysis},\n  author={Cox, Thomas L. and Wohlgenant, Michael K.},\n  journal={American Journal of Agricultural Economics},\n  volume={68},\n  number={4},\n  pages={908--919},\n  year={1986},\n  doi={10.2307/1242137}\n}\n",
+    "corrected_bib": "@article{coxWohlgenant1986prices,\n  title={Prices and Quality Effects in Cross-Sectional Demand Analysis},\n  author={Cox, Thomas L. and Wohlgenant, Michael K.},\n  journal={American Journal of Agricultural Economics},\n  volume={68},\n  number={4},\n  pages={908--919},\n  year={1986},\n  doi={10.2307/1242137}\n}\n"
+  },
+  {
+    "key": "cravino2020household",
+    "status": "corrected",
+    "one_sentence": "Household Heterogeneity and the Transmission of Foreign Shocks",
+    "canonical_url": "https://doi.org/10.2139/ssrn.3476482",
+    "issues": [
+      {
+        "field": "year",
+        "original": "2020",
+        "corrected": "2019",
+        "reason": "Crossref canonical metadata differs"
+      },
+      {
+        "field": "journal",
+        "original": "Journal of International Economics",
+        "corrected": "SSRN Electronic Journal",
+        "reason": "Crossref canonical metadata differs"
+      }
+    ],
+    "note": "",
+    "original_bib": "@article{cravino2020household,\n  title={Household heterogeneity and the transmission of foreign shocks},\n  author={Cravino, Javier and Levchenko, Andrei A},\n  journal={Journal of International Economics},\n  volume={124},\n  pages={103303},\n  year={2020},\n  publisher={Elsevier}\n}\n",
+    "corrected_bib": "@article{cravino2020household,\n  title={Household heterogeneity and the transmission of foreign shocks},\n  author={Cravino, Javier and Levchenko, Andrei A},\n  journal={Journal of International Economics},\n  volume={124},\n  pages={103303},\n  year={2020},\n  publisher={Elsevier}\n}\n"
+  },
+  {
+    "key": "dao2023unconventional",
+    "status": "clean",
+    "one_sentence": "Unconventional Fiscal Policy in Times of High Inflation",
+    "canonical_url": "https://doi.org/10.5089/9798400251399.001",
+    "issues": [],
+    "note": "",
+    "original_bib": "@book{dao2023unconventional,\n  title={Unconventional fiscal policy in times of high inflation},\n  author={Dao, Mai and Dizioli, Allan and Jackson, Chris and Gourinchas, Pierre-Olivier and Leigh, Mr Daniel},\n  year={2023},\n  publisher={International Monetary Fund WP/23/178}\n}\n",
+    "corrected_bib": "@book{dao2023unconventional,\n  title={Unconventional fiscal policy in times of high inflation},\n  author={Dao, Mai and Dizioli, Allan and Jackson, Chris and Gourinchas, Pierre-Olivier and Leigh, Mr Daniel},\n  year={2023},\n  publisher={International Monetary Fund WP/23/178}\n}\n"
+  },
+  {
+    "key": "deaton1988quality",
+    "status": "unverifiable",
+    "one_sentence": "Quality, Quantity, and Spatial Variation of Price",
+    "canonical_url": null,
+    "issues": [],
+    "note": "Crossref top hit title mismatch: Quality, quantity, and spatial variation of price: Back to the bog",
+    "original_bib": "@article{deaton1988quality,\n  title={Quality, Quantity, and Spatial Variation of Price},\n  author={Deaton, Angus},\n  journal={American Economic Review},\n  volume={78},\n  number={3},\n  pages={418--430},\n  year={1988}\n}\n",
+    "corrected_bib": "@article{deaton1988quality,\n  title={Quality, Quantity, and Spatial Variation of Price},\n  author={Deaton, Angus},\n  journal={American Economic Review},\n  volume={78},\n  number={3},\n  pages={418--430},\n  year={1988}\n}\n"
+  },
+  {
+    "key": "doepke2006inflation",
+    "status": "clean",
+    "one_sentence": "Inflation and the Redistribution of Nominal Wealth",
+    "canonical_url": "https://doi.org/10.1086/508379",
+    "issues": [],
+    "note": "",
+    "original_bib": "@article{doepke2006inflation,\n  title={Inflation and the redistribution of nominal wealth},\n  author={Doepke, Matthias and Schneider, Martin},\n  journal={Journal of Political Economy},\n  volume={114},\n  number={6},\n  pages={1069--1097},\n  year={2006},\n  publisher={University of Chicago Press}\n}\n",
+    "corrected_bib": "@article{doepke2006inflation,\n  title={Inflation and the redistribution of nominal wealth},\n  author={Doepke, Matthias and Schneider, Martin},\n  journal={Journal of Political Economy},\n  volume={114},\n  number={6},\n  pages={1069--1097},\n  year={2006},\n  publisher={University of Chicago Press}\n}\n"
+  },
+  {
+    "key": "drolsbach2023pass",
+    "status": "clean",
+    "one_sentence": "Pass-through of temporary fuel tax reductions: Evidence from Europe",
+    "canonical_url": "https://doi.org/10.1016/j.enpol.2023.113833",
+    "issues": [],
+    "note": "",
+    "original_bib": "@article{drolsbach2023pass,\n  title={Pass-through of temporary fuel tax reductions: Evidence from Europe},\n  author={Drolsbach, Chiara Patricia and Gail, Maximilian Maurice and Klotz, Phil-Adrian},\n  journal={Energy Policy},\n  volume={183},\n  pages={113833},\n  year={2023},\n  doi={10.1016/j.enpol.2023.113833},\n  url={https://www.sciencedirect.com/science/article/pii/S0301421523004184}\n}\n",
+    "corrected_bib": "@article{drolsbach2023pass,\n  title={Pass-through of temporary fuel tax reductions: Evidence from Europe},\n  author={Drolsbach, Chiara Patricia and Gail, Maximilian Maurice and Klotz, Phil-Adrian},\n  journal={Energy Policy},\n  volume={183},\n  pages={113833},\n  year={2023},\n  doi={10.1016/j.enpol.2023.113833},\n  url={https://www.sciencedirect.com/science/article/pii/S0301421523004184}\n}\n"
+  },
+  {
+    "key": "garciaMiralles2023support",
+    "status": "corrected",
+    "one_sentence": "Support measures in the face of the energy crisis and the rise in inflation: an analysis of the cost and distributional effects of some of the measures rolled out based on their degree of targeting",
+    "canonical_url": "https://doi.org/10.53479/29769",
+    "issues": [
+      {
+        "field": "journal",
+        "original": "Economic Bulletin - Banco de Espa{\\~n}a",
+        "corrected": "Economic Bulletin",
+        "reason": "Crossref canonical metadata differs"
+      },
+      {
+        "field": "number",
+        "original": "15",
+        "corrected": "2023/Q1",
+        "reason": "Crossref canonical metadata differs"
+      }
+    ],
+    "note": "",
+    "original_bib": "@article{garciaMiralles2023support,\n  title={Support measures in the face of the energy crisis and the rise in inflation: an analysis of the cost and distributional effects of some of the measures rolled out based on their degree of targeting},\n  author={Garc{\\'i}a-Miralles, Esteban},\n  journal={Economic Bulletin - Banco de Espa{\\~n}a},\n  volume={2023/Q1},\n  number={15},\n  year={2023},\n  doi={10.53479/29769}\n}\n",
+    "corrected_bib": "@article{garciaMiralles2023support,\n  title={Support measures in the face of the energy crisis and the rise in inflation: an analysis of the cost and distributional effects of some of the measures rolled out based on their degree of targeting},\n  author={Garc{\\'i}a-Miralles, Esteban},\n  journal={Economic Bulletin - Banco de Espa{\\~n}a},\n  volume={2023/Q1},\n  number={15},\n  year={2023},\n  doi={10.53479/29769}\n}\n"
+  },
+  {
+    "key": "gautier2013vat",
+    "status": "unverifiable",
+    "one_sentence": "How do VAT changes affect inflation in France?",
+    "canonical_url": null,
+    "issues": [],
+    "note": "Crossref top hit title mismatch: How Do Trade Disruptions Affect Inflation?",
+    "original_bib": "@article{gautier2013vat,\n  title={How do VAT changes affect inflation in France?},\n  author={Gautier, Erwan and Lalliard, Antoine},\n  journal={Quarterly selection of articles-Bulletin de la Banque de France},\n  number={32},\n  pages={5--27},\n  year={2013},\n  publisher={Banque de France}\n}\n",
+    "corrected_bib": "@article{gautier2013vat,\n  title={How do VAT changes affect inflation in France?},\n  author={Gautier, Erwan and Lalliard, Antoine},\n  journal={Quarterly selection of articles-Bulletin de la Banque de France},\n  number={32},\n  pages={5--27},\n  year={2013},\n  publisher={Banque de France}\n}\n"
+  },
+  {
+    "key": "gautier2024effects",
+    "status": "corrected",
+    "one_sentence": "The Heterogeneous Effects of Inflation in France and in the Eurozone",
+    "canonical_url": "https://doi.org/10.3917/ecofi.153.0193",
+    "issues": [
+      {
+        "field": "volume",
+        "original": "153",
+        "corrected": "No 153",
+        "reason": "Crossref canonical metadata differs"
+      }
+    ],
+    "note": "",
+    "original_bib": "@article{gautier2024effects,\n  title        = {The Heterogeneous Effects of Inflation in France and in the Eurozone},\n  author       = {Gautier, E. and Montornes, J.},\n  journal      = {Revue d'{\\'E}conomie Financi{\\`e}re},\n  volume       = {153},\n  number       = {1},\n  pages        = {193--211},\n  year         = {2024}\n}\n",
+    "corrected_bib": "@article{gautier2024effects,\n  title        = {The Heterogeneous Effects of Inflation in France and in the Eurozone},\n  author       = {Gautier, E. and Montornes, J.},\n  journal      = {Revue d'{\\'E}conomie Financi{\\`e}re},\n  volume       = {153},\n  number       = {1},\n  pages        = {193--211},\n  year         = {2024}\n}\n"
+  },
+  {
+    "key": "hobijn2005inflation",
+    "status": "unverifiable",
+    "one_sentence": "Inflation inequality in the United States",
+    "canonical_url": null,
+    "issues": [],
+    "note": "HTTP Error 404: Not Found",
+    "original_bib": "@article{hobijn2005inflation,\n  title={Inflation inequality in the United States},\n  author={Hobijn, B. and Lagakos, D.},\n  journal={Review of Income and Wealth},\n  volume={51},\n  number={4},\n  pages={581-606},\n  year={2005},\n  doi={10.1111/j.1475-4991.2005.00184.x}\n}\n",
+    "corrected_bib": "@article{hobijn2005inflation,\n  title={Inflation inequality in the United States},\n  author={Hobijn, B. and Lagakos, D.},\n  journal={Review of Income and Wealth},\n  volume={51},\n  number={4},\n  pages={581-606},\n  year={2005},\n  doi={10.1111/j.1475-4991.2005.00184.x}\n}\n"
+  },
+  {
+    "key": "jaravel2019unequal",
+    "status": "corrected",
+    "one_sentence": "The Unequal Gains from Product Innovations: Evidence from the U.S. Retail Sector*",
+    "canonical_url": "https://doi.org/10.1093/qje/qjy031",
+    "issues": [
+      {
+        "field": "year",
+        "original": "2019",
+        "corrected": "2018",
+        "reason": "Crossref canonical metadata differs"
+      }
+    ],
+    "note": "",
+    "original_bib": "@article{jaravel2019unequal,\n  title={The Unequal Gains from Product Innovations: Evidence from the U.S. Retail Sector},\n  author={Jaravel, Xavier},\n  journal={The Quarterly Journal of Economics},\n  volume={134},\n  number={2},\n  pages={715-783},\n  year={2019},\n  doi={10.1093/qje/qjy031}\n}\n",
+    "corrected_bib": "@article{jaravel2019unequal,\n  title={The Unequal Gains from Product Innovations: Evidence from the U.S. Retail Sector},\n  author={Jaravel, Xavier},\n  journal={The Quarterly Journal of Economics},\n  volume={134},\n  number={2},\n  pages={715-783},\n  year={2019},\n  doi={10.1093/qje/qjy031}\n}\n"
+  },
+  {
+    "key": "jaravel2021inflation",
+    "status": "clean",
+    "one_sentence": "Inflation Inequality: Measurement, Causes, and Policy Implications",
+    "canonical_url": "https://doi.org/10.1146/annurev-economics-091520-082042",
+    "issues": [],
+    "note": "",
+    "original_bib": "@article{jaravel2021inflation,\n  title={Inflation inequality: Measurement, causes, and policy implications},\n  author={Jaravel, X.},\n  journal={Annual Review of Economics},\n  volume={13},\n  pages={599-629},\n  year={2021},\n  doi={10.1146/annurev-economics-091520-082042}\n}\n",
+    "corrected_bib": "@article{jaravel2021inflation,\n  title={Inflation inequality: Measurement, causes, and policy implications},\n  author={Jaravel, X.},\n  journal={Annual Review of Economics},\n  volume={13},\n  pages={599-629},\n  year={2021},\n  doi={10.1146/annurev-economics-091520-082042}\n}\n"
+  },
+  {
+    "key": "jaravel2024distributional",
+    "status": "unverifiable",
+    "one_sentence": "Distributional Consumer Price Indices",
+    "canonical_url": null,
+    "issues": [],
+    "note": "Crossref top hit title mismatch: Distributional Consumer Price Indices&amp;nbsp;",
+    "original_bib": "@article{jaravel2024distributional,\n  title={Distributional Consumer Price Indices},\n  author={Jaravel, Xavier},\n  year={2024},\n  journal={CEPR Discussion Paper No. 19802}\n}\n",
+    "corrected_bib": "@article{jaravel2024distributional,\n  title={Distributional Consumer Price Indices},\n  author={Jaravel, Xavier},\n  year={2024},\n  journal={CEPR Discussion Paper No. 19802}\n}\n"
+  },
+  {
+    "key": "kaplan2017inflation",
+    "status": "clean",
+    "one_sentence": "Inflation at the household level",
+    "canonical_url": "https://doi.org/10.1016/j.jmoneco.2017.08.002",
+    "issues": [],
+    "note": "",
+    "original_bib": "@article{kaplan2017inflation,\n  title={Inflation at the household level},\n  author={Kaplan, Greg and Schulhofer-Wohl, Sam},\n  journal={Journal of Monetary Economics},\n  volume={91},\n  pages={19-38},\n  year={2017}\n}\n",
+    "corrected_bib": "@article{kaplan2017inflation,\n  title={Inflation at the household level},\n  author={Kaplan, Greg and Schulhofer-Wohl, Sam},\n  journal={Journal of Monetary Economics},\n  volume={91},\n  pages={19-38},\n  year={2017}\n}\n"
+  },
+  {
+    "key": "kiss2024inflation",
+    "status": "clean",
+    "one_sentence": "Inflation Heterogeneity Across Households",
+    "canonical_url": "https://doi.org/10.2139/ssrn.4711249",
+    "issues": [],
+    "note": "",
+    "original_bib": "@techreport{kiss2024inflation,\n  title={Inflation Heterogeneity Across Households},\n  author={Kiss, Regina and Strasser, Georg},\n  institution={European Central Bank},\n  type={ECB Working Paper},\n  number={2898},\n  year={2024},\n  month={January}\n}\n",
+    "corrected_bib": "@techreport{kiss2024inflation,\n  title={Inflation Heterogeneity Across Households},\n  author={Kiss, Regina and Strasser, Georg},\n  institution={European Central Bank},\n  type={ECB Working Paper},\n  number={2898},\n  year={2024},\n  month={January}\n}\n"
+  },
+  {
+    "key": "levell2024distributional",
+    "status": "unverifiable",
+    "one_sentence": "Distributional effects of the European energy crisis",
+    "canonical_url": null,
+    "issues": [],
+    "note": "Crossref top hit title mismatch: Distributional effects of energy innovation",
+    "original_bib": "@article{levell2024distributional,\n  title={Distributional effects of the European energy crisis},\n  author={Levell, Peter and Oâ€™Connell, Martin and Smith, Kate},\n  journal={Cowles Foundation for Research in Economics Discussion Paper},\n  pages={18--06},\n  year={2024}\n}\n",
+    "corrected_bib": "@article{levell2024distributional,\n  title={Distributional effects of the European energy crisis},\n  author={Levell, Peter and Oâ€™Connell, Martin and Smith, Kate},\n  journal={Cowles Foundation for Research in Economics Discussion Paper},\n  pages={18--06},\n  year={2024}\n}\n"
+  },
+  {
+    "key": "levell2026welfare",
+    "status": "corrected",
+    "one_sentence": "The welfare effects of price shocks and household relief packages: evidence from an energy crisis",
+    "canonical_url": "https://doi.org/10.1920/wp.ifs.2025.5525",
+    "issues": [
+      {
+        "field": "year",
+        "original": "2026",
+        "corrected": "2025",
+        "reason": "Crossref canonical metadata differs"
+      }
+    ],
+    "note": "",
+    "original_bib": "@techreport{levell2026welfare,\n  title={The Welfare Effects of Price Shocks and Household Relief Packages: Evidence from an Energy Crisis},\n  author={Levell, Peter and O'Connell, Martin and Smith, Kate},\n  year={2026},\n  institution={Institute for Fiscal Studies}\n}\n",
+    "corrected_bib": "@techreport{levell2026welfare,\n  title={The Welfare Effects of Price Shocks and Household Relief Packages: Evidence from an Energy Crisis},\n  author={Levell, Peter and O'Connell, Martin and Smith, Kate},\n  year={2026},\n  institution={Institute for Fiscal Studies}\n}\n"
+  },
+  {
+    "key": "martin2022revisiting",
+    "status": "clean",
+    "one_sentence": "Revisiting taste change in cost-of-living measurement",
+    "canonical_url": "https://doi.org/10.3233/jem-220485",
+    "issues": [],
+    "note": "",
+    "original_bib": "@article{martin2022revisiting,\n  title={Revisiting taste change in cost-of-living measurement},\n  author={Martin, Robert S.},\n  journal={Journal of Economic and Social Measurement},\n  volume={46},\n  number={2},\n  pages={109--147},\n  year={2022},\n  doi={10.3233/JEM-220485}\n}\n",
+    "corrected_bib": "@article{martin2022revisiting,\n  title={Revisiting taste change in cost-of-living measurement},\n  author={Martin, Robert S.},\n  journal={Journal of Economic and Social Measurement},\n  volume={46},\n  number={2},\n  pages={109--147},\n  year={2022},\n  doi={10.3233/JEM-220485}\n}\n"
+  },
+  {
+    "key": "pallotti2024bears",
+    "status": "clean",
+    "one_sentence": "Who bears the costs of inflation? Euro area households and the 2021–2023 shock",
+    "canonical_url": "https://doi.org/10.1016/j.jmoneco.2024.103671",
+    "issues": [],
+    "note": "",
+    "original_bib": "@article{pallotti2024bears,\n  title={Who bears the costs of inflation? Euro area households and the 2021--2023 shock},\n  author={Pallotti, Filippo and Paz-Pardo, Gonzalo and Slacalek, Jiri and Tristani, Oreste and Violante, Giovanni L},\n  journal={Journal of Monetary Economics},\n  pages={103671},\n  year={2024},\n  publisher={Elsevier}\n}\n",
+    "corrected_bib": "@article{pallotti2024bears,\n  title={Who bears the costs of inflation? Euro area households and the 2021--2023 shock},\n  author={Pallotti, Filippo and Paz-Pardo, Gonzalo and Slacalek, Jiri and Tristani, Oreste and Violante, Giovanni L},\n  journal={Journal of Monetary Economics},\n  pages={103671},\n  year={2024},\n  publisher={Elsevier}\n}\n"
+  },
+  {
+    "key": "redding2020measuring",
+    "status": "corrected",
+    "one_sentence": "Measuring Aggregate Price Indices with Taste Shocks: Theory and Evidence for CES Preferences*",
+    "canonical_url": "https://doi.org/10.1093/qje/qjz031",
+    "issues": [
+      {
+        "field": "year",
+        "original": "2020",
+        "corrected": "2019",
+        "reason": "Crossref canonical metadata differs"
+      }
+    ],
+    "note": "",
+    "original_bib": "@article{redding2020measuring,\n  title={Measuring Aggregate Price Indices with Taste Shocks: Theory and Evidence for CES Preferences},\n  author={Redding, Stephen J. and Weinstein, David E.},\n  journal={The Quarterly Journal of Economics},\n  volume={135},\n  number={1},\n  pages={503--560},\n  year={2020},\n  doi={10.1093/qje/qjz031}\n}\n",
+    "corrected_bib": "@article{redding2020measuring,\n  title={Measuring Aggregate Price Indices with Taste Shocks: Theory and Evidence for CES Preferences},\n  author={Redding, Stephen J. and Weinstein, David E.},\n  journal={The Quarterly Journal of Economics},\n  volume={135},\n  number={1},\n  pages={503--560},\n  year={2020},\n  doi={10.1093/qje/qjz031}\n}\n"
+  },
+  {
+    "key": "sangani2026cheapflation",
+    "status": "clean",
+    "one_sentence": "Cheapflation Cycles",
+    "canonical_url": "https://doi.org/10.3386/w35235",
+    "issues": [],
+    "note": "",
+    "original_bib": "@techreport{sangani2026cheapflation,\n  title = {Cheapflation Cycles},\n  author = {Sangani, Kunal},\n  institution = {National Bureau of Economic Research},\n  type = {NBER Working Paper},\n  number = {35235},\n  year = {2026},\n  doi = {10.3386/w35235},\n  url = {https://www.nber.org/papers/w35235}\n}\n",
+    "corrected_bib": "@techreport{sangani2026cheapflation,\n  title = {Cheapflation Cycles},\n  author = {Sangani, Kunal},\n  institution = {National Bureau of Economic Research},\n  type = {NBER Working Paper},\n  number = {35235},\n  year = {2026},\n  doi = {10.3386/w35235},\n  url = {https://www.nber.org/papers/w35235}\n}\n"
+  },
+  {
+    "key": "sgaravatti2021national",
+    "status": "unverifiable",
+    "one_sentence": "National policies to shield consumers from rising energy prices",
+    "canonical_url": null,
+    "issues": [],
+    "note": "Crossref top hit title mismatch: Fiscal and Monetary Policies in Tackling Inflation Amid Rising Global Energy Prices",
+    "original_bib": "@misc{sgaravatti2021national,\n  title={National policies to shield consumers from rising energy prices},\n  author={Sgaravatti, G. and Tagliapietra, S. and Trasi, C. and Zachmann, G.},\n  year={2021},\n  note={Bruegel Datasets},\n  url={https://www.bruegel.org/dataset/national-policies-shield-consumers-rising-energy-prices}\n}\n",
+    "corrected_bib": "@misc{sgaravatti2021national,\n  title={National policies to shield consumers from rising energy prices},\n  author={Sgaravatti, G. and Tagliapietra, S. and Trasi, C. and Zachmann, G.},\n  year={2021},\n  note={Bruegel Datasets},\n  url={https://www.bruegel.org/dataset/national-policies-shield-consumers-rising-energy-prices}\n}\n"
+  }
+]

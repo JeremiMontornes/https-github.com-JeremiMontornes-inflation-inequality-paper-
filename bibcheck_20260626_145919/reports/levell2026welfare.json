@@ -1,0 +1,17 @@
+{
+  "key": "levell2026welfare",
+  "status": "corrected",
+  "one_sentence": "The welfare effects of price shocks and household relief packages: evidence from an energy crisis",
+  "canonical_url": "https://doi.org/10.1920/wp.ifs.2025.5525",
+  "issues": [
+    {
+      "field": "year",
+      "original": "2026",
+      "corrected": "2025",
+      "reason": "Crossref canonical metadata differs"
+    }
+  ],
+  "note": "",
+  "original_bib": "@techreport{levell2026welfare,\n  title={The Welfare Effects of Price Shocks and Household Relief Packages: Evidence from an Energy Crisis},\n  author={Levell, Peter and O'Connell, Martin and Smith, Kate},\n  year={2026},\n  institution={Institute for Fiscal Studies}\n}\n",
+  "corrected_bib": "@techreport{levell2026welfare,\n  title={The Welfare Effects of Price Shocks and Household Relief Packages: Evidence from an Energy Crisis},\n  author={Levell, Peter and O'Connell, Martin and Smith, Kate},\n  year={2026},\n  institution={Institute for Fiscal Studies}\n}\n"
+}

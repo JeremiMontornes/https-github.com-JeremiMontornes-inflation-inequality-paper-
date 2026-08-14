@@ -1,0 +1,10 @@
+{
+  "key": "gautier2013vat",
+  "status": "unverifiable",
+  "one_sentence": "How do VAT changes affect inflation in France?",
+  "canonical_url": null,
+  "issues": [],
+  "note": "Crossref top hit title mismatch: How Do Trade Disruptions Affect Inflation?",
+  "original_bib": "@article{gautier2013vat,\n  title={How do VAT changes affect inflation in France?},\n  author={Gautier, Erwan and Lalliard, Antoine},\n  journal={Quarterly selection of articles-Bulletin de la Banque de France},\n  number={32},\n  pages={5--27},\n  year={2013},\n  publisher={Banque de France}\n}\n",
+  "corrected_bib": "@article{gautier2013vat,\n  title={How do VAT changes affect inflation in France?},\n  author={Gautier, Erwan and Lalliard, Antoine},\n  journal={Quarterly selection of articles-Bulletin de la Banque de France},\n  number={32},\n  pages={5--27},\n  year={2013},\n  publisher={Banque de France}\n}\n"
+}

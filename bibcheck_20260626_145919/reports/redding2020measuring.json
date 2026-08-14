@@ -1,0 +1,17 @@
+{
+  "key": "redding2020measuring",
+  "status": "corrected",
+  "one_sentence": "Measuring Aggregate Price Indices with Taste Shocks: Theory and Evidence for CES Preferences*",
+  "canonical_url": "https://doi.org/10.1093/qje/qjz031",
+  "issues": [
+    {
+      "field": "year",
+      "original": "2020",
+      "corrected": "2019",
+      "reason": "Crossref canonical metadata differs"
+    }
+  ],
+  "note": "",
+  "original_bib": "@article{redding2020measuring,\n  title={Measuring Aggregate Price Indices with Taste Shocks: Theory and Evidence for CES Preferences},\n  author={Redding, Stephen J. and Weinstein, David E.},\n  journal={The Quarterly Journal of Economics},\n  volume={135},\n  number={1},\n  pages={503--560},\n  year={2020},\n  doi={10.1093/qje/qjz031}\n}\n",
+  "corrected_bib": "@article{redding2020measuring,\n  title={Measuring Aggregate Price Indices with Taste Shocks: Theory and Evidence for CES Preferences},\n  author={Redding, Stephen J. and Weinstein, David E.},\n  journal={The Quarterly Journal of Economics},\n  volume={135},\n  number={1},\n  pages={503--560},\n  year={2020},\n  doi={10.1093/qje/qjz031}\n}\n"
+}

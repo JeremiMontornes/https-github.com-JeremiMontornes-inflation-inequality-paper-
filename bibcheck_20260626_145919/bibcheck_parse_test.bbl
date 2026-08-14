@@ -1,0 +1,264 @@
+\begin{thebibliography}{35}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Accardo et~al.(2023)Accardo, Herbert, Jude, and
+  Penalver]{accardo2023measuring}
+Aliocha Accardo, Sylv{\'e}rie Herbert, Cristina Jude, and Adrian Penalver.
+\newblock Measuring and comparing consumption inequality between france and the
+  united states.
+\newblock \emph{Banque de France Working Paper No. 904}, 2023.
+
+\bibitem[Ampudia et~al.(2024)Ampudia, Ehrmann, and
+  Strasser]{ampudia2024shopping}
+Miguel Ampudia, Michael Ehrmann, and Georg Strasser.
+\newblock Shopping behavior and the effect of monetary policy on inflation
+  heterogeneity along the income distribution.
+\newblock \emph{Journal of Monetary Economics}, page 103618, 2024.
+\newblock \doi{10.1016/j.jmoneco.2024.103618}.
+
+\bibitem[Argente and Lee(2021)]{argente2021cost}
+D.~Argente and M.~Lee.
+\newblock Cost of living inequality during the great recession.
+\newblock \emph{Journal of the European Economic Association}, 19\penalty0
+  (2):\penalty0 913--952, 2021.
+\newblock \doi{10.1093/jeea/jvaa018}.
+
+\bibitem[Arregui et~al.(2022)Arregui, Celasun, Iakova, Mineshima, Mylonas,
+  Toscani, Wong, Zeng, and Zhou]{arregui2022targeted}
+Nicolas Arregui, Oya Celasun, Dora Iakova, Aiko Mineshima, Victor Mylonas,
+  Frederik Toscani, Yu~Ching Wong, Li~Zeng, and Jing Zhou.
+\newblock Targeted, implementable, and practical energy relief measures for
+  households in europe.
+\newblock IMF Working Paper WP/22/262, International Monetary Fund, December
+  2022.
+\newblock URL
+  \url{https://www.imf.org/en/Publications/WP/Issues/2022/12/16/Targeted-Implementable-and-Practical-Energy-Relief-Measures-for-Households-in-Europe-526980}.
+
+\bibitem[Bacharach(1965)]{bacharach1965estimating}
+Michael Bacharach.
+\newblock Estimating nonnegative matrices from marginal data.
+\newblock \emph{International Economic Review}, 6\penalty0 (3):\penalty0
+  294--310, 1965.
+\newblock \doi{10.2307/2525582}.
+
+\bibitem[Bobasu et~al.(2023)Bobasu, Di~Nino, and Osbat]{bobasu2023impact}
+A.~Bobasu, V.~Di~Nino, and C.~Osbat.
+\newblock The impact of the recent inflation surge across households.
+\newblock \emph{ECB Economic Bulletin}, \penalty0 (3), 2023.
+\newblock URL
+  \url{https://www.ecb.europa.eu/press/economic-bulletin/articles/2023/html/ecb.ebart202303_02~d32f2a9b3f.en.html}.
+
+\bibitem[Bonnet et~al.(2025)Bonnet, Fize, Loisel, and
+  Wilner]{bonnet2025compensating}
+Odran Bonnet, {\'E}tienne Fize, Tristan Loisel, and Lionel Wilner.
+\newblock Compensating against fuel price inflation: Price subsidies or
+  transfers?
+\newblock \emph{Journal of Environmental Economics and Management},
+  129:\penalty0 103079, 2025.
+\newblock \doi{10.1016/j.jeem.2024.103079}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/abs/pii/S0095069624001530}.
+
+\bibitem[Cai and Vandyck(2020)]{cai2020bridging}
+M.~Cai and T.~Vandyck.
+\newblock Bridging between economy-wide activity and household-level
+  consumption data: Matrices for european countries.
+\newblock \emph{Data in Brief}, 30:\penalty0 105395, 2020.
+\newblock \doi{10.1016/j.dib.2020.105395}.
+
+\bibitem[Cardoso et~al.(2022)Cardoso, Ferreira, Leiva, Nu{\~n}o, Ortiz,
+  Rodrigo, and Vazquez]{cardoso2022heterogeneous}
+M.~Cardoso, C.~Ferreira, J.~M. Leiva, G.~Nu{\~n}o, {\'A}.~Ortiz, T.~Rodrigo,
+  and S.~Vazquez.
+\newblock The heterogeneous impact of inflation on households balance sheets.
+\newblock \emph{Bank of Spain WP}, 2022.
+
+\bibitem[Charalampakis et~al.(2022)Charalampakis, Fagandini, Henkel, and
+  Osbat]{charalampakis2022impact}
+E.~Charalampakis, B.~Fagandini, L.~Henkel, and C.~Osbat.
+\newblock The impact of the recent rise in inflation on low-income households.
+\newblock \emph{ECB Economic Bulletin}, \penalty0 (7), 2022.
+\newblock URL
+  \url{https://www.ecb.europa.eu/press/economic-bulletin/focus/2022/html/ecb.ebbox202207_04~a89ec1a6fe.en.html}.
+
+\bibitem[Chen et~al.(2024)Chen, Levell, and O'Connell]{chen2024cheapflation}
+Tao Chen, Peter Levell, and Martin O'Connell.
+\newblock Cheapflation and the rise of inflation inequality.
+\newblock \emph{CEPR Discussion Paper No. 19388}, 2024.
+
+\bibitem[Claeys et~al.(2022)Claeys, Guetta-Jeanrenaud, McCaffrey, and
+  Welslau]{claeys2022inflation}
+G.~Claeys, L.~Guetta-Jeanrenaud, C.~McCaffrey, and L.~Welslau.
+\newblock Inflation inequality in the european union and its drivers, 2022.
+\newblock URL
+  \url{https://www.bruegel.org/dataset/inflation-inequality-european-union-and-its-drivers}.
+\newblock Bruegel.
+
+\bibitem[Corsello and Riggi(2026)]{corsello2026inflation}
+Francesco Corsello and Marianna Riggi.
+\newblock Inflation is not equal for all: The heterogeneous effects of energy
+  shocks.
+\newblock \emph{European Economic Review}, 187:\penalty0 105298, 2026.
+\newblock ISSN 0014-2921.
+\newblock \doi{10.1016/j.euroecorev.2026.105298}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0014292126000425}.
+
+\bibitem[Cox and Wohlgenant(1986)]{coxWohlgenant1986prices}
+Thomas~L. Cox and Michael~K. Wohlgenant.
+\newblock Prices and quality effects in cross-sectional demand analysis.
+\newblock \emph{American Journal of Agricultural Economics}, 68\penalty0
+  (4):\penalty0 908--919, 1986.
+\newblock \doi{10.2307/1242137}.
+
+\bibitem[Cravino and Levchenko(2020)]{cravino2020household}
+Javier Cravino and Andrei~A Levchenko.
+\newblock Household heterogeneity and the transmission of foreign shocks.
+\newblock \emph{Journal of International Economics}, 124:\penalty0 103303,
+  2020.
+\newblock \doi{10.1016/j.jinteco.2020.103303}.
+
+\bibitem[Dao et~al.(2023)Dao, Dizioli, Jackson, Gourinchas, and
+  Leigh]{dao2023unconventional}
+Mai Dao, Allan Dizioli, Chris Jackson, Pierre-Olivier Gourinchas, and Mr~Daniel
+  Leigh.
+\newblock \emph{Unconventional fiscal policy in times of high inflation}.
+\newblock International Monetary Fund WP/23/178, 2023.
+
+\bibitem[Deaton(1988)]{deaton1988quality}
+Angus Deaton.
+\newblock Quality, quantity, and spatial variation of price.
+\newblock \emph{American Economic Review}, 78\penalty0 (3):\penalty0 418--430,
+  1988.
+
+\bibitem[Doepke and Schneider(2006)]{doepke2006inflation}
+Matthias Doepke and Martin Schneider.
+\newblock Inflation and the redistribution of nominal wealth.
+\newblock \emph{Journal of Political Economy}, 114\penalty0 (6):\penalty0
+  1069--1097, 2006.
+\newblock \doi{10.1086/508379}.
+
+\bibitem[Drolsbach et~al.(2023)Drolsbach, Gail, and Klotz]{drolsbach2023pass}
+Chiara~Patricia Drolsbach, Maximilian~Maurice Gail, and Phil-Adrian Klotz.
+\newblock Pass-through of temporary fuel tax reductions: Evidence from europe.
+\newblock \emph{Energy Policy}, 183:\penalty0 113833, 2023.
+\newblock \doi{10.1016/j.enpol.2023.113833}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0301421523004184}.
+
+\bibitem[Garc{\'i}a-Miralles(2023)]{garciaMiralles2023support}
+Esteban Garc{\'i}a-Miralles.
+\newblock Support measures in the face of the energy crisis and the rise in
+  inflation: an analysis of the cost and distributional effects of some of the
+  measures rolled out based on their degree of targeting.
+\newblock \emph{Economic Bulletin - Banco de Espa{\~n}a}, 2023/Q1\penalty0
+  (15), 2023.
+\newblock \doi{10.53479/29769}.
+
+\bibitem[Gautier and Montornes(2024)]{gautier2024effects}
+E.~Gautier and J.~Montornes.
+\newblock The heterogeneous effects of inflation in france and in the eurozone.
+\newblock \emph{Revue d'{\'E}conomie Financi{\`e}re}, 153\penalty0
+  (1):\penalty0 193--211, 2024.
+
+\bibitem[Gautier and Lalliard(2013)]{gautier2013vat}
+Erwan Gautier and Antoine Lalliard.
+\newblock How do vat changes affect inflation in france?
+\newblock \emph{Quarterly selection of articles-Bulletin de la Banque de
+  France}, \penalty0 (32):\penalty0 5--27, 2013.
+
+\bibitem[Hobijn and Lagakos(2005)]{hobijn2005inflation}
+B.~Hobijn and D.~Lagakos.
+\newblock Inflation inequality in the united states.
+\newblock \emph{Review of Income and Wealth}, 51\penalty0 (4):\penalty0
+  581--606, 2005.
+\newblock \doi{10.1111/j.1475-4991.2005.00184.x}.
+
+\bibitem[Jaravel(2021)]{jaravel2021inflation}
+X.~Jaravel.
+\newblock Inflation inequality: Measurement, causes, and policy implications.
+\newblock \emph{Annual Review of Economics}, 13:\penalty0 599--629, 2021.
+\newblock \doi{10.1146/annurev-economics-091520-082042}.
+
+\bibitem[Jaravel(2019)]{jaravel2019unequal}
+Xavier Jaravel.
+\newblock The unequal gains from product innovations: Evidence from the u.s.
+  retail sector.
+\newblock \emph{The Quarterly Journal of Economics}, 134\penalty0 (2):\penalty0
+  715--783, 2019.
+\newblock \doi{10.1093/qje/qjy031}.
+
+\bibitem[Jaravel(2024)]{jaravel2024distributional}
+Xavier Jaravel.
+\newblock Distributional consumer price indices.
+\newblock \emph{CEPR Discussion Paper No. 19802}, 2024.
+\newblock URL \url{https://cepr.org/publications/dp19802}.
+
+\bibitem[Kaplan and Schulhofer-Wohl(2017)]{kaplan2017inflation}
+Greg Kaplan and Sam Schulhofer-Wohl.
+\newblock Inflation at the household level.
+\newblock \emph{Journal of Monetary Economics}, 91:\penalty0 19--38, 2017.
+\newblock \doi{10.1016/j.jmoneco.2017.08.002}.
+
+\bibitem[Kiss and Strasser(2024)]{kiss2024inflation}
+Regina Kiss and Georg Strasser.
+\newblock Inflation heterogeneity across households.
+\newblock ECB Working Paper 2898, European Central Bank, January 2024.
+
+\bibitem[Levell et~al.(2024)Levell, O’Connell, and
+  Smith]{levell2024distributional}
+Peter Levell, Martin O’Connell, and Kate Smith.
+\newblock Distributional effects of the european energy crisis.
+\newblock \emph{Cowles Foundation for Research in Economics Discussion Paper},
+  pages 18--06, 2024.
+
+\bibitem[Levell et~al.(2026)Levell, O'Connell, and Smith]{levell2026welfare}
+Peter Levell, Martin O'Connell, and Kate Smith.
+\newblock The welfare effects of price shocks and household relief packages:
+  Evidence from an energy crisis.
+\newblock Technical report, Institute for Fiscal Studies, 2026.
+
+\bibitem[Martin(2022)]{martin2022revisiting}
+Robert~S. Martin.
+\newblock Revisiting taste change in cost-of-living measurement.
+\newblock \emph{Journal of Economic and Social Measurement}, 46\penalty0
+  (2):\penalty0 109--147, 2022.
+\newblock \doi{10.3233/JEM-220485}.
+
+\bibitem[Pallotti et~al.(2024)Pallotti, Paz-Pardo, Slacalek, Tristani, and
+  Violante]{pallotti2024bears}
+Filippo Pallotti, Gonzalo Paz-Pardo, Jiri Slacalek, Oreste Tristani, and
+  Giovanni~L Violante.
+\newblock Who bears the costs of inflation? euro area households and the
+  2021--2023 shock.
+\newblock \emph{Journal of Monetary Economics}, page 103671, 2024.
+\newblock \doi{10.1016/j.jmoneco.2024.103671}.
+
+\bibitem[Redding and Weinstein(2020)]{redding2020measuring}
+Stephen~J. Redding and David~E. Weinstein.
+\newblock Measuring aggregate price indices with taste shocks: Theory and
+  evidence for ces preferences.
+\newblock \emph{The Quarterly Journal of Economics}, 135\penalty0 (1):\penalty0
+  503--560, 2020.
+\newblock \doi{10.1093/qje/qjz031}.
+
+\bibitem[Sangani(2026)]{sangani2026cheapflation}
+Kunal Sangani.
+\newblock Cheapflation cycles.
+\newblock NBER Working Paper 35235, National Bureau of Economic Research, 2026.
+\newblock URL \url{https://www.nber.org/papers/w35235}.
+
+\bibitem[Sgaravatti et~al.(2021)Sgaravatti, Tagliapietra, Trasi, and
+  Zachmann]{sgaravatti2021national}
+G.~Sgaravatti, S.~Tagliapietra, C.~Trasi, and G.~Zachmann.
+\newblock National policies to shield consumers from rising energy prices,
+  2021.
+\newblock URL
+  \url{https://www.bruegel.org/dataset/national-policies-shield-consumers-rising-energy-prices}.
+\newblock Bruegel Datasets.
+
+\end{thebibliography}

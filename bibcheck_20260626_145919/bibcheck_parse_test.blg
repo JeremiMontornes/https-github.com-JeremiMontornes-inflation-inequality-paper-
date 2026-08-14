@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99e
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: bibcheck_parse_test.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: plainnat.bst
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+Database file #1: corrected.bib
+Warning--there's a number but no volume in bobasu2023impact
+Warning--there's a number but no volume in charalampakis2022impact
+Warning--there's a number but no volume in gautier2013vat
+You've used 35 entries,
+            2773 wiz_defined-function locations,
+            826 strings with 12238 characters,
+and the built_in function-call counts, 16170 in all, are:
+= -- 1480
+> -- 953
+< -- 26
++ -- 323
+- -- 288
+* -- 1325
+:= -- 2551
+add.period$ -- 134
+call.type$ -- 35
+change.case$ -- 201
+chr.to.int$ -- 35
+cite$ -- 73
+duplicate$ -- 714
+empty$ -- 1242
+format.name$ -- 347
+if$ -- 3363
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 30
+newline$ -- 212
+num.names$ -- 140
+pop$ -- 343
+preamble$ -- 1
+purify$ -- 166
+quote$ -- 0
+skip$ -- 570
+stack$ -- 0
+substring$ -- 508
+swap$ -- 69
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 380
+warning$ -- 3
+while$ -- 137
+width$ -- 0
+write$ -- 513
+(There were 3 warnings)

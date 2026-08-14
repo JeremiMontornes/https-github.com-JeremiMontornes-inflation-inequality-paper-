@@ -1,0 +1,10 @@
+{
+  "key": "doepke2006inflation",
+  "status": "clean",
+  "one_sentence": "Inflation and the Redistribution of Nominal Wealth",
+  "canonical_url": "https://doi.org/10.1086/508379",
+  "issues": [],
+  "note": "",
+  "original_bib": "@article{doepke2006inflation,\n  title={Inflation and the redistribution of nominal wealth},\n  author={Doepke, Matthias and Schneider, Martin},\n  journal={Journal of Political Economy},\n  volume={114},\n  number={6},\n  pages={1069--1097},\n  year={2006},\n  publisher={University of Chicago Press}\n}\n",
+  "corrected_bib": "@article{doepke2006inflation,\n  title={Inflation and the redistribution of nominal wealth},\n  author={Doepke, Matthias and Schneider, Martin},\n  journal={Journal of Political Economy},\n  volume={114},\n  number={6},\n  pages={1069--1097},\n  year={2006},\n  publisher={University of Chicago Press}\n}\n"
+}

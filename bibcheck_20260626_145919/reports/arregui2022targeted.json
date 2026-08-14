@@ -1,0 +1,17 @@
+{
+  "key": "arregui2022targeted",
+  "status": "corrected",
+  "one_sentence": "Targeted, Implementable, and Practical Energy Relief Measures for Households in Europe",
+  "canonical_url": "https://doi.org/10.5089/9798400227400.001",
+  "issues": [
+    {
+      "field": "number",
+      "original": "WP/22/262",
+      "corrected": "262",
+      "reason": "Crossref canonical metadata differs"
+    }
+  ],
+  "note": "",
+  "original_bib": "@techreport{arregui2022targeted,\n  title={Targeted, Implementable, and Practical Energy Relief Measures for Households in Europe},\n  author={Arregui, Nicolas and Celasun, Oya and Iakova, Dora and Mineshima, Aiko and Mylonas, Victor and Toscani, Frederik and Wong, Yu Ching and Zeng, Li and Zhou, Jing},\n  institution={International Monetary Fund},\n  type={IMF Working Paper},\n  number={WP/22/262},\n  year={2022},\n  month={December},\n  url={https://www.imf.org/en/Publications/WP/Issues/2022/12/16/Targeted-Implementable-and-Practical-Energy-Relief-Measures-for-Households-in-Europe-526980}\n}\n",
+  "corrected_bib": "@techreport{arregui2022targeted,\n  title={Targeted, Implementable, and Practical Energy Relief Measures for Households in Europe},\n  author={Arregui, Nicolas and Celasun, Oya and Iakova, Dora and Mineshima, Aiko and Mylonas, Victor and Toscani, Frederik and Wong, Yu Ching and Zeng, Li and Zhou, Jing},\n  institution={International Monetary Fund},\n  type={IMF Working Paper},\n  number={WP/22/262},\n  year={2022},\n  month={December},\n  url={https://www.imf.org/en/Publications/WP/Issues/2022/12/16/Targeted-Implementable-and-Practical-Energy-Relief-Measures-for-Households-in-Europe-526980}\n}\n"
+}

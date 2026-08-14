@@ -1,0 +1,17 @@
+{
+  "key": "jaravel2019unequal",
+  "status": "corrected",
+  "one_sentence": "The Unequal Gains from Product Innovations: Evidence from the U.S. Retail Sector*",
+  "canonical_url": "https://doi.org/10.1093/qje/qjy031",
+  "issues": [
+    {
+      "field": "year",
+      "original": "2019",
+      "corrected": "2018",
+      "reason": "Crossref canonical metadata differs"
+    }
+  ],
+  "note": "",
+  "original_bib": "@article{jaravel2019unequal,\n  title={The Unequal Gains from Product Innovations: Evidence from the U.S. Retail Sector},\n  author={Jaravel, Xavier},\n  journal={The Quarterly Journal of Economics},\n  volume={134},\n  number={2},\n  pages={715-783},\n  year={2019},\n  doi={10.1093/qje/qjy031}\n}\n",
+  "corrected_bib": "@article{jaravel2019unequal,\n  title={The Unequal Gains from Product Innovations: Evidence from the U.S. Retail Sector},\n  author={Jaravel, Xavier},\n  journal={The Quarterly Journal of Economics},\n  volume={134},\n  number={2},\n  pages={715-783},\n  year={2019},\n  doi={10.1093/qje/qjy031}\n}\n"
+}
