@@ -135,11 +135,11 @@ income-quintile inflation gap by 1.2 points in the 20-country aggregate.
 This paper examines the effect of the recent inflation surge on euro area households. Since
 mid-2021, inflation rates in the euro area have risen sharply, displaying considerable dispersion
 across countries and socio-demographic groups. Central
-banks target aggregate inflation, but the welfare cost of a given aggregate inflation rate is not
-necessarily uniform across households. High inflation disproportionately affects households whose
+banks target aggregate inflation, but the welfare cost of a given aggregate inflation rate is
+heterogenous across households. High inflation disproportionately affects households whose
 consumption baskets are more exposed to rapidly rising prices, in particular households with higher
-expenditure shares on energy and food. The 2021--2023 episode was not only an aggregate inflation
-shock, but also a large relative-price shock, initially driven by imported energy and commodity prices. Its
+expenditure shares on energy and food. The 2021--2023 episode was
+ a large relative-price shock, initially driven by imported energy and commodity prices. Its
 incidence therefore mainly depended on household exposure to energy, including heating and
 transport \citep{levell2024distributional}.
 
@@ -382,12 +382,11 @@ when consumption shares move in the same direction across income groups.
 \label{fig:hbs}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
 \caption*{Notes: Structure of consumption expenditure by income quintile.
-The euro-area aggregate is computed from the 2020 HBS wave as the unweighted sum
-of available country-level income-quintile expenditures, renormalized to 100
-within each quintile. Countries without available HBS data for the wave are not
-included in the aggregate. Italy is taken from the Eurostat HBS income-quintile
- table when available and from national HBS inputs otherwise.\\
-Sources: Eurostat HBS 2020; authors' calculations.}
+The euro-area aggregate combines the 2020 country-level HBS income-quintile
+expenditures for all 20 countries and is renormalized to 100 within each
+quintile. Italy uses baskets constructed from Istat HBS microdata; see
+Appendix~\ref{sec:app-italy-hbs}.\\
+Sources: Eurostat HBS, Istat HBS microdata, and authors' calculations.}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -429,7 +428,14 @@ remaining areas.} These variables make it possible to compare inflation experien
 the income distribution, but also across demographic groups and territorial contexts. Although
 imputed rent is outside the official HICP coverage, we retain it when constructing group-specific
 expenditure profiles; Appendix~\ref{sec:app-weight-normalization} explains this treatment and its
-implications for aggregation. This analysis uses all
+implications for aggregation. Appendix Table~\ref{tab:rent-mapping-robustness} also reports the
+sensitivity of the results to alternative rent mappings. For the euro area, the June 2021--June
+2023 income-quintile inflation gap is 0.9 percentage point under our baseline mapping of HBS actual
+and imputed rents (041+042) to HICP actual rents (041), compared with $-0.5$ point when only HBS
+actual rents are mapped to HICP 041 and 1.3 points when rents are excluded altogether. The treatment
+of rents therefore matters for the magnitude, and sometimes the sign, of measured inflation
+inequality, which supports retaining imputed rents in the group expenditure profiles rather than
+redistributing their expenditure share mechanically across non-housing items. This analysis uses all
 available waves of the HBS since 1999 and matches them with the closest corresponding HICP year.
 Country-specific extensions based on national HBS microdata are described in the appendices when
 harmonized Eurostat inputs are incomplete for the required household breakdowns.
@@ -771,8 +777,10 @@ rather than on narrowly targeted income support. We use \cite{sgaravatti2021nati
 \footnote{https://www.bruegel.org/dataset/national-policies-shield-consumers-rising-energy-prices}
  to identify the price-relevant measures and dates. We then
 construct counterfactual HICP component paths without those interventions. In the Bruegel inventory for
-the 20 euro-area countries, 142 of 207 household price measures (68.6 percent) were untargeted,
-while 65 measures (31.4 percent) were targeted at vulnerable households.
+the 20 euro-area countries, measures acting directly on prices accounted for EUR 266.9 billion out
+of EUR 400.6 billion in total household support, or 66.6 percent. Of this price-based support, EUR
+234.1 billion was delivered through untargeted measures and EUR 32.8 billion through measures
+targeted at vulnerable households.
 
 The measures differed substantially across euro area countries. Some governments relied
 primarily on regulated retail-price caps or tariff shields, while others used VAT and excise-tax
@@ -1064,6 +1072,22 @@ monthly year-on-year inflation rates. If $I_{ic,t,m}$ is the chained household p
 \end{equation}
 This annual average is the inflation measure used in the household-level regressions and in the
 inflation-burden calculation below.
+
+Figure~\ref{fig:ea20-household-inflation-distribution} shows the dispersion of these household-level
+inflation rates across the euro-area microdata sample in 2021, 2022, and 2023.
+
+\begin{figure}[H]
+\centering
+\caption{Distribution of household-level inflation in the euro area, 2021--2023}
+\includegraphics[width=0.86\textwidth,height=0.38\textheight,keepaspectratio]{fig/fig_EA20_household_inflation_distribution_2021_2023.png}
+\label{fig:ea20-household-inflation-distribution}
+\captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
+\caption*{Notes: Histograms report the survey-weighted percentage of households by annual inflation interval, calculated from fixed
+2020 household consumption baskets. The displayed range excludes the outer 0.1 percent of the
+pooled weighted distribution. The sample covers 19 euro-area countries; Portugal is excluded because
+no household reaches the 80 percent HICP matching threshold.\\
+Sources: Eurostat HICP and HBS microdata; authors' calculations.}
+\end{figure}
 
 %This formula loops over households, product categories, and months. It is more
 %computationally demanding than the faster approximation that first aggregates
@@ -1397,16 +1421,16 @@ quintiles account for about 8 and 39 percent of Italian consumption, respectivel
 \centering
 \caption{Price indices by household group, Italy, COICOP digit 3 (index, 1996 = 100)}
 \label{fig:app-it-level2-price-indices}
-\begin{subfigure}{0.88\textwidth}
+\begin{subfigure}{0.98\textwidth}
   \centering
   \caption{Income quintiles}
-  \includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]{fig/fig_IT_1996_2026_income_price_index_level2_Q1_Q5.png}
+  \includegraphics[width=\linewidth,height=0.32\textheight,keepaspectratio]{fig/fig_IT_1996_2026_income_price_index_level2_Q1_Q5.png}
 \end{subfigure}
 \vspace{6pt}
-\begin{subfigure}{0.88\textwidth}
+\begin{subfigure}{0.98\textwidth}
   \centering
   \caption{Age groups}
-  \includegraphics[width=\linewidth,height=0.30\textheight,keepaspectratio]{fig/fig_IT_1996_2026_age_price_index_level2_young_old.png}
+  \includegraphics[width=\linewidth,height=0.32\textheight,keepaspectratio]{fig/fig_IT_1996_2026_age_price_index_level2_young_old.png}
 \end{subfigure}
 \vspace{8pt}
 \captionsetup{font=footnotesize, format=hang, singlelinecheck=false, justification=justified}
@@ -1482,8 +1506,18 @@ group-level HBS profiles used by the calibration. Their inclusion should be unde
 against group-specific normalization bias, rather than as a claim that imputed rents belong to the
 official HICP coverage.
 
-Let $s_{g,y}$ denote the share of group $g$ in total consumption expenditure used for HICP weight
-year $y$:
+Table~\ref{tab:rent-mapping-robustness} quantifies this sensitivity across countries. The baseline
+combines HBS actual and imputed rents (041+042) before mapping them to HICP actual rents (041). The
+first alternative retains only HBS actual rents, while the second removes rents from both the HBS
+profiles and the HICP basket and renormalizes all remaining items.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{tables/tab_EA20_rent_mapping_robustness_2021_06_2023_06}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We distinguish three objects: the HICP product shares, the aggregate product-by-group expenditure
+mass calibrated by RAS, and the resulting within-group baskets. First, let $s_{g,y}$ denote the
+share of group $g$ in total consumption expenditure used for HICP weight year $y$:
 \begin{equation}
 s_{g,y}
 =
@@ -1508,52 +1542,64 @@ c^{HBS}_{j,g,y'}
 \frac{E^{HBS}_{j,g,y'}}{E^{HBS}_{j,\mathrm{all},y'}}.
 \end{equation}
 Thus $c^{HBS}_{j,g,y'}$ records how expenditure on item $j$ is distributed across household groups.
-Using this product-specific group share, the RAS seed is
+To avoid mixing index-weight units with expenditure shares, define the HICP weight normalized over
+the matched product set as
+\begin{equation}
+q_{j,y}
+=
+\frac{\omega^{HICP}_{j,y}}
+{\sum_{k \in \mathcal{J}_y}\omega^{HICP}_{k,y}},
+\qquad
+\sum_{j \in \mathcal{J}_y}q_{j,y}=1.
+\end{equation}
+The initial product-by-group mass is then
 \begin{equation}
 Z_{j,g,y}
 =
 \max\left\{
-s_{g,y}\omega^{HICP}_{j,y}c^{HBS}_{j,g,y'},\epsilon
+s_{g,y}q_{j,y}c^{HBS}_{j,g,y'},\epsilon
 \right\},
 \qquad
 \epsilon=10^{-12}.
 \end{equation}
 The small positive floor is a numerical safeguard to keep the RAS problem strictly non-negative
-after HICP-HBS matching. The calibrated aggregate expenditure matrix $M_{j,g,y}$ is required to
-satisfy the original HICP item-weight margins:
+after HICP-HBS matching. RAS transforms this seed into a joint expenditure-share matrix
+$M_{j,g,y}$. Its group margins equal the groups' expenditure shares, while its product margins equal
+the normalized HICP shares:
 \begin{equation}
 \sum_{j \in \mathcal{J}_y} M_{j,g,y}
 =
-s_{g,y}\sum_{j \in \mathcal{J}_y}\omega^{HICP}_{j,y}
+s_{g,y}
 \quad \text{for all } g,
 \qquad
 \sum_g M_{j,g,y}
 =
-\omega^{HICP}_{j,y}
+q_{j,y}
 \quad \text{for all } j.
 \end{equation}
+Both sets of margins sum to one, so the constraints are mutually compatible.
 
 The RAS algorithm starts from $M^{(0)}_{j,g,y}=Z_{j,g,y}$ and repeats two scaling steps. At
-iteration $t$, the row adjustment is
+iteration $t$, the group-margin adjustment is
 \begin{equation}
 \widetilde{M}^{(t)}_{j,g,y}
 =
 M^{(t-1)}_{j,g,y}
 \times
 \frac{
-s_{g,y}%\sum_{\ell \in \mathcal{J}_y}\omega^{HICP}_{\ell,y}
+s_{g,y}
 }{
 \sum_{\ell \in \mathcal{J}_y} M^{(t-1)}_{\ell,g,y}
 },
 \end{equation}
-and the column adjustment is
+and the product-margin adjustment is
 \begin{equation}
 M^{(t)}_{j,g,y}
 =
 \widetilde{M}^{(t)}_{j,g,y}
 \times
 \frac{
-\omega^{HICP}_{j,y}
+q_{j,y}
 }{
 \sum_h \widetilde{M}^{(t)}_{j,h,y}
 }.
@@ -1561,21 +1607,41 @@ M^{(t)}_{j,g,y}
 We iterate these two steps by weight year until the maximum absolute row or column marginal error is
 below $10^{-10}$, with a maximum of 1,000 iterations.
 
-The final group-specific HICP weights are obtained by normalizing the calibrated aggregate mass
-within each group:
+The calibrated matrix $M$ is a joint expenditure distribution. The group-specific HICP basket is
+the corresponding conditional product distribution within group $g$:
 \begin{equation}
 \omega_{j,g,y}
 =
+\frac{M_{j,g,y}}{s_{g,y}}
+=
 \frac{M_{j,g,y}}{\sum_{k \in \mathcal{J}_y}M_{k,g,y}}.
 \end{equation}
-Thus the expenditure-share-weighted average of the group baskets reproduces the official HICP item
-weights normalized over the matched product set:
+The equality of the two denominators follows directly from the group-margin constraint. It implies
+that each group basket sums to one. Moreover, the expenditure-share-weighted average of the group
+baskets reproduces the normalized HICP product weights:
 \begin{equation}
+\sum_{j \in \mathcal{J}_y}\omega_{j,g,y}=1,
+\qquad
 \sum_g s_{g,y}\omega_{j,g,y}
 =
-\frac{\omega^{HICP}_{j,y}}
-{\sum_{k \in \mathcal{J}_y}\omega^{HICP}_{k,y}}.
+q_{j,y}.
 \end{equation}
+
+The package implements the same system on a percentage scale. Internally, the calibrated mass is
+$P_{j,g,y}=100M_{j,g,y}$, so its margins are $100s_{g,y}$ and $100q_{j,y}$. The package returns
+these percentage weights in the R variable \texttt{weighted\_consumption}. Denoting this variable
+by $w^{\mathrm{code}}_{j,g,y}$, we have
+\begin{equation}
+w^{\mathrm{code}}_{j,g,y}
+=
+\frac{P_{j,g,y}}{s_{g,y}}
+=
+100\omega_{j,g,y},
+\end{equation}
+and sums to 100 within every household group. Thus division by $s_{g,y}$ in the code is the
+percentage-scale counterpart of dividing $M_{j,g,y}$ by its group-row sum in the normalized
+mathematical representation.
+
 This preserves the relative information contained in the HBS expenditure profiles while making the
 aggregate of the household-group baskets consistent with the published HICP weighting structure, up
 to residual differences induced by product coverage and COICOP matching.
